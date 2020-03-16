@@ -1,5 +1,6 @@
 import React from "react";
 import { Slide } from "pure-react-carousel";
+import Tag from "./Tag";
 
 const style = {
   image: {
@@ -7,15 +8,16 @@ const style = {
   }
 };
 
-type ProjectSlideProps = {
+interface ProjectSlideProps {
   index: number;
   img: string;
-};
+}
 
 function ProjectSlide(props: ProjectSlideProps) {
   return (
     <Slide index={props.index}>
       <img src={props.img} style={style.image}></img>
+      <Tag name="test" color="000"></Tag>
     </Slide>
   );
 }
