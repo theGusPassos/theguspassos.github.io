@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Carousel from "./Carousel";
+import Carousel from "./Carousel/Carousel";
 
 function Body() {
   return (

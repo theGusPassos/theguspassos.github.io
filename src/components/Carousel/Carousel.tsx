@@ -1,12 +1,16 @@
 import React from "react";
 import {
   CarouselProvider,
-  Slider,
-  Slide,
   ButtonNext,
-  ButtonBack
+  ButtonBack,
+  Slider
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import ProjectSlide from "./ProjectSlide";
+
+import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
+
+const projectsInCarousel = [{ image: sketchImage, name: "sketch" }];
 
 function Carousel() {
   return (
@@ -14,12 +18,14 @@ function Carousel() {
       naturalSlideWidth={10}
       naturalSlideHeight={10}
       visibleSlides={1}
-      totalSlides={3}
+      totalSlides={2}
     >
       <Slider>
-        <Slide index={0}>first one</Slide>
-        <Slide index={1}>second one</Slide>
-        <Slide index={2}>third one</Slide>
+        {projectsInCarousel.map((value, i) => {
+          return (
+            <ProjectSlide index={i} img={value.image} key={i}></ProjectSlide>
+          );
+        })}
       </Slider>
       <ButtonBack>back</ButtonBack>
       <ButtonNext>next</ButtonNext>
