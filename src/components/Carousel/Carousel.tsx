@@ -13,7 +13,12 @@ import CarouselTitle from "./CarouselTitle";
 import Project from "../../shared/project";
 
 const projectsInCarousel: Project[] = [
-  { image: sketchImage, name: "sketch", tags: ["Unity", "C#"] }
+  {
+    image: sketchImage,
+    imageAlt: "Image the game Sketch",
+    name: "sketch",
+    tags: ["Unity", "C#"]
+  }
 ];
 
 function Carousel() {

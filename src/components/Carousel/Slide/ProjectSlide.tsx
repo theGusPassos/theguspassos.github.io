@@ -22,7 +22,11 @@ function ProjectSlide(props: ProjectSlideProps) {
     <Slide index={props.index}>
       <div style={style.imageContainer}>
         <TagContainer tags={props.project.tags}></TagContainer>
-        <img src={props.project.image} style={style.image}></img>
+        <img
+          src={props.project.image}
+          style={style.image}
+          alt={props.project.imageAlt}
+        ></img>
       </div>
     </Slide>
   );
