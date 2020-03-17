@@ -17,7 +17,7 @@ function ProjectSlide(props: ProjectSlideProps) {
   return (
     <Slide index={props.index}>
       <img src={props.img} style={style.image}></img>
-      <Tag name="test" color="000"></Tag>
+      <Tag name="test" color="#fafafa"></Tag>
     </Slide>
   );
 }
