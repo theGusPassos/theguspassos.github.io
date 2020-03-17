@@ -2,10 +2,12 @@ import React from "react";
 import { Slide } from "pure-react-carousel";
 import TagContainer from "./TagContainer";
 import Project from "../../../shared/project";
+import ProjectDescription from "./ProjectDescription";
 
 const style = {
   imageContainer: {
-    position: "relative" as const
+    position: "relative" as const,
+    display: "flex"
   },
   image: {
     width: "100%"
@@ -27,6 +29,7 @@ function ProjectSlide(props: ProjectSlideProps) {
           style={style.image}
           alt={props.project.imageAlt}
         ></img>
+        <ProjectDescription></ProjectDescription>
       </div>
     </Slide>
   );

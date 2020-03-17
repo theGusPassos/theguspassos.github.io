@@ -1,5 +1,5 @@
 import React from "react";
-import colors from "../../shared/colors";
+import colors from "../../../shared/colors";
 
 const style = {
   fontSize: "0.9em",
@@ -7,7 +7,7 @@ const style = {
   textAlign: "center" as const,
   display: "inline-block",
   minWidth: "70px",
-  margin: 5,
+  margin: 10,
   padding: 3,
   border: "3px solid",
   borderColor: colors.mainColor,
