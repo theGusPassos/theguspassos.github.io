@@ -6,12 +6,15 @@ import {
   Slider
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import ProjectSlide from "./ProjectSlide";
+import ProjectSlide from "./Slide/ProjectSlide";
 
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
 import CarouselTitle from "./CarouselTitle";
+import Project from "../../shared/project";
 
-const projectsInCarousel = [{ image: sketchImage, name: "sketch" }];
+const projectsInCarousel: Project[] = [
+  { image: sketchImage, name: "sketch", tags: ["Unity", "C#"] }
+];
 
 function Carousel() {
   return (
@@ -24,9 +27,9 @@ function Carousel() {
         totalSlides={2}
       >
         <Slider>
-          {projectsInCarousel.map((value, i) => {
+          {projectsInCarousel.map((value: Project, i: number) => {
             return (
-              <ProjectSlide index={i} img={value.image} key={i}></ProjectSlide>
+              <ProjectSlide index={i} project={value} key={i}></ProjectSlide>
             );
           })}
         </Slider>

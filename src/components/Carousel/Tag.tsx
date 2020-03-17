@@ -1,8 +1,8 @@
 import React from "react";
-import ProjectType from "../../shared/projectType";
 import colors from "../../shared/colors";
 
 const style = {
+  background: colors.mainBackgroundColor,
   textAlign: "center" as const,
   display: "inline-block",
   minWidth: "70px",
@@ -14,15 +14,12 @@ const style = {
   borderRadius: "50px"
 };
 
-function getTagStyle(projectType: ProjectType) {
-  return {
-    ...style,
-    backgroundColor: projectType.color
-  };
+interface TagProps {
+  name: string;
 }
 
-function Tag(props: ProjectType): React.ReactElement {
-  return <div style={getTagStyle(props)}>{props.name}</div>;
+function Tag(props: TagProps): React.ReactElement {
+  return <div style={style}>{props.name}</div>;
 }
 
 export default Tag;
