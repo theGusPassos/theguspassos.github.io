@@ -8,13 +8,13 @@ const style = {
     color: colors.mainTextColor
   },
   nameContainer: {
-    padding: "10px"
+    padding: "20px"
   },
   name: {
-    fontSize: "1.3em"
+    fontSize: "1em"
   },
   jobTitle: {
-    fontSize: "1.6em"
+    fontSize: "1.5em"
   }
 };
 
