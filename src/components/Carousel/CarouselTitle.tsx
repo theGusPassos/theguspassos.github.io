@@ -5,7 +5,8 @@ const style = {
   background: colors.mainColor,
   color: colors.mainTextColor,
   textAlign: "center" as const,
-  padding: "10px"
+  padding: "10px",
+  fontSize: "0.9em"
 };
 
 function CarouselTitle() {
