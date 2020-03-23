@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.a5e7b616.chunk.css",
-    "main.js": "/static/js/main.ddbd7857.chunk.js",
-    "main.js.map": "/static/js/main.ddbd7857.chunk.js.map",
+    "main.css": "/static/css/main.6c0fcff9.chunk.css",
+    "main.js": "/static/js/main.4c26b41a.chunk.js",
+    "main.js.map": "/static/js/main.4c26b41a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.050352e1.js",
     "runtime-main.js.map": "/static/js/runtime-main.050352e1.js.map",
     "static/css/2.1fd2b905.chunk.css": "/static/css/2.1fd2b905.chunk.css",
-    "static/js/2.5fbcda9d.chunk.js": "/static/js/2.5fbcda9d.chunk.js",
-    "static/js/2.5fbcda9d.chunk.js.map": "/static/js/2.5fbcda9d.chunk.js.map",
+    "static/js/2.a4cae3ad.chunk.js": "/static/js/2.a4cae3ad.chunk.js",
+    "static/js/2.a4cae3ad.chunk.js.map": "/static/js/2.a4cae3ad.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b3528980c4a170bb068030292be4322c.js": "/precache-manifest.b3528980c4a170bb068030292be4322c.js",
+    "precache-manifest.07ab90af93dd1897a0d8854e999d8f30.js": "/precache-manifest.07ab90af93dd1897a0d8854e999d8f30.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.1fd2b905.chunk.css.map": "/static/css/2.1fd2b905.chunk.css.map",
-    "static/css/main.a5e7b616.chunk.css.map": "/static/css/main.a5e7b616.chunk.css.map",
-    "static/js/2.5fbcda9d.chunk.js.LICENSE.txt": "/static/js/2.5fbcda9d.chunk.js.LICENSE.txt",
+    "static/css/main.6c0fcff9.chunk.css.map": "/static/css/main.6c0fcff9.chunk.css.map",
+    "static/js/2.a4cae3ad.chunk.js.LICENSE.txt": "/static/js/2.a4cae3ad.chunk.js.LICENSE.txt",
     "static/media/sketch-carousel.png": "/static/media/sketch-carousel.7b5eb98f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.050352e1.js",
     "static/css/2.1fd2b905.chunk.css",
-    "static/js/2.5fbcda9d.chunk.js",
-    "static/css/main.a5e7b616.chunk.css",
-    "static/js/main.ddbd7857.chunk.js"
+    "static/js/2.a4cae3ad.chunk.js",
+    "static/css/main.6c0fcff9.chunk.css",
+    "static/js/main.4c26b41a.chunk.js"
   ]
 }
