@@ -26,7 +26,7 @@ function Carousel() {
     <div>
       <CarouselTitle></CarouselTitle>
       <CarouselProvider
-        naturalSlideWidth={10}
+        naturalSlideWidth={13}
         naturalSlideHeight={10}
         visibleSlides={1}
         totalSlides={2}
