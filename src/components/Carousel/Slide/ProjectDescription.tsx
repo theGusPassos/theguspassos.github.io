@@ -22,7 +22,7 @@ const style = {
     top: "-35px"
   },
   description: {
-    fontSize: "0.8em",
+    fontSize: "0.9em",
     background: "#f1f1f1" as const,
     width: "100%",
     padding: "10px"

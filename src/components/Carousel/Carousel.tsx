@@ -38,8 +38,6 @@ function Carousel() {
             );
           })}
         </Slider>
-        <ButtonBack>back</ButtonBack>
-        <ButtonNext>next</ButtonNext>
       </CarouselProvider>
     </div>
   );

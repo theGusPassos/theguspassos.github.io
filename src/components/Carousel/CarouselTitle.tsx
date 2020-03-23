@@ -6,7 +6,7 @@ const style = {
   color: colors.mainTextColor,
   textAlign: "center" as const,
   padding: "10px",
-  fontSize: "0.9em"
+  fontSize: "0.95em"
 };
 
 function CarouselTitle() {
