@@ -17,13 +17,13 @@ const style = {
     color: "#fff",
     fontSize: "1.1em",
     letterSpacing: "5px",
-    border: "1px solid white",
+    border: "1px solid #c2c2c2",
     position: "absolute" as const,
     top: "-35px"
   },
   description: {
     fontSize: "0.9em",
-    background: "#f1f1f1" as const,
+    background: "#e6e7e6" as const,
     width: "100%",
     padding: "10px"
   }
