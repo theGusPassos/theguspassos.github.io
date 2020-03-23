@@ -2,30 +2,34 @@ import React from "react";
 import colors from "../shared/colors";
 
 const navContainer = {
-  color: colors.mainColor
+  color: colors.mainColor,
+  position: "relative" as const
 };
 
 const buttonContainer = {
-  padding: "0"
+  margin: "0",
+  padding: "0",
+  position: "absolute" as const,
+  left: "50%",
+  top: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "100%"
 };
 
-const normalButton = {
+const link = {
   fontSize: "1.5em",
   textAlign: "center" as const,
-  listStyle: "none"
-};
-
-const middleButton = {
-  ...normalButton
+  listStyle: "none",
+  margin: "10%"
 };
 
 function Menu() {
   return (
     <nav style={navContainer}>
       <ul style={buttonContainer}>
-        <li style={normalButton}>My other projects</li>
-        <li style={middleButton}>About me</li>
-        <li style={normalButton}>Contact</li>
+        <li style={link}>My other projects</li>
+        <li style={link}>About me</li>
+        <li style={link}>Contact</li>
       </ul>
     </nav>
   );
