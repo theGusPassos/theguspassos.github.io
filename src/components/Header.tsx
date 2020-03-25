@@ -1,6 +1,7 @@
 import React from "react";
 import { colors } from "../shared/colors";
 import styled from "styled-components";
+import { device } from "../shared/device";
 
 const Background = styled.header`
   width: 100%;
@@ -14,10 +15,18 @@ const NameContainer = styled.div`
 
 const DevName = styled.div`
   font-size: 1em;
+
+  @media ${device.tablet} {
+    font-size: 1.5em;
+  }
 `;
 
 const JobTitle = styled.div`
   font-size: 1.5em;
+
+  @media ${device.tablet} {
+    font-size: 2em;
+  }
 `;
 
 function Header() {
