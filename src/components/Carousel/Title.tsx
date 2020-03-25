@@ -9,8 +9,8 @@ const style = {
   fontSize: "0.95em"
 };
 
-function CarouselTitle() {
+function Title() {
   return <div style={style}>those are some of the projects I've worked on</div>;
 }
 
-export default CarouselTitle;
+export default Title;

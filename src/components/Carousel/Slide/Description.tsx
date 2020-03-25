@@ -29,7 +29,7 @@ const style = {
   }
 };
 
-function ProjectDescription() {
+function Description() {
   return (
     <div style={style.container}>
       <div style={style.title}>
@@ -43,4 +43,4 @@ function ProjectDescription() {
   );
 }
 
-export default ProjectDescription;
+export default Description;

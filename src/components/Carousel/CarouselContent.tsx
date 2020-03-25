@@ -1,15 +1,10 @@
 import React from "react";
-import {
-  CarouselProvider,
-  ButtonNext,
-  ButtonBack,
-  Slider
-} from "pure-react-carousel";
+import { CarouselProvider, Slider } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import ProjectSlide from "./Slide/ProjectSlide";
+import SlideContent from "./Slide/SlideContent";
 
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
-import CarouselTitle from "./CarouselTitle";
+import Title from "./Title";
 import Project from "../../shared/project";
 
 const projectsInCarousel: Project[] = [
@@ -21,10 +16,10 @@ const projectsInCarousel: Project[] = [
   }
 ];
 
-function Carousel() {
+function CarouselContent() {
   return (
     <div>
-      <CarouselTitle></CarouselTitle>
+      <Title></Title>
       <CarouselProvider
         naturalSlideWidth={13}
         naturalSlideHeight={10}
@@ -34,7 +29,7 @@ function Carousel() {
         <Slider>
           {projectsInCarousel.map((value: Project, i: number) => {
             return (
-              <ProjectSlide index={i} project={value} key={i}></ProjectSlide>
+              <SlideContent index={i} project={value} key={i}></SlideContent>
             );
           })}
         </Slider>
@@ -43,4 +38,4 @@ function Carousel() {
   );
 }
 
-export default Carousel;
+export default CarouselContent;

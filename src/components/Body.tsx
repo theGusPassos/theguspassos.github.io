@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./Header";
-import Carousel from "./Carousel/Carousel";
+import CarouselContent from "./Carousel/CarouselContent";
 import Menu from "./Menu";
 
 const bodyStyle = {
@@ -13,7 +13,7 @@ function Body() {
   return (
     <div style={bodyStyle}>
       <Header></Header>
-      <Carousel></Carousel>
+      <CarouselContent></CarouselContent>
       <Menu></Menu>
     </div>
   );

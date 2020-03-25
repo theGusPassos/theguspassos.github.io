@@ -2,7 +2,7 @@ import React from "react";
 import { Slide } from "pure-react-carousel";
 import TagContainer from "./TagContainer";
 import Project from "../../../shared/project";
-import ProjectDescription from "./ProjectDescription";
+import Description from "./Description";
 
 const style = {
   imageContainer: {
@@ -19,7 +19,7 @@ interface ProjectSlideProps {
   project: Project;
 }
 
-function ProjectSlide(props: ProjectSlideProps) {
+function SlideContent(props: ProjectSlideProps) {
   return (
     <Slide index={props.index}>
       <div style={style.imageContainer}>
@@ -29,10 +29,10 @@ function ProjectSlide(props: ProjectSlideProps) {
           style={style.image}
           alt={props.project.imageAlt}
         ></img>
-        <ProjectDescription></ProjectDescription>
+        <Description></Description>
       </div>
     </Slide>
   );
 }
 
-export default ProjectSlide;
+export default SlideContent;
