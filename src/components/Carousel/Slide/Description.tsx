@@ -1,5 +1,5 @@
 import React from "react";
-import colors from "../../../shared/colors";
+import { colors } from "../../../shared/colors";
 
 const style = {
   container: {
@@ -23,7 +23,7 @@ const style = {
   },
   description: {
     fontSize: "0.9em",
-    background: "#e6e7e6" as const,
+    background: "#e6e6e6" as const,
     width: "100%",
     padding: "10px"
   }

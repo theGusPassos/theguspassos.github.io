@@ -13,3 +13,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+input[type="button"] {
+  outline: none;
+}
+
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+}

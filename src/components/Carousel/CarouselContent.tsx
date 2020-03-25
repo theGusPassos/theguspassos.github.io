@@ -2,7 +2,6 @@ import React from "react";
 import { CarouselProvider, Slider } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import SlideContent from "./Slide/SlideContent";
-
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
 import Title from "./Title";
 import Project from "../../shared/project";

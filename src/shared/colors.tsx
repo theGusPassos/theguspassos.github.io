@@ -5,4 +5,8 @@ const colors = {
   secondBackgroundColor: "#f7f7f7"
 };
 
-export default colors;
+const buttonColors = {
+  onHoverColor: "#e6e6e6"
+};
+
+export { colors, buttonColors };

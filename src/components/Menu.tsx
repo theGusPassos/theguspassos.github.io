@@ -1,7 +1,6 @@
 import React from "react";
-import colors from "../shared/colors";
+import { colors, buttonColors } from "../shared/colors";
 import styled from "styled-components";
-import { prependListener } from "cluster";
 
 const NavMenu = styled.nav`
   position: relative;
@@ -36,6 +35,16 @@ const Button = styled.button`
   border-bottom: ${(props: ButtonProps) =>
     props.border ? "solid 1px" : "none"};
   border-top: ${(props: ButtonProps) => (props.border ? "solid 1px" : "none")};
+
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  :focus {
+    outline: none;
+    text-decoration: underline;
+  }
 `;
 
 const Menu = () => {

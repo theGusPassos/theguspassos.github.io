@@ -1,5 +1,5 @@
 import React from "react";
-import colors from "../../shared/colors";
+import { colors } from "../../shared/colors";
 
 const style = {
   background: colors.mainColor,
