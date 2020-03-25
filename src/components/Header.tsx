@@ -1,31 +1,33 @@
 import React from "react";
 import { colors } from "../shared/colors";
+import styled from "styled-components";
 
-const style = {
-  background: {
-    width: "100%",
-    backgroundColor: colors.mainColor,
-    color: colors.mainTextColor
-  },
-  nameContainer: {
-    padding: "20px"
-  },
-  name: {
-    fontSize: "1em"
-  },
-  jobTitle: {
-    fontSize: "1.5em"
-  }
-};
+const Background = styled.header`
+  width: 100%;
+  background-color: ${colors.mainColor};
+  color: ${colors.mainTextColor};
+`;
+
+const NameContainer = styled.div`
+  padding: 20px;
+`;
+
+const DevName = styled.div`
+  font-size: 1em;
+`;
+
+const JobTitle = styled.div`
+  font-size: 1.5em;
+`;
 
 function Header() {
   return (
-    <header style={style.background}>
-      <div style={style.nameContainer}>
-        <div style={style.name}>Gustavo Passos</div>
-        <div style={style.jobTitle}>Game & Software Developer</div>
-      </div>
-    </header>
+    <Background>
+      <NameContainer>
+        <DevName>Gustavo Passos</DevName>
+        <JobTitle>Game & Software Developer</JobTitle>
+      </NameContainer>
+    </Background>
   );
 }
 
