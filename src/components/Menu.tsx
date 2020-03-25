@@ -1,5 +1,7 @@
 import React from "react";
 import colors from "../shared/colors";
+import styled from "styled-components";
+import { prependListener } from "cluster";
 
 const navContainer = {
   position: "relative" as const
@@ -26,30 +28,37 @@ const button = {
   background: colors.secondBackgroundColor,
   fontSize: "1.2em",
   border: "none",
-  padding: "6% 0",
-  ":hover": {
-    textDecoration: "underline"
-  }
+  padding: "6% 0"
 };
 
-const middleButton = {
-  ...button,
-  borderBottom: "solid 1px",
-  borderTop: "solid 1px"
-};
+interface ButtonProps {
+  border?: boolean;
+}
+
+const Button = styled.button`
+  width: 70%;
+  color: ${colors.mainColor};
+  background: ${colors.secondBackgroundColor};
+  font-size: 1.2em;
+  border: none;
+  padding: 6% 0;
+  border-bottom: ${(props: ButtonProps) =>
+    props.border ? "solid 1px" : "none"};
+  border-top: ${(props: ButtonProps) => (props.border ? "solid 1px" : "none")};
+`;
 
 const Menu = () => {
   return (
     <nav style={navContainer}>
       <ul style={buttonContainer}>
         <li style={link}>
-          <button style={button}>My other projects</button>
+          <Button>My other projects</Button>
         </li>
         <li style={link}>
-          <button style={middleButton}>About me</button>
+          <Button border>About me</Button>
         </li>
         <li style={link}>
-          <button style={button}>Contact</button>
+          <Button>Contact</Button>
         </li>
       </ul>
     </nav>
