@@ -3,33 +3,24 @@ import colors from "../shared/colors";
 import styled from "styled-components";
 import { prependListener } from "cluster";
 
-const navContainer = {
-  position: "relative" as const
-};
+const NavMenu = styled.nav`
+  position: relative;
+`;
 
-const buttonContainer = {
-  margin: "0",
-  padding: "0",
-  position: "absolute" as const,
-  left: "50%",
-  top: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "100%"
-};
+const LinkContainer = styled.ul`
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+`;
 
-const link = {
-  textAlign: "center" as const,
-  listStyle: "none"
-};
-
-const button = {
-  width: "70%",
-  color: colors.mainColor,
-  background: colors.secondBackgroundColor,
-  fontSize: "1.2em",
-  border: "none",
-  padding: "6% 0"
-};
+const Link = styled.li`
+  text-align: center;
+  list-style: none;
+`;
 
 interface ButtonProps {
   border?: boolean;
@@ -49,19 +40,19 @@ const Button = styled.button`
 
 const Menu = () => {
   return (
-    <nav style={navContainer}>
-      <ul style={buttonContainer}>
-        <li style={link}>
+    <NavMenu>
+      <LinkContainer>
+        <Link>
           <Button>My other projects</Button>
-        </li>
-        <li style={link}>
+        </Link>
+        <Link>
           <Button border>About me</Button>
-        </li>
-        <li style={link}>
+        </Link>
+        <Link>
           <Button>Contact</Button>
-        </li>
-      </ul>
-    </nav>
+        </Link>
+      </LinkContainer>
+    </NavMenu>
   );
 };
 
