@@ -5,7 +5,7 @@ const style = {
   container: {
     display: "flex",
     position: "absolute" as const,
-    bottom: "-40px",
+    bottom: "-15%",
     width: "100%",
     height: "25%"
   },

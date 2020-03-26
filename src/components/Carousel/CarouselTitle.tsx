@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const TitleContent = styled.div`
   background: ${colors.mainColor};
-  color: ${colors.mainColor};
+  color: ${colors.mainTextColor};
   text-align: center;
   padding: 10px;
   font-size: 0.95em;

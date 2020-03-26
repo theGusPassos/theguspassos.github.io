@@ -5,6 +5,7 @@ import SlideContent from "./Slide/SlideContent";
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
 import CarouselTitle from "./CarouselTitle";
 import Project from "../../models/project";
+import styled from "styled-components";
 
 const projectsInCarousel: Project[] = [
   {
@@ -15,15 +16,17 @@ const projectsInCarousel: Project[] = [
   }
 ];
 
+const CarouselContainer = styled.div``;
+
 const CarouselContent = () => {
   return (
-    <div>
+    <CarouselContainer>
       <CarouselTitle></CarouselTitle>
       <CarouselProvider
         naturalSlideWidth={13}
         naturalSlideHeight={10}
         visibleSlides={1}
-        totalSlides={2}
+        totalSlides={1}
       >
         <Slider>
           {projectsInCarousel.map((value: Project, i: number) => {
@@ -33,7 +36,7 @@ const CarouselContent = () => {
           })}
         </Slider>
       </CarouselProvider>
-    </div>
+    </CarouselContainer>
   );
 };
 

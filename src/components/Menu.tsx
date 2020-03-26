@@ -36,12 +36,9 @@ const Button = styled.button`
     props.border ? "solid 1px" : "none"};
   border-top: ${(props: ButtonProps) => (props.border ? "solid 1px" : "none")};
 
+  :focus,
   :hover {
-    text-decoration: underline;
     cursor: pointer;
-  }
-
-  :focus {
     outline: none;
     text-decoration: underline;
   }
