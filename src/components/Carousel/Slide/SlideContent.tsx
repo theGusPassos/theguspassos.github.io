@@ -5,22 +5,16 @@ import Project from "../../../shared/project";
 import Description from "./Description";
 import styled from "styled-components";
 
-const style = {
-  imageContainer: {
-    position: "relative" as const,
-    display: "flex"
-  },
-  image: {
-    width: "100%"
-  }
-};
-
 const ImageContainer = styled.section`
   position: relative;
   display: flex;
 `;
 
-const Image = styled.image`
+interface ImageProps {
+  src: string;
+}
+
+const Image = styled.img`
   width: 100%;
 `;
 
