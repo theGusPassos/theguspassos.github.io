@@ -1,12 +1,13 @@
 import React from "react";
 import Tag from "./Tag";
+import styled from "styled-components";
 
-const style = {
-  position: "absolute" as const,
-  top: "0px",
-  left: "0px",
-  width: "100%"
-};
+const Tags = styled.div`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+`;
 
 interface TagContainerProps {
   tags: string[];
@@ -14,11 +15,11 @@ interface TagContainerProps {
 
 function TagContainer(props: TagContainerProps) {
   return (
-    <div style={style}>
+    <Tags>
       {props.tags.map((value: string, i: number) => {
         return <Tag name={value} key={i}></Tag>;
       })}
-    </div>
+    </Tags>
   );
 }
 

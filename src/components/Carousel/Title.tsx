@@ -1,16 +1,19 @@
 import React from "react";
 import { colors } from "../../shared/colors";
+import styled from "styled-components";
 
-const style = {
-  background: colors.mainColor,
-  color: colors.mainTextColor,
-  textAlign: "center" as const,
-  padding: "10px",
-  fontSize: "0.95em"
-};
+const TitleContent = styled.div`
+  background: ${colors.mainColor};
+  color: ${colors.mainColor};
+  text-align: center;
+  padding: 10px;
+  font-size: 0.95em;
+`;
 
 function Title() {
-  return <div style={style}>those are some of the projects I've worked on</div>;
+  return (
+    <TitleContent>those are some of the projects I've worked on</TitleContent>
+  );
 }
 
 export default Title;
