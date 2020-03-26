@@ -10,7 +10,7 @@ const BodyGrid = styled.body`
   height: 100%;
 `;
 
-function Body() {
+const Body = () => {
   return (
     <BodyGrid>
       <Header></Header>
@@ -18,6 +18,6 @@ function Body() {
       <Menu></Menu>
     </BodyGrid>
   );
-}
+};
 
 export default Body;

@@ -3,8 +3,8 @@ import { CarouselProvider, Slider } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import SlideContent from "./Slide/SlideContent";
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
-import Title from "./Title";
-import Project from "../../shared/project";
+import CarouselTitle from "./CarouselTitle";
+import Project from "../../models/project";
 
 const projectsInCarousel: Project[] = [
   {
@@ -15,10 +15,10 @@ const projectsInCarousel: Project[] = [
   }
 ];
 
-function CarouselContent() {
+const CarouselContent = () => {
   return (
     <div>
-      <Title></Title>
+      <CarouselTitle></CarouselTitle>
       <CarouselProvider
         naturalSlideWidth={13}
         naturalSlideHeight={10}
@@ -35,6 +35,6 @@ function CarouselContent() {
       </CarouselProvider>
     </div>
   );
-}
+};
 
 export default CarouselContent;

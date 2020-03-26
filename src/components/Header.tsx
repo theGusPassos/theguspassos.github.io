@@ -29,7 +29,7 @@ const JobTitle = styled.div`
   }
 `;
 
-function Header() {
+const Header = () => {
   return (
     <Background>
       <NameContainer>
@@ -38,6 +38,6 @@ function Header() {
       </NameContainer>
     </Background>
   );
-}
+};
 
 export default Header;

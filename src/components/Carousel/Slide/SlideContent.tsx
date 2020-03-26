@@ -1,8 +1,8 @@
 import React from "react";
 import { Slide } from "pure-react-carousel";
 import TagContainer from "./TagContainer";
-import Project from "../../../shared/project";
-import Description from "./Description";
+import Project from "../../../models/project";
+import SlideDescription from "./SlideDescription";
 import styled from "styled-components";
 
 const ImageContainer = styled.section`
@@ -23,16 +23,16 @@ interface ProjectSlideProps {
   project: Project;
 }
 
-function SlideContent(props: ProjectSlideProps) {
+const SlideContent = (props: ProjectSlideProps) => {
   return (
     <Slide index={props.index}>
       <ImageContainer>
         <TagContainer tags={props.project.tags}></TagContainer>
         <Image src={props.project.image} alt={props.project.imageAlt}></Image>
-        <Description></Description>
+        <SlideDescription></SlideDescription>
       </ImageContainer>
     </Slide>
   );
-}
+};
 
 export default SlideContent;

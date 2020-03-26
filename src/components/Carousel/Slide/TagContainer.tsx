@@ -13,7 +13,7 @@ interface TagContainerProps {
   tags: string[];
 }
 
-function TagContainer(props: TagContainerProps) {
+const TagContainer = (props: TagContainerProps) => {
   return (
     <Tags>
       {props.tags.map((value: string, i: number) => {
@@ -21,6 +21,6 @@ function TagContainer(props: TagContainerProps) {
       })}
     </Tags>
   );
-}
+};
 
 export default TagContainer;

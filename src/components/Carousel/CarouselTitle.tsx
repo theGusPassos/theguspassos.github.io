@@ -10,10 +10,10 @@ const TitleContent = styled.div`
   font-size: 0.95em;
 `;
 
-function Title() {
+const CarouselTitle = () => {
   return (
     <TitleContent>those are some of the projects I've worked on</TitleContent>
   );
-}
+};
 
-export default Title;
+export default CarouselTitle;

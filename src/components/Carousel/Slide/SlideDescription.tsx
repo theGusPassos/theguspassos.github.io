@@ -29,7 +29,7 @@ const style = {
   }
 };
 
-function Description() {
+const SlideDescription = () => {
   return (
     <div style={style.container}>
       <div style={style.title}>
@@ -41,6 +41,6 @@ function Description() {
       </div>
     </div>
   );
-}
+};
 
-export default Description;
+export default SlideDescription;

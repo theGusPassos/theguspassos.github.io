@@ -20,8 +20,8 @@ interface TagProps {
   name: string;
 }
 
-function Tag(props: TagProps): React.ReactElement {
+const Tag = (props: TagProps): React.ReactElement => {
   return <TagName>{props.name}</TagName>;
-}
+};
 
 export default Tag;
