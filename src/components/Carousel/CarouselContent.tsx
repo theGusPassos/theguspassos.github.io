@@ -24,20 +24,9 @@ const CarouselContent = () => {
   return (
     <CarouselContainer>
       <CarouselTitle></CarouselTitle>
-      <CarouselProvider
-        naturalSlideWidth={1}
-        naturalSlideHeight={1}
-        visibleSlides={1}
-        totalSlides={1}
-      >
-        <Slider>
-          {projectsInCarousel.map((value: Project, i: number) => {
-            return (
-              <SlideContent index={i} project={value} key={i}></SlideContent>
-            );
-          })}
-        </Slider>
-      </CarouselProvider>
+      {projectsInCarousel.map((value: Project, i: number) => {
+        return <SlideContent index={i} project={value} key={i}></SlideContent>;
+      })}
     </CarouselContainer>
   );
 };

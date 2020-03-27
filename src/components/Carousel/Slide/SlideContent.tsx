@@ -36,16 +36,14 @@ const getImageByDeviceSize = (project: Project) => {
 
 const SlideContent = (props: ProjectSlideProps) => {
   return (
-    <Slide index={props.index}>
-      <ImageContainer>
-        <TagContainer tags={props.project.tags}></TagContainer>
-        <Image
-          src={getImageByDeviceSize(props.project)}
-          alt={props.project.imageAlt}
-        ></Image>
-        <SlideDescription></SlideDescription>
-      </ImageContainer>
-    </Slide>
+    <ImageContainer>
+      <TagContainer tags={props.project.tags}></TagContainer>
+      <Image
+        src={getImageByDeviceSize(props.project)}
+        alt={props.project.imageAlt}
+      ></Image>
+      <SlideDescription></SlideDescription>
+    </ImageContainer>
   );
 };
 
