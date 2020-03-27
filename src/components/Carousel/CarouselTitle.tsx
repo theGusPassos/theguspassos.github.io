@@ -6,8 +6,7 @@ import { device } from "../../shared/device";
 const TitleContent = styled.div`
   background: ${colors.mainColor};
   color: ${colors.mainTextColor};
-  text-align: center;
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 0.95em;
 
   @media ${device.tablet} {

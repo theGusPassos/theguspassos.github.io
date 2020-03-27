@@ -18,9 +18,7 @@ const DescriptionContainer = styled.div`
 
 const Title = styled.div`
   background: ${colors.mainColor};
-  width: 40%;
-  text-align: center;
-  padding: 10px 5px;
+  padding: 10px 20px;
   color: #fff;
   font-size: 1.1em;
   letter-spacing: 5px;
@@ -39,7 +37,7 @@ const Description = styled.div`
   font-size: 0.9em;
   background: #e6e6e6;
   width: 100%;
-  padding: 10px;
+  padding: 10px 20px;
 
   @media ${device.tablet} {
     font-size: 1.1em;
