@@ -1,6 +1,7 @@
 import React from "react";
 import { colors } from "../../../shared/colors";
 import styled from "styled-components";
+import { device } from "../../../shared/device";
 
 const TagName = styled.div`
   font-size: 0.8em;
@@ -14,6 +15,12 @@ const TagName = styled.div`
   border-color: ${colors.mainColor};
   border-radius: 50px;
   float: right;
+
+  @media ${device.tablet} {
+    font-size: 1.2em;
+    min-width: 100px;
+    margin: 15px;
+  }
 `;
 
 interface TagProps {

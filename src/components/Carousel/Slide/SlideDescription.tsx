@@ -11,6 +11,8 @@ const DescriptionContainer = styled.div`
   height: 25%;
 
   @media ${device.tablet} {
+    bottom: 0;
+    width: 60%;
   }
 `;
 
@@ -25,6 +27,12 @@ const Title = styled.div`
   border: 1px solid #c2c2c2;
   position: absolute;
   top: -35px;
+
+  @media ${device.tablet} {
+    font-size: 1.3em;
+    top: -60px;
+    padding: 20px;
+  }
 `;
 
 const Description = styled.div`
@@ -32,6 +40,11 @@ const Description = styled.div`
   background: #e6e6e6;
   width: 100%;
   padding: 10px;
+
+  @media ${device.tablet} {
+    font-size: 1.1em;
+    border-radius: 0 30px 0 0;
+  }
 `;
 
 const SlideDescription = () => {

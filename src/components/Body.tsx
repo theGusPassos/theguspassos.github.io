@@ -3,11 +3,16 @@ import Header from "./Header";
 import CarouselContent from "./Carousel/CarouselContent";
 import Menu from "./Menu";
 import styled from "styled-components";
+import { device } from "../shared/device";
 
 const BodyGrid = styled.body`
   display: grid;
   grid-template-rows: 15% 45% 40%;
   height: 100%;
+
+  @media ${device.tablet} {
+    grid-template-rows: 15% 55% 30%;
+  }
 `;
 
 const Body = () => {

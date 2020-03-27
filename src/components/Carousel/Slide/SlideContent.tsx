@@ -4,12 +4,16 @@ import TagContainer from "./TagContainer";
 import Project from "../../../models/project";
 import SlideDescription from "./SlideDescription";
 import styled from "styled-components";
-import { deviceSize } from "../../../shared/device";
+import { deviceSize, device } from "../../../shared/device";
 
 const ImageContainer = styled.section`
   position: relative;
   display: flex;
   max-height: 250px;
+
+  @media ${device.tablet} {
+    max-height: 350px;
+  }
 `;
 
 const Image = styled.img`

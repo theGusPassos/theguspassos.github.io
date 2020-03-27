@@ -6,7 +6,7 @@ import CarouselTitle from "./CarouselTitle";
 import Project from "../../models/project";
 import styled from "styled-components";
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
-import sketchImageBig from "../../images/projects/sketch/sketch-carousel-big.jpg";
+import sketchImageBig from "../../images/projects/sketch/sketch-carousel-big.png";
 
 const projectsInCarousel: Project[] = [
   {

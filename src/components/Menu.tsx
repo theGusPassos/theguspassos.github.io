@@ -1,6 +1,7 @@
 import React from "react";
 import { colors } from "../shared/colors";
 import styled from "styled-components";
+import { device } from "../shared/device";
 
 const NavMenu = styled.nav`
   position: relative;
@@ -14,11 +15,20 @@ const LinkContainer = styled.ul`
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+
+  @media ${device.tablet} {
+    display: inline-flex;
+  }
 `;
 
 const Link = styled.li`
   text-align: center;
   list-style: none;
+
+  @media ${device.tablet} {
+    margin: auto;
+    width: 30%;
+  }
 `;
 
 interface ButtonProps {
@@ -41,6 +51,18 @@ const Button = styled.button`
     cursor: pointer;
     outline: none;
     text-decoration: underline;
+  }
+
+  @media ${device.tablet} {
+    width: 100%;
+    font-size: 1.6em;
+    padding: 15% 0;
+    border-bottom: none;
+    border-top: none;
+    border-left: ${(props: ButtonProps) =>
+      props.border ? "solid 1px" : "none"};
+    border-right: ${(props: ButtonProps) =>
+      props.border ? "solid 1px" : "none"};
   }
 `;
 

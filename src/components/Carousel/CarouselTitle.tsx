@@ -1,6 +1,7 @@
 import React from "react";
 import { colors } from "../../shared/colors";
 import styled from "styled-components";
+import { device } from "../../shared/device";
 
 const TitleContent = styled.div`
   background: ${colors.mainColor};
@@ -8,6 +9,10 @@ const TitleContent = styled.div`
   text-align: center;
   padding: 10px;
   font-size: 0.95em;
+
+  @media ${device.tablet} {
+    font-size: 1.2em;
+  }
 `;
 
 const CarouselTitle = () => {

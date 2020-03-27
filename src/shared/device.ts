@@ -1,5 +1,5 @@
 export const deviceSize = {
-  tablet: 425,
+  tablet: 500,
   desktop: 2560
 };
 
