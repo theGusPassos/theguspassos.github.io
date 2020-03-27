@@ -10,14 +10,14 @@ const Background = styled.header`
 `;
 
 const NameContainer = styled.div`
-  padding: 20px;
+  padding: 5%;
 `;
 
 const DevName = styled.div`
   font-size: 1em;
 
   @media ${device.tablet} {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 `;
 
@@ -25,7 +25,7 @@ const JobTitle = styled.div`
   font-size: 1.5em;
 
   @media ${device.tablet} {
-    font-size: 1.7em;
+    font-size: 1.9em;
   }
 `;
 

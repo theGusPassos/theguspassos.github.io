@@ -9,6 +9,7 @@ const DescriptionContainer = styled.div`
   width: 100%;
 
   @media ${device.tablet} {
+    position: absolute;
     bottom: 0;
     width: 60%;
   }
@@ -16,7 +17,7 @@ const DescriptionContainer = styled.div`
 
 const Title = styled.strong`
   background: ${colors.mainColor};
-  padding: 10px 20px;
+  padding: 10px 5%;
   color: #fff;
   font-size: 1.1em;
   letter-spacing: 5px;
@@ -26,20 +27,21 @@ const Title = styled.strong`
   top: -35px;
 
   @media ${device.tablet} {
-    font-size: 1.2em;
+    font-size: 1.4em;
     top: -60px;
-    padding: 20px;
+    padding: 20px 5%;
   }
 `;
 
 const Description = styled.div`
   font-size: 0.9em;
   background: #e6e6e6;
-  padding: 10px 20px;
+  padding: 10px 5%;
 
   @media ${device.tablet} {
-    font-size: 1.1em;
+    font-size: 1.3em;
     border-radius: 0 30px 0 0;
+    padding: 20px 5%;
   }
 `;
 
