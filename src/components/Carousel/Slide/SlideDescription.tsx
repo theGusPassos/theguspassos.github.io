@@ -27,7 +27,7 @@ const Title = styled.div`
   top: -35px;
 
   @media ${device.tablet} {
-    font-size: 1.3em;
+    font-size: 1.2em;
     top: -60px;
     padding: 20px;
   }

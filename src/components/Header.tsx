@@ -17,7 +17,7 @@ const DevName = styled.div`
   font-size: 1em;
 
   @media ${device.tablet} {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 `;
 
@@ -25,7 +25,7 @@ const JobTitle = styled.div`
   font-size: 1.5em;
 
   @media ${device.tablet} {
-    font-size: 1.8em;
+    font-size: 1.7em;
   }
 `;
 
