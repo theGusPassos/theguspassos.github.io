@@ -1,5 +1,4 @@
 import React from "react";
-import { Slide } from "pure-react-carousel";
 import TagContainer from "./TagContainer";
 import Project from "../../../models/project";
 import SlideDescription from "./SlideDescription";
