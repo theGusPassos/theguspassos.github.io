@@ -74,7 +74,7 @@ const Menu = () => {
           <Button border>About me</Button>
         </Link>
         <Link>
-          <Button>Contact</Button>
+          <Button>Contact me</Button>
         </Link>
       </LinkContainer>
     </NavMenu>
