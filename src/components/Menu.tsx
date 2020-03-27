@@ -52,7 +52,7 @@ const Button = styled.button`
 
   @media ${device.tablet} {
     width: 100%;
-    font-size: 1.6em;
+    font-size: 1.8em;
     padding: 15% 0;
     border-bottom: none;
     border-top: none;

@@ -10,7 +10,11 @@ const Background = styled.header`
 `;
 
 const NameContainer = styled.div`
-  padding: 5%;
+  padding: 20px;
+
+  @media ${device.tablet} {
+    padding: 30px;
+  }
 `;
 
 const DevName = styled.div`
