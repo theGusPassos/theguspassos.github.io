@@ -1,9 +1,9 @@
-const size = {
-  tablet: "500px",
-  desktop: "2560px"
+export const deviceSize = {
+  tablet: 425,
+  desktop: 2560
 };
 
 export const device = {
-  tablet: `(min-width: ${size.tablet})`,
-  desktop: `(min-width: ${size.desktop})`
+  tablet: `(min-width: ${deviceSize.tablet}px)`,
+  desktop: `(min-width: ${deviceSize.desktop}px)`
 };

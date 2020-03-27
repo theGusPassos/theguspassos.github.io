@@ -4,15 +4,13 @@ import TagContainer from "./TagContainer";
 import Project from "../../../models/project";
 import SlideDescription from "./SlideDescription";
 import styled from "styled-components";
+import { deviceSize } from "../../../shared/device";
 
 const ImageContainer = styled.section`
   position: relative;
   display: flex;
+  max-height: 250px;
 `;
-
-interface ImageProps {
-  src: string;
-}
 
 const Image = styled.img`
   width: 100%;
@@ -23,12 +21,21 @@ interface ProjectSlideProps {
   project: Project;
 }
 
+const getImageByDeviceSize = (project: Project) => {
+  return window.screen.width < deviceSize.tablet
+    ? project.image
+    : project.imageBig;
+};
+
 const SlideContent = (props: ProjectSlideProps) => {
   return (
     <Slide index={props.index}>
       <ImageContainer>
         <TagContainer tags={props.project.tags}></TagContainer>
-        <Image src={props.project.image} alt={props.project.imageAlt}></Image>
+        <Image
+          src={getImageByDeviceSize(props.project)}
+          alt={props.project.imageAlt}
+        ></Image>
         <SlideDescription></SlideDescription>
       </ImageContainer>
     </Slide>

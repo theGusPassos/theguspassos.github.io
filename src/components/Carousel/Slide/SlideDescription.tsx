@@ -1,45 +1,50 @@
 import React from "react";
 import { colors } from "../../../shared/colors";
+import styled from "styled-components";
+import { device } from "../../../shared/device";
 
-const style = {
-  container: {
-    display: "flex",
-    position: "absolute" as const,
-    bottom: "-15%",
-    width: "100%",
-    height: "25%"
-  },
-  title: {
-    background: colors.mainColor,
-    width: "40%",
-    textAlign: "center" as const,
-    padding: "10px 5px",
-    color: "#fff",
-    fontSize: "1.1em",
-    letterSpacing: "5px",
-    border: "1px solid #c2c2c2",
-    position: "absolute" as const,
-    top: "-35px"
-  },
-  description: {
-    fontSize: "0.9em",
-    background: "#e6e6e6" as const,
-    width: "100%",
-    padding: "10px"
+const DescriptionContainer = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: -15%;
+  width: 100%;
+  height: 25%;
+
+  @media ${device.tablet} {
   }
-};
+`;
+
+const Title = styled.div`
+  background: ${colors.mainColor};
+  width: 40%;
+  text-align: center;
+  padding: 10px 5px;
+  color: #fff;
+  font-size: 1.1em;
+  letter-spacing: 5px;
+  border: 1px solid #c2c2c2;
+  position: absolute;
+  top: -35px;
+`;
+
+const Description = styled.div`
+  font-size: 0.9em;
+  background: #e6e6e6;
+  width: 100%;
+  padding: 10px;
+`;
 
 const SlideDescription = () => {
   return (
-    <div style={style.container}>
-      <div style={style.title}>
+    <DescriptionContainer>
+      <Title>
         <strong>SKETCH</strong>
-      </div>
-      <div style={style.description}>
+      </Title>
+      <Description>
         My firt project made with commercial intent. There’s a playable demo
         available
-      </div>
-    </div>
+      </Description>
+    </DescriptionContainer>
   );
 };
 

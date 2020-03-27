@@ -2,14 +2,16 @@ import React from "react";
 import { CarouselProvider, Slider } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import SlideContent from "./Slide/SlideContent";
-import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
 import CarouselTitle from "./CarouselTitle";
 import Project from "../../models/project";
 import styled from "styled-components";
+import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
+import sketchImageBig from "../../images/projects/sketch/sketch-carousel-big.jpg";
 
 const projectsInCarousel: Project[] = [
   {
     image: sketchImage,
+    imageBig: sketchImageBig,
     imageAlt: "Image the game Sketch",
     name: "sketch",
     tags: ["Unity", "C#"]
@@ -23,8 +25,8 @@ const CarouselContent = () => {
     <CarouselContainer>
       <CarouselTitle></CarouselTitle>
       <CarouselProvider
-        naturalSlideWidth={13}
-        naturalSlideHeight={10}
+        naturalSlideWidth={1}
+        naturalSlideHeight={1}
         visibleSlides={1}
         totalSlides={1}
       >
