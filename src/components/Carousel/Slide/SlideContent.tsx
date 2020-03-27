@@ -5,11 +5,12 @@ import Project from "../../../models/project";
 import SlideDescription from "./SlideDescription";
 import styled from "styled-components";
 import { deviceSize, device } from "../../../shared/device";
+import { colors } from "../../../shared/colors";
 
 const ImageContainer = styled.section`
   position: relative;
   display: block;
-  height: 100%;
+  background-color: ${colors.mainBackgroundColor};
 
   @media ${device.tablet} {
     max-height: 350px;
@@ -18,7 +19,8 @@ const ImageContainer = styled.section`
 
 const Image = styled.img`
   display: block;
-  width: 100%;
+  height: 100%;
+  margin: auto;
 `;
 
 interface ProjectSlideProps {

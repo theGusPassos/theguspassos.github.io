@@ -7,7 +7,7 @@ import { device } from "../shared/device";
 
 const BodyGrid = styled.body`
   display: grid;
-  grid-template-rows: 15% 45% 40%;
+  grid-template-rows: 15% 50% 35%;
   height: 100%;
 
   @media ${device.tablet} {

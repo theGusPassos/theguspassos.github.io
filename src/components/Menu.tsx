@@ -3,17 +3,11 @@ import { colors } from "../shared/colors";
 import styled from "styled-components";
 import { device } from "../shared/device";
 
-const NavMenu = styled.nav`
-  position: relative;
-`;
+const NavMenu = styled.nav``;
 
 const LinkContainer = styled.ul`
   margin: 0;
   padding: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
 
   @media ${device.tablet} {
