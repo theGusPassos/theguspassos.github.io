@@ -8,8 +8,8 @@ import { deviceSize, device } from "../../../shared/device";
 
 const ImageContainer = styled.section`
   position: relative;
-  display: flex;
-  max-height: 250px;
+  display: block;
+  height: 100%;
 
   @media ${device.tablet} {
     max-height: 350px;
@@ -17,6 +17,7 @@ const ImageContainer = styled.section`
 `;
 
 const Image = styled.img`
+  display: block;
   width: 100%;
 `;
 
