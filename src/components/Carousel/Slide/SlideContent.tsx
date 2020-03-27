@@ -18,7 +18,7 @@ const ImageContainer = styled.section`
 
 const Image = styled.img`
   display: block;
-  height: 100%;
+  width: 100%;
   margin: auto;
 `;
 

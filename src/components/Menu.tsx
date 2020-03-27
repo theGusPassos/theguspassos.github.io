@@ -3,10 +3,13 @@ import { colors } from "../shared/colors";
 import styled from "styled-components";
 import { device } from "../shared/device";
 
-const NavMenu = styled.nav``;
+const NavMenu = styled.nav`
+  flex: 1;
+  display: flex;
+`;
 
 const LinkContainer = styled.ul`
-  margin: 0;
+  margin: auto;
   padding: 0;
   width: 100%;
 
@@ -35,7 +38,7 @@ const Button = styled.button`
   background: ${colors.secondBackgroundColor};
   font-size: 1.2em;
   border: none;
-  padding: 6% 0;
+  padding: 4% 0;
   border-bottom: ${(props: ButtonProps) =>
     props.border ? "solid 1px" : "none"};
   border-top: ${(props: ButtonProps) => (props.border ? "solid 1px" : "none")};

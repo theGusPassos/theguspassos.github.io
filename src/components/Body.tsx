@@ -4,7 +4,11 @@ import CarouselContent from "./Carousel/CarouselContent";
 import Menu from "./Menu";
 import styled from "styled-components";
 
-const BodyGrid = styled.body``;
+const BodyGrid = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
 
 const Body = () => {
   return (
