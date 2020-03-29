@@ -17,8 +17,8 @@ const TagName = styled.div`
   float: right;
 
   @media ${device.tablet} {
-    font-size: 1.3em;
-    min-width: 100px;
+    font-size: 1.2em;
+    min-width: 90px;
     margin: 15px;
   }
 `;

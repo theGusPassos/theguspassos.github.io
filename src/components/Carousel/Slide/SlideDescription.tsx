@@ -27,7 +27,7 @@ const Title = styled.strong`
   padding: 10px 20px;
 
   @media ${device.tablet} {
-    font-size: 1.4em;
+    font-size: 1.3em;
     top: -60px;
     padding: 20px 30px;
   }
@@ -39,7 +39,7 @@ const Description = styled.div`
   padding: 10px 20px;
 
   @media ${device.tablet} {
-    font-size: 1.3em;
+    font-size: 1.2em;
     border-radius: 0 30px 0 0;
     padding: 20px 30px;
   }

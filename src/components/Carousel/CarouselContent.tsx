@@ -16,7 +16,9 @@ const projectsInCarousel: Project[] = [
   }
 ];
 
-const CarouselContainer = styled.div``;
+const CarouselContainer = styled.div`
+  z-index: 10;
+`;
 
 const CarouselContent = () => {
   return (

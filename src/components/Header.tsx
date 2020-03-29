@@ -7,6 +7,7 @@ const Background = styled.header`
   width: 100%;
   background-color: ${colors.mainColor};
   color: ${colors.mainTextColor};
+  z-index: 10;
 `;
 
 const NameContainer = styled.div`

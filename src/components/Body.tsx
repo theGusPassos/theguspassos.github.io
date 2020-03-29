@@ -3,20 +3,37 @@ import Header from "./Header";
 import CarouselContent from "./Carousel/CarouselContent";
 import Menu from "./Menu";
 import styled from "styled-components";
+import { colors } from "../shared/colors";
+
+const Content = styled.div`
+  height: 100%;
+`;
 
 const BodyGrid = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  max-width: 900px;
+  margin: auto;
+`;
+
+const Background = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  background-color: ${colors.mainColor};
 `;
 
 const Body = () => {
   return (
-    <BodyGrid>
-      <Header></Header>
-      <CarouselContent></CarouselContent>
-      <Menu></Menu>
-    </BodyGrid>
+    <Content>
+      <Background></Background>
+      <BodyGrid>
+        <Header></Header>
+        <CarouselContent></CarouselContent>
+        <Menu></Menu>
+      </BodyGrid>
+    </Content>
   );
 };
 

@@ -3,13 +3,17 @@ import TagContainer from "./TagContainer";
 import Project from "../../../models/project";
 import SlideDescription from "./SlideDescription";
 import styled from "styled-components";
-import { deviceSize } from "../../../shared/device";
+import { deviceSize, device } from "../../../shared/device";
 import { colors } from "../../../shared/colors";
 
 const ImageContainer = styled.section`
   position: relative;
   display: block;
   background-color: ${colors.mainBackgroundColor};
+
+  @media ${device.tablet} {
+    margin: 30px;
+  }
 `;
 
 const Image = styled.img`
