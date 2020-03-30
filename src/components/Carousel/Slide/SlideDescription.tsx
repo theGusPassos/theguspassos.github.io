@@ -45,16 +45,20 @@ const Description = styled.div`
   }
 `;
 
-const SlideDescription = () => {
+const SlideDescription = (props: SlideDescriptionProps) => {
   return (
     <DescriptionContainer>
       <Description>
         My firt project made with commercial intent. There’s a playable demo
         available
       </Description>
-      <Title>Sketch</Title>
+      <Title>{props.projectName}</Title>
     </DescriptionContainer>
   );
 };
+
+interface SlideDescriptionProps {
+  projectName: string;
+}
 
 export default SlideDescription;

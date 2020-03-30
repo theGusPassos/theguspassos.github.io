@@ -4,6 +4,7 @@ import CarouselContent from "./Carousel/CarouselContent";
 import Menu from "./Menu";
 import styled from "styled-components";
 import { colors } from "../shared/colors";
+import "@brainhubeu/react-carousel/lib/style.css";
 
 const Content = styled.div`
   height: 100%;
