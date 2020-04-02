@@ -24,6 +24,7 @@ const Title = styled.strong`
   border: 1px solid #c2c2c2;
   position: absolute;
   top: -35px;
+  left: 0;
   padding: 10px 20px;
 
   @media ${device.tablet} {

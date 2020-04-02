@@ -10,10 +10,6 @@ const ImageContainer = styled.section`
   position: relative;
   display: block;
   background-color: ${colors.mainBackgroundColor};
-
-  @media ${device.tablet} {
-    margin: 30px;
-  }
 `;
 
 const Image = styled.img`
