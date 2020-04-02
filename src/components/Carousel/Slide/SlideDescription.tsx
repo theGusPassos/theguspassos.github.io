@@ -38,6 +38,7 @@ const Description = styled.div`
   font-size: 0.9em;
   background: #e6e6e6;
   padding: 10px 20px;
+  text-align: left;
 
   @media ${device.tablet} {
     font-size: 1.2em;
