@@ -60,6 +60,10 @@ const CarouselContent = () => {
         showStatus={false}
         showIndicators
         emulateTouch
+        autoPlay
+        interval={4000}
+        stopOnHover
+        infiniteLoop
       >
         {projectSlides()}
       </CarouselStyled>
