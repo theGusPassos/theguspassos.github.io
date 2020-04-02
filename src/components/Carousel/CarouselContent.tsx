@@ -7,6 +7,7 @@ import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
 import sketchImageBig from "../../images/projects/sketch/sketch-carousel-big.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { device, deviceSize, isInDesktop } from "../../shared/device";
 
 const projectsInCarousel: Project[] = [
   {
@@ -37,8 +38,9 @@ const CarouselContainer = styled.div`
 `;
 
 const CarouselStyled = styled(Carousel)`
-  li {
-    display: block;
+  .control-dots {
+    top: 0;
+    bottom: unset;
   }
 `;
 
@@ -52,15 +54,15 @@ const CarouselContent = () => {
   return (
     <CarouselContainer>
       <CarouselTitle></CarouselTitle>
-      <Carousel
+      <CarouselStyled
+        showArrows={isInDesktop()}
         showThumbs={false}
-        showIndicators={false}
-        showArrows={false}
-        emulateTouch={true}
         showStatus={false}
+        showIndicators
+        emulateTouch
       >
         {projectSlides()}
-      </Carousel>
+      </CarouselStyled>
     </CarouselContainer>
   );
 };
