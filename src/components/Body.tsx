@@ -4,6 +4,7 @@ import CarouselContent from "./Carousel/CarouselContent";
 import Menu from "./Menu";
 import styled from "styled-components";
 import { colors } from "../shared/colors";
+import HomePage from "./HomePage";
 
 const Content = styled.div`
   height: 100%;
@@ -30,8 +31,7 @@ const Body = () => {
       <Background></Background>
       <BodyGrid>
         <Header></Header>
-        <CarouselContent></CarouselContent>
-        <Menu></Menu>
+        <HomePage></HomePage>
       </BodyGrid>
     </Content>
   );
