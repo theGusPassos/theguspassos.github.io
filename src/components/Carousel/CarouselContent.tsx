@@ -1,6 +1,6 @@
 import React from "react";
 import SlideContent from "./Slide/SlideContent";
-import CarouselTitle from "./CarouselTitle";
+import PageTitle from "../PageTitle";
 import Project from "../../models/project";
 import styled from "styled-components";
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
@@ -53,7 +53,10 @@ function projectSlides() {
 const CarouselContent = () => {
   return (
     <CarouselContainer>
-      <CarouselTitle></CarouselTitle>
+      <PageTitle
+        centered={false}
+        title={"some of the projects I've worked on"}
+      ></PageTitle>
       <CarouselStyled
         showArrows={isInDesktop()}
         showThumbs={false}

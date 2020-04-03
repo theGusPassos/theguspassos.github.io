@@ -1,7 +1,12 @@
 import React from "react";
+import PageTitle from "./PageTitle";
 
 const About = () => {
-  return <div>about me</div>;
+  return (
+    <div>
+      <PageTitle centered title="about me"></PageTitle>
+    </div>
+  );
 };
 
 export default About;

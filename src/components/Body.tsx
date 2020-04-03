@@ -3,6 +3,7 @@ import Header from "./Header";
 import styled from "styled-components";
 import { colors } from "../shared/colors";
 import HomePage from "./HomePage";
+import About from "./About";
 import { HashRouter, Route, Link } from "react-router-dom";
 
 const Content = styled.div`
@@ -27,11 +28,11 @@ const Background = styled.div`
 const Body = () => {
   return (
     <Content>
-      <Background></Background>
       <BodyGrid>
         <Header></Header>
         <HashRouter basename="/">
           <Route exact path="/" component={HomePage}></Route>
+          <Route exact path="/about" component={About}></Route>
         </HashRouter>
       </BodyGrid>
     </Content>
