@@ -4,11 +4,8 @@ import styled from "styled-components";
 import { colors } from "../shared/colors";
 import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
-import { HashRouter, Route, Link } from "react-router-dom";
-
-const Content = styled.div`
-  height: 100%;
-`;
+import { HashRouter, Route, Link, Switch } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const BodyGrid = styled.div`
   display: flex;
@@ -25,17 +22,35 @@ const Background = styled.div`
   background-color: ${colors.mainColor};
 `;
 
+const TransitionGroupStyled = styled(TransitionGroup)`
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+`;
+
 const Body = () => {
   return (
-    <Content>
-      <BodyGrid>
-        <Header></Header>
-        <HashRouter basename="/">
-          <Route exact path="/" component={HomePage}></Route>
-          <Route exact path="/about" component={AboutPage}></Route>
-        </HashRouter>
-      </BodyGrid>
-    </Content>
+    <BodyGrid>
+      <Header></Header>
+      <HashRouter basename="/">
+        <Route
+          render={({ location }) => (
+            <TransitionGroupStyled>
+              <CSSTransition
+                key={location.pathname}
+                classNames="animation"
+                timeout={400}
+              >
+                <Switch location={location}>
+                  <Route exact path="/" component={HomePage}></Route>
+                  <Route exact path="/about" component={AboutPage}></Route>
+                </Switch>
+              </CSSTransition>
+            </TransitionGroupStyled>
+          )}
+        ></Route>
+      </HashRouter>
+    </BodyGrid>
   );
 };
 
