@@ -4,14 +4,7 @@ import styled from "styled-components";
 import { colors } from "../shared/colors";
 import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  Router,
-  BrowserRouter,
-} from "react-router-dom";
+import { HashRouter, Route, Link } from "react-router-dom";
 
 const Content = styled.div`
   height: 100%;
@@ -37,12 +30,10 @@ const Body = () => {
     <Content>
       <BodyGrid>
         <Header></Header>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={HomePage}></Route>
-            <Route exact path="/about" component={AboutPage}></Route>
-          </Switch>
-        </BrowserRouter>
+        <HashRouter basename="/">
+          <Route exact path="/" component={HomePage}></Route>
+          <Route exact path="/about" component={AboutPage}></Route>
+        </HashRouter>
       </BodyGrid>
     </Content>
   );
