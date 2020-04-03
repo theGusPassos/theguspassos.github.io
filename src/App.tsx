@@ -2,8 +2,8 @@ import React from "react";
 import "./App.css";
 import Body from "./components/Body";
 
-function App() {
+const App = () => {
   return <Body></Body>;
-}
+};
 
 export default App;

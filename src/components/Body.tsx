@@ -4,8 +4,15 @@ import styled from "styled-components";
 import { colors } from "../shared/colors";
 import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
-import { HashRouter, Route, Link, Switch } from "react-router-dom";
+import {
+  HashRouter,
+  Route,
+  Link,
+  Switch,
+  BrowserRouter,
+} from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { LastLocationProvider } from "react-router-last-location";
 
 const BodyGrid = styled.div`
   display: flex;
@@ -33,22 +40,24 @@ const Body = () => {
     <BodyGrid>
       <Header></Header>
       <HashRouter basename="/">
-        <Route
-          render={({ location }) => (
-            <TransitionGroupStyled>
-              <CSSTransition
-                key={location.pathname}
-                classNames="animation"
-                timeout={400}
-              >
-                <Switch location={location}>
-                  <Route exact path="/" component={HomePage}></Route>
-                  <Route exact path="/about" component={AboutPage}></Route>
-                </Switch>
-              </CSSTransition>
-            </TransitionGroupStyled>
-          )}
-        ></Route>
+        <LastLocationProvider>
+          <Route
+            render={({ location }) => (
+              <TransitionGroupStyled>
+                <CSSTransition
+                  key={location.pathname}
+                  classNames="animation"
+                  timeout={400}
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={HomePage}></Route>
+                    <Route exact path="/about" component={AboutPage}></Route>
+                  </Switch>
+                </CSSTransition>
+              </TransitionGroupStyled>
+            )}
+          ></Route>
+        </LastLocationProvider>
       </HashRouter>
     </BodyGrid>
   );
