@@ -2,7 +2,6 @@ import React from "react";
 import Menu from "./Menu";
 import CarouselContent from "./Carousel/CarouselContent";
 import styled from "styled-components";
-import { useLastLocation } from "react-router-last-location";
 
 const HomePageStyled = styled.div`
   position: absolute;
