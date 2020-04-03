@@ -1,10 +1,9 @@
 import React from "react";
 import Header from "./Header";
-import CarouselContent from "./Carousel/CarouselContent";
-import Menu from "./Menu";
 import styled from "styled-components";
 import { colors } from "../shared/colors";
 import HomePage from "./HomePage";
+import { HashRouter, Route, Link } from "react-router-dom";
 
 const Content = styled.div`
   height: 100%;
@@ -31,7 +30,9 @@ const Body = () => {
       <Background></Background>
       <BodyGrid>
         <Header></Header>
-        <HomePage></HomePage>
+        <HashRouter basename="/">
+          <Route exact path="/" component={HomePage}></Route>
+        </HashRouter>
       </BodyGrid>
     </Content>
   );

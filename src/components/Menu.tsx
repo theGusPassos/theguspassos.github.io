@@ -2,6 +2,7 @@ import React from "react";
 import { colors } from "../shared/colors";
 import styled from "styled-components";
 import { device } from "../shared/device";
+import { Link } from "react-router-dom";
 
 const NavMenu = styled.nav`
   flex: 1;
@@ -18,7 +19,7 @@ const LinkContainer = styled.ul`
   }
 `;
 
-const Link = styled.li`
+const Item = styled.li`
   text-align: center;
   list-style: none;
 
@@ -63,19 +64,25 @@ const Button = styled.button`
   }
 `;
 
+const LinkStyled = styled(Link)`
+  text-decoration: none;
+`;
+
 const Menu = () => {
   return (
     <NavMenu>
       <LinkContainer>
-        <Link>
+        <Item>
           <Button>My other projects</Button>
-        </Link>
-        <Link>
-          <Button border>About me</Button>
-        </Link>
-        <Link>
+        </Item>
+        <Item>
+          <Link to="/about">
+            <Button border>About me</Button>
+          </Link>
+        </Item>
+        <Item>
           <Button>Contact me</Button>
-        </Link>
+        </Item>
       </LinkContainer>
     </NavMenu>
   );
