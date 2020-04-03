@@ -3,7 +3,7 @@ import Header from "./Header";
 import styled from "styled-components";
 import { colors } from "../shared/colors";
 import HomePage from "./HomePage";
-import About from "./About";
+import AboutPage from "./AboutPage";
 import { HashRouter, Route, Link } from "react-router-dom";
 
 const Content = styled.div`
@@ -32,7 +32,7 @@ const Body = () => {
         <Header></Header>
         <HashRouter basename="/">
           <Route exact path="/" component={HomePage}></Route>
-          <Route exact path="/about" component={About}></Route>
+          <Route exact path="/about" component={AboutPage}></Route>
         </HashRouter>
       </BodyGrid>
     </Content>

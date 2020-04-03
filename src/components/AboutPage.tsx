@@ -1,7 +1,7 @@
 import React from "react";
 import PageTitle from "./PageTitle";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <div>
       <PageTitle centered title="about me"></PageTitle>
@@ -9,4 +9,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;
