@@ -10,6 +10,10 @@ import { Link } from "react-router-dom";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
+
+  @media ${device.tablet} {
+    font-size: 1.1em;
+  }
 `;
 
 const AboutPageAnimated = GetAnimationStyle(
@@ -23,6 +27,10 @@ const Image = styled.img`
   display: flex;
   width: 45%;
   margin: 5% auto;
+
+  @media ${device.tablet} {
+    width: 30%;
+  }
 `;
 
 const Info = styled.div`
@@ -39,6 +47,10 @@ const Bio = styled.div`
 
   @media ${device.tablet} {
     padding: 30px;
+
+    p {
+      margin: 30px 0;
+    }
   }
 `;
 
@@ -55,6 +67,10 @@ const LinkContainer = styled.ul`
   a {
     display: block;
     text-align: center;
+  }
+
+  @media ${device.tablet} {
+    font-size: 0.9em;
   }
 `;
 
