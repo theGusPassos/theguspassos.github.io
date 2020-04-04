@@ -12,13 +12,13 @@ export const getCurrentAnimation = (
   currentLocation: string,
   lastLocation: string | undefined
 ) => {
-  return currentLocation == homePathHash
+  return currentLocation === homePathHash
     ? getAnimationBasedOnLocation(lastLocation)
     : getAnimationBasedOnLocation(currentLocation.replace("#", ""));
 };
 
 const getAnimationBasedOnLocation = (location: string | undefined) => {
-  if (location == aboutPath)
+  if (location === aboutPath)
     return GetEnterStartPosition(AnimationDirection.FromRight);
   else return GetEnterStartPosition(AnimationDirection.FromUp);
 };

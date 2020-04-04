@@ -1,13 +1,12 @@
 import React from "react";
 import SlideContent from "./Slide/SlideContent";
-import PageTitle from "../common/PageTitle";
 import Project from "../../models/project";
 import styled from "styled-components";
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";
 import sketchImageBig from "../../images/projects/sketch/sketch-carousel-big.png";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { device, deviceSize, isInDesktop } from "../../shared/device";
+import { isInDesktop } from "../../shared/device";
 
 const projectsInCarousel: Project[] = [
   {
