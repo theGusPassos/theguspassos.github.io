@@ -8,7 +8,7 @@ interface TitleProps {
 }
 
 const TitleContent = styled.div`
-  background: ${colors.mainColor};
+  background: ${colors.secondColor};
   color: ${colors.mainTextColor};
   padding: 10px 20px;
   font-size: 0.95em;
