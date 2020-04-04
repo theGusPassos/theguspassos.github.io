@@ -15,22 +15,22 @@ const projectsInCarousel: Project[] = [
     imageBig: sketchImageBig,
     imageAlt: "Image the game Sketch",
     name: "sketch 1",
-    tags: ["Unity", "C#"]
+    tags: ["Unity", "C#"],
   },
   {
     image: sketchImage,
     imageBig: sketchImageBig,
     imageAlt: "Image the game Sketch",
     name: "sketch 2",
-    tags: ["Unity", "C#"]
+    tags: ["Unity", "C#"],
   },
   {
     image: sketchImage,
     imageBig: sketchImageBig,
     imageAlt: "Image the game Sketch",
     name: "sketch 3",
-    tags: ["Unity", "C#"]
-  }
+    tags: ["Unity", "C#"],
+  },
 ];
 
 const CarouselContainer = styled.div`
@@ -53,10 +53,6 @@ function projectSlides() {
 const CarouselContent = () => {
   return (
     <CarouselContainer>
-      <PageTitle
-        centered={false}
-        title={"some of the projects I've worked on"}
-      ></PageTitle>
       <CarouselStyled
         showArrows={isInDesktop()}
         showThumbs={false}

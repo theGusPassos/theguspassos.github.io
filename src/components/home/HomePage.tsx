@@ -6,11 +6,10 @@ import {
   GetTranslateFromTransform,
   Transform,
   animationSpeed,
-  GetEnterStartPosition,
-  AnimationDirection,
 } from "../../shared/animations";
 import { useLastLocation } from "react-router-last-location";
 import { getCurrentAnimation } from "./homeAnimation";
+import PageTitle from "../PageTitle";
 
 interface HomePageProps {
   transform: Transform;
@@ -59,6 +58,10 @@ const HomePage = () => {
 
   return (
     <HomePageStyled transform={animationDirection}>
+      <PageTitle
+        centered={false}
+        title={"some of the projects I've worked on"}
+      ></PageTitle>
       <CarouselContent></CarouselContent>
       <Menu></Menu>
     </HomePageStyled>

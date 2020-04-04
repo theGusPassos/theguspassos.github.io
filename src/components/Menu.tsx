@@ -64,10 +64,6 @@ const Button = styled.button`
   }
 `;
 
-const LinkStyled = styled(Link)`
-  text-decoration: none;
-`;
-
 const Menu = () => {
   return (
     <NavMenu>
