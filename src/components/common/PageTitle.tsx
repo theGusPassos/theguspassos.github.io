@@ -14,6 +14,8 @@ const TitleContent = styled.div`
   font-size: 0.95em;
   text-align: ${(props: TitleProps) => (props.centered ? "center" : "unset")};
 
+  box-shadow: 0px 3px 11px 0px #0000009c;
+
   @media ${device.tablet} {
     padding: 10px 30px;
     font-size: 1.4em;
