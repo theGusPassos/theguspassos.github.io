@@ -1,7 +1,7 @@
 import React from "react";
 import PageTitle from "./PageTitle";
 import styled from "styled-components";
-import { AnimationStyle, AnimationDirection } from "../shared/animations";
+import { GetAnimationStyle, AnimationDirection } from "../shared/animations";
 
 const AboutPageStyled = styled.div`
   position: absolute;
@@ -9,7 +9,7 @@ const AboutPageStyled = styled.div`
   width: 100%;
 `;
 
-const AboutPageAnimated = AnimationStyle(
+const AboutPageAnimated = GetAnimationStyle(
   AboutPageStyled,
   AnimationDirection.FromLeft
 );

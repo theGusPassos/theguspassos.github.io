@@ -9,7 +9,7 @@ export enum AnimationDirection {
   FromLeft,
 }
 
-export const AnimationStyle = (
+export const GetAnimationStyle = (
   component: AnyStyledComponent,
   animationDirection: AnimationDirection
 ) => styled(component)`
@@ -38,7 +38,7 @@ export const AnimationStyle = (
   }
 `;
 
-const GetEnterStartPosition = (
+export const GetEnterStartPosition = (
   animationDirection: AnimationDirection
 ): Transform => {
   switch (animationDirection) {
@@ -56,11 +56,11 @@ const GetEnterStartPosition = (
   }
 };
 
-const GetTranslateFromTransform = (transform: Transform): string => {
+export const GetTranslateFromTransform = (transform: Transform): string => {
   return `translate(${transform.x}%, ${transform.y}%)`;
 };
 
-interface Transform {
+export interface Transform {
   x: number;
   y: number;
 }
