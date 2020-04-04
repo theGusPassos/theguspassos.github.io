@@ -1,11 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import { device } from "../../shared/device";
 import { colors } from "../../shared/colors";
-import { Link } from "react-router-dom";
 
-const LinkButtonStyle = styled.button`
-  width: 100%;
+const LinkButton = styled.button`
   color: ${colors.mainColor};
   background: ${colors.secondBackgroundColor};
   font-size: 1.2em;
@@ -24,18 +21,5 @@ const LinkButtonStyle = styled.button`
     padding: 15% 0;
   }
 `;
-
-interface LinkButtonProps {
-  to: string;
-  children: string;
-}
-
-const LinkButton = (props: LinkButtonProps) => {
-  return (
-    <Link to={props.to}>
-      <LinkButtonStyle>{props.children}</LinkButtonStyle>
-    </Link>
-  );
-};
 
 export default LinkButton;

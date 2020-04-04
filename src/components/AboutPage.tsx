@@ -6,6 +6,7 @@ import image from "../images/me/EubyKuma.png";
 import { device } from "../shared/device";
 import LinkButton from "./common/LinkButton";
 import PageStyle from "./common/PageStyle";
+import { Link } from "react-router-dom";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -16,15 +17,11 @@ const AboutPageAnimated = GetAnimationStyle(
   AnimationDirection.FromLeft
 );
 
-const AboutContent = styled.section`
-  height: 100%;
-`;
-
 const ImageContainer = styled.div``;
 
 const Image = styled.img`
   display: flex;
-  width: 50%;
+  width: 45%;
   margin: 5% auto;
 `;
 
@@ -38,20 +35,36 @@ const Info = styled.div`
 `;
 
 const Bio = styled.div`
-  padding: 10% 20px;
+  padding: 3% 20px;
 
   @media ${device.tablet} {
     padding: 30px;
   }
 `;
 
-const NavigationButtons = styled.div`
+const NavigationButtons = styled.nav`
   flex: 1;
   display: flex;
 `;
 
-const LinkContainer = styled.div`
+const LinkContainer = styled.ul`
   margin: auto;
+  font-size: 1.1em;
+  padding: 0;
+
+  a {
+    display: block;
+    text-align: center;
+  }
+`;
+
+const Item = styled.li`
+  text-align: center;
+  list-style: none;
+`;
+
+const LinkButtonStyled = styled(LinkButton)`
+  padding: 15% 0;
 `;
 
 const AboutPage = () => {
@@ -80,8 +93,16 @@ const AboutPage = () => {
       </Bio>
       <NavigationButtons>
         <LinkContainer>
-          <LinkButton to="/">My Contacts</LinkButton>
-          <LinkButton to="/">Return</LinkButton>
+          <Item>
+            <Link to="/">
+              <LinkButtonStyled>My Contacts</LinkButtonStyled>
+            </Link>
+          </Item>
+          <Item>
+            <Link to="/">
+              <LinkButtonStyled>Return</LinkButtonStyled>
+            </Link>
+          </Item>
         </LinkContainer>
       </NavigationButtons>
     </AboutPageAnimated>

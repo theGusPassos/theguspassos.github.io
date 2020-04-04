@@ -1,8 +1,8 @@
 import React from "react";
-import { colors } from "../shared/colors";
 import styled from "styled-components";
 import { device } from "../shared/device";
 import { Link } from "react-router-dom";
+import LinkButton from "./common/LinkButton";
 
 const NavMenu = styled.nav`
   flex: 1;
@@ -33,28 +33,14 @@ interface ButtonProps {
   border?: boolean;
 }
 
-const Button = styled.button`
+const MenuButton = styled(LinkButton)`
   width: 70%;
-  color: ${colors.mainColor};
-  background: ${colors.secondBackgroundColor};
-  font-size: 1.2em;
-  border: none;
-  padding: 4% 0;
   border-bottom: ${(props: ButtonProps) =>
     props.border ? "solid 1px" : "none"};
   border-top: ${(props: ButtonProps) => (props.border ? "solid 1px" : "none")};
 
-  :focus,
-  :hover {
-    cursor: pointer;
-    outline: none;
-    text-decoration: underline;
-  }
-
   @media ${device.tablet} {
     width: 100%;
-    font-size: 1.8em;
-    padding: 15% 0;
     border-bottom: none;
     border-top: none;
     border-left: ${(props: ButtonProps) =>
@@ -69,15 +55,15 @@ const Menu = () => {
     <NavMenu>
       <LinkContainer>
         <Item>
-          <Button>My other projects</Button>
+          <MenuButton>My other projects</MenuButton>
         </Item>
         <Item>
           <Link to="/about">
-            <Button border>About me</Button>
+            <MenuButton border>About me</MenuButton>
           </Link>
         </Item>
         <Item>
-          <Button>Contact me</Button>
+          <MenuButton>Contact me</MenuButton>
         </Item>
       </LinkContainer>
     </NavMenu>
