@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import styled from "styled-components";
 import { colors } from "../shared/colors";
-import HomePage from "./HomePage";
+import HomePage from "./home/HomePage";
 import AboutPage from "./AboutPage";
 import {
   HashRouter,

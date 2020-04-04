@@ -1,6 +1,6 @@
 import React from "react";
-import Menu from "./Menu";
-import CarouselContent from "./Carousel/CarouselContent";
+import Menu from "../Menu";
+import CarouselContent from "../Carousel/CarouselContent";
 import styled from "styled-components";
 import {
   GetTranslateFromTransform,
@@ -8,8 +8,9 @@ import {
   animationSpeed,
   GetEnterStartPosition,
   AnimationDirection,
-} from "../shared/animations";
+} from "../../shared/animations";
 import { useLastLocation } from "react-router-last-location";
+import { getCurrentAnimation } from "./homeAnimation";
 
 interface HomePageProps {
   transform: Transform;
@@ -47,35 +48,11 @@ const HomePageStyled = styled.div`
   }
 `;
 
-const getAnimationBasedOnNewLocation = (newLocation: string) => {
-  if (newLocation == "#/about")
-    return GetEnterStartPosition(AnimationDirection.FromRight);
-  return GetEnterStartPosition(AnimationDirection.FromUp);
-};
-
-const getAnimationBasedOnLastLocation = (
-  lastLocation: string | undefined
-): Transform => {
-  if (lastLocation == "/about")
-    return GetEnterStartPosition(AnimationDirection.FromRight);
-  return GetEnterStartPosition(AnimationDirection.FromUp);
-};
-
-const getAnimation = (
-  currentLocation: string,
-  lastLocation: string | undefined
-) => {
-  console.log(currentLocation);
-  if (currentLocation == "#/")
-    return getAnimationBasedOnLastLocation(lastLocation);
-  else return getAnimationBasedOnNewLocation(currentLocation);
-};
-
 const HomePage = () => {
   const currentLocation = window.location.hash;
   const lastLocation = useLastLocation();
 
-  const animationDirection = getAnimation(
+  const animationDirection = getCurrentAnimation(
     currentLocation,
     lastLocation?.pathname
   );
