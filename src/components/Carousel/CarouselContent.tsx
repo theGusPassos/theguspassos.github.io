@@ -1,6 +1,6 @@
 import React from "react";
 import SlideContent from "./Slide/SlideContent";
-import PageTitle from "../PageTitle";
+import PageTitle from "../common/PageTitle";
 import Project from "../../models/project";
 import styled from "styled-components";
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";

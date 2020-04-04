@@ -1,7 +1,7 @@
 import React from "react";
-import { colors } from "../shared/colors";
+import { colors } from "../../shared/colors";
 import styled from "styled-components";
-import { device } from "../shared/device";
+import { device } from "../../shared/device";
 
 interface TitleProps {
   centered: boolean;
@@ -21,12 +21,14 @@ const TitleContent = styled.div`
 `;
 
 interface PageTitleProps {
-  title: string;
+  children: string;
   centered: boolean;
 }
 
 const PageTitle = (props: PageTitleProps) => {
-  return <TitleContent centered={props.centered}>{props.title}</TitleContent>;
+  return (
+    <TitleContent centered={props.centered}>{props.children}</TitleContent>
+  );
 };
 
 export default PageTitle;

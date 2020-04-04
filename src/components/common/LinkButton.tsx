@@ -10,6 +10,7 @@ const LinkButtonStyle = styled.button`
   background: ${colors.secondBackgroundColor};
   font-size: 1.2em;
   border: none;
+  padding: 4% 0;
 
   :focus,
   :hover {

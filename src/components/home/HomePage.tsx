@@ -9,21 +9,14 @@ import {
 } from "../../shared/animations";
 import { useLastLocation } from "react-router-last-location";
 import { getCurrentAnimation } from "./homeAnimation";
-import PageTitle from "../PageTitle";
+import PageTitle from "../common/PageTitle";
+import PageStyle from "../common/PageStyle";
 
 interface HomePageProps {
   transform: Transform;
 }
 
-const HomePageStyled = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-
+const HomePageStyled = styled(PageStyle)`
   &.animation-enter {
     transform: ${(props: HomePageProps) =>
       GetTranslateFromTransform(props.transform)};
@@ -58,10 +51,9 @@ const HomePage = () => {
 
   return (
     <HomePageStyled transform={animationDirection}>
-      <PageTitle
-        centered={false}
-        title={"some of the projects I've worked on"}
-      ></PageTitle>
+      <PageTitle centered={false}>
+        some of the projects I've worked on
+      </PageTitle>
       <CarouselContent></CarouselContent>
       <Menu></Menu>
     </HomePageStyled>

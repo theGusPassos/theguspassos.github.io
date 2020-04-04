@@ -1,18 +1,13 @@
 import React from "react";
-import PageTitle from "./PageTitle";
+import PageTitle from "./common/PageTitle";
 import styled from "styled-components";
 import { GetAnimationStyle, AnimationDirection } from "../shared/animations";
 import image from "../images/me/EubyKuma.png";
 import { device } from "../shared/device";
 import LinkButton from "./common/LinkButton";
+import PageStyle from "./common/PageStyle";
 
-const AboutPageStyled = styled.div`
-  position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
 `;
 
@@ -62,7 +57,7 @@ const LinkContainer = styled.div`
 const AboutPage = () => {
   return (
     <AboutPageAnimated>
-      <PageTitle centered title="about me"></PageTitle>
+      <PageTitle centered>about me</PageTitle>
       <ImageContainer>
         <Image
           src={image}
