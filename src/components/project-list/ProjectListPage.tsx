@@ -5,6 +5,8 @@ import { AnimationDirection, GetAnimationStyle } from "../../shared/animations";
 import PageTitle from "../common/PageTitle";
 import Project from "../../models/project";
 import ProjectCard from "./ProjectCard";
+import LinkButton from "../common/LinkButton";
+import { Link } from "react-router-dom";
 
 const ProjectListPageStyled = styled(PageStyle)``;
 
@@ -15,6 +17,7 @@ const ProjectListPageAnimated = GetAnimationStyle(
 
 const ProjectCardContainer = styled.section`
   margin-top: 20px;
+  height: 90%;
 `;
 
 const mockProjects: Project[] = [
@@ -40,6 +43,9 @@ const mockProjects: Project[] = [
     imageBig: "",
     tags: ["unity"],
   },
+  { name: "big", image: "", imageAlt: "", imageBig: "", tags: ["java"] },
+  { name: "big", image: "", imageAlt: "", imageBig: "", tags: ["java"] },
+  { name: "big", image: "", imageAlt: "", imageBig: "", tags: ["java"] },
 ];
 
 const getProjectCards = () => {
@@ -48,11 +54,24 @@ const getProjectCards = () => {
   });
 };
 
+const LinkStyled = styled(Link)`
+  height: 10%;
+`;
+
+const ReturnButton = styled(LinkButton)`
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+`;
+
 const ProjectListPage = () => {
   return (
     <ProjectListPageAnimated>
       <PageTitle centered>my projects</PageTitle>
       <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
+      <LinkStyled to="/">
+        <ReturnButton>Return</ReturnButton>
+      </LinkStyled>
     </ProjectListPageAnimated>
   );
 };
