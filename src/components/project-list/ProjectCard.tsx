@@ -10,7 +10,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCardStyle = styled.div`
-  padding: 10px 20px;
+  margin: 20px 20px 10px 20px;
+  border-bottom: 2px solid ${colors.mainColor};
 
   @media ${device.tablet} {
     padding: 30px;
@@ -44,7 +45,8 @@ const TagContainerStyled = styled.div`
 
 const ProjectDescription = styled.p`
   clear: both;
-  padding: 10px 0;
+  padding: 20px 0 10px 0;
+  margin: 0;
 `;
 
 const getProjectTags = (project: Project) => {
