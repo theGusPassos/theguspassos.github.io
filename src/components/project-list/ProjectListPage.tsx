@@ -14,7 +14,7 @@ const ProjectListPageAnimated = GetAnimationStyle(
 );
 
 const ProjectCardContainer = styled.section`
-  margin-top: 10px;
+  margin-top: 20px;
 `;
 
 const mockProjects: Project[] = [

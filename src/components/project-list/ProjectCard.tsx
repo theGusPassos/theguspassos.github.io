@@ -10,8 +10,14 @@ interface ProjectCardProps {
 }
 
 const ProjectCardStyle = styled.div`
-  margin: 20px 20px 10px 20px;
+  padding: 20px 20px 10px 20px;
   border-bottom: 2px solid ${colors.mainColor};
+  transition: 0.3s;
+
+  :focus,
+  :hover {
+    background-color: ${colors.buttonClickedColor};
+  }
 
   @media ${device.tablet} {
     padding: 30px;

@@ -4,6 +4,8 @@ const colors = {
   mainBackgroundColor: "#f1f1f1",
   secondColor: "#6B68EE",
   secondBackgroundColor: "#f7f7f7",
+
+  buttonClickedColor: "#dedede",
 };
 
 const buttonColors = {
