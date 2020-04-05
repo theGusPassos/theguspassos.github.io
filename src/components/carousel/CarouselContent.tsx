@@ -1,5 +1,5 @@
 import React from "react";
-import SlideContent from "./Slide/SlideContent";
+import SlideContent from "./slide/SlideContent";
 import Project from "../../models/project";
 import styled from "styled-components";
 import sketchImage from "../../images/projects/sketch/sketch-carousel.png";

@@ -1,10 +1,10 @@
 import React from "react";
-import TagContainer from "./TagContainer";
 import Project from "../../../models/project";
-import SlideDescription from "./SlideDescription";
 import styled from "styled-components";
 import { deviceSize } from "../../../shared/device";
 import { colors } from "../../../shared/colors";
+import TagContainer from "./TagContainer";
+import SlideDescription from "./SlideDescription";
 
 const ImageContainer = styled.section`
   position: relative;

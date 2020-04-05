@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "../Menu";
-import CarouselContent from "../Carousel/CarouselContent";
+import CarouselContent from "../carousel/CarouselContent";
 import styled from "styled-components";
 import {
   GetTranslateFromTransform,

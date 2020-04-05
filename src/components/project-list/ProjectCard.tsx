@@ -1,7 +1,7 @@
 import React from "react";
 import Project from "../../models/project";
 import styled from "styled-components";
-import Tag from "../Carousel/Slide/Tag";
+import Tag from "../carousel/slide/Tag";
 import { device } from "../../shared/device";
 import { colors } from "../../shared/colors";
 
