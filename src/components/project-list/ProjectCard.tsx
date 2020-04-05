@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 const ProjectCardStyle = styled.div`
   padding: 20px 20px 10px 20px;
-  border-bottom: 2px solid ${colors.mainColor};
+  border-bottom: 1px solid ${colors.mainColor};
   transition: 0.3s;
 
   :focus,
