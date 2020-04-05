@@ -17,7 +17,7 @@ const TagContainer = (props: TagContainerProps) => {
   return (
     <Tags>
       {props.tags.map((value: string, i: number) => {
-        return <Tag name={value} key={i}></Tag>;
+        return <Tag key={i}>{value}</Tag>;
       })}
     </Tags>
   );

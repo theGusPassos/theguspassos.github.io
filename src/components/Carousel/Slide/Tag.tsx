@@ -10,7 +10,7 @@ const TagName = styled.div`
   text-align: center;
   min-width: 60px;
   margin: 10px;
-  padding: 3px;
+  padding: 3px 7px;
   border: 3px solid;
   border-color: ${colors.mainColor};
   border-radius: 50px;
@@ -24,11 +24,11 @@ const TagName = styled.div`
 `;
 
 interface TagProps {
-  name: string;
+  children: string;
 }
 
 const Tag = (props: TagProps): React.ReactElement => {
-  return <TagName>{props.name}</TagName>;
+  return <TagName>{props.children}</TagName>;
 };
 
 export default Tag;

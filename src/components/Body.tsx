@@ -6,7 +6,7 @@ import AboutPage from "./AboutPage";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
-import ProjectListPage from "./ProjectListPage";
+import ProjectListPage from "./project-list/ProjectListPage";
 
 const BodyGrid = styled.div`
   display: flex;
