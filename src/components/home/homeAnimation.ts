@@ -7,6 +7,7 @@ const homePath = "/";
 const homePathHash = `#${homePath}`;
 
 const aboutPath = "/about";
+const projectListPath = "/projects";
 
 export const getCurrentAnimation = (
   currentLocation: string,
@@ -20,5 +21,7 @@ export const getCurrentAnimation = (
 const getAnimationBasedOnLocation = (location: string | undefined) => {
   if (location === aboutPath)
     return GetEnterStartPosition(AnimationDirection.FromRight);
+  else if (location === projectListPath)
+    return GetEnterStartPosition(AnimationDirection.FromLeft);
   else return GetEnterStartPosition(AnimationDirection.FromUp);
 };

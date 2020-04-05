@@ -6,6 +6,7 @@ import AboutPage from "./AboutPage";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
+import ProjectListPage from "./ProjectListPage";
 
 const BodyGrid = styled.div`
   display: flex;
@@ -38,6 +39,9 @@ const Body = () => {
                   <Switch location={location}>
                     <Route exact path="/" component={HomePage}></Route>
                     <Route exact path="/about" component={AboutPage}></Route>
+                    <Route exact path="/projects">
+                      <ProjectListPage></ProjectListPage>
+                    </Route>
                   </Switch>
                 </CSSTransition>
               </TransitionGroupStyled>

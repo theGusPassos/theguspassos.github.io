@@ -55,7 +55,9 @@ const Menu = () => {
     <NavMenu>
       <LinkContainer>
         <Item>
-          <MenuButton>My other projects</MenuButton>
+          <Link to="/projects">
+            <MenuButton>My other projects</MenuButton>
+          </Link>
         </Item>
         <Item>
           <Link to="/about">
