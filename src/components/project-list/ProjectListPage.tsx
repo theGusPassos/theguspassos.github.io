@@ -7,6 +7,7 @@ import Project from "../../models/project";
 import ProjectCard from "./ProjectCard";
 import LinkButton from "../common/LinkButton";
 import { Link } from "react-router-dom";
+import { device } from "../../shared/device";
 
 const ProjectListPageStyled = styled(PageStyle)``;
 
@@ -62,6 +63,10 @@ const ReturnButton = styled(LinkButton)`
   width: 100%;
   position: fixed;
   bottom: 0;
+
+  @media ${device.tablet} {
+    padding: 4% 0;
+  }
 `;
 
 const ProjectListPage = () => {
