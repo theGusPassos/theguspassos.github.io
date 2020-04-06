@@ -17,7 +17,7 @@ const ContactsButton = () => {
         unmountOnExit
         timeout={animationSpeed}
       >
-        <ContactsModal></ContactsModal>
+        <ContactsModal onClose={() => setIsOpen(false)}></ContactsModal>
       </CSSTransition>
     </div>
   );

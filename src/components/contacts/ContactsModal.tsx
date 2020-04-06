@@ -5,6 +5,7 @@ import { GetAnimationStyle, AnimationDirection } from "../../shared/animations";
 import { colors } from "../../shared/colors";
 import basicImage from "../../images/me/EubyKuma.png";
 import ContactCard from "./ContactCard";
+import LinkButton from "../common/LinkButton";
 
 const ModalBackground = styled.div`
   background: rgba(0, 0, 0, 0.2);
@@ -57,12 +58,24 @@ const getContacts = () => {
   });
 };
 
-const ContactsModal = () => {
+const LinkButtonStyled = styled(LinkButton)`
+  width: 100%;
+  background-color: #fff;
+`;
+
+interface ContactsModalProps {
+  onClose(): void;
+}
+
+const ContactsModal = (props: ContactsModalProps) => {
   const modalMarkup = (
     <ModalAnimated>
       <ModalWrapper>
         <Header>My Contacts</Header>
         <ContactsContainer>{getContacts()}</ContactsContainer>
+        <LinkButtonStyled onClick={() => props.onClose()}>
+          Close
+        </LinkButtonStyled>
       </ModalWrapper>
     </ModalAnimated>
   );
