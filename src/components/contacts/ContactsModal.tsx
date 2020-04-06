@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import { GetAnimationStyle, AnimationDirection } from "../../shared/animations";
+import {
+  GetAnimationStyle,
+  AnimationDirection,
+  animationSpeed,
+} from "../../shared/animations";
 import { colors } from "../../shared/colors";
 import basicImage from "../../images/me/EubyKuma.png";
 import ContactCard from "./ContactCard";
@@ -18,12 +22,45 @@ const ModalBackground = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
 
-const ModalAnimated = GetAnimationStyle(
-  ModalBackground,
-  AnimationDirection.FromDown
-);
+  &.animation-enter {
+    opacity: 0;
+
+    > div:first-child {
+      transform: translate(0, 100%);
+    }
+  }
+
+  &.animation-enter-active {
+    opacity: 1;
+    transition: opacity ${animationSpeed}ms;
+
+    > div:first-child {
+      transform: translate(0, 0);
+      transition-timing-function: ease-in-out;
+      transition: transform ${animationSpeed}ms;
+    }
+  }
+
+  &.animation-exit {
+    opacity: 1;
+
+    > div:first-child {
+      transform: translate(0, 0);
+    }
+  }
+
+  &.animation-exit-active {
+    opacity: 0;
+    transition: opacity ${animationSpeed}ms;
+
+    > div:first-child {
+      transform: translate(0, 100%);
+      transition-timing-function: ease-in-out;
+      transition: transform ${animationSpeed}ms;
+    }
+  }
+`;
 
 const ModalWrapper = styled.div`
   z-index: 999999;
@@ -69,7 +106,7 @@ interface ContactsModalProps {
 
 const ContactsModal = (props: ContactsModalProps) => {
   const modalMarkup = (
-    <ModalAnimated>
+    <ModalBackground>
       <ModalWrapper>
         <Header>My Contacts</Header>
         <ContactsContainer>{getContacts()}</ContactsContainer>
@@ -77,7 +114,7 @@ const ContactsModal = (props: ContactsModalProps) => {
           Close
         </LinkButtonStyled>
       </ModalWrapper>
-    </ModalAnimated>
+    </ModalBackground>
   );
 
   return ReactDOM.createPortal(modalMarkup, document.body);
