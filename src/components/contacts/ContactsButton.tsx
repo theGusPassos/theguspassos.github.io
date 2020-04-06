@@ -1,5 +1,9 @@
 import React from "react";
 import LinkButton from "../common/LinkButton";
+import { CSSTransition } from "react-transition-group";
+import { animationSpeed } from "../../shared/animations";
+import ContactsModal from "./ContactsModal";
+import styled from "styled-components";
 
 const ContactsButton = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -7,6 +11,14 @@ const ContactsButton = () => {
   return (
     <div>
       <LinkButton onClick={() => setIsOpen(true)}>My Contacts</LinkButton>
+      <CSSTransition
+        in={modalIsOpen}
+        classNames="animation"
+        unmountOnExit
+        timeout={animationSpeed}
+      >
+        <ContactsModal></ContactsModal>
+      </CSSTransition>
     </div>
   );
 };
