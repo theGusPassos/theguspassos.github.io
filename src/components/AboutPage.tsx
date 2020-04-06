@@ -7,6 +7,7 @@ import { device } from "../shared/device";
 import LinkButton from "./common/LinkButton";
 import PageStyle from "./common/PageStyle";
 import { Link } from "react-router-dom";
+import ContactsButton from "./contacts/ContactsButton";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -110,9 +111,7 @@ const AboutPage = () => {
       <NavigationButtons>
         <LinkContainer>
           <Item>
-            <Link to="/">
-              <LinkButtonStyled>My Contacts</LinkButtonStyled>
-            </Link>
+            <ContactsButton></ContactsButton>
           </Item>
           <Item>
             <Link to="/">
