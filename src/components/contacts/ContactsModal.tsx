@@ -2,9 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { GetAnimationStyle, AnimationDirection } from "../../shared/animations";
+import { colors } from "../../shared/colors";
+import basicImage from "../../images/me/EubyKuma.png";
+import ContactCard from "./ContactCard";
 
 const ModalBackground = styled.div`
-  background: rgba(0, 0, 0, 0.84);
+  background: rgba(0, 0, 0, 0.2);
   height: 100%;
   width: 100%;
   position: fixed;
@@ -22,18 +25,45 @@ const ModalAnimated = GetAnimationStyle(
 );
 
 const ModalWrapper = styled.div`
-  width: 50vw;
-
-  background: blue;
-  max-height: 80vh;
   z-index: 999999;
-  overflow: scroll;
+  width: 100%;
 `;
+
+const Header = styled.div`
+  background-color: ${colors.mainColor};
+  color: ${colors.mainTextColor};
+  text-align: center;
+  font-size: 1.3em;
+  padding: 10px;
+`;
+
+const ContactsContainer = styled.div`
+  background-color: #fff;
+`;
+
+const mockedContacts = [
+  { image: basicImage, message: "mail me", contact: "theguspassos@gmail.com" },
+];
+
+const getContacts = () => {
+  return mockedContacts.map((contact) => {
+    return (
+      <ContactCard
+        contact={contact.contact}
+        image={contact.image}
+        message={contact.message}
+      ></ContactCard>
+    );
+  });
+};
 
 const ContactsModal = () => {
   const modalMarkup = (
     <ModalAnimated>
-      <ModalWrapper>test</ModalWrapper>
+      <ModalWrapper>
+        <Header>My Contacts</Header>
+        <ContactsContainer>{getContacts()}</ContactsContainer>
+      </ModalWrapper>
     </ModalAnimated>
   );
 
