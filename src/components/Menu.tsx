@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { device } from "../shared/device";
 import { Link } from "react-router-dom";
 import LinkButton from "./common/LinkButton";
+import ContactsButton from "./contacts/ContactsButton";
 
 const NavMenu = styled.nav`
   flex: 1;
@@ -65,7 +66,7 @@ const Menu = () => {
           </Link>
         </Item>
         <Item>
-          <MenuButton>Contact me</MenuButton>
+          <ContactsButton></ContactsButton>
         </Item>
       </LinkContainer>
     </NavMenu>
