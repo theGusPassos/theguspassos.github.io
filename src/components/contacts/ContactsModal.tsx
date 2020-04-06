@@ -1,17 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import {
-  GetAnimationStyle,
-  AnimationDirection,
-  animationSpeed,
-} from "../../shared/animations";
-import { colors } from "../../shared/colors";
-import basicImage from "../../images/me/EubyKuma.png";
+import { animationSpeed } from "../../shared/animations";
 import ContactCard from "./ContactCard";
 import LinkButton from "../common/LinkButton";
 import { contacts } from "../../data/contacts";
 import PageTitle from "../common/PageTitle";
+import { colors } from "../../shared/colors";
 
 const ModalBackground = styled.div`
   background: rgba(0, 0, 0, 0.2);
@@ -67,18 +62,14 @@ const ModalBackground = styled.div`
 const ModalWrapper = styled.div`
   z-index: 999999;
   width: 100%;
-`;
-
-const Header = styled.div`
-  background-color: ${colors.mainColor};
-  color: ${colors.mainTextColor};
-  text-align: center;
-  font-size: 1.3em;
-  padding: 10px;
+  background-color: #fff;
 `;
 
 const ContactsContainer = styled.div`
-  background-color: #fff;
+  > div:nth-child(2) {
+    border-top: 1px solid ${colors.mainColor};
+    border-bottom: 1px solid ${colors.mainColor};
+  }
 `;
 
 const getContacts = () => {
