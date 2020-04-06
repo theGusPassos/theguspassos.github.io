@@ -2,19 +2,22 @@ import React from "react";
 import styled from "styled-components";
 
 const ContactCardStyled = styled.div`
-  padding: 10%;
+  padding: 5% 10%;
   display: flex;
+  font-size: 0.9em;
 `;
 
 const ContactImage = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 20%;
+  height: 20%;
 `;
 
 const ContactInfo = styled.div`
   align-self: flex-end;
+
   span {
     display: block;
+    margin-left: 10px;
   }
 `;
 

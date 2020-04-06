@@ -10,6 +10,8 @@ import { colors } from "../../shared/colors";
 import basicImage from "../../images/me/EubyKuma.png";
 import ContactCard from "./ContactCard";
 import LinkButton from "../common/LinkButton";
+import { contacts } from "../../data/contacts";
+import PageTitle from "../common/PageTitle";
 
 const ModalBackground = styled.div`
   background: rgba(0, 0, 0, 0.2);
@@ -79,15 +81,11 @@ const ContactsContainer = styled.div`
   background-color: #fff;
 `;
 
-const mockedContacts = [
-  { image: basicImage, message: "mail me", contact: "theguspassos@gmail.com" },
-];
-
 const getContacts = () => {
-  return mockedContacts.map((contact) => {
+  return contacts.map((contact) => {
     return (
       <ContactCard
-        contact={contact.contact}
+        contact={contact.contactText}
         image={contact.image}
         message={contact.message}
       ></ContactCard>
@@ -108,7 +106,7 @@ const ContactsModal = (props: ContactsModalProps) => {
   const modalMarkup = (
     <ModalBackground>
       <ModalWrapper>
-        <Header>My Contacts</Header>
+        <PageTitle centered>MyContacts</PageTitle>
         <ContactsContainer>{getContacts()}</ContactsContainer>
         <LinkButtonStyled onClick={() => props.onClose()}>
           Close
