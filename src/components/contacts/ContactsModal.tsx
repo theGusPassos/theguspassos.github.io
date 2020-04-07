@@ -87,6 +87,7 @@ const getContacts = () => {
 const LinkButtonStyled = styled(LinkButton)`
   width: 100%;
   background-color: #fff;
+  box-shadow: 0px 3px 11px 0px #0000009c;
 `;
 
 interface ContactsModalProps {
