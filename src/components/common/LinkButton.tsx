@@ -17,8 +17,7 @@ const LinkButton = styled.button`
   }
 
   @media ${device.tablet} {
-    font-size: 1.8em;
-    padding: 15% 0;
+    font-size: 1.4em;
   }
 `;
 

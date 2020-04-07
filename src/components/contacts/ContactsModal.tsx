@@ -7,6 +7,7 @@ import LinkButton from "../common/LinkButton";
 import { contacts } from "../../data/contacts";
 import PageTitle from "../common/PageTitle";
 import { colors } from "../../shared/colors";
+import { device } from "../../shared/device";
 
 const ModalBackground = styled.div`
   background: rgba(0, 0, 0, 0.2);
@@ -60,9 +61,10 @@ const ModalBackground = styled.div`
 `;
 
 const ModalWrapper = styled.div`
+  background-color: #fff;
   z-index: 999999;
   width: 100%;
-  background-color: #fff;
+  max-width: 500px;
 `;
 
 const ContactsContainer = styled.div`
