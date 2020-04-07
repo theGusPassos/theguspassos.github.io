@@ -15,7 +15,8 @@ const ContactImage = styled.img`
 const ContactInfo = styled.div`
   align-self: flex-end;
 
-  span {
+  span,
+  strong {
     display: block;
     margin-left: 10px;
   }
@@ -32,7 +33,7 @@ const ContactCard = (props: ContactCardProps) => {
     <ContactCardStyled>
       <ContactImage src={props.image}></ContactImage>
       <ContactInfo>
-        <span>{props.message}</span>
+        <strong>{props.message}</strong>
         <span>{props.contact}</span>
       </ContactInfo>
     </ContactCardStyled>
