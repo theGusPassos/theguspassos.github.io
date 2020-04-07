@@ -8,7 +8,8 @@ body,
   background-color: #f7f7f7;
 }
 
-body {
+body,
+button {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

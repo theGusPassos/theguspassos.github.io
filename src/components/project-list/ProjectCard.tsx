@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Tag from "../carousel/slide/Tag";
 import { device } from "../../shared/device";
 import { colors } from "../../shared/colors";
+import LinkButton from "../common/LinkButton";
 
 interface ProjectCardProps {
   project: Project;
@@ -13,11 +14,6 @@ const ProjectCardStyle = styled.div`
   padding: 20px 0;
   border-bottom: 1px solid ${colors.mainColor};
   transition: 0.3s;
-
-  :focus,
-  :hover {
-    background-color: ${colors.buttonClickedColor};
-  }
 
   @media ${device.tablet} {
     padding: 30px 0;
@@ -61,6 +57,11 @@ const getProjectTags = (project: Project) => {
   });
 };
 
+const LinkButtonStyled = styled(LinkButton)`
+  padding: 20px 0 0 0;
+  width: 100%;
+`;
+
 const ProjectCard = (props: ProjectCardProps) => {
   return (
     <ProjectCardStyle>
@@ -72,6 +73,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         2D fast paced game inspired in hits like Castlevania SOTN and Hollow
         Knight. Not a Metroidvania, though.
       </ProjectDescription>
+      <LinkButtonStyled>check this project</LinkButtonStyled>
     </ProjectCardStyle>
   );
 };
