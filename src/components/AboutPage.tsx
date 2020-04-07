@@ -8,6 +8,7 @@ import LinkButton from "./common/LinkButton";
 import PageStyle from "./common/PageStyle";
 import { Link } from "react-router-dom";
 import ContactsButton from "./contacts/ContactsButton";
+import { colors } from "../shared/colors";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -61,13 +62,22 @@ const NavigationButtons = styled.nav`
 `;
 
 const LinkContainer = styled.ul`
-  margin: auto;
+  margin: 0 auto;
   font-size: 1.1em;
   padding: 0;
 
+  li {
+    height: 50%;
+  }
+
   a {
+    -webkit-tap-highlight-color: transparent;
     display: block;
     text-align: center;
+  }
+
+  button {
+    padding: 10px;
   }
 
   @media ${device.tablet} {
@@ -81,7 +91,8 @@ const Item = styled.li`
 `;
 
 const LinkButtonStyled = styled(LinkButton)`
-  padding: 15% 0;
+  width: 100%;
+  border-top: 1px solid ${colors.mainColor};
 `;
 
 const AboutPage = () => {
