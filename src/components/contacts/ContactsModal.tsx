@@ -66,6 +66,8 @@ const ModalWrapper = styled.div`
 `;
 
 const ContactsContainer = styled.div`
+  padding: 20px;
+
   > div:nth-child(2) {
     border-top: 1px solid ${colors.mainColor};
     border-bottom: 1px solid ${colors.mainColor};
@@ -98,7 +100,7 @@ const ContactsModal = (props: ContactsModalProps) => {
   const modalMarkup = (
     <ModalBackground>
       <ModalWrapper>
-        <PageTitle centered>MyContacts</PageTitle>
+        <PageTitle centered>My Contacts</PageTitle>
         <ContactsContainer>{getContacts()}</ContactsContainer>
         <LinkButtonStyled onClick={() => props.onClose()}>
           Close
