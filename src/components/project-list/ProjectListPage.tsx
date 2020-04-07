@@ -20,6 +20,10 @@ const ProjectCardContainer = styled.section`
   height: 90%;
   overflow: auto;
   padding: 20px;
+
+  @media ${device.tablet} {
+    padding: 0 30px;
+  }
 `;
 
 const mockProjects: Project[] = [
@@ -67,7 +71,8 @@ const ReturnButton = styled(LinkButton)`
   box-shadow: 0px 3px 11px 0px #0000009c;
 
   @media ${device.tablet} {
-    padding: 4% 0;
+    font-size: 1.4em;
+    padding: 3% 0;
   }
 `;
 
