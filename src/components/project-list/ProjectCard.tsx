@@ -10,7 +10,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCardStyle = styled.div`
-  padding: 20px 20px 10px 20px;
+  padding: 20px 0;
   border-bottom: 1px solid ${colors.mainColor};
   transition: 0.3s;
 
