@@ -46,6 +46,7 @@ const Info = styled.div`
 
 const Bio = styled.div`
   padding: 3% 20px;
+  height: 70%;
 
   @media ${device.tablet} {
     padding: 30px;
@@ -59,16 +60,13 @@ const Bio = styled.div`
 const NavigationButtons = styled.nav`
   flex: 1;
   display: flex;
+  margin-bottom: 10px;
 `;
 
 const LinkContainer = styled.ul`
   margin: 0 auto;
   font-size: 1.1em;
   padding: 0;
-
-  li {
-    height: 50%;
-  }
 
   a {
     -webkit-tap-highlight-color: transparent;
@@ -77,7 +75,7 @@ const LinkContainer = styled.ul`
   }
 
   button {
-    padding: 10px;
+    padding: 15px;
   }
 
   @media ${device.tablet} {

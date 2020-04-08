@@ -69,7 +69,6 @@ const ReturnButton = styled(LinkButton)`
   position: fixed;
   bottom: 0;
   box-shadow: 0px 3px 11px 0px #0000009c;
-  padding: 10px 20px;
 
   @media ${device.tablet} {
     font-size: 1.4em;
