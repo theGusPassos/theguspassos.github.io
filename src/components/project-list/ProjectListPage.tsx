@@ -9,6 +9,7 @@ import LinkButton from "../common/LinkButton";
 import { Link } from "react-router-dom";
 import { device } from "../../shared/device";
 import { projectList } from "../../data/projects/projectList";
+import ReturnButton from "../common/ReturnButton";
 
 const ProjectListPageStyled = styled(PageStyle)``;
 
@@ -33,30 +34,12 @@ const getProjectCards = () => {
   });
 };
 
-const LinkStyled = styled(Link)`
-  height: 10%;
-`;
-
-const ReturnButton = styled(LinkButton)`
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  box-shadow: 0px 3px 11px 0px #0000009c;
-
-  @media ${device.tablet} {
-    font-size: 1.4em;
-    padding: 3% 0;
-  }
-`;
-
 const ProjectListPage = () => {
   return (
     <ProjectListPageAnimated>
       <PageTitle centered>my projects</PageTitle>
       <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
-      <LinkStyled to="/">
-        <ReturnButton>Return</ReturnButton>
-      </LinkStyled>
+      <ReturnButton></ReturnButton>
     </ProjectListPageAnimated>
   );
 };

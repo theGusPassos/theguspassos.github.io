@@ -6,6 +6,7 @@ import PageTitle from "../common/PageTitle";
 import Project from "../../models/project";
 import Tag from "../carousel/slide/Tag";
 import { device } from "../../shared/device";
+import ReturnButton from "../common/ReturnButton";
 
 const ProjectViewPageStyled = styled(PageStyle)``;
 
@@ -46,6 +47,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
       <Image src={props.project.image} alt={props.project.imageAlt}></Image>
       <TagContainer>{getProjectTags(props.project)}</TagContainer>
       <ProjectText>{props.project.container()}</ProjectText>
+      <ReturnButton></ReturnButton>
     </ProjectViewPageAnimated>
   );
 };
