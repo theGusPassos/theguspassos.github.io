@@ -8,6 +8,7 @@ import ProjectCard from "./ProjectCard";
 import LinkButton from "../common/LinkButton";
 import { Link } from "react-router-dom";
 import { device } from "../../shared/device";
+import { projectList } from "../../data/projects/projectList";
 
 const ProjectListPageStyled = styled(PageStyle)``;
 
@@ -26,27 +27,8 @@ const ProjectCardContainer = styled.section`
   }
 `;
 
-const mockProjects: Project[] = [
-  {
-    name: "sketch",
-    image: "",
-    imageAlt: "",
-    imageBig: "",
-    tags: ["C#", "Unity"],
-    container: () => <div>test</div>,
-  },
-  {
-    name: "blockchain",
-    image: "",
-    imageAlt: "",
-    imageBig: "",
-    tags: ["hyperledger"],
-    container: () => <div>test</div>,
-  },
-];
-
 const getProjectCards = () => {
-  return mockProjects.map((a: Project) => {
+  return projectList.map((a: Project) => {
     return <ProjectCard project={a}></ProjectCard>;
   });
 };
