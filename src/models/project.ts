@@ -1,6 +1,5 @@
-import { Component } from "react";
-
 export default interface Project {
+  id: number;
   name: string;
   image: string;
   imageBig: string;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import PageStyle from "../common/PageStyle";
 import { GetAnimationStyle, AnimationDirection } from "../../shared/animations";
@@ -7,6 +7,7 @@ import Project from "../../models/project";
 import Tag from "../carousel/slide/Tag";
 import { device } from "../../shared/device";
 import ReturnButton from "../common/ReturnButton";
+import { getProjectById } from "../../data/projects/projectList";
 
 const ProjectViewPageStyled = styled(PageStyle)``;
 
@@ -16,6 +17,7 @@ const ProjectViewPageAnimated = GetAnimationStyle(
 );
 
 interface ProjectViewProps {
+  projectId: number;
   project: Project;
 }
 
@@ -41,9 +43,11 @@ const ProjectText = styled.section`
 `;
 
 const ProjectViewPage = (props: ProjectViewProps) => {
+  let project = getProjectById(Number(props.projectId));
+
   return (
     <ProjectViewPageAnimated>
-      <PageTitle centered>{props.project.name}</PageTitle>
+      <PageTitle centered>{project.name}</PageTitle>
       <Image src={props.project.image} alt={props.project.imageAlt}></Image>
       <TagContainer>{getProjectTags(props.project)}</TagContainer>
       <ProjectText>{props.project.container()}</ProjectText>

@@ -44,9 +44,18 @@ const Body = () => {
                     <Route exact path="/projects">
                       <ProjectListPage></ProjectListPage>
                     </Route>
-                    <Route exact path="/project">
-                      <ProjectViewPage project={sketch}></ProjectViewPage>
-                    </Route>
+                    <Route
+                      exact
+                      path="/project/:id"
+                      render={(props) => {
+                        return (
+                          <ProjectViewPage
+                            projectId={props.match.params.id}
+                            project={sketch}
+                          ></ProjectViewPage>
+                        );
+                      }}
+                    ></Route>
                   </Switch>
                 </CSSTransition>
               </TransitionGroupStyled>
