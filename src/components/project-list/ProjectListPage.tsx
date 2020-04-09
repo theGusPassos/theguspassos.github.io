@@ -27,8 +27,8 @@ const ProjectCardContainer = styled.section`
 `;
 
 const getProjectCards = () => {
-  return projectList.map((a: Project) => {
-    return <ProjectCard project={a}></ProjectCard>;
+  return projectList.map((a: Project, key: number) => {
+    return <ProjectCard project={a} key={key}></ProjectCard>;
   });
 };
 

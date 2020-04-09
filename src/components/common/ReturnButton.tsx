@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { device } from "../../shared/device";
 import LinkButton from "./LinkButton";
 import { Link } from "react-router-dom";
+import { useLastLocation, LastLocationType } from "react-router-last-location";
 
 const LinkStyled = styled(Link)`
   height: 10%;
@@ -20,9 +21,16 @@ const ReturnButtonStyled = styled(LinkButton)`
   }
 `;
 
+const getLastVisited = (lastLocation: LastLocationType): string => {
+  if (lastLocation) return lastLocation.pathname;
+  return "/";
+};
+
 const ReturnButton = () => {
+  const lastLocation = useLastLocation();
+
   return (
-    <LinkStyled to="/">
+    <LinkStyled to={getLastVisited(lastLocation)}>
       <ReturnButtonStyled>Return</ReturnButtonStyled>
     </LinkStyled>
   );
