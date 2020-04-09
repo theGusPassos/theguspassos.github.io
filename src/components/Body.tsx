@@ -8,6 +8,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
 import ProjectListPage from "./project-list/ProjectListPage";
 import ProjectViewPage from "./project-view/ProjectViewPage";
+import { sketch } from "../data/projects/sketch/sketch";
 
 const BodyGrid = styled.div`
   display: flex;
@@ -44,7 +45,7 @@ const Body = () => {
                       <ProjectListPage></ProjectListPage>
                     </Route>
                     <Route exact path="/project">
-                      <ProjectViewPage></ProjectViewPage>
+                      <ProjectViewPage project={sketch}></ProjectViewPage>
                     </Route>
                   </Switch>
                 </CSSTransition>
