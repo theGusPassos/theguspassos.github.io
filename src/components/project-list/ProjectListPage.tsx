@@ -5,8 +5,6 @@ import { AnimationDirection, GetAnimationStyle } from "../../shared/animations";
 import PageTitle from "../common/PageTitle";
 import Project from "../../models/project";
 import ProjectCard from "./ProjectCard";
-import LinkButton from "../common/LinkButton";
-import { Link } from "react-router-dom";
 import { device } from "../../shared/device";
 import { projectList } from "../../data/projects/projectList";
 import ReturnButton from "../common/ReturnButton";

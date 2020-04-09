@@ -5,6 +5,7 @@ import Tag from "../carousel/slide/Tag";
 import { device } from "../../shared/device";
 import { colors } from "../../shared/colors";
 import LinkButton from "../common/LinkButton";
+import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
   project: Project;
@@ -62,6 +63,10 @@ const LinkButtonStyled = styled(LinkButton)`
   width: 100%;
 `;
 
+const getProjectUrl = (projectId: number) => {
+  return "project/" + projectId;
+};
+
 const ProjectCard = (props: ProjectCardProps) => {
   return (
     <ProjectCardStyle>
@@ -73,7 +78,9 @@ const ProjectCard = (props: ProjectCardProps) => {
         2D fast paced game inspired in hits like Castlevania SOTN and Hollow
         Knight. Not a Metroidvania, though.
       </ProjectDescription>
-      <LinkButtonStyled>check this project</LinkButtonStyled>
+      <Link to={getProjectUrl(props.project.id)}>
+        <LinkButtonStyled>check this project</LinkButtonStyled>
+      </Link>
     </ProjectCardStyle>
   );
 };

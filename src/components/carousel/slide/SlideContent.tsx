@@ -5,6 +5,7 @@ import { deviceSize } from "../../../shared/device";
 import { colors } from "../../../shared/colors";
 import TagContainer from "./TagContainer";
 import SlideDescription from "./SlideDescription";
+import { createHashHistory } from "history";
 
 const ImageContainer = styled.section`
   position: relative;
@@ -29,9 +30,14 @@ const getImageByDeviceSize = (project: Project) => {
     : project.imageBig;
 };
 
+const goToProjectPage = (projectId: number) => {
+  const history = createHashHistory();
+  history.push("project/" + projectId);
+};
+
 const SlideContent = (props: ProjectSlideProps) => {
   return (
-    <ImageContainer>
+    <ImageContainer onClick={() => goToProjectPage(1)}>
       <TagContainer tags={props.project.tags}></TagContainer>
       <Image
         src={getImageByDeviceSize(props.project)}
