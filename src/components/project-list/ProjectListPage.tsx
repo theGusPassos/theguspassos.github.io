@@ -33,6 +33,7 @@ const mockProjects: Project[] = [
     imageAlt: "",
     imageBig: "",
     tags: ["C#", "Unity"],
+    container: () => <div>test</div>,
   },
   {
     name: "blockchain",
@@ -40,18 +41,8 @@ const mockProjects: Project[] = [
     imageAlt: "",
     imageBig: "",
     tags: ["hyperledger"],
+    container: () => <div>test</div>,
   },
-  { name: "big", image: "", imageAlt: "", imageBig: "", tags: ["java"] },
-  {
-    name: "src racing game",
-    image: "",
-    imageAlt: "",
-    imageBig: "",
-    tags: ["unity"],
-  },
-  { name: "big", image: "", imageAlt: "", imageBig: "", tags: ["java"] },
-  { name: "big", image: "", imageAlt: "", imageBig: "", tags: ["java"] },
-  { name: "big", image: "", imageAlt: "", imageBig: "", tags: ["java"] },
 ];
 
 const getProjectCards = () => {

@@ -15,6 +15,7 @@ const projectsInCarousel: Project[] = [
     imageAlt: "Image the game Sketch",
     name: "sketch 1",
     tags: ["Unity", "C#"],
+    container: () => <div>test</div>,
   },
   {
     image: sketchImage,
@@ -22,6 +23,7 @@ const projectsInCarousel: Project[] = [
     imageAlt: "Image the game Sketch",
     name: "sketch 2",
     tags: ["Unity", "C#"],
+    container: () => <div>test</div>,
   },
   {
     image: sketchImage,
@@ -29,6 +31,7 @@ const projectsInCarousel: Project[] = [
     imageAlt: "Image the game Sketch",
     name: "sketch 3",
     tags: ["Unity", "C#"],
+    container: () => <div>test</div>,
   },
 ];
 
