@@ -1,6 +1,6 @@
 import {
-  GetEnterStartPosition,
   AnimationDirection,
+  GetAnimationTransform,
 } from "../../shared/animations";
 
 const homePath = "/";
@@ -21,8 +21,8 @@ export const getCurrentAnimation = (
 
 const getAnimationBasedOnLocation = (location: string | undefined) => {
   if (location === aboutPath)
-    return GetEnterStartPosition(AnimationDirection.FromRight);
+    return GetAnimationTransform(AnimationDirection.FromRight);
   else if (location === projectListPath)
-    return GetEnterStartPosition(AnimationDirection.FromLeft);
-  else return GetEnterStartPosition(AnimationDirection.FromDown);
+    return GetAnimationTransform(AnimationDirection.FromLeft);
+  else return GetAnimationTransform(AnimationDirection.FromDown);
 };

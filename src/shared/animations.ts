@@ -44,36 +44,7 @@ export const GetAnimator = (component: AnyStyledComponent) => {
   `;
 };
 
-export const GetAnimationStyle = (
-  component: AnyStyledComponent,
-  animationDirection: AnimationDirection
-) => styled(component)`
-  &.animation-enter {
-    transform: ${GetTranslateFromTransform(
-      GetEnterStartPosition(animationDirection)
-    )};
-  }
-
-  &.animation-enter-active {
-    transform: translate(0, 0);
-    transition-timing-function: ease-in-out;
-    transition: transform ${animationSpeed}ms;
-  }
-
-  &.animation-exit {
-    transform: translate(0, 0);
-  }
-
-  &.animation-exit-active {
-    transform: ${GetTranslateFromTransform(
-      GetEnterStartPosition(animationDirection)
-    )};
-    transition-timing-function: ease-in-out;
-    transition: transform ${animationSpeed}ms;
-  }
-`;
-
-export const GetEnterStartPosition = (
+export const GetAnimationTransform = (
   animationDirection: AnimationDirection
 ): Transform => {
   switch (animationDirection) {

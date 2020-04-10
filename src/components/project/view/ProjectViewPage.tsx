@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import PageStyle from "../../common/PageStyle";
 import {
-  GetAnimationStyle,
   AnimationDirection,
+  GetAnimator,
+  GetAnimationTransform,
 } from "../../../shared/animations";
 import PageTitle from "../../common/PageTitle";
 import Project from "../../../models/project";
@@ -14,10 +15,8 @@ import { getProjectById } from "../../../data/projects/projectList";
 
 const ProjectViewPageStyled = styled(PageStyle)``;
 
-const ProjectViewPageAnimated = GetAnimationStyle(
-  ProjectViewPageStyled,
-  AnimationDirection.FromUp
-);
+const ProjectViewPageAnimated = GetAnimator(PageStyle);
+const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
 
 interface ProjectViewProps {
   projectId: number;
@@ -49,7 +48,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
   let project = getProjectById(Number(props.projectId));
 
   return (
-    <ProjectViewPageAnimated>
+    <ProjectViewPageAnimated transform={AnimationTransform}>
       <PageTitle centered>{project.name}</PageTitle>
       <Image src={props.project.image} alt={props.project.imageAlt}></Image>
       <TagContainer>{getProjectTags(props.project)}</TagContainer>

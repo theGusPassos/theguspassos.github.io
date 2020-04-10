@@ -3,7 +3,8 @@ import styled from "styled-components";
 import PageStyle from "../../common/PageStyle";
 import {
   AnimationDirection,
-  GetAnimationStyle,
+  GetAnimator,
+  GetAnimationTransform,
 } from "../../../shared/animations";
 import PageTitle from "../../common/PageTitle";
 import Project from "../../../models/project";
@@ -14,10 +15,8 @@ import ReturnButton from "../../common/ReturnButton";
 
 const ProjectListPageStyled = styled(PageStyle)``;
 
-const ProjectListPageAnimated = GetAnimationStyle(
-  ProjectListPageStyled,
-  AnimationDirection.FromRight
-);
+const ProjectListPageAnimated = GetAnimator(PageStyle);
+const AnimationTransform = GetAnimationTransform(AnimationDirection.FromRight);
 
 const ProjectCardContainer = styled.section`
   height: 90%;
@@ -37,7 +36,7 @@ const getProjectCards = () => {
 
 const ProjectListPage = () => {
   return (
-    <ProjectListPageAnimated>
+    <ProjectListPageAnimated transform={AnimationTransform}>
       <PageTitle centered>my projects</PageTitle>
       <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
       <ReturnButton></ReturnButton>

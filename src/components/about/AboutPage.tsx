@@ -1,7 +1,11 @@
 import React from "react";
 import PageTitle from "../common/PageTitle";
 import styled from "styled-components";
-import { GetAnimationStyle, AnimationDirection } from "../../shared/animations";
+import {
+  AnimationDirection,
+  GetAnimator,
+  GetAnimationTransform,
+} from "../../shared/animations";
 import image from "../../images/me/EubyKuma.png";
 import { device } from "../../shared/device";
 import PageStyle from "../common/PageStyle";
@@ -15,10 +19,8 @@ const AboutPageStyled = styled(PageStyle)`
   }
 `;
 
-const AboutPageAnimated = GetAnimationStyle(
-  AboutPageStyled,
-  AnimationDirection.FromLeft
-);
+const AboutPageAnimated = GetAnimator(AboutPageStyled);
+const AnimationTransform = GetAnimationTransform(AnimationDirection.FromLeft);
 
 const ImageContainer = styled.div``;
 
@@ -56,7 +58,7 @@ const Bio = styled.div`
 
 const AboutPage = () => {
   return (
-    <AboutPageAnimated>
+    <AboutPageAnimated transform={AnimationTransform}>
       <PageTitle centered>about me</PageTitle>
       <ImageContainer>
         <Image
