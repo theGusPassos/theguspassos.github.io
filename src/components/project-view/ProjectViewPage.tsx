@@ -29,8 +29,8 @@ const TagContainer = styled.div`
 `;
 
 const getProjectTags = (project: Project) => {
-  return project.tags.map((tag) => {
-    return <Tag>{tag}</Tag>;
+  return project.tags.map((tag: string, key: number) => {
+    return <Tag key={key}>{tag}</Tag>;
   });
 };
 
