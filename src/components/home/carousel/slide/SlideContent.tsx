@@ -1,11 +1,11 @@
 import React from "react";
-import Project from "../../../models/project";
 import styled from "styled-components";
-import { deviceSize } from "../../../shared/device";
-import { colors } from "../../../shared/colors";
 import SlideDescription from "./SlideDescription";
 import { createHashHistory } from "history";
-import { getTagsInProject } from "../../project/tag/tagList";
+import { getTagsInProject } from "../../../project/tag/tagList";
+import { colors } from "../../../../shared/colors";
+import Project from "../../../../models/project";
+import { deviceSize } from "../../../../shared/device";
 
 const ImageContainer = styled.section`
   position: relative;

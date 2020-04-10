@@ -1,7 +1,7 @@
 import React from "react";
-import { colors } from "../../../shared/colors";
 import styled from "styled-components";
-import { device } from "../../../shared/device";
+import { device } from "../../../../shared/device";
+import { colors } from "../../../../shared/colors";
 
 const DescriptionContainer = styled.div`
   display: block;

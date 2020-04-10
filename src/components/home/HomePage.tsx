@@ -1,6 +1,5 @@
 import React from "react";
 import Menu from "../Menu";
-import CarouselContent from "../carousel/CarouselContent";
 import styled from "styled-components";
 import {
   GetTranslateFromTransform,
@@ -11,6 +10,7 @@ import { useLastLocation } from "react-router-last-location";
 import { getCurrentAnimation } from "./homeAnimation";
 import PageTitle from "../common/PageTitle";
 import PageStyle from "../common/PageStyle";
+import CarouselContent from "./carousel/CarouselContent";
 
 interface HomePageProps {
   transform: Transform;
