@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../shared/device";
+import { device } from "../../shared/device";
 import { Link } from "react-router-dom";
-import LinkButton from "./common/LinkButton";
-import ContactsButton from "./contacts/ContactsButton";
+import LinkButton from "../common/LinkButton";
+import ContactsButton from "../contacts/ContactsButton";
 
 const NavMenu = styled.nav`
   flex: 1;
