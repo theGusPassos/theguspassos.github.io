@@ -3,14 +3,21 @@ import Project from "../../../models/project";
 import styled from "styled-components";
 import { deviceSize } from "../../../shared/device";
 import { colors } from "../../../shared/colors";
-import TagContainer from "./TagContainer";
 import SlideDescription from "./SlideDescription";
 import { createHashHistory } from "history";
+import { getTagsInProject } from "../../project/tag/tagList";
 
 const ImageContainer = styled.section`
   position: relative;
   display: block;
   background-color: ${colors.mainBackgroundColor};
+`;
+
+const TagContainer = styled.div`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
 `;
 
 const Image = styled.img`
@@ -38,7 +45,7 @@ const goToProjectPage = (projectId: number) => {
 const SlideContent = (props: ProjectSlideProps) => {
   return (
     <ImageContainer onClick={() => goToProjectPage(1)}>
-      <TagContainer tags={props.project.tags}></TagContainer>
+      <TagContainer>{getTagsInProject(props.project)}</TagContainer>
       <Image
         src={getImageByDeviceSize(props.project)}
         alt={props.project.imageAlt}
