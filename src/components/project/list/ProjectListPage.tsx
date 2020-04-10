@@ -13,8 +13,6 @@ import { device } from "../../../shared/device";
 import { projectList } from "../../../data/projects/projectList";
 import ReturnButton from "../../common/ReturnButton";
 
-const ProjectListPageStyled = styled(PageStyle)``;
-
 const ProjectListPageAnimated = GetAnimator(PageStyle);
 const AnimationTransform = GetAnimationTransform(AnimationDirection.FromRight);
 

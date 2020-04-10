@@ -8,12 +8,10 @@ import {
 } from "../../../shared/animations";
 import PageTitle from "../../common/PageTitle";
 import Project from "../../../models/project";
-import Tag from "../tag/Tag";
 import { device } from "../../../shared/device";
 import ReturnButton from "../../common/ReturnButton";
 import { getProjectById } from "../../../data/projects/projectList";
-
-const ProjectViewPageStyled = styled(PageStyle)``;
+import { getTagsInProject } from "../tag/tagList";
 
 const ProjectViewPageAnimated = GetAnimator(PageStyle);
 const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
@@ -30,12 +28,6 @@ const TagContainer = styled.div`
   margin: 0 auto;
 `;
 
-const getProjectTags = (project: Project) => {
-  return project.tags.map((tag: string, key: number) => {
-    return <Tag key={key}>{tag}</Tag>;
-  });
-};
-
 const ProjectText = styled.section`
   padding: 20px;
 
@@ -51,7 +43,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
     <ProjectViewPageAnimated transform={AnimationTransform}>
       <PageTitle centered>{project.name}</PageTitle>
       <Image src={props.project.image} alt={props.project.imageAlt}></Image>
-      <TagContainer>{getProjectTags(props.project)}</TagContainer>
+      <TagContainer>{getTagsInProject(props.project)}</TagContainer>
       <ProjectText>{props.project.container()}</ProjectText>
       <ReturnButton></ReturnButton>
     </ProjectViewPageAnimated>
