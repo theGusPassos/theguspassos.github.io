@@ -5,6 +5,7 @@ import { HashRouter, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
 import Routes from "./Routes";
+import { animationSpeed } from "../shared/animations";
 
 const BodyGrid = styled.div`
   display: flex;
@@ -32,7 +33,7 @@ const Body = () => {
                 <CSSTransition
                   key={location.pathname}
                   classNames="animation"
-                  timeout={400}
+                  timeout={animationSpeed}
                 >
                   <Routes location={location}></Routes>
                 </CSSTransition>
