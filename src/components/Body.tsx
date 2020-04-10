@@ -1,14 +1,10 @@
 import React from "react";
 import Header from "./Header";
 import styled from "styled-components";
-import HomePage from "./home/HomePage";
-import AboutPage from "./about/AboutPage";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
-import ProjectListPage from "./project/list/ProjectListPage";
-import { sketch } from "../data/projects/sketch/sketch";
-import ProjectViewPage from "./project/view/ProjectViewPage";
+import Routes from "./Routes";
 
 const BodyGrid = styled.div`
   display: flex;
@@ -38,25 +34,7 @@ const Body = () => {
                   classNames="animation"
                   timeout={400}
                 >
-                  <Switch location={location}>
-                    <Route exact path="/" component={HomePage}></Route>
-                    <Route exact path="/about" component={AboutPage}></Route>
-                    <Route exact path="/projects">
-                      <ProjectListPage></ProjectListPage>
-                    </Route>
-                    <Route
-                      exact
-                      path="/project/:id"
-                      render={(props) => {
-                        return (
-                          <ProjectViewPage
-                            projectId={props.match.params.id}
-                            project={sketch}
-                          ></ProjectViewPage>
-                        );
-                      }}
-                    ></Route>
-                  </Switch>
+                  <Routes location={location}></Routes>
                 </CSSTransition>
               </TransitionGroupStyled>
             )}
