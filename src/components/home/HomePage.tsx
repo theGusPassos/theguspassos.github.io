@@ -51,9 +51,7 @@ const HomePage = () => {
 
   return (
     <HomePageStyled transform={animationDirection}>
-      <PageTitle centered={false}>
-        some of the projects I've worked on
-      </PageTitle>
+      <PageTitle>some of the projects I've worked on</PageTitle>
       <CarouselContent></CarouselContent>
       <Menu></Menu>
     </HomePageStyled>

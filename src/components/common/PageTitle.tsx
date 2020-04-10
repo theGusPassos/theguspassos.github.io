@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { device } from "../../shared/device";
 
 interface TitleProps {
-  centered: boolean;
+  centered?: boolean;
 }
 
 const TitleContent = styled.div`
@@ -24,7 +24,7 @@ const TitleContent = styled.div`
 
 interface PageTitleProps {
   children: string;
-  centered: boolean;
+  centered?: boolean;
 }
 
 const PageTitle = (props: PageTitleProps) => {
