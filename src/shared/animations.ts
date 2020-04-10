@@ -9,6 +9,41 @@ export enum AnimationDirection {
   FromLeft,
 }
 
+export interface Transform {
+  x: number;
+  y: number;
+}
+
+export interface AnimatorProps {
+  transform: Transform;
+}
+
+export const GetAnimator = (component: AnyStyledComponent) => {
+  return styled(component)`
+    &.animation-enter {
+      transform: ${(props: AnimatorProps) =>
+        GetTranslateFromTransform(props.transform)};
+    }
+
+    &.animation-enter-active {
+      transform: translateX(0);
+      transition-timing-function: ease-in-out;
+      transition: transform ${animationSpeed}ms;
+    }
+
+    &.animation-exit {
+      transform: translateX(0);
+    }
+
+    &.animation-exit-active {
+      transform: ${(props: AnimatorProps) =>
+        GetTranslateFromTransform(props.transform)};
+      transition-timing-function: ease-in-out;
+      transition: transform ${animationSpeed}ms;
+    }
+  `;
+};
+
 export const GetAnimationStyle = (
   component: AnyStyledComponent,
   animationDirection: AnimationDirection
@@ -59,8 +94,3 @@ export const GetEnterStartPosition = (
 export const GetTranslateFromTransform = (transform: Transform): string => {
   return `translate(${transform.x}%, ${transform.y}%)`;
 };
-
-export interface Transform {
-  x: number;
-  y: number;
-}
