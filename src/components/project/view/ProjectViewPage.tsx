@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import PageStyle from "../common/PageStyle";
-import { GetAnimationStyle, AnimationDirection } from "../../shared/animations";
-import PageTitle from "../common/PageTitle";
-import Project from "../../models/project";
-import Tag from "../project/tag/Tag";
-import { device } from "../../shared/device";
-import ReturnButton from "../common/ReturnButton";
-import { getProjectById } from "../../data/projects/projectList";
+import PageStyle from "../../common/PageStyle";
+import {
+  GetAnimationStyle,
+  AnimationDirection,
+} from "../../../shared/animations";
+import PageTitle from "../../common/PageTitle";
+import Project from "../../../models/project";
+import Tag from "../tag/Tag";
+import { device } from "../../../shared/device";
+import ReturnButton from "../../common/ReturnButton";
+import { getProjectById } from "../../../data/projects/projectList";
 
 const ProjectViewPageStyled = styled(PageStyle)``;
 

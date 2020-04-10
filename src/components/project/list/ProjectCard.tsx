@@ -1,10 +1,10 @@
 import React from "react";
-import Project from "../../models/project";
+import Project from "../../../models/project";
 import styled from "styled-components";
-import Tag from "../project/tag/Tag";
-import { device } from "../../shared/device";
-import { colors } from "../../shared/colors";
-import LinkButton from "../common/LinkButton";
+import Tag from "../tag/Tag";
+import { device } from "../../../shared/device";
+import { colors } from "../../../shared/colors";
+import LinkButton from "../../common/LinkButton";
 import { Link } from "react-router-dom";
 
 interface ProjectCardProps {

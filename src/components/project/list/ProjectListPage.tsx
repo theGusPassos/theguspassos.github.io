@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import PageStyle from "../common/PageStyle";
-import { AnimationDirection, GetAnimationStyle } from "../../shared/animations";
-import PageTitle from "../common/PageTitle";
-import Project from "../../models/project";
+import PageStyle from "../../common/PageStyle";
+import {
+  AnimationDirection,
+  GetAnimationStyle,
+} from "../../../shared/animations";
+import PageTitle from "../../common/PageTitle";
+import Project from "../../../models/project";
 import ProjectCard from "./ProjectCard";
-import { device } from "../../shared/device";
-import { projectList } from "../../data/projects/projectList";
-import ReturnButton from "../common/ReturnButton";
+import { device } from "../../../shared/device";
+import { projectList } from "../../../data/projects/projectList";
+import ReturnButton from "../../common/ReturnButton";
 
 const ProjectListPageStyled = styled(PageStyle)``;
 
