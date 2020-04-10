@@ -5,25 +5,31 @@ import HomePage from "./home/HomePage";
 import AboutPage from "./about/AboutPage";
 import ProjectViewPage from "./project/view/ProjectViewPage";
 import { sketch } from "../data/projects/sketch/sketch";
+import {
+  homePath,
+  aboutPath,
+  projectPath,
+  projectListPath,
+} from "../models/routes";
 
 const Routes = (props: { location: any }) => {
   return (
     <Switch location={props.location}>
-      <Route exact path="/">
+      <Route exact path={homePath}>
         <HomePage></HomePage>
       </Route>
 
-      <Route exact path="/about">
+      <Route exact path={aboutPath}>
         <AboutPage></AboutPage>
       </Route>
 
-      <Route exact path="/projects">
+      <Route exact path={projectListPath}>
         <ProjectListPage></ProjectListPage>
       </Route>
 
       <Route
         exact
-        path="/project/:id"
+        path={projectPath}
         render={(props) => {
           return (
             <ProjectViewPage
