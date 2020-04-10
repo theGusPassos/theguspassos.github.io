@@ -3,7 +3,6 @@ import LinkButton from "../common/LinkButton";
 import { CSSTransition } from "react-transition-group";
 import { animationSpeed } from "../../shared/animations";
 import ContactsModal from "./ContactsModal";
-import styled from "styled-components";
 
 const ContactsButton = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);

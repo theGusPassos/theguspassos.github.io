@@ -1,14 +1,11 @@
 import React from "react";
-import PageTitle from "./common/PageTitle";
+import PageTitle from "../common/PageTitle";
 import styled from "styled-components";
-import { GetAnimationStyle, AnimationDirection } from "../shared/animations";
-import image from "../images/me/EubyKuma.png";
-import { device } from "../shared/device";
-import LinkButton from "./common/LinkButton";
-import PageStyle from "./common/PageStyle";
-import { Link } from "react-router-dom";
-import ContactsButton from "./contacts/ContactsButton";
-import { colors } from "../shared/colors";
+import { GetAnimationStyle, AnimationDirection } from "../../shared/animations";
+import image from "../../images/me/EubyKuma.png";
+import { device } from "../../shared/device";
+import PageStyle from "../common/PageStyle";
+import NavigationButtons from "./NavigationButtons";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -57,42 +54,6 @@ const Bio = styled.div`
   }
 `;
 
-const NavigationButtons = styled.nav`
-  flex: 1;
-  display: flex;
-  margin-bottom: 10px;
-`;
-
-const LinkContainer = styled.ul`
-  margin: 0 auto;
-  font-size: 1.1em;
-  padding: 0;
-
-  a {
-    -webkit-tap-highlight-color: transparent;
-    display: block;
-    text-align: center;
-  }
-
-  button {
-    padding: 15px;
-  }
-
-  @media ${device.tablet} {
-    font-size: 0.9em;
-  }
-`;
-
-const Item = styled.li`
-  text-align: center;
-  list-style: none;
-`;
-
-const LinkButtonStyled = styled(LinkButton)`
-  width: 100%;
-  border-top: 1px solid ${colors.mainColor};
-`;
-
 const AboutPage = () => {
   return (
     <AboutPageAnimated>
@@ -117,18 +78,7 @@ const AboutPage = () => {
           technologies, specially games my defin
         </p>
       </Bio>
-      <NavigationButtons>
-        <LinkContainer>
-          <Item>
-            <ContactsButton></ContactsButton>
-          </Item>
-          <Item>
-            <Link to="/">
-              <LinkButtonStyled>Return</LinkButtonStyled>
-            </Link>
-          </Item>
-        </LinkContainer>
-      </NavigationButtons>
+      <NavigationButtons></NavigationButtons>
     </AboutPageAnimated>
   );
 };

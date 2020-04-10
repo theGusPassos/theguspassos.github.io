@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import styled from "styled-components";
 import HomePage from "./home/HomePage";
-import AboutPage from "./AboutPage";
+import AboutPage from "./about/AboutPage";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
