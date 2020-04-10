@@ -7,6 +7,7 @@ import LinkButton from "../common/LinkButton";
 import { contacts } from "../../data/contacts";
 import PageTitle from "../common/PageTitle";
 import { colors } from "../../shared/colors";
+import Contact from "../../models/contact";
 
 const ModalBackground = styled.div`
   background: rgba(0, 0, 0, 0.2);
@@ -76,9 +77,10 @@ const ContactsContainer = styled.div`
 `;
 
 const getContacts = () => {
-  return contacts.map((contact) => {
+  return contacts.map((contact: Contact, key: number) => {
     return (
       <ContactCard
+        key={key}
         contact={contact.contactText}
         image={contact.image}
         message={contact.message}
