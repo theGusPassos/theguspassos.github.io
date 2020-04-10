@@ -2,7 +2,6 @@ import React from "react";
 import Menu from "./Menu";
 import { GetAnimator, AnimationDirection } from "../../shared/animations";
 import { useLastLocation } from "react-router-last-location";
-import { getCurrentAnimation } from "./homeAnimation";
 import PageTitle from "../common/PageTitle";
 import PageStyle from "../common/PageStyle";
 import CarouselContent from "./carousel/CarouselContent";
