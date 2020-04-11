@@ -12,9 +12,19 @@ import ProjectCard from "./ProjectCard";
 import { device } from "../../../shared/device";
 import { projectList } from "../../../data/projects/projectList";
 import ReturnButton from "../../common/ReturnButton";
+import { getLocationToAnim } from "../../../shared/locationToAnim";
+import {
+  LocationAnimationMap,
+  getAnimationBasedOnLocation,
+} from "../../../shared/dynamicAnimation";
+import {
+  homePath,
+  homePathHash,
+  projectListPathHash,
+} from "../../../models/routes";
+import { useLastLocation } from "react-router-last-location";
 
 const ProjectListPageAnimated = GetAnimator(PageStyle);
-const AnimationTransform = GetAnimationTransform(AnimationDirection.FromRight);
 
 const ProjectCardContainer = styled.section`
   height: 90%;
@@ -26,6 +36,14 @@ const ProjectCardContainer = styled.section`
   }
 `;
 
+const getAnimationMap = () => {
+  const animationMap: LocationAnimationMap = {};
+  animationMap[homePath] = AnimationDirection.FromRight;
+  animationMap["default"] = AnimationDirection.FromDown;
+
+  return animationMap;
+};
+
 const getProjectCards = () => {
   return projectList.map((a: Project, key: number) => {
     return <ProjectCard project={a} key={key}></ProjectCard>;
@@ -33,8 +51,19 @@ const getProjectCards = () => {
 };
 
 const ProjectListPage = () => {
+  const location = getLocationToAnim(
+    window.location.hash,
+    useLastLocation()?.pathname,
+    projectListPathHash
+  );
+
+  const animationTransform = getAnimationBasedOnLocation(
+    getAnimationMap(),
+    location
+  );
+
   return (
-    <ProjectListPageAnimated transform={AnimationTransform}>
+    <ProjectListPageAnimated transform={animationTransform}>
       <PageTitle centered>my projects</PageTitle>
       <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
       <ReturnButton returnToHome></ReturnButton>
