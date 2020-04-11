@@ -37,7 +37,7 @@ const ProjectListPage = () => {
     <ProjectListPageAnimated transform={AnimationTransform}>
       <PageTitle centered>my projects</PageTitle>
       <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
-      <ReturnButton></ReturnButton>
+      <ReturnButton returnToHome></ReturnButton>
     </ProjectListPageAnimated>
   );
 };
