@@ -52,9 +52,6 @@ const Bio = styled.div`
   height: 70%;
 
   @media ${device.tablet} {
-    width: 700px;
-    margin: auto;
-
     p {
       margin: 30px 0;
     }

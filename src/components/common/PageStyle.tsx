@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../shared/device";
 
 const PageStyle = styled.section`
   position: absolute;
@@ -10,6 +11,11 @@ const PageStyle = styled.section`
   width: 100%;
   height: 100%;
   overflow: auto;
+
+  @media ${device.desktop} {
+    width: 800px;
+    margin: auto;
+  }
 `;
 
 export default PageStyle;

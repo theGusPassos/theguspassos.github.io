@@ -42,7 +42,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
 
   return (
     <ProjectViewPageAnimated transform={AnimationTransform}>
-      <PageTitle centered>{project.name}</PageTitle>
+      {props.isDesktop ? null : <PageTitle centered>{project.name}</PageTitle>}
       <Image src={props.project.image} alt={props.project.imageAlt}></Image>
       <TagContainer>{getTagsInProject(props.project)}</TagContainer>
       <ProjectText>{props.project.container()}</ProjectText>
