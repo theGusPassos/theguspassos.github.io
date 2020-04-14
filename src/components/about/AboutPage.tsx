@@ -52,7 +52,7 @@ const Info = styled.div`
 
 const Bio = styled.div`
   padding: 3% 20px;
-  height: 70%;
+  line-height: 1.7;
 
   p a {
     color: ${colors.mainColor};
@@ -61,7 +61,6 @@ const Bio = styled.div`
   @media ${device.tablet} {
     p {
       margin: 30px 0;
-      line-height: 1.7;
     }
   }
 `;
