@@ -3,6 +3,8 @@ import { colors } from "../../shared/colors";
 import styled from "styled-components";
 import { device, isInDesktop } from "../../shared/device";
 import HeaderContacts from "./HeaderContacts";
+import { withResizeDetector } from "react-resize-detector";
+import ResizeListenerProps from "../../shared/ResizeListenerProps";
 
 const Background = styled.header`
   width: 100%;
@@ -51,17 +53,18 @@ const JobTitle = styled.div`
   }
 `;
 
-const Header = () => {
+interface HeaderProps extends ResizeListenerProps {}
+
+const Header = (props: HeaderProps) => {
   return (
     <Background>
       <NameContainer>
         <DevName>Gustavo Passos</DevName>
         <JobTitle>Game & Software Developer</JobTitle>
       </NameContainer>
-
-      {isInDesktop() ? <HeaderContacts></HeaderContacts> : null}
+      {isInDesktop(props.width) ? <HeaderContacts></HeaderContacts> : null}
     </Background>
   );
 };
 
-export default Header;
+export default withResizeDetector(Header);

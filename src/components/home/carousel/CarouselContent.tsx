@@ -28,7 +28,7 @@ const CarouselContent = () => {
   return (
     <CarouselContainer>
       <CarouselStyled
-        showArrows={isInDesktop()}
+        showArrows={isInDesktop(10)}
         showThumbs={false}
         showStatus={false}
         showIndicators

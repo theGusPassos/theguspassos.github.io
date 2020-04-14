@@ -28,7 +28,7 @@ const TransitionGroupStyled = styled(TransitionGroup)`
 const Body = () => {
   return (
     <BodyGrid>
-      <Header></Header>
+      <Header handleWidth></Header>
       <HashRouter basename="/">
         <LastLocationProvider>
           <Route

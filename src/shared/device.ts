@@ -3,8 +3,8 @@ export const deviceSize = {
   desktop: 1900,
 };
 
-export function isInDesktop() {
-  return window.screen.width >= deviceSize.desktop;
+export function isInDesktop(currentWidth: number) {
+  return currentWidth >= deviceSize.desktop;
 }
 
 export const device = {
