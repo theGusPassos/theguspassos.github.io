@@ -9,6 +9,11 @@ import { isInDesktop, device } from "../../../shared/device";
 
 const CarouselContainer = styled.div`
   z-index: 10;
+
+  @media ${device.desktop} {
+    margin: 20px;
+    box-shadow: 0px 3px 11px 0px #0000009c;
+  }
 `;
 
 const CarouselStyled = styled(Carousel)`
