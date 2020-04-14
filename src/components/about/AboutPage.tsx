@@ -10,6 +10,7 @@ import image from "../../images/me/EubyKuma.png";
 import { device } from "../../shared/device";
 import PageStyle from "../common/PageStyle";
 import NavigationButtons from "./NavigationButtons";
+import DeviceInfo from "../../shared/deviceInfo";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -30,7 +31,7 @@ const Image = styled.img`
   margin: 5% auto;
 
   @media ${device.tablet} {
-    width: 30%;
+    width: 25%;
   }
 `;
 
@@ -48,7 +49,8 @@ const Bio = styled.div`
   height: 70%;
 
   @media ${device.tablet} {
-    padding: 30px;
+    width: 700px;
+    margin: auto;
 
     p {
       margin: 30px 0;
@@ -56,10 +58,12 @@ const Bio = styled.div`
   }
 `;
 
-const AboutPage = () => {
+interface AboutProps extends DeviceInfo {}
+
+const AboutPage = (props: AboutProps) => {
   return (
     <AboutPageAnimated transform={AnimationTransform}>
-      <PageTitle centered>about me</PageTitle>
+      {props.isDesktop ? null : <PageTitle centered>about me</PageTitle>}
       <ImageContainer>
         <Image
           src={image}
@@ -79,8 +83,12 @@ const AboutPage = () => {
           I’m always studying and developing new projects with different
           technologies, specially games my defin
         </p>
+        <p>
+          I’m always studying and developing new projects with different
+          technologies, specially games my defin
+        </p>
       </Bio>
-      <NavigationButtons></NavigationButtons>
+      {props.isDesktop ? null : <NavigationButtons></NavigationButtons>}
     </AboutPageAnimated>
   );
 };

@@ -25,7 +25,7 @@ const Routes = (props: RoutesProps) => {
       </Route>
 
       <Route exact path={aboutPath}>
-        <AboutPage></AboutPage>
+        <AboutPage isDesktop={props.isDesktop}></AboutPage>
       </Route>
 
       <Route exact path={projectListPath}>
