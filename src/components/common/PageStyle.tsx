@@ -13,7 +13,8 @@ const PageStyle = styled.section`
   overflow: auto;
 
   @media ${device.desktop} {
-    width: 800px;
+    max-width: 800px;
+    width: 90%;
     margin: auto;
   }
 `;

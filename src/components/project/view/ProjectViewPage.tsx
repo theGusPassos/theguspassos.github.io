@@ -22,7 +22,10 @@ interface ProjectViewProps extends DeviceInfo {
   project: Project;
 }
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 100%;
+  max-height: 400px;
+`;
 
 const TagContainer = styled.div`
   display: flex;
@@ -43,7 +46,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
   return (
     <ProjectViewPageAnimated transform={AnimationTransform}>
       {props.isDesktop ? null : <PageTitle centered>{project.name}</PageTitle>}
-      <Image src={props.project.image} alt={props.project.imageAlt}></Image>
+      <Image src={props.project.imageBig} alt={props.project.imageAlt}></Image>
       <TagContainer>{getTagsInProject(props.project)}</TagContainer>
       <ProjectText>{props.project.container()}</ProjectText>
       {props.isDesktop ? null : <ReturnButton></ReturnButton>}
