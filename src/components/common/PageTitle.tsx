@@ -26,6 +26,7 @@ const TitleContent = styled.div`
     color: ${colors.mainColor};
     background: ${colors.mainBackgroundColor};
     margin-bottom: 10px;
+    font-size: 1.6em;
   }
 `;
 

@@ -53,7 +53,7 @@ const HomePage = (props: HomeProps) => {
   return (
     <HomePageAnimated transform={animationTransform}>
       <PageTitle>some of the projects I've worked on</PageTitle>
-      <CarouselContent></CarouselContent>
+      <CarouselContent isDesktop={props.isDesktop}></CarouselContent>
       {props.isDesktop ? null : <Menu></Menu>}
     </HomePageAnimated>
   );

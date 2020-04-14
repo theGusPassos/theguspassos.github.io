@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { projectList } from "../../../data/projects/projectList";
 import Project from "../../../models/project";
 import { isInDesktop, device } from "../../../shared/device";
+import DeviceInfo from "../../../shared/deviceInfo";
 
 const CarouselContainer = styled.div`
   z-index: 10;
@@ -16,6 +17,11 @@ const CarouselStyled = styled(Carousel)`
     top: 0;
     bottom: unset;
   }
+
+  .carousel.carousel-slider .control-arrow {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
 `;
 
 function projectSlides() {
@@ -24,11 +30,13 @@ function projectSlides() {
   });
 }
 
-const CarouselContent = () => {
+interface CarouselContent extends DeviceInfo {}
+
+const CarouselContent = (props: CarouselContent) => {
   return (
     <CarouselContainer>
       <CarouselStyled
-        showArrows={isInDesktop(10)}
+        showArrows={false}
         showThumbs={false}
         showStatus={false}
         showIndicators

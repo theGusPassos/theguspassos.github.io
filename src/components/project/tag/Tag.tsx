@@ -23,7 +23,6 @@ const TagName = styled.div`
   }
 
   @media ${device.desktop} {
-    font-size: 1.3em;
     padding: 5px 20px;
   }
 `;
