@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./header/Header";
 import styled from "styled-components";
 import { HashRouter, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";

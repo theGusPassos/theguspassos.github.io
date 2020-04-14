@@ -1,7 +1,8 @@
 import React from "react";
-import { colors } from "../shared/colors";
+import { colors } from "../../shared/colors";
 import styled from "styled-components";
-import { device } from "../shared/device";
+import { device, isInDesktop } from "../../shared/device";
+import HeaderContacts from "./HeaderContacts";
 
 const Background = styled.header`
   width: 100%;
@@ -10,6 +11,8 @@ const Background = styled.header`
   z-index: 10;
 
   @media ${device.desktop} {
+    display: flex;
+    flex-direction: column;
     width: 25%;
     height: 100%;
     float: left;
@@ -55,6 +58,8 @@ const Header = () => {
         <DevName>Gustavo Passos</DevName>
         <JobTitle>Game & Software Developer</JobTitle>
       </NameContainer>
+
+      {isInDesktop() ? <HeaderContacts></HeaderContacts> : null}
     </Background>
   );
 };
