@@ -21,8 +21,10 @@ import {
   homePath,
   homePathHash,
   projectListPathHash,
+  aboutPath,
 } from "../../../models/routes";
 import { useLastLocation } from "react-router-last-location";
+import DeviceInfo from "../../../shared/deviceInfo";
 
 const ProjectListPageAnimated = GetAnimator(PageStyle);
 
@@ -39,6 +41,7 @@ const ProjectCardContainer = styled.section`
 const getAnimationMap = () => {
   const animationMap: LocationAnimationMap = {};
   animationMap[homePath] = AnimationDirection.FromRight;
+  animationMap[aboutPath] = AnimationDirection.FromRight;
   animationMap["default"] = AnimationDirection.FromDown;
 
   return animationMap;
@@ -50,7 +53,9 @@ const getProjectCards = () => {
   });
 };
 
-const ProjectListPage = () => {
+interface ProjectListProps extends DeviceInfo {}
+
+const ProjectListPage = (props: ProjectListProps) => {
   const location = getLocationToAnim(
     window.location.hash,
     useLastLocation()?.pathname,
@@ -64,9 +69,9 @@ const ProjectListPage = () => {
 
   return (
     <ProjectListPageAnimated transform={animationTransform}>
-      <PageTitle centered>my projects</PageTitle>
+      {props.isDesktop ? null : <PageTitle centered>my projects</PageTitle>}
       <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
-      <ReturnButton returnToHome></ReturnButton>
+      {props.isDesktop ? null : <ReturnButton returnToHome></ReturnButton>}
     </ProjectListPageAnimated>
   );
 };

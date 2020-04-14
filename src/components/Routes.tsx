@@ -29,17 +29,18 @@ const Routes = (props: RoutesProps) => {
       </Route>
 
       <Route exact path={projectListPath}>
-        <ProjectListPage></ProjectListPage>
+        <ProjectListPage isDesktop={props.isDesktop}></ProjectListPage>
       </Route>
 
       <Route
         exact
         path={projectPath}
-        render={(props) => {
+        render={(renderProps) => {
           return (
             <ProjectViewPage
-              projectId={props.match.params.id}
+              projectId={renderProps.match.params.id}
               project={sketch}
+              isDesktop={props.isDesktop}
             ></ProjectViewPage>
           );
         }}

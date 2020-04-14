@@ -12,11 +12,12 @@ import { device } from "../../../shared/device";
 import ReturnButton from "../../common/ReturnButton";
 import { getProjectById } from "../../../data/projects/projectList";
 import { getTagsInProject } from "../tag/tagList";
+import DeviceInfo from "../../../shared/deviceInfo";
 
 const ProjectViewPageAnimated = GetAnimator(PageStyle);
 const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
 
-interface ProjectViewProps {
+interface ProjectViewProps extends DeviceInfo {
   projectId: number;
   project: Project;
 }
@@ -45,7 +46,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
       <Image src={props.project.image} alt={props.project.imageAlt}></Image>
       <TagContainer>{getTagsInProject(props.project)}</TagContainer>
       <ProjectText>{props.project.container()}</ProjectText>
-      <ReturnButton></ReturnButton>
+      {props.isDesktop ? null : <ReturnButton></ReturnButton>}
     </ProjectViewPageAnimated>
   );
 };
