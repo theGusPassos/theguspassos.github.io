@@ -17,9 +17,7 @@ const Background = styled.header`
   @media ${device.desktop} {
     display: flex;
     flex-direction: column;
-    width: 35%;
-    min-width: 400px;
-    max-width: 450px;
+    width: 350px;
     height: 100%;
     float: left;
   }
@@ -52,10 +50,6 @@ const DevName = styled.div`
   @media ${device.tablet} {
     font-size: 1.4em;
   }
-
-  @media ${device.desktop} {
-    font-size: 1.9em;
-  }
 `;
 
 const JobTitle = styled.div`
@@ -63,10 +57,6 @@ const JobTitle = styled.div`
 
   @media ${device.tablet} {
     font-size: 1.9em;
-  }
-
-  @media ${device.desktop} {
-    font-size: 2.4em;
   }
 `;
 

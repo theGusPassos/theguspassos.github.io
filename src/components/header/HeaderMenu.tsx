@@ -16,7 +16,6 @@ const LinkContainer = styled.ul`
 `;
 
 const Item = styled.li`
-  font-size: 1.3em;
   text-align: center;
   list-style: none;
 `;
