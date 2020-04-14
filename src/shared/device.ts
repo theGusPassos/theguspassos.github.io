@@ -1,6 +1,6 @@
 export const deviceSize = {
   tablet: 500,
-  desktop: 1900,
+  desktop: 1200,
 };
 
 export function isInDesktop(currentWidth: number) {

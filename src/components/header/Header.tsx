@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { colors } from "../../shared/colors";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { device, isInDesktop } from "../../shared/device";
 import HeaderContacts from "./HeaderContacts";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../../shared/ResizeListenerProps";
+import HeaderMenu from "./HeaderMenu";
 
 const Background = styled.header`
   width: 100%;
@@ -21,12 +22,21 @@ const Background = styled.header`
   }
 `;
 
-const NameContainer = styled.div`
+const InfoContainer = styled.div`
   padding: 20px;
 
   @media ${device.tablet} {
     padding: 30px;
   }
+
+  @media ${device.desktop} {
+    height: 50%;
+    display: flex;
+  }
+`;
+
+const NameContainer = styled.div`
+  margin: auto;
 `;
 
 const DevName = styled.div`
@@ -58,11 +68,18 @@ interface HeaderProps extends ResizeListenerProps {}
 const Header = (props: HeaderProps) => {
   return (
     <Background>
-      <NameContainer>
-        <DevName>Gustavo Passos</DevName>
-        <JobTitle>Game & Software Developer</JobTitle>
-      </NameContainer>
-      {isInDesktop(props.width) ? <HeaderContacts></HeaderContacts> : null}
+      <InfoContainer>
+        <NameContainer>
+          <DevName>Gustavo Passos</DevName>
+          <JobTitle>Game & Software Developer</JobTitle>
+        </NameContainer>
+      </InfoContainer>
+      {isInDesktop(props.width) ? (
+        <Fragment>
+          <HeaderMenu></HeaderMenu>
+          <HeaderContacts></HeaderContacts>
+        </Fragment>
+      ) : null}
     </Background>
   );
 };
