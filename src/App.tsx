@@ -3,7 +3,7 @@ import "./App.css";
 import Body from "./components/Body";
 
 const App = () => {
-  return <Body></Body>;
+  return <Body handleWidth></Body>;
 };
 
 export default App;

@@ -11,12 +11,17 @@ import {
   projectPath,
   projectListPath,
 } from "../models/routes";
+import DeviceInfo from "../shared/deviceInfo";
 
-const Routes = (props: { location: any }) => {
+interface RoutesProps extends DeviceInfo {
+  location: any;
+}
+
+const Routes = (props: RoutesProps) => {
   return (
     <Switch location={props.location}>
       <Route exact path={homePath}>
-        <HomePage handleWidth></HomePage>
+        <HomePage isDesktop={props.isDesktop}></HomePage>
       </Route>
 
       <Route exact path={aboutPath}>

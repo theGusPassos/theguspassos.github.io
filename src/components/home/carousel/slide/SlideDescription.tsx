@@ -11,7 +11,7 @@ const DescriptionContainer = styled.div`
   @media ${device.tablet} {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: -5px;
     width: 50%;
   }
 `;
@@ -24,8 +24,8 @@ const Title = styled.strong`
   text-transform: uppercase;
   border: 1px solid #c2c2c2;
   position: absolute;
+  left: 0px;
   top: -35px;
-  left: 0;
   padding: 10px 20px;
 
   @media ${device.tablet} {
@@ -42,7 +42,7 @@ const Description = styled.div`
   text-align: left;
 
   @media ${device.tablet} {
-    font-size: 1.2em;
+    font-size: 1.1em;
     border-radius: 0 30px 0 0;
     padding: 20px 30px;
   }

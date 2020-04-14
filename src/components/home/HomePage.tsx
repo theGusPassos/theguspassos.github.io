@@ -10,16 +10,16 @@ import {
 } from "../../shared/dynamicAnimation";
 import { aboutPath, projectListPath, homePathHash } from "../../models/routes";
 import { getLocationToAnim } from "../../shared/locationToAnim";
-import { withResizeDetector } from "react-resize-detector";
-import ResizeListenerProps from "../../shared/ResizeListenerProps";
 import { device } from "../../shared/device";
 import styled from "styled-components";
+import Menu from "./Menu";
+import DeviceInfo from "../../shared/deviceInfo";
 
 const HomePageStyled = styled(PageStyle)`
   @media ${device.desktop} {
     position: relative;
     margin: auto;
-    width: 75%;
+    width: 80%;
     height: unset;
     max-width: 800px;
   }
@@ -36,7 +36,7 @@ const getAnimationMap = () => {
   return animationMap;
 };
 
-interface HomeProps extends ResizeListenerProps {}
+interface HomeProps extends DeviceInfo {}
 
 const HomePage = (props: HomeProps) => {
   const location = getLocationToAnim(
@@ -54,9 +54,9 @@ const HomePage = (props: HomeProps) => {
     <HomePageAnimated transform={animationTransform}>
       <PageTitle>some of the projects I've worked on</PageTitle>
       <CarouselContent></CarouselContent>
-      {/* <Menu></Menu> */}
+      {props.isDesktop ? null : <Menu></Menu>}
     </HomePageAnimated>
   );
 };
 
-export default withResizeDetector(HomePage);
+export default HomePage;

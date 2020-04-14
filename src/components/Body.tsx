@@ -6,13 +6,16 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
 import Routes from "./Routes";
 import { animationSpeed } from "../shared/animations";
-import { device } from "../shared/device";
+import { device, isInDesktop } from "../shared/device";
+import { withResizeDetector } from "react-resize-detector";
+import ResizeListenerProps from "../shared/ResizeListenerProps";
 
 const BodyGrid = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
   margin: auto;
+  max-width: 1800px;
 
   @media ${device.desktop} {
     display: block;
@@ -29,11 +32,13 @@ const TransitionGroupStyled = styled(TransitionGroup)`
   }
 `;
 
-const Body = () => {
+interface BodyProps extends ResizeListenerProps {}
+
+const Body = (props: BodyProps) => {
   return (
     <BodyGrid>
       <HashRouter basename="/">
-        <Header handleWidth></Header>
+        <Header isDesktop={isInDesktop(props.width)}></Header>
         <LastLocationProvider>
           <Route
             render={({ location }) => (
@@ -43,7 +48,10 @@ const Body = () => {
                   classNames="animation"
                   timeout={animationSpeed}
                 >
-                  <Routes location={location}></Routes>
+                  <Routes
+                    isDesktop={isInDesktop(props.width)}
+                    location={location}
+                  ></Routes>
                 </CSSTransition>
               </TransitionGroupStyled>
             )}
@@ -54,4 +62,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default withResizeDetector(Body);

@@ -3,10 +3,9 @@ import { colors } from "../../shared/colors";
 import styled, { css } from "styled-components";
 import { device, isInDesktop } from "../../shared/device";
 import HeaderContacts from "./HeaderContacts";
-import { withResizeDetector } from "react-resize-detector";
-import ResizeListenerProps from "../../shared/ResizeListenerProps";
 import HeaderMenu from "./HeaderMenu";
 import { createHashHistory } from "history";
+import DeviceInfo from "../../shared/deviceInfo";
 
 const Background = styled.header`
   width: 100%;
@@ -66,7 +65,7 @@ const goToHome = () => {
   history.push("/");
 };
 
-interface HeaderProps extends ResizeListenerProps {}
+interface HeaderProps extends DeviceInfo {}
 
 const Header = (props: HeaderProps) => {
   return (
@@ -77,7 +76,7 @@ const Header = (props: HeaderProps) => {
           <JobTitle>Game & Software Developer</JobTitle>
         </NameContainer>
       </InfoContainer>
-      {isInDesktop(props.width) ? (
+      {props.isDesktop ? (
         <Fragment>
           <HeaderMenu></HeaderMenu>
           <HeaderContacts></HeaderContacts>
@@ -87,4 +86,4 @@ const Header = (props: HeaderProps) => {
   );
 };
 
-export default withResizeDetector(Header);
+export default Header;

@@ -1,10 +1,10 @@
 export const deviceSize = {
   tablet: 500,
-  desktop: 1000,
+  desktop: 920,
 };
 
 export function isInDesktop(currentWidth: number) {
-  return currentWidth >= deviceSize.desktop;
+  return currentWidth > deviceSize.desktop;
 }
 
 export const device = {
