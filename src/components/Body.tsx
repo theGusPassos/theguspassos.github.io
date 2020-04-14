@@ -9,16 +9,19 @@ import { animationSpeed } from "../shared/animations";
 import { device, isInDesktop } from "../shared/device";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../shared/ResizeListenerProps";
+import { colors } from "../shared/colors";
 
 const BodyGrid = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
   margin: auto;
-  max-width: 1800px;
+  max-width: 1200px;
+  background-color: ${colors.mainBackgroundColor};
 
   @media ${device.desktop} {
     display: block;
+    box-shadow: 7px 0px 20px 0px #0000004f;
   }
 `;
 

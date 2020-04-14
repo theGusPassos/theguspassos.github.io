@@ -24,7 +24,7 @@ const TitleContent = styled.div`
   @media ${device.desktop} {
     text-align: center;
     color: ${colors.mainColor};
-    background: ${colors.secondBackgroundColor};
+    background: ${colors.mainBackgroundColor};
     margin-bottom: 10px;
   }
 `;
