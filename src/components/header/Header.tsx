@@ -20,6 +20,7 @@ const Background = styled.header`
     width: 350px;
     height: 100%;
     float: left;
+    box-shadow: 0px 3px 11px 0px #0000009c;
   }
 `;
 
