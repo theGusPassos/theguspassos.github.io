@@ -1,6 +1,7 @@
 import styled, { AnyStyledComponent } from "styled-components";
 
 export const animationSpeed = 500;
+const animationDistance = 200;
 
 export enum AnimationDirection {
   FromUp,
@@ -49,16 +50,16 @@ export const GetAnimationTransform = (
 ): Transform => {
   switch (animationDirection) {
     case AnimationDirection.FromUp:
-      return { x: 0, y: -100 };
+      return { x: 0, y: -animationDistance };
 
     case AnimationDirection.FromDown:
-      return { x: 0, y: 100 };
+      return { x: 0, y: animationDistance };
 
     case AnimationDirection.FromLeft:
-      return { x: -100, y: 0 };
+      return { x: -animationDistance, y: 0 };
 
     case AnimationDirection.FromRight:
-      return { x: 100, y: 0 };
+      return { x: animationDistance, y: 0 };
   }
 };
 

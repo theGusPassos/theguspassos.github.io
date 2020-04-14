@@ -11,6 +11,18 @@ import { device } from "../../shared/device";
 import PageStyle from "../common/PageStyle";
 import NavigationButtons from "./NavigationButtons";
 import DeviceInfo from "../../shared/deviceInfo";
+import { getLocationToAnim } from "../../shared/locationToAnim";
+import { useLastLocation } from "react-router-last-location";
+import {
+  aboutPathHash,
+  projectPath,
+  homePath,
+  projectListPath,
+} from "../../models/routes";
+import {
+  getAnimationBasedOnLocation,
+  LocationAnimationMap,
+} from "../../shared/dynamicAnimation";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -58,11 +70,31 @@ const Bio = styled.div`
   }
 `;
 
+const getAnimationMap = () => {
+  const animationMap: LocationAnimationMap = {};
+  animationMap[homePath] = AnimationDirection.FromLeft;
+  animationMap[projectListPath] = AnimationDirection.FromLeft;
+  animationMap["default"] = AnimationDirection.FromDown;
+
+  return animationMap;
+};
+
 interface AboutProps extends DeviceInfo {}
 
 const AboutPage = (props: AboutProps) => {
+  const location = getLocationToAnim(
+    window.location.hash,
+    useLastLocation()?.pathname,
+    aboutPathHash
+  );
+
+  const animationTransform = getAnimationBasedOnLocation(
+    getAnimationMap(),
+    location
+  );
+
   return (
-    <AboutPageAnimated transform={AnimationTransform}>
+    <AboutPageAnimated transform={animationTransform}>
       {props.isDesktop ? null : <PageTitle centered>about me</PageTitle>}
       <ImageContainer>
         <Image
