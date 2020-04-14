@@ -8,6 +8,12 @@ const Background = styled.header`
   background-color: ${colors.mainColor};
   color: ${colors.mainTextColor};
   z-index: 10;
+
+  @media ${device.desktop} {
+    width: 25%;
+    height: 100%;
+    float: left;
+  }
 `;
 
 const NameContainer = styled.div`
@@ -24,6 +30,10 @@ const DevName = styled.div`
   @media ${device.tablet} {
     font-size: 1.4em;
   }
+
+  @media ${device.desktop} {
+    font-size: 2.5em;
+  }
 `;
 
 const JobTitle = styled.div`
@@ -31,6 +41,10 @@ const JobTitle = styled.div`
 
   @media ${device.tablet} {
     font-size: 1.9em;
+  }
+
+  @media ${device.desktop} {
+    font-size: 3em;
   }
 `;
 

@@ -6,13 +6,17 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
 import Routes from "./Routes";
 import { animationSpeed } from "../shared/animations";
+import { device } from "../shared/device";
 
 const BodyGrid = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-width: 900px;
   margin: auto;
+
+  @media ${device.desktop} {
+    display: block;
+  }
 `;
 
 const TransitionGroupStyled = styled(TransitionGroup)`

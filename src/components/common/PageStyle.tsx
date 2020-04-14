@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PageStyle = styled.div`
+const PageStyle = styled.section`
   position: absolute;
   top: 0;
   left: 0;

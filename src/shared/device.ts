@@ -1,6 +1,6 @@
 export const deviceSize = {
   tablet: 500,
-  desktop: 2560
+  desktop: 1900,
 };
 
 export function isInDesktop() {
@@ -9,5 +9,5 @@ export function isInDesktop() {
 
 export const device = {
   tablet: `(min-width: ${deviceSize.tablet}px)`,
-  desktop: `(min-width: ${deviceSize.desktop}px)`
+  desktop: `(min-width: ${deviceSize.desktop}px)`,
 };
