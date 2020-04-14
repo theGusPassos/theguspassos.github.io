@@ -11,6 +11,10 @@ const ImageContainer = styled.section`
   position: relative;
   display: block;
   background-color: ${colors.mainBackgroundColor};
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const TagContainer = styled.div`

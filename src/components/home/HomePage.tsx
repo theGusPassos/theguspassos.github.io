@@ -1,5 +1,4 @@
 import React from "react";
-import Menu from "./Menu";
 import { GetAnimator, AnimationDirection } from "../../shared/animations";
 import { useLastLocation } from "react-router-last-location";
 import PageTitle from "../common/PageTitle";
@@ -13,9 +12,20 @@ import { aboutPath, projectListPath, homePathHash } from "../../models/routes";
 import { getLocationToAnim } from "../../shared/locationToAnim";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../../shared/ResizeListenerProps";
-import { isInDesktop } from "../../shared/device";
+import { device } from "../../shared/device";
+import styled from "styled-components";
 
-const HomePageStyled = GetAnimator(PageStyle);
+const HomePageStyled = styled(PageStyle)`
+  @media ${device.desktop} {
+    position: relative;
+    margin: auto;
+    width: 70%;
+    height: unset;
+    max-width: 800px;
+  }
+`;
+
+const HomePageAnimated = GetAnimator(HomePageStyled);
 
 const getAnimationMap = () => {
   const animationMap: LocationAnimationMap = {};
@@ -41,11 +51,11 @@ const HomePage = (props: HomeProps) => {
   );
 
   return (
-    <HomePageStyled transform={animationTransform}>
-      {/* <PageTitle>some of the projects I've worked on</PageTitle> */}
+    <HomePageAnimated transform={animationTransform}>
+      <PageTitle>some of the projects I've worked on</PageTitle>
       <CarouselContent></CarouselContent>
       {/* <Menu></Menu> */}
-    </HomePageStyled>
+    </HomePageAnimated>
   );
 };
 

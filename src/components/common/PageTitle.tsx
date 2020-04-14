@@ -19,6 +19,14 @@ const TitleContent = styled.div`
   @media ${device.tablet} {
     padding: 10px 30px;
     font-size: 1.4em;
+    margin-bottom: 50px;
+    box-shadow: none;
+  }
+
+  @media ${device.desktop} {
+    text-align: center;
+    color: ${colors.mainColor};
+    background: ${colors.secondBackgroundColor};
   }
 `;
 

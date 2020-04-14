@@ -21,6 +21,11 @@ const TagName = styled.div`
     min-width: 90px;
     margin: 15px;
   }
+
+  @media ${device.desktop} {
+    font-size: 1.3em;
+    padding: 5px 20px;
+  }
 `;
 
 interface TagProps {

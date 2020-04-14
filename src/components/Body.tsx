@@ -23,6 +23,10 @@ const TransitionGroupStyled = styled(TransitionGroup)`
   height: 100%;
   position: relative;
   overflow: hidden;
+
+  @media ${device.desktop} {
+    display: flex;
+  }
 `;
 
 const Body = () => {
