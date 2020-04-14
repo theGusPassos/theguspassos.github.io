@@ -6,6 +6,7 @@ import HeaderContacts from "./HeaderContacts";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../../shared/ResizeListenerProps";
 import HeaderMenu from "./HeaderMenu";
+import { createHashHistory } from "history";
 
 const Background = styled.header`
   width: 100%;
@@ -39,6 +40,10 @@ const InfoContainer = styled.div`
 
 const NameContainer = styled.div`
   margin: auto;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const DevName = styled.div`
@@ -65,13 +70,18 @@ const JobTitle = styled.div`
   }
 `;
 
+const goToHome = () => {
+  const history = createHashHistory();
+  history.push("/");
+};
+
 interface HeaderProps extends ResizeListenerProps {}
 
 const Header = (props: HeaderProps) => {
   return (
     <Background>
       <InfoContainer>
-        <NameContainer>
+        <NameContainer onClick={() => goToHome()}>
           <DevName>Gustavo Passos</DevName>
           <JobTitle>Game & Software Developer</JobTitle>
         </NameContainer>
