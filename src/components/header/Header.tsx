@@ -31,7 +31,7 @@ const InfoContainer = styled.div`
   }
 
   @media ${device.desktop} {
-    height: 50%;
+    height: 45%;
     display: flex;
   }
 `;

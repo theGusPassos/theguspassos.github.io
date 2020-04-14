@@ -25,7 +25,7 @@ const TitleContent = styled.div`
     text-align: center;
     color: ${colors.mainColor};
     background: ${colors.secondBackgroundColor};
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 `;
 
