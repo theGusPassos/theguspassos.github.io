@@ -14,6 +14,9 @@ import {
   getAnimationBasedOnLocation,
   LocationAnimationMap,
 } from "../../shared/dynamicAnimation";
+import { colors } from "../../shared/colors";
+import { Link } from "react-router-dom";
+import ContactsButton from "../contacts/ContactsButton";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -51,9 +54,14 @@ const Bio = styled.div`
   padding: 3% 20px;
   height: 70%;
 
+  p a {
+    color: ${colors.mainColor};
+  }
+
   @media ${device.tablet} {
     p {
       margin: 30px 0;
+      line-height: 1.7;
     }
   }
 `;
@@ -100,13 +108,27 @@ const AboutPage = (props: AboutProps) => {
           software developer in brazillian companies.
         </p>
         <p>
-          I’m always studying and developing new projects with different
-          technologies, specially games my defin
+          I'm interested in developing any kind of software or game, regardless
+          of the tech stack. I have no preferred programming language or
+          framework, the software quality and the user experience are the most
+          important things for me. That's why I look forward to working with
+          people that have the same objectives.
         </p>
         <p>
-          I’m always studying and developing new projects with different
-          technologies, specially games my defin
+          If you're interested in the technologies that I'm already experienced
+          with, you can check my <Link to="/projects">project page</Link> for
+          finished projects or my{" "}
+          <a href="https://github.com/theGusPassos" target="_blank">
+            github
+          </a>{" "}
+          for ongoing ones. For professional projects and experience, feel free
+          to check my{" "}
+          <a href="https://www.linkedin.com/in/theguspassos/" target="_blank">
+            linkedin page
+          </a>
+          .
         </p>
+        <p>If you need help in a project of yours feel free to contact me =)</p>
       </Bio>
       {props.isDesktop ? null : <NavigationButtons></NavigationButtons>}
     </AboutPageAnimated>
