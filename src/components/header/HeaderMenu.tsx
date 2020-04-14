@@ -5,7 +5,8 @@ import LinkButton from "../common/LinkButton";
 import { colors } from "../../shared/colors";
 
 const HeaderMenuStyled = styled.section`
-  padding: 30px;
+  padding: 15% 15% 0 15%;
+  height: 25%;
 `;
 
 const LinkContainer = styled.ul`
@@ -20,9 +21,17 @@ const Item = styled.li`
   list-style: none;
 `;
 
+interface ButtonProps {
+  border?: boolean;
+}
+
 const MenuButton = styled(LinkButton)`
+  width: 100%;
+  padding: 7% 0;
   color: #fff;
   background: ${colors.mainColor};
+  border-top: ${(props: ButtonProps) =>
+    props.border ? "solid 1px white" : "none"};
 `;
 
 const HeaderMenu = () => {
@@ -36,7 +45,7 @@ const HeaderMenu = () => {
         </Item>
         <Item>
           <Link to="/about">
-            <MenuButton>About Me</MenuButton>
+            <MenuButton border>About Me</MenuButton>
           </Link>
         </Item>
       </LinkContainer>
