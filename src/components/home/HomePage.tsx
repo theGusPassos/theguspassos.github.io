@@ -19,7 +19,7 @@ const HomePageStyled = styled(PageStyle)`
   @media ${device.desktop} {
     position: relative;
     margin: auto;
-    width: 80%;
+    width: 85%;
     height: unset;
     max-width: 800px;
   }

@@ -8,7 +8,7 @@ import Routes from "./Routes";
 import { animationSpeed } from "../shared/animations";
 import { device, isInDesktop } from "../shared/device";
 import { withResizeDetector } from "react-resize-detector";
-import ResizeListenerProps from "../shared/ResizeListenerProps";
+import ResizeListenerProps from "../shared/resizeListenerProps";
 import { colors } from "../shared/colors";
 
 const BodyGrid = styled.div`
@@ -16,12 +16,12 @@ const BodyGrid = styled.div`
   flex-direction: column;
   height: 100%;
   margin: auto;
-  max-width: 1200px;
+  max-width: 1400px;
   background-color: ${colors.mainBackgroundColor};
 
   @media ${device.desktop} {
     display: block;
-    box-shadow: 7px 0px 20px 0px #0000004f;
+    box-shadow: 0px 3px 11px 0px #0000000c;
   }
 `;
 
