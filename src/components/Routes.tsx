@@ -16,7 +16,7 @@ const Routes = (props: { location: any }) => {
   return (
     <Switch location={props.location}>
       <Route exact path={homePath}>
-        <HomePage></HomePage>
+        <HomePage handleWidth></HomePage>
       </Route>
 
       <Route exact path={aboutPath}>

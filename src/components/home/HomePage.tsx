@@ -11,6 +11,9 @@ import {
 } from "../../shared/dynamicAnimation";
 import { aboutPath, projectListPath, homePathHash } from "../../models/routes";
 import { getLocationToAnim } from "../../shared/locationToAnim";
+import { withResizeDetector } from "react-resize-detector";
+import ResizeListenerProps from "../../shared/ResizeListenerProps";
+import { isInDesktop } from "../../shared/device";
 
 const HomePageStyled = GetAnimator(PageStyle);
 
@@ -23,7 +26,9 @@ const getAnimationMap = () => {
   return animationMap;
 };
 
-const HomePage = () => {
+interface HomeProps extends ResizeListenerProps {}
+
+const HomePage = (props: HomeProps) => {
   const location = getLocationToAnim(
     window.location.hash,
     useLastLocation()?.pathname,
@@ -37,11 +42,11 @@ const HomePage = () => {
 
   return (
     <HomePageStyled transform={animationTransform}>
-      <PageTitle>some of the projects I've worked on</PageTitle>
+      {/* <PageTitle>some of the projects I've worked on</PageTitle> */}
       <CarouselContent></CarouselContent>
-      <Menu></Menu>
+      {/* <Menu></Menu> */}
     </HomePageStyled>
   );
 };
 
-export default HomePage;
+export default withResizeDetector(HomePage);

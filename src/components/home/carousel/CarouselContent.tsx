@@ -5,10 +5,16 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { projectList } from "../../../data/projects/projectList";
 import Project from "../../../models/project";
-import { isInDesktop } from "../../../shared/device";
+import { isInDesktop, device } from "../../../shared/device";
 
 const CarouselContainer = styled.div`
   z-index: 10;
+
+  @media ${device.desktop} {
+    margin: auto;
+    width: 70%;
+    max-width: 800px;
+  }
 `;
 
 const CarouselStyled = styled(Carousel)`
