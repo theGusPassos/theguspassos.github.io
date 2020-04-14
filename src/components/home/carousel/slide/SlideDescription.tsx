@@ -11,6 +11,7 @@ const DescriptionContainer = styled.div`
   @media ${device.tablet} {
     position: absolute;
     bottom: 0;
+    left: -1;
     width: 50%;
   }
 `;

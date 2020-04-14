@@ -13,13 +13,11 @@ const TitleContent = styled.div`
   padding: 10px 20px;
   font-size: 0.95em;
   text-align: ${(props: TitleProps) => (props.centered ? "center" : "unset")};
-
   box-shadow: 0px 3px 11px 0px #0000009c;
 
   @media ${device.tablet} {
     padding: 10px 30px;
     font-size: 1.4em;
-    margin-bottom: 50px;
     box-shadow: none;
   }
 
@@ -27,6 +25,7 @@ const TitleContent = styled.div`
     text-align: center;
     color: ${colors.mainColor};
     background: ${colors.secondBackgroundColor};
+    margin-bottom: 40px;
   }
 `;
 
