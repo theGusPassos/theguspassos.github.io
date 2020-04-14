@@ -1,11 +1,7 @@
 import React from "react";
 import PageTitle from "../common/PageTitle";
 import styled from "styled-components";
-import {
-  AnimationDirection,
-  GetAnimator,
-  GetAnimationTransform,
-} from "../../shared/animations";
+import { AnimationDirection, GetAnimator } from "../../shared/animations";
 import image from "../../images/me/EubyKuma.png";
 import { device } from "../../shared/device";
 import PageStyle from "../common/PageStyle";
@@ -13,12 +9,7 @@ import NavigationButtons from "./NavigationButtons";
 import DeviceInfo from "../../shared/deviceInfo";
 import { getLocationToAnim } from "../../shared/locationToAnim";
 import { useLastLocation } from "react-router-last-location";
-import {
-  aboutPathHash,
-  projectPath,
-  homePath,
-  projectListPath,
-} from "../../models/routes";
+import { aboutPathHash, homePath, projectListPath } from "../../models/routes";
 import {
   getAnimationBasedOnLocation,
   LocationAnimationMap,
@@ -33,7 +24,6 @@ const AboutPageStyled = styled(PageStyle)`
 `;
 
 const AboutPageAnimated = GetAnimator(AboutPageStyled);
-const AnimationTransform = GetAnimationTransform(AnimationDirection.FromLeft);
 
 const ImageContainer = styled.div``;
 
@@ -44,6 +34,7 @@ const Image = styled.img`
 
   @media ${device.tablet} {
     width: 25%;
+    min-width: 250px;
   }
 `;
 

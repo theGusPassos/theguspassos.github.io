@@ -1,7 +1,7 @@
 import styled, { AnyStyledComponent } from "styled-components";
 
 export const animationSpeed = 500;
-const animationDistance = 200;
+const animationDistance = 150;
 
 export enum AnimationDirection {
   FromUp,
