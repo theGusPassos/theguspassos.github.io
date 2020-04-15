@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Contact from "../../models/contact";
 
 const ContactCardStyled = styled.div`
   padding: 5% 10%;
@@ -23,17 +24,18 @@ const ContactInfo = styled.div`
 `;
 
 interface ContactCardProps {
-  image: string;
-  message: string;
-  contact: string;
+  contact: Contact;
 }
 
 const ContactCard = (props: ContactCardProps) => {
   return (
     <ContactCardStyled>
-      <ContactImage src={props.image}></ContactImage>
+      <ContactImage
+        src={props.contact.image}
+        alt={props.contact.altImage}
+      ></ContactImage>
       <ContactInfo>
-        <strong>{props.message}</strong>
+        <strong>{props.contact.message}</strong>
         <span>{props.contact}</span>
       </ContactInfo>
     </ContactCardStyled>

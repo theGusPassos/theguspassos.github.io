@@ -78,14 +78,7 @@ const ContactsContainer = styled.div`
 
 const getContacts = () => {
   return contacts.map((contact: Contact, key: number) => {
-    return (
-      <ContactCard
-        key={key}
-        contact={contact.contactText}
-        image={contact.image}
-        message={contact.message}
-      ></ContactCard>
-    );
+    return <ContactCard key={key} contact={contact}></ContactCard>;
   });
 };
 

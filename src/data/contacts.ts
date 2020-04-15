@@ -6,16 +6,19 @@ import linkedinLogo from "../images/contacts/linkedin.png";
 export const contacts: Contact[] = [
   {
     image: gmailLogo,
+    altImage: "gmail logo",
     message: "mail me",
     contactText: "theguspassos@gmail.com",
   },
   {
     image: linkedinLogo,
+    altImage: "linkedin logo",
     message: "connect with me",
     contactText: "linkedin.com/in/theguspassos/",
   },
   {
     image: githubLogo,
+    altImage: "github logo",
     message: "code with me",
     contactText: "github/theguspassos",
   },
