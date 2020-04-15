@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { colors } from "../../shared/colors";
-import styled, { css } from "styled-components";
-import { device, isInDesktop } from "../../shared/device";
+import styled from "styled-components";
+import { device } from "../../shared/device";
 import HeaderContacts from "./HeaderContacts";
 import HeaderMenu from "./HeaderMenu";
 import { createHashHistory } from "history";

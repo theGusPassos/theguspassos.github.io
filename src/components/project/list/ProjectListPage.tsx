@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PageStyle from "../../common/PageStyle";
-import {
-  AnimationDirection,
-  GetAnimator,
-  GetAnimationTransform,
-} from "../../../shared/animations";
+import { AnimationDirection, GetAnimator } from "../../../shared/animations";
 import PageTitle from "../../common/PageTitle";
 import Project from "../../../models/project";
 import ProjectCard from "./ProjectCard";
@@ -19,7 +15,6 @@ import {
 } from "../../../shared/dynamicAnimation";
 import {
   homePath,
-  homePathHash,
   projectListPathHash,
   aboutPath,
 } from "../../../models/routes";

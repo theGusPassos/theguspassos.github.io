@@ -16,7 +16,6 @@ import {
 } from "../../shared/dynamicAnimation";
 import { colors } from "../../shared/colors";
 import { Link } from "react-router-dom";
-import ContactsButton from "../contacts/ContactsButton";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -117,12 +116,20 @@ const AboutPage = (props: AboutProps) => {
           If you're interested in the technologies that I'm already experienced
           with, you can check my <Link to="/projects">project page</Link> for
           finished projects or my{" "}
-          <a href="https://github.com/theGusPassos" target="_blank">
+          <a
+            href="https://github.com/theGusPassos"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             github
           </a>{" "}
           for ongoing ones. For professional projects and experience, feel free
           to check my{" "}
-          <a href="https://www.linkedin.com/in/theguspassos/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/theguspassos/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             linkedin page
           </a>
           .

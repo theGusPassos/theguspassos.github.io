@@ -5,7 +5,6 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { projectList } from "../../../data/projects/projectList";
 import Project from "../../../models/project";
-import { isInDesktop, device } from "../../../shared/device";
 import DeviceInfo from "../../../shared/deviceInfo";
 
 const CarouselContainer = styled.div`
