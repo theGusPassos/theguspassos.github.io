@@ -7,13 +7,15 @@ interface TitleProps {
   centered?: boolean;
 }
 
-const TitleContent = styled.div`
+const TitleContent = styled.h1`
   background: ${colors.secondColor};
   color: ${colors.mainTextColor};
   padding: 10px 20px;
   font-size: 0.95em;
   text-align: ${(props: TitleProps) => (props.centered ? "center" : "unset")};
   box-shadow: 0px 3px 11px 0px #0000009c;
+  font-weight: normal;
+  margin: 0;
 
   @media ${device.tablet} {
     padding: 10px 30px;
