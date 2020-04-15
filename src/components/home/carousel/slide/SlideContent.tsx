@@ -28,6 +28,10 @@ const Image = styled.img`
   display: block;
   width: 100%;
   margin: auto;
+
+  @media ${device.desktop} {
+    border-radius: 50px;
+  }
 `;
 
 interface ProjectSlideProps {
