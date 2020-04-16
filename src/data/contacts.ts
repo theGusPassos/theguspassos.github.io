@@ -15,11 +15,13 @@ export const contacts: Contact[] = [
     altImage: "linkedin logo",
     message: "connect with me",
     contactText: "linkedin.com/in/theguspassos/",
+    url: "https://www.linkedin.com/in/theguspassos/",
   },
   {
     image: githubLogo,
     altImage: "github logo",
     message: "code with me",
     contactText: "github/theguspassos",
+    url: "https://github.com/theGusPassos",
   },
 ];

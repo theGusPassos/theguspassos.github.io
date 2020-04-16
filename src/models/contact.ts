@@ -3,4 +3,6 @@ export default interface Contact {
   altImage: string;
   message: string;
   contactText: string;
+  url?: string;
+  action?(): void;
 }

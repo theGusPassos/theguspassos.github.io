@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { contacts } from "../../data/contacts";
 import Contact from "../../models/contact";
+import { onCardClick, onCardKeyDown } from "../contacts/contactCardClick";
 
 const ContactContainer = styled.div`
   width: 50%;
@@ -28,6 +29,8 @@ const getContacts = () => {
   return contacts.map((contact: Contact, key: number) => {
     return (
       <ContactIcon
+        onClick={() => onCardClick(contact)}
+        onKeyDown={(e) => onCardKeyDown(e, contact)}
         src={contact.image}
         key={key}
         tabIndex={key + headerItemsBeforeContact + 1}

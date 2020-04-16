@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Contact from "../../models/contact";
+import { onCardClick } from "./contactCardClick";
 
 const ContactCardStyled = styled.div`
   padding: 5% 10%;
@@ -29,7 +30,7 @@ interface ContactCardProps {
 
 const ContactCard = (props: ContactCardProps) => {
   return (
-    <ContactCardStyled>
+    <ContactCardStyled onClick={() => onCardClick(props.contact)}>
       <ContactImage
         src={props.contact.image}
         alt={props.contact.altImage}
