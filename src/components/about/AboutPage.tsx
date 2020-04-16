@@ -94,6 +94,7 @@ const AboutPage = (props: AboutProps) => {
         <Image
           src={image}
           alt={"drawing of me and my pets by @kumamaskie"}
+          text={"drawing of me and my pets by @kumamaskie"}
         ></Image>
         <Info>
           <span>Gustavo Passos, 22 years old, Brazillian</span>
