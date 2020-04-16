@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 export const onCardClick = (contact: Contact) => {
   if (contact.url) {
     let windowRef = window.open(contact.url, "_blank");
-    windowRef = null;
+    if (windowRef) windowRef.opener = null;
   } else {
     copyToClipboard(contact.contactText);
     toast.info(`my e-mail was copied to your clipboard =)`, {
