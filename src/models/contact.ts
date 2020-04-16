@@ -4,5 +4,4 @@ export default interface Contact {
   message: string;
   contactText: string;
   url?: string;
-  action?(): void;
 }
