@@ -2,6 +2,10 @@
 
 My personal portfolio website developed with React and served as a [github page](https://theguspassos.github.io/#/)
 
+The process of building a react application and serving it as a github page is well explained [here](https://github.com/gitname/react-gh-pages)
+
+The website's design is fully responsive and was made scratch by me. I used [figma](https://www.figma.com/) to prototype the mobile and desktop pages and created the styling with styled-componets without any other css framework.
+
 ### Build with
 
 - [react](https://reactjs.org/)
@@ -11,8 +15,7 @@ My personal portfolio website developed with React and served as a [github page]
 ## Development
 
 Make sure to checkout to the **dev branch**. The master branch is used for build files that are served as a github page.
-
-After making changes to the code you can publish it to github with `npm run deploy`
+After making changes to the code you can publish it to github with `npm run deploy`.
 
 ### Requirements
 
