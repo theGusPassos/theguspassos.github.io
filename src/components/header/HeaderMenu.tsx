@@ -38,12 +38,12 @@ const HeaderMenu = () => {
     <HeaderMenuStyled>
       <LinkContainer>
         <Item>
-          <Link to="/projects">
+          <Link to="/projects" tabIndex={-1}>
             <MenuButton>My other projects</MenuButton>
           </Link>
         </Item>
         <Item>
-          <Link to="/about">
+          <Link to="/about" tabIndex={-1}>
             <MenuButton border>About Me</MenuButton>
           </Link>
         </Item>

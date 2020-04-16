@@ -71,7 +71,7 @@ const Header = (props: HeaderProps) => {
   return (
     <Background>
       <InfoContainer>
-        <NameContainer onClick={() => goToHome()}>
+        <NameContainer onClick={() => goToHome()} tabIndex={1}>
           <DevName>Gustavo Passos</DevName>
           <JobTitle>Game & Software Developer</JobTitle>
         </NameContainer>
