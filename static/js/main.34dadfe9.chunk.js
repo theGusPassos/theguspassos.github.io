@@ -1,2 +1,0 @@
-(this["webpackJsonpportfolio-theguspassos"]=this["webpackJsonpportfolio-theguspassos"]||[]).push([[0],{11:function(t,e,n){},12:function(t,e,n){},16:function(t,e,n){"use strict";n.r(e);var o=n(1),s=n.n(o),r=n(2),u=n.n(r),a=(n(11),n(12),n(5));n(13);a.a.configure();var c=function(){return s.a.createElement("div",null,"test")};u.a.render(s.a.createElement(c,null),document.getElementById("root"))},6:function(t,e,n){t.exports=n(16)}},[[6,1,2]]]);
-//# sourceMappingURL=main.34dadfe9.chunk.js.map

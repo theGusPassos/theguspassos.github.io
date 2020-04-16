@@ -1,25 +1,31 @@
 {
   "files": {
     "main.css": "/static/css/main.523c3f65.chunk.css",
-    "main.js": "/static/js/main.34dadfe9.chunk.js",
-    "main.js.map": "/static/js/main.34dadfe9.chunk.js.map",
+    "main.js": "/static/js/main.f6a57232.chunk.js",
+    "main.js.map": "/static/js/main.f6a57232.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.36844e49.js",
     "runtime-main.js.map": "/static/js/runtime-main.36844e49.js.map",
-    "static/css/2.f42e59c9.chunk.css": "/static/css/2.f42e59c9.chunk.css",
-    "static/js/2.fd39d676.chunk.js": "/static/js/2.fd39d676.chunk.js",
-    "static/js/2.fd39d676.chunk.js.map": "/static/js/2.fd39d676.chunk.js.map",
+    "static/css/2.735a36f9.chunk.css": "/static/css/2.735a36f9.chunk.css",
+    "static/js/2.fc982e08.chunk.js": "/static/js/2.fc982e08.chunk.js",
+    "static/js/2.fc982e08.chunk.js.map": "/static/js/2.fc982e08.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1505b3367e0ef260af33b1dd128093e0.js": "/precache-manifest.1505b3367e0ef260af33b1dd128093e0.js",
+    "precache-manifest.df7b308cbb3318618b95bb515bd9309c.js": "/precache-manifest.df7b308cbb3318618b95bb515bd9309c.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.f42e59c9.chunk.css.map": "/static/css/2.f42e59c9.chunk.css.map",
+    "static/css/2.735a36f9.chunk.css.map": "/static/css/2.735a36f9.chunk.css.map",
     "static/css/main.523c3f65.chunk.css.map": "/static/css/main.523c3f65.chunk.css.map",
-    "static/js/2.fd39d676.chunk.js.LICENSE.txt": "/static/js/2.fd39d676.chunk.js.LICENSE.txt"
+    "static/js/2.fc982e08.chunk.js.LICENSE.txt": "/static/js/2.fc982e08.chunk.js.LICENSE.txt",
+    "static/media/EubyKuma.png": "/static/media/EubyKuma.de40467c.png",
+    "static/media/github.png": "/static/media/github.9f96cfd1.png",
+    "static/media/gmail.png": "/static/media/gmail.62549d5c.png",
+    "static/media/linkedin.png": "/static/media/linkedin.07265057.png",
+    "static/media/sketch-carousel-big.png": "/static/media/sketch-carousel-big.86fcbb81.png",
+    "static/media/sketch-carousel.png": "/static/media/sketch-carousel.7b5eb98f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.36844e49.js",
-    "static/css/2.f42e59c9.chunk.css",
-    "static/js/2.fd39d676.chunk.js",
+    "static/css/2.735a36f9.chunk.css",
+    "static/js/2.fc982e08.chunk.js",
     "static/css/main.523c3f65.chunk.css",
-    "static/js/main.34dadfe9.chunk.js"
+    "static/js/main.f6a57232.chunk.js"
   ]
 }
