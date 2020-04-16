@@ -14,11 +14,25 @@ const ContactIcon = styled.img`
   opacity: 0.3;
   width: 20%;
   margin: auto;
+
+  :hover,
+  :focus {
+    cursor: pointer;
+    opacity: 1;
+  }
 `;
+
+const headerItemsBeforeContact = 3;
 
 const getContacts = () => {
   return contacts.map((contact: Contact, key: number) => {
-    return <ContactIcon src={contact.image} key={key}></ContactIcon>;
+    return (
+      <ContactIcon
+        src={contact.image}
+        key={key}
+        tabIndex={key + headerItemsBeforeContact + 1}
+      ></ContactIcon>
+    );
   });
 };
 
