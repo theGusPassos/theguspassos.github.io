@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./App.css";
 import Body from "./components/Body";
 import { toast, ToastContainer } from "react-toastify";

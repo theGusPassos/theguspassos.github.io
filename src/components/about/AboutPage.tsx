@@ -16,7 +16,6 @@ import {
 } from "../../shared/dynamicAnimation";
 import { colors } from "../../shared/colors";
 import { Link } from "react-router-dom";
-import ReactTooltip from "react-tooltip";
 import { MainToolTip } from "../common/ToolTip";
 
 const AboutPageStyled = styled(PageStyle)`
