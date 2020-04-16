@@ -52,22 +52,22 @@ const ProjectDescription = styled.p`
   margin: 0;
 `;
 
-const getProjectTags = (project: Project) => {
-  return project.tags.map((tag: string, key: number) => {
-    return <Tag key={key}>{tag}</Tag>;
-  });
-};
-
 const LinkButtonStyled = styled(LinkButton)`
   padding: 20px 0 0 0;
   width: 100%;
 `;
 
-const getProjectUrl = (projectId: number) => {
-  return "project/" + projectId;
-};
-
 const ProjectCard = (props: ProjectCardProps) => {
+  const getProjectTags = (project: Project) => {
+    return project.tags.map((tag: string, key: number) => {
+      return <Tag key={key}>{tag}</Tag>;
+    });
+  };
+
+  const getProjectUrl = (projectId: number) => {
+    return "project/" + projectId;
+  };
+
   return (
     <ProjectCardStyle>
       <CardHeader>

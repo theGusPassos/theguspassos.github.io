@@ -45,12 +45,12 @@ const getImageByDeviceSize = (project: Project) => {
     : project.imageBig;
 };
 
-const goToProjectPage = (projectId: number) => {
-  const history = createHashHistory();
-  history.push("project/" + projectId);
-};
-
 const SlideContent = (props: ProjectSlideProps) => {
+  const goToProjectPage = (projectId: number) => {
+    const history = createHashHistory();
+    history.push("project/" + projectId);
+  };
+
   return (
     <ImageContainer onClick={() => goToProjectPage(1)}>
       <TagContainer>{getTagsInProject(props.project)}</TagContainer>

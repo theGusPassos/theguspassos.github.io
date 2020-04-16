@@ -33,21 +33,6 @@ const ProjectCardContainer = styled.section`
   }
 `;
 
-const getAnimationMap = () => {
-  const animationMap: LocationAnimationMap = {};
-  animationMap[homePath] = AnimationDirection.FromRight;
-  animationMap[aboutPath] = AnimationDirection.FromRight;
-  animationMap["default"] = AnimationDirection.FromDown;
-
-  return animationMap;
-};
-
-const getProjectCards = () => {
-  return projectList.map((a: Project, key: number) => {
-    return <ProjectCard project={a} key={key}></ProjectCard>;
-  });
-};
-
 interface ProjectListProps extends DeviceInfo {}
 
 const ProjectListPage = (props: ProjectListProps) => {
@@ -57,10 +42,25 @@ const ProjectListPage = (props: ProjectListProps) => {
     projectListPathHash
   );
 
+  const getAnimationMap = () => {
+    const animationMap: LocationAnimationMap = {};
+    animationMap[homePath] = AnimationDirection.FromRight;
+    animationMap[aboutPath] = AnimationDirection.FromRight;
+    animationMap["default"] = AnimationDirection.FromDown;
+
+    return animationMap;
+  };
+
   const animationTransform = getAnimationBasedOnLocation(
     getAnimationMap(),
     location
   );
+
+  const getProjectCards = () => {
+    return projectList.map((a: Project, key: number) => {
+      return <ProjectCard project={a} key={key}></ProjectCard>;
+    });
+  };
 
   return (
     <ProjectListPageAnimated transform={animationTransform}>

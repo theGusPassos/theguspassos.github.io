@@ -27,15 +27,6 @@ const HomePageStyled = styled(PageStyle)`
 
 const HomePageAnimated = GetAnimator(HomePageStyled);
 
-const getAnimationMap = () => {
-  const animationMap: LocationAnimationMap = {};
-  animationMap[aboutPath] = AnimationDirection.FromRight;
-  animationMap[projectListPath] = AnimationDirection.FromLeft;
-  animationMap["default"] = AnimationDirection.FromDown;
-
-  return animationMap;
-};
-
 interface HomeProps extends DeviceInfo {}
 
 const HomePage = (props: HomeProps) => {
@@ -44,6 +35,15 @@ const HomePage = (props: HomeProps) => {
     useLastLocation()?.pathname,
     homePathHash
   );
+
+  const getAnimationMap = () => {
+    const animationMap: LocationAnimationMap = {};
+    animationMap[aboutPath] = AnimationDirection.FromRight;
+    animationMap[projectListPath] = AnimationDirection.FromLeft;
+    animationMap["default"] = AnimationDirection.FromDown;
+
+    return animationMap;
+  };
 
   const animationTransform = getAnimationBasedOnLocation(
     getAnimationMap(),

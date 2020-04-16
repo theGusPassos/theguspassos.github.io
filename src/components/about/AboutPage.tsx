@@ -70,15 +70,6 @@ const Bio = styled.div`
   }
 `;
 
-const getAnimationMap = () => {
-  const animationMap: LocationAnimationMap = {};
-  animationMap[homePath] = AnimationDirection.FromLeft;
-  animationMap[projectListPath] = AnimationDirection.FromLeft;
-  animationMap["default"] = AnimationDirection.FromDown;
-
-  return animationMap;
-};
-
 interface AboutProps extends DeviceInfo {}
 
 const AboutPage = (props: AboutProps) => {
@@ -87,6 +78,15 @@ const AboutPage = (props: AboutProps) => {
     useLastLocation()?.pathname,
     aboutPathHash
   );
+
+  const getAnimationMap = () => {
+    const animationMap: LocationAnimationMap = {};
+    animationMap[homePath] = AnimationDirection.FromLeft;
+    animationMap[projectListPath] = AnimationDirection.FromLeft;
+    animationMap["default"] = AnimationDirection.FromDown;
+
+    return animationMap;
+  };
 
   const animationTransform = getAnimationBasedOnLocation(
     getAnimationMap(),

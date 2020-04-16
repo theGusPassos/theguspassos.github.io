@@ -76,12 +76,6 @@ const ContactsContainer = styled.div`
   }
 `;
 
-const getContacts = () => {
-  return contacts.map((contact: Contact, key: number) => {
-    return <ContactCard key={key} contact={contact}></ContactCard>;
-  });
-};
-
 const LinkButtonStyled = styled(LinkButton)`
   width: 100%;
   background-color: #fff;
@@ -94,6 +88,12 @@ interface ContactsModalProps {
 }
 
 const ContactsModal = (props: ContactsModalProps) => {
+  const getContacts = () => {
+    return contacts.map((contact: Contact, key: number) => {
+      return <ContactCard key={key} contact={contact}></ContactCard>;
+    });
+  };
+
   const modalMarkup = (
     <ModalBackground>
       <ModalWrapper>

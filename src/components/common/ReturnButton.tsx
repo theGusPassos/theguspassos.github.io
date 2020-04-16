@@ -21,17 +21,17 @@ const ReturnButtonStyled = styled(LinkButton)`
   }
 `;
 
-const getLastVisited = (lastLocation: LastLocationType): string => {
-  if (lastLocation) return lastLocation.pathname;
-  return "/";
-};
-
 interface ReturnProps {
   returnToHome?: boolean;
 }
 
 const ReturnButton = (props: ReturnProps) => {
   const lastLocation = useLastLocation();
+
+  const getLastVisited = (lastLocation: LastLocationType): string => {
+    if (lastLocation) return lastLocation.pathname;
+    return "/";
+  };
 
   return (
     <LinkStyled to={props.returnToHome ? "/" : getLastVisited(lastLocation)}>

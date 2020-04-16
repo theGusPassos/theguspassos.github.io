@@ -39,15 +39,15 @@ const CarouselStyled = styled(Carousel)`
   }
 `;
 
-function projectSlides() {
-  return projectList.map((value: Project, i: number) => {
-    return <SlideContent index={i} project={value} key={i}></SlideContent>;
-  });
-}
-
 interface CarouselContent extends DeviceInfo {}
 
 const CarouselContent = (props: CarouselContent) => {
+  const projectSlides = () => {
+    return projectList.map((value: Project, i: number) => {
+      return <SlideContent index={i} project={value} key={i}></SlideContent>;
+    });
+  };
+
   return (
     <CarouselContainer>
       <CarouselStyled

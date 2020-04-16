@@ -24,24 +24,24 @@ const ContactIcon = styled.img`
   }
 `;
 
-const headerItemsBeforeContact = 3;
-
-const getContacts = () => {
-  return contacts.map((contact: Contact, key: number) => {
-    return (
-      <ContactIcon
-        onClick={() => onCardClick(contact)}
-        onKeyDown={(e) => onCardKeyDown(e, contact)}
-        src={contact.image}
-        key={key}
-        tabIndex={key + headerItemsBeforeContact + 1}
-        data-tip={contact.message}
-      ></ContactIcon>
-    );
-  });
-};
-
 const HeaderContacts = () => {
+  const headerItemsBeforeContact = 3;
+
+  const getContacts = () => {
+    return contacts.map((contact: Contact, key: number) => {
+      return (
+        <ContactIcon
+          onClick={() => onCardClick(contact)}
+          onKeyDown={(e) => onCardKeyDown(e, contact)}
+          src={contact.image}
+          key={key}
+          tabIndex={key + headerItemsBeforeContact + 1}
+          data-tip={contact.message}
+        ></ContactIcon>
+      );
+    });
+  };
+
   return (
     <ContactContainer>
       {getContacts()}
