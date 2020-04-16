@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import ProjectListPage from "./project/list/ProjectListPage";
 import HomePage from "./home/HomePage";
@@ -12,12 +12,17 @@ import {
   projectListPath,
 } from "../models/routes";
 import DeviceInfo from "../shared/deviceInfo";
+import ReactGA from "react-ga";
 
 interface RoutesProps extends DeviceInfo {
   location: any;
 }
 
 const Routes = (props: RoutesProps) => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.hash);
+  });
+
   return (
     <Switch location={props.location}>
       <Route exact path={homePath}>
