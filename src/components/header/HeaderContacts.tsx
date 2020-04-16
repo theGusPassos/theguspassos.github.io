@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { contacts } from "../../data/contacts";
 import Contact from "../../models/contact";
 import { onCardClick, onCardKeyDown } from "../contacts/contactCardClick";
+import { WhiteToolTip } from "../common/ToolTip";
 
 const ContactContainer = styled.div`
   width: 50%;
@@ -34,13 +35,19 @@ const getContacts = () => {
         src={contact.image}
         key={key}
         tabIndex={key + headerItemsBeforeContact + 1}
+        data-tip={contact.message}
       ></ContactIcon>
     );
   });
 };
 
 const HeaderContacts = () => {
-  return <ContactContainer>{getContacts()}</ContactContainer>;
+  return (
+    <ContactContainer>
+      {getContacts()}
+      <WhiteToolTip />
+    </ContactContainer>
+  );
 };
 
 export default HeaderContacts;

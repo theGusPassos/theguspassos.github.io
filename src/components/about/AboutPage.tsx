@@ -16,6 +16,8 @@ import {
 } from "../../shared/dynamicAnimation";
 import { colors } from "../../shared/colors";
 import { Link } from "react-router-dom";
+import ReactTooltip from "react-tooltip";
+import { MainToolTip } from "../common/ToolTip";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -37,6 +39,10 @@ const Image = styled.img`
   @media ${device.tablet} {
     width: 25%;
     min-width: 250px;
+  }
+
+  .tooltip {
+    background: black;
   }
 `;
 
@@ -91,9 +97,11 @@ const AboutPage = (props: AboutProps) => {
     <AboutPageAnimated transform={animationTransform}>
       {props.isDesktop ? null : <PageTitle centered>about me</PageTitle>}
       <ImageContainer>
+        <MainToolTip />
         <Image
           src={image}
-          alt={"drawing of me and my pets by @kumamaskie"}
+          alt="drawing of me and my pets by @kumamaskie"
+          data-tip="drawing by @kumamaskie"
         ></Image>
         <Info>
           <span>Gustavo Passos, 22 years old, Brazillian</span>
