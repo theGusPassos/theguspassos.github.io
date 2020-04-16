@@ -6,6 +6,8 @@ The process of building a react application and serving it as a github page is w
 
 The website's design is fully responsive and was made scratch by me. I used [figma](https://www.figma.com/) to prototype the mobile and desktop pages and created the styling with styled-componets without any other css framework.
 
+If you desire to use the same design for your own portfolio feel free to do it, just make sure to give me the credit for the structure in some way =)
+
 ### Build with
 
 - [react](https://reactjs.org/)
