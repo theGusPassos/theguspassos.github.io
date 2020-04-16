@@ -57,6 +57,7 @@ const CarouselContent = (props: CarouselContent) => {
         showIndicators
         emulateTouch
         autoPlay
+        transitionTime={700}
         interval={4000}
         stopOnHover
         infiniteLoop
