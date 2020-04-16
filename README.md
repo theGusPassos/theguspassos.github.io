@@ -8,7 +8,7 @@ The website's design is fully responsive and was made scratch by me. I used [fig
 
 If you desire to use the same design for your own portfolio feel free to do it, just make sure to give me the credit for the structure in some way =)
 
-### Build with
+### Built with
 
 - [react](https://reactjs.org/)
 - [gh-pages](https://www.npmjs.com/package/gh-pages)
