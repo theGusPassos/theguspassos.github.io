@@ -2,7 +2,7 @@
 
 My personal portfolio website developed with React and served as a [github page](https://theguspassos.github.io/#/)
 
-![My personal portfolio](demo/page.png)
+![My personal portfolio](demo/desktop-and-mobile-page.png)
 
 The process of building a react application and serving it as a github page is well explained [here](https://github.com/gitname/react-gh-pages)
 
