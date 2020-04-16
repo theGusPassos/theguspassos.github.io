@@ -78,7 +78,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         2D fast paced game inspired in hits like Castlevania SOTN and Hollow
         Knight. Not a Metroidvania, though.
       </ProjectDescription>
-      <Link to={getProjectUrl(props.project.id)}>
+      <Link to={getProjectUrl(props.project.id)} tabIndex={-1}>
         <LinkButtonStyled>check this project</LinkButtonStyled>
       </Link>
     </ProjectCardStyle>
