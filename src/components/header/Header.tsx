@@ -38,6 +38,7 @@ const InfoContainer = styled.div`
 
 const NameContainer = styled.div`
   margin: auto;
+  outline-color: #fff;
 
   :hover {
     cursor: pointer;
