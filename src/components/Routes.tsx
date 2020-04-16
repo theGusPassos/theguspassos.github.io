@@ -21,7 +21,7 @@ interface RoutesProps extends DeviceInfo {
 const Routes = (props: RoutesProps) => {
   useEffect(() => {
     ReactGA.pageview(window.location.hash);
-  });
+  }, []);
 
   return (
     <Switch location={props.location}>
