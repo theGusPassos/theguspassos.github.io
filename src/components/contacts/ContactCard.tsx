@@ -36,7 +36,7 @@ const ContactCard = (props: ContactCardProps) => {
       ></ContactImage>
       <ContactInfo>
         <strong>{props.contact.message}</strong>
-        <span>{props.contact}</span>
+        <span>{props.contact.contactText}</span>
       </ContactInfo>
     </ContactCardStyled>
   );
