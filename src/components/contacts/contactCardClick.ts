@@ -1,5 +1,6 @@
 import Contact from "../../models/contact";
 import { copyToClipboard } from "../../shared/copyToClipboard";
+import { toast } from "react-toastify";
 
 export const onCardClick = (contact: Contact) => {
   if (contact.url) {
@@ -7,6 +8,14 @@ export const onCardClick = (contact: Contact) => {
     windowRef = null;
   } else {
     copyToClipboard(contact.contactText);
+    toast.info(`my e-mail was copied to your clipboard =)`, {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+    });
   }
 };
 
