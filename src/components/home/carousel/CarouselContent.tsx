@@ -18,6 +18,12 @@ const CarouselStyled = styled(Carousel)`
     bottom: unset;
   }
 
+  .dot {
+    :focus {
+      border: 5px solid white;
+    }
+  }
+
   @media ${device.desktop} {
     .carousel.carousel-slider .control-arrow {
       height: 50%;
