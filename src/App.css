@@ -1,3 +1,7 @@
+.Toastify div div {
+  background: #7673ff;
+}
+
 .Toastify div {
   z-index: 9999999;
 }
