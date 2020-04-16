@@ -61,18 +61,26 @@ const JobTitle = styled.div`
   }
 `;
 
-const goToHome = () => {
-  const history = createHashHistory();
-  history.push("/");
-};
-
 interface HeaderProps extends DeviceInfo {}
 
 const Header = (props: HeaderProps) => {
+  const goToHome = () => {
+    const history = createHashHistory();
+    history.push("/");
+  };
+
+  const goToHomeOnEnter = (e: any) => {
+    if (e.keyCode === 13 || e.charCode === 13) goToHome();
+  };
+
   return (
     <Background>
       <InfoContainer>
-        <NameContainer onClick={() => goToHome()} tabIndex={1}>
+        <NameContainer
+          onClick={goToHome}
+          onKeyPress={goToHomeOnEnter}
+          tabIndex={1}
+        >
           <DevName>Gustavo Passos</DevName>
           <JobTitle>Game & Software Developer</JobTitle>
         </NameContainer>
