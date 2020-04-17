@@ -8,7 +8,7 @@ import Routes from "./Routes";
 import { animationSpeed } from "../animations/animations";
 import { device, isInDesktop } from "../data/device";
 import { withResizeDetector } from "react-resize-detector";
-import ResizeListenerProps from "../shared/resizeListenerProps";
+import ResizeListenerProps from "../common-functions/resizeListenerProps";
 import { colors } from "../data/colors";
 
 const BodyGrid = styled.div`

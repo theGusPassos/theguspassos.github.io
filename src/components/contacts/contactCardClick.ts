@@ -1,5 +1,5 @@
 import Contact from "../../models/contact";
-import { copyToClipboard } from "../../shared/copyToClipboard";
+import { copyToClipboard } from "../../common-functions/copyToClipboard";
 import { toast } from "react-toastify";
 
 export const onCardClick = (contact: Contact) => {

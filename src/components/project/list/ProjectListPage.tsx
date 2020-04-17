@@ -11,7 +11,7 @@ import ProjectCard from "./ProjectCard";
 import { device } from "../../../data/device";
 import { projectList } from "../../../data/projects/projectList";
 import ReturnButton from "../../common-components/ReturnButton";
-import { getLocationToAnim } from "../../../shared/locationToAnim";
+import { getLocationToAnim } from "../../../common-functions/locationToAnim";
 import {
   LocationAnimationMap,
   getAnimationBasedOnLocation,

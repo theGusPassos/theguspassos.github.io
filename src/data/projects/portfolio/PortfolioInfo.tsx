@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { sectionWithText } from "../../../components/common-styles/styles";
 import LinkButton from "../../../components/common-components/LinkButton";
-import { goToExternalPage } from "../../../shared/goToExternalPage";
+import { goToExternalPage } from "../../../common-functions/goToExternalPage";
 
 const Info = styled.section`
   ${sectionWithText}
