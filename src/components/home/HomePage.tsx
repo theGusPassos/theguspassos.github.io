@@ -2,7 +2,7 @@ import React from "react";
 import { GetAnimator, AnimationDirection } from "../../shared/animations";
 import { useLastLocation } from "react-router-last-location";
 import PageTitle from "../common-components/PageTitle";
-import PageStyle from "../common-styles/PageStyle";
+import pageStyle from "../common-styles/pageStyle";
 import CarouselContent from "./carousel/CarouselContent";
 import {
   LocationAnimationMap,
@@ -15,7 +15,7 @@ import styled from "styled-components";
 import Menu from "./Menu";
 import DeviceInfo from "../../shared/deviceInfo";
 
-const HomePageStyled = styled(PageStyle)`
+const HomePageStyled = styled(pageStyle)`
   @media ${device.desktop} {
     position: relative;
     margin: auto;

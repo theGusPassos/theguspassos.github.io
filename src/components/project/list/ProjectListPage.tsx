@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PageStyle from "../../common-styles/PageStyle";
+import pageStyle from "../../common-styles/pageStyle";
 import { AnimationDirection, GetAnimator } from "../../../shared/animations";
 import PageTitle from "../../common-components/PageTitle";
 import Project from "../../../models/project";
@@ -17,7 +17,7 @@ import { homePath, projectListPathHash, aboutPath } from "../../../data/routes";
 import { useLastLocation } from "react-router-last-location";
 import DeviceInfo from "../../../shared/deviceInfo";
 
-const ProjectListPageAnimated = GetAnimator(PageStyle);
+const ProjectListPageAnimated = GetAnimator(pageStyle);
 
 const ProjectCardContainer = styled.section`
   height: 90%;

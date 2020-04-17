@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { AnimationDirection, GetAnimator } from "../../shared/animations";
 import image from "../../images/me/EubyKuma.png";
 import { device } from "../../shared/device";
-import PageStyle from "../common-styles/PageStyle";
+import pageStyle from "../common-styles/pageStyle";
 import NavigationButtons from "./NavigationButtons";
 import DeviceInfo from "../../shared/deviceInfo";
 import { getLocationToAnim } from "../../shared/locationToAnim";
@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 import { MainToolTip } from "../common-components/ToolTip";
 import { sectionWithText } from "../common-styles/styles";
 
-const AboutPageStyled = styled(PageStyle)`
+const AboutPageStyled = styled(pageStyle)`
   font-size: 0.9em;
 
   @media ${device.tablet} {

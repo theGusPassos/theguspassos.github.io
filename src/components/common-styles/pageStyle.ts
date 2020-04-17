@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "../../shared/device";
 
-const PageStyle = styled.section`
+const pageStyle = styled.section`
   position: absolute;
   top: 0;
   left: 0;
@@ -19,4 +19,4 @@ const PageStyle = styled.section`
   }
 `;
 
-export default PageStyle;
+export default pageStyle;

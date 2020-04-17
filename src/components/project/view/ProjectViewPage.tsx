@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PageStyle from "../../common-styles/PageStyle";
+import pageStyle from "../../common-styles/pageStyle";
 import {
   AnimationDirection,
   GetAnimator,
@@ -14,7 +14,7 @@ import { getProjectById } from "../../../data/projects/projectList";
 import { getTagsInProject } from "../tag/tagList";
 import DeviceInfo from "../../../shared/deviceInfo";
 
-const ProjectViewPageAnimated = GetAnimator(PageStyle);
+const ProjectViewPageAnimated = GetAnimator(pageStyle);
 const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
 
 interface ProjectViewProps extends DeviceInfo {
