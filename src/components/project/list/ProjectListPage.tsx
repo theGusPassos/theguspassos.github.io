@@ -22,21 +22,21 @@ import DeviceInfo from "../../../models/deviceInfo";
 
 const ProjectListPageAnimated = GetAnimator(pageStyle);
 
+interface ProjectListProps extends DeviceInfo {}
+
+const ScrollableArea = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const ProjectCardContainer = styled.section`
   height: 90%;
-  padding: 20px;
+  padding: 15px 20px 20px 20px;
   margin-bottom: 10%;
 
   @media ${device.tablet} {
     padding: 0 30px;
   }
-`;
-
-interface ProjectListProps extends DeviceInfo {}
-
-const ScrollableArea = styled(pageStyle)`
-  display: flex;
-  flex-direction: column;
 `;
 
 const ProjectListPage = (props: ProjectListProps) => {
