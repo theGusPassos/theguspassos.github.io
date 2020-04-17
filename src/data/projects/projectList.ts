@@ -1,6 +1,6 @@
 import Project from "../../models/project";
 import { portfolio } from "./portfolio/portfolio";
-import { sketch } from "./sketch/sketch";
+import { sketch } from "./unity-state-machine/unityStateMachine";
 
 export const projectList: Project[] = [portfolio, sketch];
 

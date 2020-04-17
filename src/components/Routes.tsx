@@ -4,7 +4,7 @@ import ProjectListPage from "./project/list/ProjectListPage";
 import HomePage from "./home/HomePage";
 import AboutPage from "./about/AboutPage";
 import ProjectViewPage from "./project/view/ProjectViewPage";
-import { sketch } from "../data/projects/sketch/sketch";
+import { sketch } from "../data/projects/unity-state-machine/unityStateMachine";
 import {
   homePath,
   aboutPath,

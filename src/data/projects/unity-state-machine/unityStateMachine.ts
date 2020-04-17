@@ -4,10 +4,10 @@ import SketchDescription from "./SketchDescription";
 
 export const sketch: Project = {
   id: 2,
-  name: "sketch",
-  description: "none",
-  tags: ["c#", "Unity"],
-  imageAlt: "sketch gameplay screenshot",
+  name: "Unity State Machine",
+  description: "",
+  tags: ["C#", "Unity"],
+  imageAlt: "gif with",
   image: img,
   projectInfo: SketchDescription,
 };
