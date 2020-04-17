@@ -7,6 +7,7 @@ import { projectList } from "../../../data/projects/projectList";
 import Project from "../../../models/project";
 import DeviceInfo from "../../../models/deviceInfo";
 import { device } from "../../../data/device";
+import { colors } from "../../../data/colors";
 
 const CarouselContainer = styled.div`
   z-index: 10;
@@ -22,6 +23,10 @@ const CarouselStyled = styled(Carousel)`
     :focus {
       border: 5px solid white;
     }
+  }
+
+  ul li {
+    background: ${colors.mainBackgroundColor} !important;
   }
 
   @media ${device.desktop} {
@@ -57,7 +62,7 @@ const CarouselContent = (props: CarouselContent) => {
         showIndicators
         emulateTouch
         autoPlay
-        transitionTime={700}
+        transitionTime={1000}
         interval={4000}
         stopOnHover
         infiniteLoop

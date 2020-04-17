@@ -1,6 +1,5 @@
 import Project from "../../../models/project";
-import img from "../../../images/projects/sketch/sketch-carousel.png";
-import imgBig from "../../../images/projects/sketch/sketch-carousel-big.png";
+import img from "./unity-state-machine.gif";
 import SketchDescription from "./SketchDescription";
 
 export const sketch: Project = {
