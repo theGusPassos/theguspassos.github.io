@@ -44,7 +44,6 @@ const Routes = (props: RoutesProps) => {
           return (
             <ProjectViewPage
               projectId={renderProps.match.params.id}
-              project={sketch}
               isDesktop={props.isDesktop}
             ></ProjectViewPage>
           );

@@ -1,5 +1,4 @@
 import Project from "../../models/project";
-import { sketch } from "./sketch/sketch";
 import { portfolio } from "./portfolio/portfolio";
 
 export const projectList: Project[] = [portfolio];

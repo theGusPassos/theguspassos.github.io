@@ -19,7 +19,6 @@ const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
 
 interface ProjectViewProps extends DeviceInfo {
   projectId: number;
-  project: Project;
 }
 
 const Image = styled.img`
@@ -46,9 +45,9 @@ const ProjectViewPage = (props: ProjectViewProps) => {
   return (
     <ProjectViewPageAnimated transform={AnimationTransform}>
       {props.isDesktop ? null : <PageTitle centered>{project.name}</PageTitle>}
-      <Image src={props.project.imageBig} alt={props.project.imageAlt}></Image>
-      <TagContainer>{getTagsInProject(props.project)}</TagContainer>
-      <ProjectText>{props.project.projectInfo()}</ProjectText>
+      <Image src={project.imageBig} alt={project.imageAlt}></Image>
+      <TagContainer>{getTagsInProject(project)}</TagContainer>
+      <ProjectText>{project.projectInfo()}</ProjectText>
       {props.isDesktop ? null : <ReturnButton></ReturnButton>}
     </ProjectViewPageAnimated>
   );
