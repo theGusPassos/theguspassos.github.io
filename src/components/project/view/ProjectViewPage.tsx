@@ -34,7 +34,7 @@ const TagContainer = styled.div`
 const ProjectText = styled.section`
   height: 90%;
   padding: 15px 20px 20px 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10%;
 
   @media ${device.tablet} {
     padding: 30px;
@@ -50,7 +50,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
       <Image src={project.imageBig} alt={project.imageAlt}></Image>
       <TagContainer>{getTagsInProject(project)}</TagContainer>
       <ProjectText>{project.projectInfo()}</ProjectText>
-      {props.isDesktop ? null : <ReturnButton></ReturnButton>}
+      {/* {props.isDesktop ? null : <ReturnButton></ReturnButton>} */}
     </ProjectViewPageAnimated>
   );
 };

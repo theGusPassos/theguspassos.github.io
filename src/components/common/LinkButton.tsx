@@ -8,6 +8,7 @@ const LinkButton = styled.button`
   font-size: 1.2em;
   border: none;
   padding: 4% 0;
+  width: 100%;
 
   :focus,
   :hover {
