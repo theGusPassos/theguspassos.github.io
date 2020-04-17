@@ -9,7 +9,7 @@ import {
   getAnimationBasedOnLocation,
 } from "../../animations/dynamicAnimation";
 import { aboutPath, projectListPath, homePathHash } from "../../data/routes";
-import { getLocationToAnim } from "../../common-functions/locationToAnim";
+import { getLocationToAnim } from "../../animations/locationToAnim";
 import { device } from "../../data/device";
 import styled from "styled-components";
 import Menu from "./Menu";

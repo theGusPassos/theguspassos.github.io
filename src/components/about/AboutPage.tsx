@@ -7,7 +7,7 @@ import { device } from "../../data/device";
 import pageStyle from "../common-styles/pageStyle";
 import NavigationButtons from "./NavigationButtons";
 import DeviceInfo from "../../models/deviceInfo";
-import { getLocationToAnim } from "../../common-functions/locationToAnim";
+import { getLocationToAnim } from "../../animations/locationToAnim";
 import { useLastLocation } from "react-router-last-location";
 import { aboutPathHash, homePath, projectListPath } from "../../data/routes";
 import {
