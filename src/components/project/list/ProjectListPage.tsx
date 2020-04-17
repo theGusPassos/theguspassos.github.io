@@ -24,8 +24,8 @@ const ProjectListPageAnimated = GetAnimator(pageStyle);
 
 const ProjectCardContainer = styled.section`
   height: 90%;
-  overflow: auto;
   padding: 20px;
+  margin-bottom: 10%;
 
   @media ${device.tablet} {
     padding: 0 30px;
@@ -33,6 +33,11 @@ const ProjectCardContainer = styled.section`
 `;
 
 interface ProjectListProps extends DeviceInfo {}
+
+const ScrollableArea = styled(pageStyle)`
+  display: flex;
+  flex-direction: column;
+`;
 
 const ProjectListPage = (props: ProjectListProps) => {
   const location = getLocationToAnim(
@@ -63,8 +68,10 @@ const ProjectListPage = (props: ProjectListProps) => {
 
   return (
     <ProjectListPageAnimated transform={animationTransform}>
-      {props.isDesktop ? null : <PageTitle centered>my projects</PageTitle>}
-      <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
+      <ScrollableArea>
+        {props.isDesktop ? null : <PageTitle centered>my projects</PageTitle>}
+        <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
+      </ScrollableArea>
       {props.isDesktop ? null : <ReturnButton returnToHome></ReturnButton>}
     </ProjectListPageAnimated>
   );

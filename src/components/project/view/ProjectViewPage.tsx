@@ -21,6 +21,11 @@ interface ProjectViewProps extends DeviceInfo {
   projectId: number;
 }
 
+const ScrollableArea = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const Image = styled.img`
   width: 100%;
   max-height: 400px;
@@ -46,11 +51,15 @@ const ProjectViewPage = (props: ProjectViewProps) => {
 
   return (
     <ProjectViewPageAnimated transform={AnimationTransform}>
-      {props.isDesktop ? null : <PageTitle centered>{project.name}</PageTitle>}
-      <Image src={project.imageBig} alt={project.imageAlt}></Image>
-      <TagContainer>{getTagsInProject(project)}</TagContainer>
-      <ProjectText>{project.projectInfo()}</ProjectText>
-      {/* {props.isDesktop ? null : <ReturnButton></ReturnButton>} */}
+      <ScrollableArea>
+        {props.isDesktop ? null : (
+          <PageTitle centered>{project.name}</PageTitle>
+        )}
+        <Image src={project.imageBig} alt={project.imageAlt}></Image>
+        <TagContainer>{getTagsInProject(project)}</TagContainer>
+        <ProjectText>{project.projectInfo()}</ProjectText>
+      </ScrollableArea>
+      {props.isDesktop ? null : <ReturnButton></ReturnButton>}
     </ProjectViewPageAnimated>
   );
 };
