@@ -6,10 +6,10 @@ import {
   GetAnimator,
   GetAnimationTransform,
 } from "../../../shared/animations";
-import PageTitle from "../../common-styles/PageTitle";
+import PageTitle from "../../common-components/PageTitle";
 import Project from "../../../models/project";
 import { device } from "../../../shared/device";
-import ReturnButton from "../../common-styles/ReturnButton";
+import ReturnButton from "../../common-components/ReturnButton";
 import { getProjectById } from "../../../data/projects/projectList";
 import { getTagsInProject } from "../tag/tagList";
 import DeviceInfo from "../../../shared/deviceInfo";

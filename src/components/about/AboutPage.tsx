@@ -1,5 +1,5 @@
 import React from "react";
-import PageTitle from "../common-styles/PageTitle";
+import PageTitle from "../common-components/PageTitle";
 import styled from "styled-components";
 import { AnimationDirection, GetAnimator } from "../../shared/animations";
 import image from "../../images/me/EubyKuma.png";
@@ -16,7 +16,7 @@ import {
 } from "../../shared/dynamicAnimation";
 import { colors } from "../../shared/colors";
 import { Link } from "react-router-dom";
-import { MainToolTip } from "../common-styles/ToolTip";
+import { MainToolTip } from "../common-components/ToolTip";
 import { sectionWithText } from "../common-styles/styles";
 
 const AboutPageStyled = styled(PageStyle)`

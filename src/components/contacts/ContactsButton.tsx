@@ -1,5 +1,5 @@
 import React from "react";
-import LinkButton from "../common-styles/LinkButton";
+import LinkButton from "../common-components/LinkButton";
 import { CSSTransition } from "react-transition-group";
 import { animationSpeed } from "../../shared/animations";
 import ContactsModal from "./ContactsModal";
