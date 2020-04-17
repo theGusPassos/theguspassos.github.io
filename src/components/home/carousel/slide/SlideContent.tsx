@@ -58,7 +58,7 @@ const SlideContent = (props: ProjectSlideProps) => {
         src={getImageByDeviceSize(props.project)}
         alt={props.project.imageAlt}
       ></Image>
-      <SlideDescription projectName={props.project.name}></SlideDescription>
+      <SlideDescription project={props.project}></SlideDescription>
     </ImageContainer>
   );
 };

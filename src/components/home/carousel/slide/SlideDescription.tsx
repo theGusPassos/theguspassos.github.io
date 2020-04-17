@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { device } from "../../../../shared/device";
 import { colors } from "../../../../shared/colors";
+import Project from "../../../../models/project";
 
 const DescriptionContainer = styled.div`
   display: block;
@@ -12,7 +13,7 @@ const DescriptionContainer = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50%;
+    width: 55%;
   }
 `;
 
@@ -29,7 +30,7 @@ const Title = styled.strong`
   padding: 10px 20px;
 
   @media ${device.tablet} {
-    font-size: 1.3em;
+    font-size: 1.2em;
     top: -60px;
     padding: 20px 30px;
   }
@@ -51,17 +52,14 @@ const Description = styled.div`
 const SlideDescription = (props: SlideDescriptionProps) => {
   return (
     <DescriptionContainer>
-      <Description>
-        My firt project made with commercial intent. There’s a playable demo
-        available
-      </Description>
-      <Title>{props.projectName}</Title>
+      <Description>{props.project.description}</Description>
+      <Title>{props.project.name}</Title>
     </DescriptionContainer>
   );
 };
 
 interface SlideDescriptionProps {
-  projectName: string;
+  project: Project;
 }
 
 export default SlideDescription;
