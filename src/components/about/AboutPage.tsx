@@ -14,7 +14,6 @@ import {
   getAnimationBasedOnLocation,
   LocationAnimationMap,
 } from "../../animations/dynamicAnimation";
-import { colors } from "../../data/colors";
 import { Link } from "react-router-dom";
 import { MainToolTip } from "../common-components/ToolTip";
 import { sectionWithText } from "../common-styles/styles";

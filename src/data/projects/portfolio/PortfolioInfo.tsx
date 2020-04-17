@@ -16,7 +16,8 @@ const PortfolioInfo = () => {
     <Info>
       <p>
         This website was designed and developed by me using{" "}
-        <strong>React</strong> and <strong>Figma</strong> for prototyping.
+        <strong>React</strong>. The early prototypes were made with <b>Figma</b>
+        .
       </p>
       <LinkButton
         onClick={() =>
@@ -34,10 +35,10 @@ const PortfolioInfo = () => {
         Check the source code here
       </LinkButton>
       <p>
-        I'm using github pages to host the source code for free. The build
-        process consists on the generation of a production build from the
-        development branch and pushing the transpiled files into the upstream
-        master branch. Then the files are served by the github page.{" "}
+        I'm using <strong>github pages</strong> to host the source code for
+        free. The build process consists on the generation of a production build
+        from the development branch and pushing the transpiled files into the
+        upstream master branch. The files are then served as a github page.{" "}
         <a
           href="https://github.com/gitname/react-gh-pages"
           target="_blank"
@@ -57,9 +58,9 @@ const PortfolioInfo = () => {
         which is great.
       </p>
       <p>
-        I'm plan to still make changes to the website by improving some
-        responsivity and accessibility problems. I'm 100% open to feedback, so
-        if you have any suggestion feel free to contact me =)
+        I plan to make changes to the website by improving some responsivity and
+        accessibility problems. I'm 100% open to feedback, so if you have any
+        suggestion feel free to contact me =)
       </p>
     </Info>
   );

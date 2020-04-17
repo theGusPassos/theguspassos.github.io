@@ -7,7 +7,6 @@ import {
   GetAnimationTransform,
 } from "../../../animations/animations";
 import PageTitle from "../../common-components/PageTitle";
-import Project from "../../../models/project";
 import { device } from "../../../data/device";
 import ReturnButton from "../../common-components/ReturnButton";
 import { getProjectById } from "../../../data/projects/projectList";
