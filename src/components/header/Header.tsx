@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { colors } from "../../data/colors";
 import styled from "styled-components";
-import { device } from "../../shared/device";
+import { device } from "../../data/device";
 import HeaderContacts from "./HeaderContacts";
 import HeaderMenu from "./HeaderMenu";
 import { createHashHistory } from "history";
-import DeviceInfo from "../../shared/deviceInfo";
+import DeviceInfo from "../../models/deviceInfo";
 
 const Background = styled.header`
   width: 100%;

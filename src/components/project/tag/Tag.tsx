@@ -1,7 +1,7 @@
 import React from "react";
 import { colors } from "../../../data/colors";
 import styled from "styled-components";
-import { device } from "../../../shared/device";
+import { device } from "../../../data/device";
 
 const TagName = styled.div`
   font-size: 0.8em;

@@ -5,8 +5,8 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { projectList } from "../../../data/projects/projectList";
 import Project from "../../../models/project";
-import DeviceInfo from "../../../shared/deviceInfo";
-import { device } from "../../../shared/device";
+import DeviceInfo from "../../../models/deviceInfo";
+import { device } from "../../../data/device";
 
 const CarouselContainer = styled.div`
   z-index: 10;

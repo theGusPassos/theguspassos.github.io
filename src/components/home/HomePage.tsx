@@ -10,10 +10,10 @@ import {
 } from "../../animations/dynamicAnimation";
 import { aboutPath, projectListPath, homePathHash } from "../../data/routes";
 import { getLocationToAnim } from "../../shared/locationToAnim";
-import { device } from "../../shared/device";
+import { device } from "../../data/device";
 import styled from "styled-components";
 import Menu from "./Menu";
-import DeviceInfo from "../../shared/deviceInfo";
+import DeviceInfo from "../../models/deviceInfo";
 
 const HomePageStyled = styled(pageStyle)`
   @media ${device.desktop} {

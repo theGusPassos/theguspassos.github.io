@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../../shared/device";
+import { device } from "../../data/device";
 import LinkButton from "./LinkButton";
 import { Link } from "react-router-dom";
 import { useLastLocation, LastLocationType } from "react-router-last-location";

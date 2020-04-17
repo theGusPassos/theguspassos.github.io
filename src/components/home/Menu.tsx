@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../../shared/device";
+import { device } from "../../data/device";
 import { Link } from "react-router-dom";
 import LinkButton from "../common-components/LinkButton";
 import ContactsButton from "../contacts/ContactsButton";

@@ -11,7 +11,7 @@ import {
   projectPath,
   projectListPath,
 } from "../data/routes";
-import DeviceInfo from "../shared/deviceInfo";
+import DeviceInfo from "../models/deviceInfo";
 import ReactGA from "react-ga";
 
 interface RoutesProps extends DeviceInfo {

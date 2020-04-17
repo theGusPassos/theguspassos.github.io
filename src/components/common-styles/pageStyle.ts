@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { device } from "../../shared/device";
+import { device } from "../../data/device";
 
 const pageStyle = styled.section`
   position: absolute;

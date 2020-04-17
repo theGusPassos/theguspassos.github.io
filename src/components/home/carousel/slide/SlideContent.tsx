@@ -5,7 +5,7 @@ import { createHashHistory } from "history";
 import { getTagsInProject } from "../../../project/tag/tagList";
 import { colors } from "../../../../data/colors";
 import Project from "../../../../models/project";
-import { deviceSize, device } from "../../../../shared/device";
+import { deviceSize, device } from "../../../../data/device";
 
 const ImageContainer = styled.section`
   position: relative;

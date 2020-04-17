@@ -6,7 +6,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
 import Routes from "./Routes";
 import { animationSpeed } from "../animations/animations";
-import { device, isInDesktop } from "../shared/device";
+import { device, isInDesktop } from "../data/device";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../shared/resizeListenerProps";
 import { colors } from "../data/colors";

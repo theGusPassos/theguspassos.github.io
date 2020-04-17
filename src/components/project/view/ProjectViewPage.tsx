@@ -8,11 +8,11 @@ import {
 } from "../../../animations/animations";
 import PageTitle from "../../common-components/PageTitle";
 import Project from "../../../models/project";
-import { device } from "../../../shared/device";
+import { device } from "../../../data/device";
 import ReturnButton from "../../common-components/ReturnButton";
 import { getProjectById } from "../../../data/projects/projectList";
 import { getTagsInProject } from "../tag/tagList";
-import DeviceInfo from "../../../shared/deviceInfo";
+import DeviceInfo from "../../../models/deviceInfo";
 
 const ProjectViewPageAnimated = GetAnimator(pageStyle);
 const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);

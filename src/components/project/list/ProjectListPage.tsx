@@ -8,7 +8,7 @@ import {
 import PageTitle from "../../common-components/PageTitle";
 import Project from "../../../models/project";
 import ProjectCard from "./ProjectCard";
-import { device } from "../../../shared/device";
+import { device } from "../../../data/device";
 import { projectList } from "../../../data/projects/projectList";
 import ReturnButton from "../../common-components/ReturnButton";
 import { getLocationToAnim } from "../../../shared/locationToAnim";
@@ -18,7 +18,7 @@ import {
 } from "../../../animations/dynamicAnimation";
 import { homePath, projectListPathHash, aboutPath } from "../../../data/routes";
 import { useLastLocation } from "react-router-last-location";
-import DeviceInfo from "../../../shared/deviceInfo";
+import DeviceInfo from "../../../models/deviceInfo";
 
 const ProjectListPageAnimated = GetAnimator(pageStyle);
 
