@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { sectionWithText } from "../../../components/common-styles/styles";
 import LinkButton from "../../../components/common-components/LinkButton";
-import { goToExternalPage } from "../../../common-functions/goToExternalPage";
+import {
+  goToExternalPage,
+  goToExternalPageOnKeyDown,
+} from "../../../common-functions/goToExternalPage";
 
 const Info = styled.section`
   ${sectionWithText}
@@ -18,6 +21,12 @@ const PortfolioInfo = () => {
       <LinkButton
         onClick={() =>
           goToExternalPage(
+            "https://github.com/theGusPassos/theguspassos.github.io"
+          )
+        }
+        onKeyDown={(e) =>
+          goToExternalPageOnKeyDown(
+            e,
             "https://github.com/theGusPassos/theguspassos.github.io"
           )
         }
