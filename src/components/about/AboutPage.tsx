@@ -1,10 +1,10 @@
 import React from "react";
-import PageTitle from "../common/PageTitle";
+import PageTitle from "../common-styles/PageTitle";
 import styled from "styled-components";
 import { AnimationDirection, GetAnimator } from "../../shared/animations";
 import image from "../../images/me/EubyKuma.png";
 import { device } from "../../shared/device";
-import PageStyle from "../common/PageStyle";
+import PageStyle from "../common-styles/PageStyle";
 import NavigationButtons from "./NavigationButtons";
 import DeviceInfo from "../../shared/deviceInfo";
 import { getLocationToAnim } from "../../shared/locationToAnim";
@@ -16,8 +16,8 @@ import {
 } from "../../shared/dynamicAnimation";
 import { colors } from "../../shared/colors";
 import { Link } from "react-router-dom";
-import { MainToolTip } from "../common/ToolTip";
-import { sectionWithText } from "../common/styles";
+import { MainToolTip } from "../common-styles/ToolTip";
+import { sectionWithText } from "../common-styles/styles";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;

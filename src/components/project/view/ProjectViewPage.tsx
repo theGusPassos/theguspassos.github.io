@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import PageStyle from "../../common/PageStyle";
+import PageStyle from "../../common-styles/PageStyle";
 import {
   AnimationDirection,
   GetAnimator,
   GetAnimationTransform,
 } from "../../../shared/animations";
-import PageTitle from "../../common/PageTitle";
+import PageTitle from "../../common-styles/PageTitle";
 import Project from "../../../models/project";
 import { device } from "../../../shared/device";
-import ReturnButton from "../../common/ReturnButton";
+import ReturnButton from "../../common-styles/ReturnButton";
 import { getProjectById } from "../../../data/projects/projectList";
 import { getTagsInProject } from "../tag/tagList";
 import DeviceInfo from "../../../shared/deviceInfo";

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import LinkButton from "../common/LinkButton";
+import LinkButton from "../common-styles/LinkButton";
 import { colors } from "../../shared/colors";
 
 const HeaderMenuStyled = styled.section`

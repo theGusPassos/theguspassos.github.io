@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import PageStyle from "../../common/PageStyle";
+import PageStyle from "../../common-styles/PageStyle";
 import { AnimationDirection, GetAnimator } from "../../../shared/animations";
-import PageTitle from "../../common/PageTitle";
+import PageTitle from "../../common-styles/PageTitle";
 import Project from "../../../models/project";
 import ProjectCard from "./ProjectCard";
 import { device } from "../../../shared/device";
 import { projectList } from "../../../data/projects/projectList";
-import ReturnButton from "../../common/ReturnButton";
+import ReturnButton from "../../common-styles/ReturnButton";
 import { getLocationToAnim } from "../../../shared/locationToAnim";
 import {
   LocationAnimationMap,

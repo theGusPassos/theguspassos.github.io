@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { animationSpeed } from "../../shared/animations";
 import ContactCard from "./ContactCard";
-import LinkButton from "../common/LinkButton";
+import LinkButton from "../common-styles/LinkButton";
 import { contacts } from "../../data/contacts";
-import PageTitle from "../common/PageTitle";
+import PageTitle from "../common-styles/PageTitle";
 import { colors } from "../../shared/colors";
 import Contact from "../../models/contact";
 

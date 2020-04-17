@@ -1,8 +1,8 @@
 import React from "react";
 import { GetAnimator, AnimationDirection } from "../../shared/animations";
 import { useLastLocation } from "react-router-last-location";
-import PageTitle from "../common/PageTitle";
-import PageStyle from "../common/PageStyle";
+import PageTitle from "../common-styles/PageTitle";
+import PageStyle from "../common-styles/PageStyle";
 import CarouselContent from "./carousel/CarouselContent";
 import {
   LocationAnimationMap,

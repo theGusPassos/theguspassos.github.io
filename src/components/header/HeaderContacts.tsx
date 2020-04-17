@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { contacts } from "../../data/contacts";
 import Contact from "../../models/contact";
 import { onCardClick, onCardKeyDown } from "../contacts/contactCardClick";
-import { WhiteToolTip } from "../common/ToolTip";
+import { WhiteToolTip } from "../common-styles/ToolTip";
 
 const ContactContainer = styled.div`
   width: 50%;
