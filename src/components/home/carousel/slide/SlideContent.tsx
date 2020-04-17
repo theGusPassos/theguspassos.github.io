@@ -22,6 +22,7 @@ const TagContainer = styled.div`
   top: 0px;
   left: 0px;
   width: 100%;
+  padding: 20px;
 `;
 
 const Image = styled.img`
