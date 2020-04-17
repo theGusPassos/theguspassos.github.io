@@ -47,7 +47,7 @@ const SlideContent = (props: ProjectSlideProps) => {
   };
 
   return (
-    <ImageContainer onClick={() => goToProjectPage(1)}>
+    <ImageContainer onClick={() => goToProjectPage(props.project.id)}>
       <TagContainer>{getTagsInProject(props.project)}</TagContainer>
       <Image src={props.project.image} alt={props.project.imageAlt}></Image>
       <SlideDescription project={props.project}></SlideDescription>
