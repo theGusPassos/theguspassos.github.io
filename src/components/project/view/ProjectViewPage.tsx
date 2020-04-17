@@ -32,7 +32,9 @@ const TagContainer = styled.div`
 `;
 
 const ProjectText = styled.section`
-  padding: 20px;
+  height: 90%;
+  padding: 15px 20px 20px 20px;
+  margin-bottom: 30px;
 
   @media ${device.tablet} {
     padding: 30px;

@@ -17,6 +17,7 @@ import {
 import { colors } from "../../shared/colors";
 import { Link } from "react-router-dom";
 import { MainToolTip } from "../common/ToolTip";
+import { sectionWithText } from "../common/styles";
 
 const AboutPageStyled = styled(PageStyle)`
   font-size: 0.9em;
@@ -56,11 +57,7 @@ const Info = styled.div`
 
 const Bio = styled.div`
   padding: 3% 20px;
-  line-height: 1.7;
-
-  p a {
-    color: ${colors.mainColor};
-  }
+  ${sectionWithText}
 
   @media ${device.tablet} {
     p {
