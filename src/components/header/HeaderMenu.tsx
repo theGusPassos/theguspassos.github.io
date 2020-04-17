@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import LinkButton from "../common-components/LinkButton";
-import { colors } from "../../shared/colors";
+import { colors } from "../../data/colors";
 
 const HeaderMenuStyled = styled.section`
   padding: 15% 15% 0 15%;

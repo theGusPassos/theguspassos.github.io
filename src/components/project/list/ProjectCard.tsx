@@ -3,7 +3,7 @@ import Project from "../../../models/project";
 import styled from "styled-components";
 import Tag from "../tag/Tag";
 import { device } from "../../../shared/device";
-import { colors } from "../../../shared/colors";
+import { colors } from "../../../data/colors";
 import LinkButton from "../../common-components/LinkButton";
 import { Link } from "react-router-dom";
 

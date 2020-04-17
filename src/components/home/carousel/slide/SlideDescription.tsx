@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../../../../shared/device";
-import { colors } from "../../../../shared/colors";
+import { colors } from "../../../../data/colors";
 import Project from "../../../../models/project";
 
 const DescriptionContainer = styled.div`

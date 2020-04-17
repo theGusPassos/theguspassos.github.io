@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../shared/device";
-import { colors } from "../../shared/colors";
+import { colors } from "../../data/colors";
 
 const LinkButton = styled.button`
   color: ${colors.mainColor};

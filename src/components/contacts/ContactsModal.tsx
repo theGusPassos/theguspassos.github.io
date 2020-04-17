@@ -6,7 +6,7 @@ import ContactCard from "./ContactCard";
 import LinkButton from "../common-components/LinkButton";
 import { contacts } from "../../data/contacts";
 import PageTitle from "../common-components/PageTitle";
-import { colors } from "../../shared/colors";
+import { colors } from "../../data/colors";
 import Contact from "../../models/contact";
 
 const ModalBackground = styled.div`

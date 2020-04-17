@@ -9,7 +9,7 @@ import { animationSpeed } from "../shared/animations";
 import { device, isInDesktop } from "../shared/device";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../shared/resizeListenerProps";
-import { colors } from "../shared/colors";
+import { colors } from "../data/colors";
 
 const BodyGrid = styled.div`
   display: flex;

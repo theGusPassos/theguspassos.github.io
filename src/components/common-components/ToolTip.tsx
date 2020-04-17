@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ReactTooltip from "react-tooltip";
-import { colors } from "../../shared/colors";
+import { colors } from "../../data/colors";
 
 export const MainToolTip = styled(ReactTooltip)`
   background: ${colors.mainColor} !important;

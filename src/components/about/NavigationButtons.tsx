@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { device } from "../../shared/device";
 import LinkButton from "../common-components/LinkButton";
-import { colors } from "../../shared/colors";
+import { colors } from "../../data/colors";
 import ContactsButton from "../contacts/ContactsButton";
 import { Link } from "react-router-dom";
 

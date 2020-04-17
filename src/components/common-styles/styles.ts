@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { colors } from "../../shared/colors";
+import { colors } from "../../data/colors";
 
 export const sectionWithText = css`
   line-height: 1.7;

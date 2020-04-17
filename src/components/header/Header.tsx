@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { colors } from "../../shared/colors";
+import { colors } from "../../data/colors";
 import styled from "styled-components";
 import { device } from "../../shared/device";
 import HeaderContacts from "./HeaderContacts";

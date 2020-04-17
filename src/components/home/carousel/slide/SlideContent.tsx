@@ -3,7 +3,7 @@ import styled from "styled-components";
 import SlideDescription from "./SlideDescription";
 import { createHashHistory } from "history";
 import { getTagsInProject } from "../../../project/tag/tagList";
-import { colors } from "../../../../shared/colors";
+import { colors } from "../../../../data/colors";
 import Project from "../../../../models/project";
 import { deviceSize, device } from "../../../../shared/device";
 
