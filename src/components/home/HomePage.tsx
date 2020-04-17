@@ -1,5 +1,5 @@
 import React from "react";
-import { GetAnimator, AnimationDirection } from "../../shared/animations";
+import { GetAnimator, AnimationDirection } from "../../animations/animations";
 import { useLastLocation } from "react-router-last-location";
 import PageTitle from "../common-components/PageTitle";
 import pageStyle from "../common-styles/pageStyle";
@@ -7,7 +7,7 @@ import CarouselContent from "./carousel/CarouselContent";
 import {
   LocationAnimationMap,
   getAnimationBasedOnLocation,
-} from "../../shared/dynamicAnimation";
+} from "../../animations/dynamicAnimation";
 import { aboutPath, projectListPath, homePathHash } from "../../data/routes";
 import { getLocationToAnim } from "../../shared/locationToAnim";
 import { device } from "../../shared/device";

@@ -5,7 +5,7 @@ import {
   AnimationDirection,
   GetAnimator,
   GetAnimationTransform,
-} from "../../../shared/animations";
+} from "../../../animations/animations";
 import PageTitle from "../../common-components/PageTitle";
 import Project from "../../../models/project";
 import { device } from "../../../shared/device";

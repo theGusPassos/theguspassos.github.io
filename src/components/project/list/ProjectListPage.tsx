@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import pageStyle from "../../common-styles/pageStyle";
-import { AnimationDirection, GetAnimator } from "../../../shared/animations";
+import {
+  AnimationDirection,
+  GetAnimator,
+} from "../../../animations/animations";
 import PageTitle from "../../common-components/PageTitle";
 import Project from "../../../models/project";
 import ProjectCard from "./ProjectCard";
@@ -12,7 +15,7 @@ import { getLocationToAnim } from "../../../shared/locationToAnim";
 import {
   LocationAnimationMap,
   getAnimationBasedOnLocation,
-} from "../../../shared/dynamicAnimation";
+} from "../../../animations/dynamicAnimation";
 import { homePath, projectListPathHash, aboutPath } from "../../../data/routes";
 import { useLastLocation } from "react-router-last-location";
 import DeviceInfo from "../../../shared/deviceInfo";

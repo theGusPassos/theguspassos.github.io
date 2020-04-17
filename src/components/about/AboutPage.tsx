@@ -1,7 +1,7 @@
 import React from "react";
 import PageTitle from "../common-components/PageTitle";
 import styled from "styled-components";
-import { AnimationDirection, GetAnimator } from "../../shared/animations";
+import { AnimationDirection, GetAnimator } from "../../animations/animations";
 import image from "../../images/me/EubyKuma.png";
 import { device } from "../../shared/device";
 import pageStyle from "../common-styles/pageStyle";
@@ -13,7 +13,7 @@ import { aboutPathHash, homePath, projectListPath } from "../../data/routes";
 import {
   getAnimationBasedOnLocation,
   LocationAnimationMap,
-} from "../../shared/dynamicAnimation";
+} from "../../animations/dynamicAnimation";
 import { colors } from "../../data/colors";
 import { Link } from "react-router-dom";
 import { MainToolTip } from "../common-components/ToolTip";
