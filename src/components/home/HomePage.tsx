@@ -21,7 +21,7 @@ const HomePageStyled = styled(pageStyle)`
     margin: auto;
     width: 75%;
     height: unset;
-    max-width: 700px;
+    max-width: 850px;
   }
 `;
 
