@@ -10,7 +10,7 @@ import {
   aboutPath,
   projectPath,
   projectListPath,
-} from "../models/routes";
+} from "../data/routes";
 import DeviceInfo from "../shared/deviceInfo";
 import ReactGA from "react-ga";
 

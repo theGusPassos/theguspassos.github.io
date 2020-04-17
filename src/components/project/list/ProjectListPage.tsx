@@ -13,11 +13,7 @@ import {
   LocationAnimationMap,
   getAnimationBasedOnLocation,
 } from "../../../shared/dynamicAnimation";
-import {
-  homePath,
-  projectListPathHash,
-  aboutPath,
-} from "../../../models/routes";
+import { homePath, projectListPathHash, aboutPath } from "../../../data/routes";
 import { useLastLocation } from "react-router-last-location";
 import DeviceInfo from "../../../shared/deviceInfo";
 

@@ -8,7 +8,7 @@ import {
   LocationAnimationMap,
   getAnimationBasedOnLocation,
 } from "../../shared/dynamicAnimation";
-import { aboutPath, projectListPath, homePathHash } from "../../models/routes";
+import { aboutPath, projectListPath, homePathHash } from "../../data/routes";
 import { getLocationToAnim } from "../../shared/locationToAnim";
 import { device } from "../../shared/device";
 import styled from "styled-components";

@@ -9,7 +9,7 @@ import NavigationButtons from "./NavigationButtons";
 import DeviceInfo from "../../shared/deviceInfo";
 import { getLocationToAnim } from "../../shared/locationToAnim";
 import { useLastLocation } from "react-router-last-location";
-import { aboutPathHash, homePath, projectListPath } from "../../models/routes";
+import { aboutPathHash, homePath, projectListPath } from "../../data/routes";
 import {
   getAnimationBasedOnLocation,
   LocationAnimationMap,
