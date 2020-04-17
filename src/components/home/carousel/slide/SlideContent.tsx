@@ -40,12 +40,6 @@ interface ProjectSlideProps {
   project: Project;
 }
 
-const getImageByDeviceSize = (project: Project) => {
-  return window.screen.width < deviceSize.tablet
-    ? project.image
-    : project.imageBig;
-};
-
 const SlideContent = (props: ProjectSlideProps) => {
   const goToProjectPage = (projectId: number) => {
     const history = createHashHistory();
@@ -55,10 +49,7 @@ const SlideContent = (props: ProjectSlideProps) => {
   return (
     <ImageContainer onClick={() => goToProjectPage(1)}>
       <TagContainer>{getTagsInProject(props.project)}</TagContainer>
-      <Image
-        src={getImageByDeviceSize(props.project)}
-        alt={props.project.imageAlt}
-      ></Image>
+      <Image src={props.project.image} alt={props.project.imageAlt}></Image>
       <SlideDescription project={props.project}></SlideDescription>
     </ImageContainer>
   );

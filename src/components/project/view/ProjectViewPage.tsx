@@ -54,7 +54,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
         {props.isDesktop ? null : (
           <PageTitle centered>{project.name}</PageTitle>
         )}
-        <Image src={project.imageBig} alt={project.imageAlt}></Image>
+        <Image src={project.image} alt={project.imageAlt}></Image>
         <TagContainer>{getTagsInProject(project)}</TagContainer>
         <ProjectText>{project.projectInfo()}</ProjectText>
       </ScrollableArea>

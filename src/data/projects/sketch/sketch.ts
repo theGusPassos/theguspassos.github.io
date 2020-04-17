@@ -10,6 +10,5 @@ export const sketch: Project = {
   tags: ["c#", "Unity"],
   imageAlt: "sketch gameplay screenshot",
   image: img,
-  imageBig: imgBig,
   projectInfo: SketchDescription,
 };

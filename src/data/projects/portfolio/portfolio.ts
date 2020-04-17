@@ -1,6 +1,5 @@
 import Project from "../../../models/project";
-import img from "../../../images/projects/sketch/sketch-carousel.png";
-import imgBig from "../../../images/projects/sketch/sketch-carousel-big.png";
+import img from "./portfolio-figma-screenshot.png";
 import PortfolioInfo from "./PortfolioInfo";
 
 export const portfolio: Project = {
@@ -11,6 +10,5 @@ export const portfolio: Project = {
   tags: ["react"],
   imageAlt: "an image of this very own website",
   image: img,
-  imageBig: imgBig,
   projectInfo: PortfolioInfo,
 };

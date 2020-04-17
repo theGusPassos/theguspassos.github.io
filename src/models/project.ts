@@ -3,7 +3,6 @@ export default interface Project {
   name: string;
   description: string;
   image: string;
-  imageBig: string;
   imageAlt: string;
   tags: string[];
   projectInfo(): JSX.Element;
