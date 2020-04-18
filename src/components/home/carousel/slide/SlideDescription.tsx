@@ -13,7 +13,7 @@ const DescriptionContainer = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 55%;
+    width: 60%;
   }
 `;
 
@@ -21,7 +21,7 @@ const Title = styled.strong`
   background: ${colors.mainColor};
   color: #fff;
   font-size: 1.1em;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   border: 1px solid #c2c2c2;
   position: absolute;
@@ -30,7 +30,7 @@ const Title = styled.strong`
   padding: 10px 20px;
 
   @media ${device.tablet} {
-    font-size: 1.2em;
+    font-size: 1.1em;
     top: -60px;
     padding: 20px 30px;
   }

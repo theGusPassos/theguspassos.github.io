@@ -27,7 +27,6 @@ const AboutPageStyled = styled(pageStyle)`
 `;
 
 const AboutPageAnimated = GetAnimator(AboutPageStyled);
-
 const ImageContainer = styled.div``;
 
 const Image = styled.img`

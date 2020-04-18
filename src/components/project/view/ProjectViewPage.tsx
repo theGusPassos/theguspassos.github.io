@@ -43,6 +43,10 @@ const ProjectText = styled.section`
   @media ${device.tablet} {
     padding: 30px;
   }
+
+  @media ${device.tablet} {
+    margin-bottom: 0;
+  }
 `;
 
 const ProjectViewPage = (props: ProjectViewProps) => {
