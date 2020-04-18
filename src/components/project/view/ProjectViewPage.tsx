@@ -13,6 +13,7 @@ import { getProjectById } from "../../../data/projects/projectList";
 import { getTagsInProject } from "../tag/tagList";
 import DeviceInfo from "../../../models/deviceInfo";
 import PerfectScrollbar from "react-perfect-scrollbar";
+import { colors } from "../../../data/colors";
 
 const ProjectViewPageAnimated = GetAnimator(pageStyle);
 const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
@@ -24,6 +25,14 @@ interface ProjectViewProps extends DeviceInfo {
 const ScrollableArea = styled(PerfectScrollbar)`
   display: flex;
   flex-direction: column;
+`;
+
+const ProjectTitle = styled.strong`
+  color: ${colors.mainColor};
+  font-size: 1.5em;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
 `;
 
 const Image = styled.img`
@@ -60,6 +69,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
           <PageTitle centered>{project.name}</PageTitle>
         )}
         <Image src={project.image} alt={project.imageAlt}></Image>
+        <ProjectTitle>{project.name}</ProjectTitle>
         <TagContainer>{getTagsInProject(project)}</TagContainer>
         <ProjectText>{project.projectInfo()}</ProjectText>
       </ScrollableArea>
