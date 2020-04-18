@@ -6,6 +6,10 @@
   z-index: 9999999;
 }
 
-.ps__thumb-y {
+.ps__thumbs-y {
+  position: fixed !important;
+}
+
+.ps__thumbs-x {
   position: fixed !important;
 }
