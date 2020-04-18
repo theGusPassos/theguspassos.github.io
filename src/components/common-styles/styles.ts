@@ -8,4 +8,8 @@ export const sectionWithText = css`
   ul li a {
     color: ${colors.mainColor};
   }
+
+  abbr {
+    text-decoration: none;
+  }
 `;
