@@ -5,3 +5,7 @@
 .Toastify div {
   z-index: 9999999;
 }
+
+.ps__thumb-y {
+  position: fixed !important;
+}
