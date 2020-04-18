@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { sectionWithText } from "../../../components/common-styles/styles";
+import LinkToExternal from "../../../components/common-components/LinkToExternal";
 
 const Info = styled.section`
   ${sectionWithText}
@@ -13,6 +14,9 @@ const UnityStateMachineInfo = () => {
         This is a sample project in <strong>Unity</strong> that implements a{" "}
         <strong>Finite State Machine</strong> for character behaviour.
       </p>
+      <LinkToExternal url="https://github.com/theGusPassos/unity-finite-state-machine">
+        Check the source code here
+      </LinkToExternal>
       <p>
         The <abbr title="Finite State Machine">FSM</abbr> is a design pattern
         used for various scenarios other than character behaviour, more on that
