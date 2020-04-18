@@ -6,6 +6,7 @@ import { device } from "../../../data/device";
 import { colors } from "../../../data/colors";
 import LinkButton from "../../common-styles/linkButton";
 import { Link } from "react-router-dom";
+import { sectionWithText } from "../../common-styles/styles";
 
 interface ProjectCardProps {
   project: Project;
@@ -20,6 +21,7 @@ const ProjectCardStyle = styled.div`
   padding: 20px 0;
   border-bottom: 1px solid ${colors.mainColor};
   transition: 0.3s;
+  ${sectionWithText}
 
   @media ${device.tablet} {
     padding: 30px 0;
@@ -63,7 +65,7 @@ const ProjectDescription = styled.p`
 `;
 
 const LinkButtonStyled = styled(LinkButton)`
-  padding: 20px 0 0 0;
+  padding: 5px 0 0 0;
   width: 100%;
 `;
 
