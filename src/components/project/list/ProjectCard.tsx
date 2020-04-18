@@ -9,6 +9,11 @@ import { Link } from "react-router-dom";
 
 interface ProjectCardProps {
   project: Project;
+  imageInRight: boolean;
+}
+
+interface StyleProps {
+  imageInRight: boolean;
 }
 
 const ProjectCardStyle = styled.div`
@@ -22,27 +27,32 @@ const ProjectCardStyle = styled.div`
 `;
 
 const CardHeader = styled.div`
-  display: flow-root;
-  position: relative;
+  display: ${(props: StyleProps) => (props.imageInRight ? "block" : "flex")};
+`;
+
+const ProjectImage = styled.img`
+  width: 55%;
+  border-radius: 20px;
+  float: right;
+`;
+
+const TitleAndTags = styled.div`
+  width: 45%;
+  padding-left: 5px;
 `;
 
 const ProjectTitle = styled.strong`
   color: ${colors.mainColor};
-  float: left;
   font-size: 1.3em;
-  position: absolute;
-  bottom: 0;
+  width: 100%;
+  padding: 5px;
 `;
 
 const TagContainerStyled = styled.div`
-  float: right;
-
   div {
-    margin: 0;
-  }
-
-  div:first-child {
-    margin-left: 10px;
+    float: left;
+    margin: 5px;
+    padding: 2px;
   }
 `;
 
@@ -70,14 +80,19 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <ProjectCardStyle>
-      <CardHeader>
-        <ProjectTitle>{props.project.name}</ProjectTitle>
-        <TagContainerStyled>{getProjectTags(props.project)}</TagContainerStyled>
+      <CardHeader imageInRight={props.imageInRight}>
+        <ProjectImage
+          src={props.project.image}
+          alt={props.project.imageAlt}
+        ></ProjectImage>
+        <TitleAndTags>
+          <ProjectTitle>{props.project.name}</ProjectTitle>
+          <TagContainerStyled>
+            {getProjectTags(props.project)}
+          </TagContainerStyled>
+        </TitleAndTags>
       </CardHeader>
-      <ProjectDescription>
-        2D fast paced game inspired in hits like Castlevania SOTN and Hollow
-        Knight. Not a Metroidvania, though.
-      </ProjectDescription>
+      <ProjectDescription>{props.project.description}</ProjectDescription>
       <Link to={getProjectUrl(props.project.id)} tabIndex={-1}>
         <LinkButtonStyled>check this project</LinkButtonStyled>
       </Link>

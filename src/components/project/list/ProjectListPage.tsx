@@ -63,7 +63,13 @@ const ProjectListPage = (props: ProjectListProps) => {
 
   const getProjectCards = () => {
     return projectList.map((a: Project, key: number) => {
-      return <ProjectCard project={a} key={key}></ProjectCard>;
+      return (
+        <ProjectCard
+          project={a}
+          imageInRight={key % 2 === 0}
+          key={key}
+        ></ProjectCard>
+      );
     });
   };
 
