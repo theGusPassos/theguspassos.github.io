@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { sectionWithText } from "../../../components/common-styles/styles";
-import LinkButton from "../../../components/common-components/LinkButton";
 import {
   goToExternalPage,
   goToExternalPageOnKeyDown,
 } from "../../../common-functions/goToExternalPage";
+import LinkButton from "../../../components/common-styles/linkButton";
 
 const Info = styled.section`
   ${sectionWithText}

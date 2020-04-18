@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Tag from "../tag/Tag";
 import { device } from "../../../data/device";
 import { colors } from "../../../data/colors";
-import LinkButton from "../../common-components/LinkButton";
+import LinkButton from "../../common-styles/linkButton";
 import { Link } from "react-router-dom";
 
 interface ProjectCardProps {

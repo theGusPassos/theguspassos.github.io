@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../../data/device";
-import LinkButton from "../common-components/LinkButton";
 import { colors } from "../../data/colors";
 import ContactsButton from "../contacts/ContactsButton";
 import { Link } from "react-router-dom";
+import LinkButton from "../common-styles/linkButton";
 
 const Navigation = styled.nav`
   flex: 1;

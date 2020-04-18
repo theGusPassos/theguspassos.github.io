@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { animationSpeed } from "../../animations/animations";
 import ContactCard from "./ContactCard";
-import LinkButton from "../common-components/LinkButton";
+import LinkButton from "../common-styles/linkButton";
 import { contacts } from "../../data/contacts";
 import PageTitle from "../common-components/PageTitle";
 import { colors } from "../../data/colors";
