@@ -53,8 +53,8 @@ const HomePage = (props: HomeProps) => {
   return (
     <HomePageAnimated transform={animationTransform}>
       <PageTitle>some of the projects I've worked on</PageTitle>
-      <CarouselContent isDesktop={props.isDesktop}></CarouselContent>
-      {props.isDesktop ? null : <Menu></Menu>}
+      <CarouselContent deviceType={props.deviceType}></CarouselContent>
+      {props.deviceType.isDesktop ? null : <Menu></Menu>}
     </HomePageAnimated>
   );
 };

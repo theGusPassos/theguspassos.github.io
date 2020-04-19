@@ -85,7 +85,7 @@ const Header = (props: HeaderProps) => {
           <JobTitle>Game & Software Developer</JobTitle>
         </NameContainer>
       </InfoContainer>
-      {props.isDesktop ? (
+      {props.deviceType.isDesktop ? (
         <Fragment>
           <HeaderMenu></HeaderMenu>
           <HeaderContacts></HeaderContacts>

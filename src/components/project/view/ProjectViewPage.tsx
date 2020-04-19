@@ -64,7 +64,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
   return (
     <ProjectViewPageAnimated transform={AnimationTransform}>
       <ScrollableArea>
-        {props.isDesktop ? null : (
+        {props.deviceType.isDesktop ? null : (
           <PageTitle centered>{project.name}</PageTitle>
         )}
         <Image src={project.image} alt={project.imageAlt}></Image>
@@ -72,7 +72,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
         <TagContainer>{getTagsInProject(project)}</TagContainer>
         <ProjectText>{project.projectInfo()}</ProjectText>
       </ScrollableArea>
-      {props.isDesktop ? null : <ReturnButton></ReturnButton>}
+      {props.deviceType.isDesktop ? null : <ReturnButton></ReturnButton>}
     </ProjectViewPageAnimated>
   );
 };

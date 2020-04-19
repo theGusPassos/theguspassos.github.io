@@ -56,7 +56,7 @@ const CarouselContent = (props: CarouselContent) => {
   return (
     <CarouselContainer>
       <CarouselStyled
-        showArrows={props.isDesktop}
+        showArrows={props.deviceType.isDesktop}
         showThumbs={false}
         showStatus={false}
         showIndicators

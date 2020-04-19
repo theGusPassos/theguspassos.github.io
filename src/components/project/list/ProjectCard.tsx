@@ -107,14 +107,14 @@ const ProjectCard = (props: ProjectCardProps) => {
           <TagContainerStyled>
             {getProjectTags(props.project)}
           </TagContainerStyled>
-          {props.isTablet ? (
+          {props.deviceType.isTablet ? (
             <DesktopProjectDescription>
               {props.project.description}
             </DesktopProjectDescription>
           ) : null}
         </TitleAndTags>
       </CardHeader>
-      {props.isTablet ? null : (
+      {props.deviceType.isTablet ? null : (
         <ProjectDescription>{props.project.description}</ProjectDescription>
       )}
       <Link to={getProjectUrl(props.project.id)} tabIndex={-1}>

@@ -68,8 +68,7 @@ const ProjectListPage = (props: ProjectListProps) => {
           project={a}
           imageInRight={key % 2 === 0}
           key={key}
-          isDesktop={props.isDesktop}
-          isTablet={props.isTablet}
+          deviceType={props.deviceType}
         ></ProjectCard>
       );
     });
@@ -78,10 +77,14 @@ const ProjectListPage = (props: ProjectListProps) => {
   return (
     <ProjectListPageAnimated transform={animationTransform}>
       <ScrollableArea>
-        {props.isDesktop ? null : <PageTitle centered>my projects</PageTitle>}
+        {props.deviceType.isDesktop ? null : (
+          <PageTitle centered>my projects</PageTitle>
+        )}
         <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
       </ScrollableArea>
-      {props.isDesktop ? null : <ReturnButton returnToHome></ReturnButton>}
+      {props.deviceType.isDesktop ? null : (
+        <ReturnButton returnToHome></ReturnButton>
+      )}
     </ProjectListPageAnimated>
   );
 };

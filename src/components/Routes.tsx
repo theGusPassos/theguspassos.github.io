@@ -4,7 +4,6 @@ import ProjectListPage from "./project/list/ProjectListPage";
 import HomePage from "./home/HomePage";
 import AboutPage from "./about/AboutPage";
 import ProjectViewPage from "./project/view/ProjectViewPage";
-import { sketch } from "../data/projects/unity-state-machine/unityStateMachine";
 import {
   homePath,
   aboutPath,
@@ -26,18 +25,15 @@ const Routes = (props: RoutesProps) => {
   return (
     <Switch location={props.location}>
       <Route exact path={homePath}>
-        <HomePage isDesktop={props.isDesktop}></HomePage>
+        <HomePage deviceType={props.deviceType}></HomePage>
       </Route>
 
       <Route exact path={aboutPath}>
-        <AboutPage isDesktop={props.isDesktop}></AboutPage>
+        <AboutPage deviceType={props.deviceType}></AboutPage>
       </Route>
 
       <Route exact path={projectListPath}>
-        <ProjectListPage
-          isDesktop={props.isDesktop}
-          isTablet={props.isTablet}
-        ></ProjectListPage>
+        <ProjectListPage deviceType={props.deviceType}></ProjectListPage>
       </Route>
 
       <Route
@@ -47,8 +43,7 @@ const Routes = (props: RoutesProps) => {
           return (
             <ProjectViewPage
               projectId={renderProps.match.params.id}
-              isDesktop={props.isDesktop}
-              isTablet={props.isTablet}
+              deviceType={props.deviceType}
             ></ProjectViewPage>
           );
         }}

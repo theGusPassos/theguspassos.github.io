@@ -89,7 +89,9 @@ const AboutPage = (props: AboutProps) => {
 
   return (
     <AboutPageAnimated transform={animationTransform}>
-      {props.isDesktop ? null : <PageTitle centered>about me</PageTitle>}
+      {props.deviceType.isDesktop ? null : (
+        <PageTitle centered>about me</PageTitle>
+      )}
       <ImageContainer>
         <MainToolTip />
         <Image
@@ -138,7 +140,9 @@ const AboutPage = (props: AboutProps) => {
         </p>
         <p>If you need help in a project of yours feel free to contact me =)</p>
       </Bio>
-      {props.isDesktop ? null : <NavigationButtons></NavigationButtons>}
+      {props.deviceType.isDesktop ? null : (
+        <NavigationButtons></NavigationButtons>
+      )}
     </AboutPageAnimated>
   );
 };

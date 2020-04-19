@@ -10,6 +10,7 @@ import { device, isInDesktop, isInTablet } from "../data/device";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../models/resizeListenerProps";
 import { colors } from "../data/colors";
+import { DeviceType } from "../models/deviceInfo";
 
 const BodyGrid = styled.div`
   display: flex;
@@ -38,10 +39,15 @@ const TransitionGroupStyled = styled(TransitionGroup)`
 interface BodyProps extends ResizeListenerProps {}
 
 const Body = (props: BodyProps) => {
+  const deviceType: DeviceType = {
+    isTablet: isInTablet(props.width),
+    isDesktop: isInDesktop(props.width),
+  };
+
   return (
     <BodyGrid>
       <HashRouter basename="/">
-        <Header isDesktop={isInDesktop(props.width)}></Header>
+        <Header deviceType={deviceType}></Header>
         <LastLocationProvider>
           <Route
             render={({ location }) => (
@@ -51,11 +57,7 @@ const Body = (props: BodyProps) => {
                   classNames="animation"
                   timeout={animationSpeed}
                 >
-                  <Routes
-                    isDesktop={isInDesktop(props.width)}
-                    isTablet={isInTablet(props.width)}
-                    location={location}
-                  ></Routes>
+                  <Routes deviceType={deviceType} location={location}></Routes>
                 </CSSTransition>
               </TransitionGroupStyled>
             )}
