@@ -7,8 +7,9 @@ import { colors } from "../../../data/colors";
 import LinkButton from "../../common-styles/linkButton";
 import { Link } from "react-router-dom";
 import { sectionWithText } from "../../common-styles/styles";
+import DeviceInfo from "../../../models/deviceInfo";
 
-interface ProjectCardProps {
+interface ProjectCardProps extends DeviceInfo {
   project: Project;
   imageInRight: boolean;
 }
@@ -36,11 +37,15 @@ const ProjectImage = styled.img`
   width: 55%;
   border-radius: 20px;
   float: right;
+
+  @media ${device.tablet} {
+    width: 60%;
+  }
 `;
 
 const TitleAndTags = styled.div`
   width: 45%;
-  padding-left: 5px;
+  padding-left: ${(props: StyleProps) => (props.imageInRight ? "0" : "10px")};
 `;
 
 const ProjectTitle = styled.strong`
@@ -51,6 +56,8 @@ const ProjectTitle = styled.strong`
 `;
 
 const TagContainerStyled = styled.div`
+  display: flex;
+
   div {
     float: left;
     margin: 5px;
@@ -64,9 +71,17 @@ const ProjectDescription = styled.p`
   margin: 0;
 `;
 
+const DesktopProjectDescription = styled(ProjectDescription)`
+  clear: none;
+`;
+
 const LinkButtonStyled = styled(LinkButton)`
   padding: 5px 0 0 0;
   width: 100%;
+
+  @media ${device.tablet} {
+    padding: 20px 0 0 0;
+  }
 `;
 
 const ProjectCard = (props: ProjectCardProps) => {
@@ -87,14 +102,21 @@ const ProjectCard = (props: ProjectCardProps) => {
           src={props.project.image}
           alt={props.project.imageAlt}
         ></ProjectImage>
-        <TitleAndTags>
+        <TitleAndTags imageInRight={props.imageInRight}>
           <ProjectTitle>{props.project.name}</ProjectTitle>
           <TagContainerStyled>
             {getProjectTags(props.project)}
           </TagContainerStyled>
+          {props.isTablet ? (
+            <DesktopProjectDescription>
+              {props.project.description}
+            </DesktopProjectDescription>
+          ) : null}
         </TitleAndTags>
       </CardHeader>
-      <ProjectDescription>{props.project.description}</ProjectDescription>
+      {props.isTablet ? null : (
+        <ProjectDescription>{props.project.description}</ProjectDescription>
+      )}
       <Link to={getProjectUrl(props.project.id)} tabIndex={-1}>
         <LinkButtonStyled>check this project</LinkButtonStyled>
       </Link>

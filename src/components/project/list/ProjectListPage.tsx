@@ -68,6 +68,8 @@ const ProjectListPage = (props: ProjectListProps) => {
           project={a}
           imageInRight={key % 2 === 0}
           key={key}
+          isDesktop={props.isDesktop}
+          isTablet={props.isTablet}
         ></ProjectCard>
       );
     });

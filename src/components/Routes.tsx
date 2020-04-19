@@ -34,7 +34,10 @@ const Routes = (props: RoutesProps) => {
       </Route>
 
       <Route exact path={projectListPath}>
-        <ProjectListPage isDesktop={props.isDesktop}></ProjectListPage>
+        <ProjectListPage
+          isDesktop={props.isDesktop}
+          isTablet={props.isTablet}
+        ></ProjectListPage>
       </Route>
 
       <Route
@@ -45,6 +48,7 @@ const Routes = (props: RoutesProps) => {
             <ProjectViewPage
               projectId={renderProps.match.params.id}
               isDesktop={props.isDesktop}
+              isTablet={props.isTablet}
             ></ProjectViewPage>
           );
         }}
