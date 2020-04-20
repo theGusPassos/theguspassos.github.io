@@ -1,8 +1,8 @@
 import Project from "../../models/project";
 import { portfolio } from "./portfolio/portfolio";
-import { sketch } from "./unity-state-machine/unityStateMachine";
+import { unityStateMachine } from "./unity-state-machine/unityStateMachine";
 
-export const projectList: Project[] = [portfolio, sketch, sketch, sketch];
+export const projectList: Project[] = [portfolio, unityStateMachine];
 
 export const getProjectById = (id: number) => {
   return projectList.filter((a) => a.id === id)[0];

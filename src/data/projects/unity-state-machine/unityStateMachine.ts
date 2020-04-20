@@ -2,7 +2,7 @@ import Project from "../../../models/project";
 import img from "./unity-state-machine.gif";
 import UnityStateMachineInfo from "./UnityStateMachineInfo";
 
-export const sketch: Project = {
+export const unityStateMachine: Project = {
   id: 2,
   name: "Unity State Machine",
   description:
