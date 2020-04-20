@@ -35,7 +35,7 @@ const ProjectCardContainer = styled.section`
   padding: 15px 20px 20px 20px;
   margin-bottom: 10%;
 
-  div:last-child {
+  > div:last-child {
     border-bottom: none;
   }
 
