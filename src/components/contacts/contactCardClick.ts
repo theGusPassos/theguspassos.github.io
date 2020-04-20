@@ -8,7 +8,7 @@ export const onCardClick = (contact: Contact) => {
     goToExternalPage(contact.url);
   } else {
     copyToClipboard(contact.contactText);
-    toast.info(`my e-mail was copied to your clipboard =)`, {
+    toast.info(`my e-mail has been copied to your clipboard =)`, {
       position: "bottom-right",
       autoClose: 3000,
       hideProgressBar: true,

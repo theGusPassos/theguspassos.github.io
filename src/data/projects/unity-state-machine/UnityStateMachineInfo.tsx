@@ -28,6 +28,7 @@ const UnityStateMachineInfo = () => {
         >
           Game Programming Patterns book
         </a>
+        .
       </p>
       <p>
         This implementation does use{" "}
