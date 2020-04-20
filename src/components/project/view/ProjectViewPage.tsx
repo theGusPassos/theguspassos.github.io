@@ -33,6 +33,10 @@ const ProjectTitle = styled.strong`
   width: 100%;
   text-align: center;
   padding: 5px;
+
+  @media ${device.desktop} {
+    padding: 10px 0;
+  }
 `;
 
 const Image = styled.img`
@@ -51,9 +55,6 @@ const ProjectText = styled.section`
 
   @media ${device.tablet} {
     padding: 30px;
-  }
-
-  @media ${device.tablet} {
     margin-bottom: 0;
   }
 `;
@@ -68,7 +69,9 @@ const ProjectViewPage = (props: ProjectViewProps) => {
           <PageTitle centered>{project.name}</PageTitle>
         )}
         <Image src={project.image} alt={project.imageAlt}></Image>
-        <ProjectTitle>{project.name}</ProjectTitle>
+        {props.deviceType.isDesktop ? (
+          <ProjectTitle>{project.name}</ProjectTitle>
+        ) : null}
         <TagContainer>{getTagsInProject(project)}</TagContainer>
         <ProjectText>{project.projectInfo()}</ProjectText>
       </ScrollableArea>
