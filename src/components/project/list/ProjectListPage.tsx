@@ -19,13 +19,12 @@ import {
 import { homePath, projectListPathHash, aboutPath } from "../../../data/routes";
 import { useLastLocation } from "react-router-last-location";
 import DeviceInfo from "../../../models/deviceInfo";
-import PerfectScrollbar from "react-perfect-scrollbar";
 
 const ProjectListPageAnimated = GetAnimator(pageStyle);
 
 interface ProjectListProps extends DeviceInfo {}
 
-const ScrollableArea = styled(PerfectScrollbar)`
+const ScrollableArea = styled.div`
   display: flex;
   flex-direction: column;
 `;

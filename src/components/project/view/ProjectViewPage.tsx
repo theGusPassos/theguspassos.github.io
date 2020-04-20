@@ -12,7 +12,6 @@ import ReturnButton from "../../common-components/ReturnButton";
 import { getProjectById } from "../../../data/projects/projectList";
 import { getTagsInProject } from "../tag/tagList";
 import DeviceInfo from "../../../models/deviceInfo";
-import PerfectScrollbar from "react-perfect-scrollbar";
 import { colors } from "../../../data/colors";
 
 const ProjectViewPageAnimated = GetAnimator(pageStyle);
@@ -22,7 +21,7 @@ interface ProjectViewProps extends DeviceInfo {
   projectId: number;
 }
 
-const ScrollableArea = styled(PerfectScrollbar)`
+const ScrollableArea = styled.div`
   display: flex;
   flex-direction: column;
 `;
