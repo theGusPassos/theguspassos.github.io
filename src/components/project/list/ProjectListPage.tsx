@@ -35,6 +35,10 @@ const ProjectCardContainer = styled.section`
   padding: 15px 20px 20px 20px;
   margin-bottom: 10%;
 
+  div:last-child {
+    border-bottom: none;
+  }
+
   @media ${device.tablet} {
     padding: 0 30px;
   }
