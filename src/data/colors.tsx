@@ -1,8 +1,8 @@
 const colors = {
-  mainColor: "#7673ff",
+  mainColor: "#6764e6",
   mainTextColor: "#fff",
   mainBackgroundColor: "#f1f1f1",
-  secondColor: "#6B68EE",
+  secondColor: "#726ff0",
   secondBackgroundColor: "#f7f7f7",
 
   buttonClickedColor: "#dedede",
