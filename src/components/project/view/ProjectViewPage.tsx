@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import pageStyle from "../../common-styles/pageStyle";
+import { pageStyleFullWidth } from "../../common-styles/pageStyle";
 import {
   AnimationDirection,
   GetAnimator,
@@ -13,18 +13,14 @@ import { getProjectById } from "../../../data/projects/projectList";
 import { getTagsInProject } from "../tag/tagList";
 import DeviceInfo from "../../../models/deviceInfo";
 import { colors } from "../../../data/colors";
+import { ScrollableArea } from "../../common-components/ScrollableArea";
 
-const ProjectViewPageAnimated = GetAnimator(pageStyle);
+const ProjectViewPageAnimated = GetAnimator(pageStyleFullWidth);
 const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
 
 interface ProjectViewProps extends DeviceInfo {
   projectId: number;
 }
-
-const ScrollableArea = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 const ProjectTitle = styled.strong`
   color: ${colors.mainColor};
@@ -49,13 +45,11 @@ const TagContainer = styled.div`
 `;
 
 const ProjectText = styled.section`
-  height: 90%;
-  padding: 15px 20px 20px 20px;
-  margin-bottom: 10%;
+  height: 100%;
+  padding: 15px 20px 15% 20px;
 
   @media ${device.tablet} {
-    padding: 30px;
-    margin-bottom: 0;
+    padding: 30px 30px 10px 30px;
   }
 `;
 

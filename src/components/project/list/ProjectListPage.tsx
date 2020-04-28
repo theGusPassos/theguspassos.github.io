@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import pageStyle from "../../common-styles/pageStyle";
+import { pageStyleFullWidth } from "../../common-styles/pageStyle";
 import {
   AnimationDirection,
   GetAnimator,
@@ -19,15 +19,11 @@ import {
 import { homePath, projectListPathHash, aboutPath } from "../../../data/routes";
 import { useLastLocation } from "react-router-last-location";
 import DeviceInfo from "../../../models/deviceInfo";
+import { ScrollableArea } from "../../common-components/ScrollableArea";
 
-const ProjectListPageAnimated = GetAnimator(pageStyle);
+const ProjectListPageAnimated = GetAnimator(pageStyleFullWidth);
 
 interface ProjectListProps extends DeviceInfo {}
-
-const ScrollableArea = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 const ProjectCardContainer = styled.section`
   height: 90%;

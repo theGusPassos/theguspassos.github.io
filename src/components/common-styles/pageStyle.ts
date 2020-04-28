@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../data/device";
+import { maxWidthInDesktop } from "../../data/sizes";
 
 const pageStyle = styled.section`
   position: absolute;
@@ -13,8 +14,16 @@ const pageStyle = styled.section`
   overflow: auto;
 
   @media ${device.desktop} {
-    max-width: 800px;
+    max-width: ${maxWidthInDesktop}px;
     width: 90%;
+    margin: auto;
+  }
+`;
+
+export const pageStyleFullWidth = styled(pageStyle)`
+  @media ${device.desktop} {
+    max-width: unset !important;
+    width: 100% !important;
     margin: auto;
   }
 `;
