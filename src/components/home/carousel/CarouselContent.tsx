@@ -8,6 +8,7 @@ import Project from "../../../models/project";
 import DeviceInfo from "../../../models/deviceInfo";
 import { device } from "../../../data/device";
 import { colors } from "../../../data/colors";
+import { animationSpeed } from "../../../animations/animations";
 
 const CarouselContainer = styled.div`
   z-index: 10;
@@ -61,9 +62,6 @@ const CarouselContent = (props: CarouselContent) => {
         showStatus={false}
         showIndicators
         emulateTouch
-        autoPlay
-        transitionTime={1000}
-        interval={4000}
         stopOnHover
         infiniteLoop
       >
