@@ -27,7 +27,7 @@ interface ProjectListProps extends DeviceInfo {}
 
 const ProjectCardContainer = styled.section`
   height: 90%;
-  padding: 15px 20px 20px 20px;
+  padding: 15px 20px 15% 20px;
   margin-bottom: 10%;
 
   > div:last-child {
@@ -35,7 +35,7 @@ const ProjectCardContainer = styled.section`
   }
 
   @media ${device.tablet} {
-    padding: 0 30px;
+    padding: 30px 30px 10px 30px;
   }
 `;
 
