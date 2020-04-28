@@ -15,6 +15,7 @@ const ContactContainer = styled.div`
 const ContactIcon = styled.img`
   opacity: 0.3;
   width: 20%;
+  height: 15%;
   margin: auto;
 
   :hover,
