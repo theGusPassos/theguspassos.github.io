@@ -40,7 +40,7 @@ const Image = styled.img`
 `;
 
 const TagContainer = styled.div`
-  display: flex;
+  display: block;
   margin: 0 auto;
 `;
 

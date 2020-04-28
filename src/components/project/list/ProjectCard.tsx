@@ -36,7 +36,7 @@ const CardHeader = styled.div`
 const ProjectImage = styled.img`
   width: 55%;
   border-radius: 20px;
-  float: right;
+  float: ${(props: StyleProps) => (props.imageInRight ? "right" : "unset")};
 
   @media ${device.tablet} {
     width: 60%;
@@ -99,6 +99,7 @@ const ProjectCard = (props: ProjectCardProps) => {
     <ProjectCardStyle>
       <CardHeader imageInRight={props.imageInRight}>
         <ProjectImage
+          imageInRight={props.imageInRight}
           src={props.project.image}
           alt={props.project.imageAlt}
         ></ProjectImage>
