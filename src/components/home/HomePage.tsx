@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { colors } from "../../data/colors";
 import { defaultPadding } from "../common-styles/styles";
 import HomeNavButton from "./HomeNavButton";
+import AboutPage from "./AboutPage";
 
 const HomePageStyled = styled.section`
   height: 100%;
@@ -24,7 +25,8 @@ const HomePage = () => {
   return (
     <HomePageStyled>
       <HomeNavigation>
-        <FrontPage></FrontPage>
+        {/* <FrontPage></FrontPage> */}
+        <AboutPage></AboutPage>
       </HomeNavigation>
       <HomeNavButtonWrapper>
         <HomeNavButton>see my work</HomeNavButton>

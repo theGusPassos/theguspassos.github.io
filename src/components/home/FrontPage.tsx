@@ -10,7 +10,7 @@ const FrontPageStyled = styled.section`
   height: 100%;
 `;
 
-const PersonalInfo = styled.div`
+const Info = styled.div`
   ${defaultPadding};
 
   h1 {
@@ -23,7 +23,7 @@ const PersonalInfo = styled.div`
   }
 `;
 
-const PersonalBio = styled.div`
+const Bio = styled.div`
   font-size: 1.2em;
   margin: auto;
 
@@ -42,11 +42,11 @@ const HomeNavButtonWrapper = styled.div`
 const FrontPage = () => {
   return (
     <FrontPageStyled>
-      <PersonalInfo>
+      <Info>
         <h1>Gustavo Passos</h1>
         <span>Software and Game Developer</span>
-      </PersonalInfo>
-      <PersonalBio>
+      </Info>
+      <Bio>
         <p>
           I’m interested in developing any kind of software regardless of the
           tech stack.
@@ -55,7 +55,7 @@ const FrontPage = () => {
           The software quality and user experience are the most important things
           for me. I look forward to working with people that value the same =)
         </p>
-      </PersonalBio>
+      </Bio>
       <HomeNavButtonWrapper>
         <HomeNavButton>more about me</HomeNavButton>
       </HomeNavButtonWrapper>
