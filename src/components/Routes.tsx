@@ -22,10 +22,6 @@ const Routes = (props: RoutesProps) => {
         <ProjectListPage></ProjectListPage>
       </Route>
 
-      <Route path={homePath}>
-        <HomePage location={props.location}></HomePage>
-      </Route>
-
       <Route
         exact
         path={projectPath}
@@ -38,6 +34,10 @@ const Routes = (props: RoutesProps) => {
           );
         }}
       ></Route>
+
+      <Route path={homePath}>
+        <HomePage location={props.location}></HomePage>
+      </Route>
     </Switch>
   );
 };
