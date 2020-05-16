@@ -40,7 +40,7 @@ const FrontPage = () => {
           for me. I look forward to working with people that value the same =)
         </p>
       </Bio>
-      <HomeNavButton link="/">more about me</HomeNavButton>
+      <HomeNavButton link="/about">more about me</HomeNavButton>
     </FrontPageStyled>
   );
 };

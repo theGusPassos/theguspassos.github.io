@@ -5,6 +5,7 @@ import { colors } from "../../data/colors";
 import { defaultPadding } from "../common-styles/styles";
 import HomeNavButton from "./common/HomeNavButton";
 import AboutPage from "./AboutPage";
+import { Switch, Route, RouteProps } from "react-router-dom";
 
 const HomePageStyled = styled.section`
   height: 100%;
@@ -17,11 +18,19 @@ const HomeNavigation = styled.div`
   color: ${colors.mainTextColor};
 `;
 
-const HomePage = () => {
+const HomePage = (props: RouteProps) => {
   return (
     <HomePageStyled>
       <HomeNavigation>
-        <FrontPage></FrontPage>
+        <Switch location={props.location}>
+          <Route exact path="/">
+            <FrontPage></FrontPage>
+          </Route>
+
+          <Route path="/about">
+            <AboutPage></AboutPage>
+          </Route>
+        </Switch>
       </HomeNavigation>
       <HomeNavButton link="/" useMainColor>
         see my work
