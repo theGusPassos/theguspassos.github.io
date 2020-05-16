@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./header/Header";
 import styled from "styled-components";
 import { HashRouter, Route } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -47,7 +46,6 @@ const Body = (props: BodyProps) => {
   return (
     <BodyGrid>
       <HashRouter basename="/">
-        <Header deviceType={deviceType}></Header>
         <LastLocationProvider>
           <Route
             render={({ location }) => (
