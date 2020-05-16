@@ -13,3 +13,7 @@ export const sectionWithText = css`
     text-decoration: none;
   }
 `;
+
+export const defaultPadding = css`
+  padding: 10%;
+`;
