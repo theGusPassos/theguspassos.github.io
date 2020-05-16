@@ -6,7 +6,7 @@ import { colors } from "../../data/colors";
 
 const FrontPageStyled = styled.section`
   display: grid;
-  grid-template-rows: 30% 60% 10%;
+  grid-template-rows: 20% 70% 10%;
   height: 100%;
 `;
 
@@ -14,16 +14,19 @@ const PersonalInfo = styled.div`
   ${defaultPadding};
 
   h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin: 0;
   }
 
   span {
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
 `;
 
 const PersonalBio = styled.div`
+  font-size: 1.2em;
+  margin: auto;
+
   ${defaultPadding};
   ${sectionWithText};
 `;
