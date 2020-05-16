@@ -6,12 +6,20 @@ import HomeNavButton from "./common/HomeNavButton";
 import AboutPage from "./AboutPage";
 import { Switch, Route, RouteProps } from "react-router-dom";
 import { projectListPath } from "../../data/routes";
+import {
+  GetAnimator,
+  GetAnimationTransform,
+  AnimationDirection,
+} from "../../animations/animations";
 
 const HomePageStyled = styled.section`
   height: 100%;
   display: grid;
   grid-template-rows: 90% 10%;
 `;
+
+const HomePageAnimated = GetAnimator(HomePageStyled);
+const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
 
 const HomeNavigation = styled.div`
   background-color: ${colors.mainColor};
@@ -20,7 +28,7 @@ const HomeNavigation = styled.div`
 
 const HomePage = (props: RouteProps) => {
   return (
-    <HomePageStyled>
+    <HomePageAnimated transform={AnimationTransform}>
       <HomeNavigation>
         <Switch location={props.location}>
           <Route exact path="/">
@@ -35,7 +43,7 @@ const HomePage = (props: RouteProps) => {
       <HomeNavButton link={projectListPath} useMainColor>
         see my work
       </HomeNavButton>
-    </HomePageStyled>
+    </HomePageAnimated>
   );
 };
 
