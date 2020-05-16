@@ -17,10 +17,6 @@ const HomeNavigation = styled.div`
   color: ${colors.mainTextColor};
 `;
 
-const HomeNavButtonWrapper = styled.div`
-  display: flex;
-`;
-
 const HomePage = () => {
   return (
     <HomePageStyled>
@@ -28,9 +24,9 @@ const HomePage = () => {
         {/* <FrontPage></FrontPage> */}
         <AboutPage></AboutPage>
       </HomeNavigation>
-      <HomeNavButtonWrapper>
-        <HomeNavButton>see my work</HomeNavButton>
-      </HomeNavButtonWrapper>
+      <HomeNavButton link="/" useMainColor>
+        see my work
+      </HomeNavButton>
     </HomePageStyled>
   );
 };

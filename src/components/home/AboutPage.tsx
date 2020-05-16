@@ -6,6 +6,7 @@ import { colors } from "../../data/colors";
 
 const AboutPageStyled = styled.section`
   display: grid;
+  height: 100%;
   grid-template-rows: 90% 10%;
 `;
 
@@ -13,14 +14,6 @@ const Bio = styled.div`
   font-size: 1.2em;
   ${defaultPadding};
   ${sectionWithText};
-`;
-
-const HomeNavButtonWrapper = styled.div`
-  display: flex;
-
-  a {
-    color: ${colors.mainTextColor};
-  }
 `;
 
 const AboutPage = () => {
@@ -38,9 +31,7 @@ const AboutPage = () => {
         </p>
         <p>If you need help in a project of yours feel free to contact me =)</p>
       </Bio>
-      <HomeNavButtonWrapper>
-        <HomeNavButton>my contacts</HomeNavButton>
-      </HomeNavButtonWrapper>
+      <HomeNavButton link="/">my contacts</HomeNavButton>
     </AboutPageStyled>
   );
 };

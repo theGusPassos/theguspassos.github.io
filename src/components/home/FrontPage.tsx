@@ -57,7 +57,7 @@ const FrontPage = () => {
         </p>
       </Bio>
       <HomeNavButtonWrapper>
-        <HomeNavButton>more about me</HomeNavButton>
+        <HomeNavButton link="/">more about me</HomeNavButton>
       </HomeNavButtonWrapper>
     </FrontPageStyled>
   );
