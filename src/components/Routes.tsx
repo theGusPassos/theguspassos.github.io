@@ -2,14 +2,8 @@ import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import ProjectListPage from "./project/list/ProjectListPage";
 import HomePage from "./home/HomePage";
-import AboutPage from "./about/AboutPage";
 import ProjectViewPage from "./project/view/ProjectViewPage";
-import {
-  homePath,
-  aboutPath,
-  projectPath,
-  projectListPath,
-} from "../data/routes";
+import { homePath, projectPath, projectListPath } from "../data/routes";
 import DeviceInfo from "../models/deviceInfo";
 import ReactGA from "react-ga";
 
@@ -25,7 +19,7 @@ const Routes = (props: RoutesProps) => {
   return (
     <Switch location={props.location}>
       <Route exact path={projectListPath}>
-        <ProjectListPage deviceType={props.deviceType}></ProjectListPage>
+        <ProjectListPage></ProjectListPage>
       </Route>
 
       <Route path={homePath}>

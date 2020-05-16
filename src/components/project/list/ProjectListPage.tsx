@@ -1,91 +1,15 @@
 import React from "react";
-import styled from "styled-components";
-import { pageStyleFullWidth } from "../../common-styles/pageStyle";
-import {
-  AnimationDirection,
-  GetAnimator,
-} from "../../../animations/animations";
-import PageTitle from "../../common-components/PageTitle";
-import Project from "../../../models/project";
-import ProjectCard from "./ProjectCard";
-import { device } from "../../../data/device";
 import { projectList } from "../../../data/projects/projectList";
-import ReturnButton from "../../common-components/ReturnButton";
-import { getLocationToAnim } from "../../../animations/locationToAnim";
-import {
-  LocationAnimationMap,
-  getAnimationBasedOnLocation,
-} from "../../../animations/dynamicAnimation";
-import { homePath, projectListPathHash, aboutPath } from "../../../data/routes";
-import { useLastLocation } from "react-router-last-location";
-import DeviceInfo from "../../../models/deviceInfo";
-import { ScrollableArea } from "../../common-components/ScrollableArea";
+import Project from "../../../models/project";
 
-const ProjectListPageAnimated = GetAnimator(pageStyleFullWidth);
-
-interface ProjectListProps extends DeviceInfo {}
-
-const ProjectCardContainer = styled.section`
-  height: 90%;
-  padding: 15px 20px 15% 20px;
-  margin-bottom: 10%;
-
-  > div:last-child {
-    border-bottom: none;
-  }
-
-  @media ${device.tablet} {
-    padding: 30px 30px 10px 30px;
-  }
-`;
-
-const ProjectListPage = (props: ProjectListProps) => {
-  const location = getLocationToAnim(
-    window.location.hash,
-    useLastLocation()?.pathname,
-    projectListPathHash
-  );
-
-  const getAnimationMap = () => {
-    const animationMap: LocationAnimationMap = {};
-    animationMap[homePath] = AnimationDirection.FromRight;
-    animationMap[aboutPath] = AnimationDirection.FromRight;
-    animationMap["default"] = AnimationDirection.FromDown;
-
-    return animationMap;
-  };
-
-  const animationTransform = getAnimationBasedOnLocation(
-    getAnimationMap(),
-    location
-  );
-
-  const getProjectCards = () => {
-    return projectList.map((a: Project, key: number) => {
-      return (
-        <ProjectCard
-          project={a}
-          imageInRight={key % 2 === 0}
-          key={key}
-          deviceType={props.deviceType}
-        ></ProjectCard>
-      );
+const ProjectListPage = () => {
+  const getProjects = () => {
+    return projectList.map((project: Project, i: number) => {
+      return <div key={i}>{project.name}</div>;
     });
   };
 
-  return (
-    <ProjectListPageAnimated transform={animationTransform}>
-      <ScrollableArea>
-        {props.deviceType.isDesktop ? null : (
-          <PageTitle centered>my projects</PageTitle>
-        )}
-        <ProjectCardContainer>{getProjectCards()}</ProjectCardContainer>
-      </ScrollableArea>
-      {props.deviceType.isDesktop ? null : (
-        <ReturnButton returnToHome></ReturnButton>
-      )}
-    </ProjectListPageAnimated>
-  );
+  return <div>{getProjects()}</div>;
 };
 
 export default ProjectListPage;
