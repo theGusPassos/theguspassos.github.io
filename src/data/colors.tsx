@@ -1,7 +1,7 @@
 const colors = {
   mainColor: "#5655A3",
   mainTextColor: "#fff",
-  mainBackgroundColor: "#f1f1f1",
+  mainBackgroundColor: "#fff",
   secondColor: "#726ff0",
   secondBackgroundColor: "#f7f7f7",
 
