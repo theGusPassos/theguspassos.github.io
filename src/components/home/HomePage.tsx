@@ -21,8 +21,7 @@ const HomePage = () => {
   return (
     <HomePageStyled>
       <HomeNavigation>
-        {/* <FrontPage></FrontPage> */}
-        <AboutPage></AboutPage>
+        <FrontPage></FrontPage>
       </HomeNavigation>
       <HomeNavButton link="/" useMainColor>
         see my work

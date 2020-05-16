@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import HomeNavButton from "./common/HomeNavButton";
 import { defaultPadding } from "../common-styles/styles";
-import { colors } from "../../data/colors";
 import Bio from "./common/bioStyle";
 
 const FrontPageStyled = styled.section`
@@ -24,14 +23,6 @@ const Info = styled.div`
   }
 `;
 
-const HomeNavButtonWrapper = styled.div`
-  display: flex;
-
-  a {
-    color: ${colors.mainTextColor};
-  }
-`;
-
 const FrontPage = () => {
   return (
     <FrontPageStyled>
@@ -49,9 +40,7 @@ const FrontPage = () => {
           for me. I look forward to working with people that value the same =)
         </p>
       </Bio>
-      <HomeNavButtonWrapper>
-        <HomeNavButton link="/">more about me</HomeNavButton>
-      </HomeNavButtonWrapper>
+      <HomeNavButton link="/">more about me</HomeNavButton>
     </FrontPageStyled>
   );
 };
