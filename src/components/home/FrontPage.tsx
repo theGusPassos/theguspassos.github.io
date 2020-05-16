@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import HomeNavButton from "./HomeNavButton";
-import { sectionWithText, defaultPadding } from "../common-styles/styles";
+import HomeNavButton from "./common/HomeNavButton";
+import { defaultPadding } from "../common-styles/styles";
 import { colors } from "../../data/colors";
+import Bio from "./common/bioStyle";
 
 const FrontPageStyled = styled.section`
   display: grid;
@@ -21,14 +22,6 @@ const Info = styled.div`
   span {
     font-size: 1.6em;
   }
-`;
-
-const Bio = styled.div`
-  font-size: 1.2em;
-  margin: auto;
-
-  ${defaultPadding};
-  ${sectionWithText};
 `;
 
 const HomeNavButtonWrapper = styled.div`

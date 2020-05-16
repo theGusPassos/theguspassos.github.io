@@ -1,19 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import HomeNavButton from "./HomeNavButton";
-import { sectionWithText, defaultPadding } from "../common-styles/styles";
-import { colors } from "../../data/colors";
+import HomeNavButton from "./common/HomeNavButton";
+import Bio from "./common/bioStyle";
 
 const AboutPageStyled = styled.section`
   display: grid;
   height: 100%;
   grid-template-rows: 90% 10%;
-`;
-
-const Bio = styled.div`
-  font-size: 1.2em;
-  ${defaultPadding};
-  ${sectionWithText};
 `;
 
 const AboutPage = () => {

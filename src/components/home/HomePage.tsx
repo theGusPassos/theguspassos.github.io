@@ -3,7 +3,7 @@ import FrontPage from "./FrontPage";
 import styled from "styled-components";
 import { colors } from "../../data/colors";
 import { defaultPadding } from "../common-styles/styles";
-import HomeNavButton from "./HomeNavButton";
+import HomeNavButton from "./common/HomeNavButton";
 import AboutPage from "./AboutPage";
 
 const HomePageStyled = styled.section`
