@@ -24,16 +24,12 @@ const Routes = (props: RoutesProps) => {
 
   return (
     <Switch location={props.location}>
-      <Route path={homePath}>
-        <HomePage location={props.location}></HomePage>
-      </Route>
-      {/* 
-      <Route exact path={aboutPath}>
-        <AboutPage deviceType={props.deviceType}></AboutPage>
-      </Route> */}
-
       <Route exact path={projectListPath}>
         <ProjectListPage deviceType={props.deviceType}></ProjectListPage>
+      </Route>
+
+      <Route path={homePath}>
+        <HomePage location={props.location}></HomePage>
       </Route>
 
       <Route

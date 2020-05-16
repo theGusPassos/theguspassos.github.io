@@ -2,10 +2,10 @@ import React from "react";
 import FrontPage from "./FrontPage";
 import styled from "styled-components";
 import { colors } from "../../data/colors";
-import { defaultPadding } from "../common-styles/styles";
 import HomeNavButton from "./common/HomeNavButton";
 import AboutPage from "./AboutPage";
 import { Switch, Route, RouteProps } from "react-router-dom";
+import { projectListPath } from "../../data/routes";
 
 const HomePageStyled = styled.section`
   height: 100%;
@@ -27,12 +27,12 @@ const HomePage = (props: RouteProps) => {
             <FrontPage></FrontPage>
           </Route>
 
-          <Route path="/about">
+          <Route exact path="/about">
             <AboutPage></AboutPage>
           </Route>
         </Switch>
       </HomeNavigation>
-      <HomeNavButton link="/" useMainColor>
+      <HomeNavButton link={projectListPath} useMainColor>
         see my work
       </HomeNavButton>
     </HomePageStyled>
