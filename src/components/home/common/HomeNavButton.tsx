@@ -20,6 +20,8 @@ const HomeNaveButtonStyled = styled.div`
       props.useMainColor ? colors.mainColor : colors.mainTextColor};
     font-size: 1.5em;
     text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   }
 `;
 

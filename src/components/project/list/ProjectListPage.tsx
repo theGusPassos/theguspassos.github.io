@@ -25,7 +25,7 @@ const ProjectPageBackground = styled.div`
   right: 0;
   top: 0;
   left: 0;
-  bottom: 70%;
+  bottom: 80%;
 `;
 
 const PageTitle = styled.h1`

@@ -16,6 +16,8 @@ const ProjectCardStyled = styled.button`
   text-align: initial;
   font-size: 1em;
   cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 
   img {
     width: 100%;
