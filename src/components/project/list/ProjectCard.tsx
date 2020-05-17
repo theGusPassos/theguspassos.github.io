@@ -33,6 +33,10 @@ const ProjectInfo = styled.div`
     margin-bottom: 10px;
     font-size: 1.5em;
   }
+
+  span {
+    font-size: 1.2em;
+  }
 `;
 
 const ProjectCard = (props: ProjectCardProps) => {

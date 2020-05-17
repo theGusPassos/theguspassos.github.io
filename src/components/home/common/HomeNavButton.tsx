@@ -22,6 +22,11 @@ const HomeNaveButtonStyled = styled.div`
     text-decoration: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
+
+    :active,
+    :hover {
+      text-decoration: underline;
+    }
   }
 `;
 
