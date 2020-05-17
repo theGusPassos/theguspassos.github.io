@@ -6,71 +6,54 @@ import {
   GetAnimator,
   GetAnimationTransform,
 } from "../../../animations/animations";
-import PageTitle from "../../common-components/PageTitle";
 import { device } from "../../../data/device";
-import ReturnButton from "../../common-components/ReturnButton";
 import { getProjectById } from "../../../data/projects/projectList";
-import { getTagsInProject } from "../tag/tagList";
 import DeviceInfo from "../../../models/deviceInfo";
 import { colors } from "../../../data/colors";
-import { ScrollableArea } from "../../common-components/ScrollableArea";
-
-const ProjectViewPageAnimated = GetAnimator(pageStyleFullWidth);
-const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
+import { defaultPadding, sectionWithText } from "../../common-styles/styles";
 
 interface ProjectViewProps extends DeviceInfo {
   projectId: number;
 }
 
-const ProjectTitle = styled.strong`
-  color: ${colors.mainColor};
-  font-size: 1.5em;
-  width: 100%;
-  text-align: center;
-  padding: 5px;
+const ProjectViewStyled = styled.section``;
 
-  @media ${device.desktop} {
-    padding: 10px 0;
-  }
+const ProjectTitle = styled.h1`
+  color: ${colors.mainColor};
+  font-size: 1.8em;
+  margin: 0;
+`;
+
+const ProjectTechStack = styled.span`
+  color: ${colors.mainColor};
+  font-size: 1.2em;
+`;
+
+const PaddedContent = styled.div`
+  padding: 0 5% 5% 5%;
 `;
 
 const Image = styled.img`
   width: 100%;
-  max-height: 400px;
-`;
-
-const TagContainer = styled.div`
-  display: block;
-  margin: 0 auto;
 `;
 
 const ProjectText = styled.section`
-  height: 100%;
-  padding: 15px 20px 15% 20px;
-
-  @media ${device.tablet} {
-    padding: 30px 30px 10px 30px;
-  }
+  ${sectionWithText};
+  padding-top: 10%;
 `;
 
 const ProjectViewPage = (props: ProjectViewProps) => {
   let project = getProjectById(Number(props.projectId));
 
   return (
-    <ProjectViewPageAnimated transform={AnimationTransform}>
-      <ScrollableArea>
-        {props.deviceType.isDesktop ? null : (
-          <PageTitle centered>{project.name}</PageTitle>
-        )}
-        <Image src={project.image} alt={project.imageAlt}></Image>
-        {props.deviceType.isDesktop ? (
-          <ProjectTitle>{project.name}</ProjectTitle>
-        ) : null}
-        <TagContainer>{getTagsInProject(project)}</TagContainer>
+    <ProjectViewStyled>
+      <Image src={project.image} alt={project.imageAlt}></Image>
+      <PaddedContent>
+        <ProjectTitle>{project.name}</ProjectTitle>
+        <ProjectTechStack>bult with c# and unity</ProjectTechStack>
         <ProjectText>{project.projectInfo()}</ProjectText>
-      </ScrollableArea>
-      {props.deviceType.isDesktop ? null : <ReturnButton></ReturnButton>}
-    </ProjectViewPageAnimated>
+      </PaddedContent>
+    </ProjectViewStyled>
   );
 };
 

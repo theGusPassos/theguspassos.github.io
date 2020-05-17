@@ -13,6 +13,7 @@ import { colors } from "../../../data/colors";
 
 const ProjectListPageStyled = styled.section`
   ${defaultPadding};
+  padding-bottom: 0 !important;
 `;
 
 const ProjectListPageAnimated = GetAnimator(ProjectListPageStyled);
