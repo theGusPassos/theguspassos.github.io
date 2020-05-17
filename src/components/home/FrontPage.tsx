@@ -8,11 +8,13 @@ import {
   GetAnimationTransform,
   AnimationDirection,
 } from "../../animations/animations";
+import { requiredForAnimation } from "../common-styles/requiredForAnimation";
 
 const FrontPageStyled = styled.section`
   display: grid;
   grid-template-rows: 20% 70% 10%;
   height: 100%;
+  ${requiredForAnimation};
 `;
 
 const FrontPageAnimated = GetAnimator(FrontPageStyled);

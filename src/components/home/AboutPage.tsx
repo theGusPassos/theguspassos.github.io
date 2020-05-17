@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import HomeNavButton from "./common/HomeNavButton";
 import Bio from "./common/bioStyle";
 import {
@@ -7,11 +7,13 @@ import {
   AnimationDirection,
   GetAnimationTransform,
 } from "../../animations/animations";
+import { requiredForAnimation } from "../common-styles/requiredForAnimation";
 
 const AboutPageStyled = styled.section`
   display: grid;
   height: 100%;
   grid-template-rows: 90% 10%;
+  ${requiredForAnimation};
 `;
 
 const AboutPageAnimated = GetAnimator(AboutPageStyled);
