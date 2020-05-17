@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import HomeNavButton from "./common/HomeNavButton";
 import Bio from "./common/bioStyle";
+import {
+  GetAnimator,
+  AnimationDirection,
+  GetAnimationTransform,
+} from "../../animations/animations";
 
 const AboutPageStyled = styled.section`
   display: grid;
@@ -9,9 +14,12 @@ const AboutPageStyled = styled.section`
   grid-template-rows: 90% 10%;
 `;
 
+const AboutPageAnimated = GetAnimator(AboutPageStyled);
+const AnimationTransform = GetAnimationTransform(AnimationDirection.FromRight);
+
 const AboutPage = () => {
   return (
-    <AboutPageStyled>
+    <AboutPageAnimated transform={AnimationTransform}>
       <Bio>
         <p>
           I’m a 22 years old developer who’s been programming professionally for
@@ -25,7 +33,7 @@ const AboutPage = () => {
         <p>If you need help in a project of yours feel free to contact me =)</p>
       </Bio>
       <HomeNavButton link="/">my contacts</HomeNavButton>
-    </AboutPageStyled>
+    </AboutPageAnimated>
   );
 };
 

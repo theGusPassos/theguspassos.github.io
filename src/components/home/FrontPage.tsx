@@ -3,12 +3,20 @@ import styled from "styled-components";
 import HomeNavButton from "./common/HomeNavButton";
 import { defaultPadding } from "../common-styles/styles";
 import Bio from "./common/bioStyle";
+import {
+  GetAnimator,
+  GetAnimationTransform,
+  AnimationDirection,
+} from "../../animations/animations";
 
 const FrontPageStyled = styled.section`
   display: grid;
   grid-template-rows: 20% 70% 10%;
   height: 100%;
 `;
+
+const FrontPageAnimated = GetAnimator(FrontPageStyled);
+const AnimationTransform = GetAnimationTransform(AnimationDirection.FromLeft);
 
 const Info = styled.div`
   ${defaultPadding};
@@ -25,7 +33,7 @@ const Info = styled.div`
 
 const FrontPage = () => {
   return (
-    <FrontPageStyled>
+    <FrontPageAnimated transform={AnimationTransform}>
       <Info>
         <h1>Gustavo Passos</h1>
         <span>Software and Game Developer</span>
@@ -41,7 +49,7 @@ const FrontPage = () => {
         </p>
       </Bio>
       <HomeNavButton link="/about">more about me</HomeNavButton>
-    </FrontPageStyled>
+    </FrontPageAnimated>
   );
 };
 

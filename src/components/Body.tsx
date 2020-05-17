@@ -25,16 +25,6 @@ const BodyGrid = styled.div`
   }
 `;
 
-const TransitionGroupStyled = styled(TransitionGroup)`
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-
-  @media ${device.desktop} {
-    display: flex;
-  }
-`;
-
 interface BodyProps extends ResizeListenerProps {}
 
 const Body = (props: BodyProps) => {
@@ -49,15 +39,7 @@ const Body = (props: BodyProps) => {
         <LastLocationProvider>
           <Route
             render={({ location }) => (
-              <TransitionGroupStyled>
-                <CSSTransition
-                  key={location.pathname}
-                  classNames="animation"
-                  timeout={animationSpeed}
-                >
-                  <Routes deviceType={deviceType} location={location}></Routes>
-                </CSSTransition>
-              </TransitionGroupStyled>
+              <Routes deviceType={deviceType} location={location}></Routes>
             )}
           ></Route>
         </LastLocationProvider>

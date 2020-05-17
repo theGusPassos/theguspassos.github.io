@@ -10,7 +10,11 @@ import {
   GetAnimator,
   GetAnimationTransform,
   AnimationDirection,
+  animationSpeed,
 } from "../../animations/animations";
+import TransitionGroup from "react-transition-group/TransitionGroup";
+import { CSSTransition } from "react-transition-group";
+import TransitionGroupStyled from "../common-styles/transitionGroup";
 
 const HomePageStyled = styled.section`
   height: 100%;
@@ -26,19 +30,31 @@ const HomeNavigation = styled.div`
   color: ${colors.mainTextColor};
 `;
 
-const HomePage = (props: RouteProps) => {
+const HomePage = () => {
   return (
     <HomePageAnimated transform={AnimationTransform}>
       <HomeNavigation>
-        <Switch location={props.location}>
-          <Route exact path="/">
-            <FrontPage></FrontPage>
-          </Route>
+        <Route
+          render={({ location }) => (
+            <TransitionGroupStyled>
+              <CSSTransition
+                key={location?.pathname}
+                classNames="animation"
+                timeout={animationSpeed}
+              >
+                <Switch location={location}>
+                  <Route exact path="/">
+                    <FrontPage></FrontPage>
+                  </Route>
 
-          <Route exact path="/about">
-            <AboutPage></AboutPage>
-          </Route>
-        </Switch>
+                  <Route exact path="/about">
+                    <AboutPage></AboutPage>
+                  </Route>
+                </Switch>
+              </CSSTransition>
+            </TransitionGroupStyled>
+          )}
+        ></Route>
       </HomeNavigation>
       <HomeNavButton link={projectListPath} useMainColor>
         see my work
