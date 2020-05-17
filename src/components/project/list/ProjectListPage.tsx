@@ -20,16 +20,18 @@ const AnimationTransform = GetAnimationTransform(AnimationDirection.FromDown);
 
 const ProjectPageBackground = styled.div`
   position: absolute;
+  background-color: ${colors.mainColor};
   z-index: -9999;
   right: 0;
-  bottom: 35%;
-  background-color: ${colors.mainColor};
+  top: 0;
+  left: 0;
+  bottom: 70%;
 `;
 
 const PageTitle = styled.h1`
   margin-top: 0;
   margin-bottom: 30px;
-  color: ${colors.mainColor};
+  color: ${colors.mainTextColor};
   text-align: center;
 `;
 

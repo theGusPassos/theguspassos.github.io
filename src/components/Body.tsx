@@ -1,14 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { HashRouter, Route } from "react-router-dom";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { LastLocationProvider } from "react-router-last-location";
 import Routes from "./Routes";
-import { animationSpeed } from "../animations/animations";
 import { device, isInDesktop, isInTablet } from "../data/device";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../models/resizeListenerProps";
-import { colors } from "../data/colors";
 import { DeviceType } from "../models/deviceInfo";
 
 const BodyGrid = styled.div`
@@ -17,7 +14,6 @@ const BodyGrid = styled.div`
   height: 100%;
   margin: auto;
   max-width: 1400px;
-  background-color: ${colors.mainBackgroundColor};
 
   @media ${device.desktop} {
     display: block;
