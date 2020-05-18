@@ -8,6 +8,8 @@ import {
   GetAnimationTransform,
 } from "../../animations/animations";
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";
+import ContactsModal from "../contacts/ContactsModal";
+import ContactsButton from "../contacts/ContactsButton";
 
 const AboutPageStyled = styled.section`
   display: grid;
@@ -34,7 +36,7 @@ const AboutPage = () => {
         </p>
         <p>If you need help in a project of yours feel free to contact me =)</p>
       </Bio>
-      <HomeNavButton link="/">my contacts</HomeNavButton>
+      <ContactsButton></ContactsButton>
     </AboutPageAnimated>
   );
 };
