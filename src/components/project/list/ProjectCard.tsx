@@ -9,6 +9,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCardStyled = styled.button`
+  position: relative;
   background-color: #fff;
   margin-bottom: 30px;
   padding: 0;
@@ -22,6 +23,20 @@ const ProjectCardStyled = styled.button`
 
   img {
     width: 100%;
+  }
+`;
+
+const HoverEffect = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 1s ease;
+
+  :hover,
+  :active {
+    background-color: #00000055;
   }
 `;
 
@@ -49,6 +64,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <ProjectCardStyled onClick={onCardClick}>
+      <HoverEffect></HoverEffect>
       <img src={props.project.image} alt={props.project.imageAlt}></img>
       <ProjectInfo>
         <strong>{props.project.name}</strong>
