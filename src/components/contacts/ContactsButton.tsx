@@ -1,5 +1,4 @@
 import React from "react";
-import LinkButton from "../common-styles/linkButton";
 import { CSSTransition } from "react-transition-group";
 import { animationSpeed } from "../../animations/animations";
 import ContactsModal from "./ContactsModal";
@@ -18,6 +17,8 @@ const ContactsButtonStyled = styled.button`
   color: ${colors.mainTextColor};
   background-color: ${colors.mainColor};
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 
   :hover,
   :active {
@@ -31,7 +32,7 @@ const ContactsButton = () => {
   return (
     <Wrapper>
       <ContactsButtonStyled onClick={() => setIsOpen(true)}>
-        My Contacts
+        my contacts
       </ContactsButtonStyled>
       <CSSTransition
         in={modalIsOpen}

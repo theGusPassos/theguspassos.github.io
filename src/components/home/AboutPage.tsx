@@ -1,6 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
-import HomeNavButton from "./common/HomeNavButton";
+import styled from "styled-components";
 import Bio from "./common/bioStyle";
 import {
   GetAnimator,
@@ -8,7 +7,6 @@ import {
   GetAnimationTransform,
 } from "../../animations/animations";
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";
-import ContactsModal from "../contacts/ContactsModal";
 import ContactsButton from "../contacts/ContactsButton";
 
 const AboutPageStyled = styled.section`

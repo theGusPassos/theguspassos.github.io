@@ -5,7 +5,6 @@ import { animationSpeed } from "../../animations/animations";
 import ContactCard from "./ContactCard";
 import LinkButton from "../common-styles/linkButton";
 import { contacts } from "../../data/contacts";
-import PageTitle from "../common-components/PageTitle";
 import { colors } from "../../data/colors";
 import Contact from "../../models/contact";
 
@@ -77,8 +76,9 @@ const ContactsContainer = styled.div`
 `;
 
 const LinkButtonStyled = styled(LinkButton)`
+  color: ${colors.mainColor};
+  font-size: 1.4em;
   width: 100%;
-  background-color: #fff;
   box-shadow: 0px 3px 11px 0px #0000009c;
   padding: 10px 20px;
 `;
@@ -97,7 +97,6 @@ const ContactsModal = (props: ContactsModalProps) => {
   const modalMarkup = (
     <ModalBackground>
       <ModalWrapper>
-        <PageTitle centered>My Contacts</PageTitle>
         <ContactsContainer>{getContacts()}</ContactsContainer>
         <LinkButtonStyled onClick={() => props.onClose()}>
           Close

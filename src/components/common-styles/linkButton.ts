@@ -5,7 +5,6 @@ import { colors } from "../../data/colors";
 const LinkButton = styled.button`
   color: ${colors.mainColor};
   background: ${colors.mainBackgroundColor};
-  font-size: 1.2em;
   border: none;
   padding: 4% 0;
   width: 100%;
