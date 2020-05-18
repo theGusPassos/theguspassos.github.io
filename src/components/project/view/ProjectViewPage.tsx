@@ -1,16 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { pageStyleFullWidth } from "../../common-styles/pageStyle";
-import {
-  AnimationDirection,
-  GetAnimator,
-  GetAnimationTransform,
-} from "../../../animations/animations";
-import { device } from "../../../data/device";
 import { getProjectById } from "../../../data/projects/projectList";
 import DeviceInfo from "../../../models/deviceInfo";
 import { colors } from "../../../data/colors";
-import { defaultPadding, sectionWithText } from "../../common-styles/styles";
+import { sectionWithText } from "../../common-styles/styles";
 
 interface ProjectViewProps extends DeviceInfo {
   projectId: number;
@@ -45,12 +38,18 @@ const ProjectText = styled.section`
 const ProjectViewPage = (props: ProjectViewProps) => {
   let project = getProjectById(Number(props.projectId));
 
+  const concatTags = (tags: string[]) => {
+    return tags.join(" and ");
+  };
+
   return (
     <ProjectViewStyled>
       <Image src={project.image} alt={project.imageAlt}></Image>
       <PaddedContent>
         <ProjectTitle>{project.name}</ProjectTitle>
-        <ProjectTechStack>bult with c# and unity</ProjectTechStack>
+        <ProjectTechStack>
+          built with {concatTags(project.tags)}
+        </ProjectTechStack>
         <ProjectText>{project.projectInfo()}</ProjectText>
       </PaddedContent>
     </ProjectViewStyled>
