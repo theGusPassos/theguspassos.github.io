@@ -2,6 +2,7 @@ import React from "react";
 import Project from "../../../models/project";
 import styled from "styled-components";
 import { colors } from "../../../data/colors";
+import { useHistory } from "react-router-dom";
 
 interface ProjectCardProps {
   project: Project;
@@ -40,8 +41,14 @@ const ProjectInfo = styled.div`
 `;
 
 const ProjectCard = (props: ProjectCardProps) => {
+  const history = useHistory();
+
+  const onCardClick = () => {
+    history.push("/project/" + props.project.id);
+  };
+
   return (
-    <ProjectCardStyled>
+    <ProjectCardStyled onClick={onCardClick}>
       <img src={props.project.image} alt={props.project.imageAlt}></img>
       <ProjectInfo>
         <strong>{props.project.name}</strong>
