@@ -5,6 +5,7 @@ export const buttonStyle = css`
   text-align: center;
   margin: auto;
   border: none;
+  background-color: ${colors.mainBackgroundColor};
 
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;

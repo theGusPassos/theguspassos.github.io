@@ -8,12 +8,18 @@ import {
 } from "../../animations/animations";
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";
 import ContactsButton from "../contacts/ContactsButton";
+import { colors } from "../../data/colors";
 
 const AboutPageStyled = styled.section`
   display: grid;
   height: 100%;
   grid-template-rows: 90% 10%;
   ${requiredForAnimation};
+
+  button {
+    color: ${colors.mainTextColor};
+    background-color: ${colors.mainColor};
+  }
 `;
 
 const AboutPageAnimated = GetAnimator(AboutPageStyled);

@@ -20,6 +20,12 @@ const HomeNaveButtonStyled = styled.div`
   a {
     color: ${(props: ColorProp) =>
       props.useMainColor ? colors.mainColor : colors.mainTextColor};
+
+    background-color: ${(props: ColorProp) =>
+      props.useMainColor
+        ? colors.mainBackgroundColor
+        : colors.mainColor} !important;
+
     ${buttonStyle};
   }
 `;

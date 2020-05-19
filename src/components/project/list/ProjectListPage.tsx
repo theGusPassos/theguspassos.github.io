@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { projectList } from "../../../data/projects/projectList";
 import Project from "../../../models/project";
 import styled from "styled-components";
@@ -10,10 +10,16 @@ import {
 import ProjectCard from "./ProjectCard";
 import { defaultPadding } from "../../common-styles/styles";
 import { colors } from "../../../data/colors";
+import ContactsButton from "../../contacts/ContactsButton";
 
 const ProjectListPageStyled = styled.section`
   ${defaultPadding};
   padding-bottom: 0 !important;
+
+  button {
+    color: ${colors.mainColor};
+    margin-bottom: 30px;
+  }
 `;
 
 const ProjectListPageAnimated = GetAnimator(ProjectListPageStyled);
@@ -39,7 +45,12 @@ const PageTitle = styled.h1`
 const ProjectListPage = () => {
   const getProjects = () => {
     return projectList.map((project: Project, i: number) => {
-      return <ProjectCard key={i} project={project}></ProjectCard>;
+      return (
+        <Fragment>
+          <ProjectCard key={i} project={project}></ProjectCard>
+          {i === 0 ? <ContactsButton></ContactsButton> : null}
+        </Fragment>
+      );
     });
   };
 
