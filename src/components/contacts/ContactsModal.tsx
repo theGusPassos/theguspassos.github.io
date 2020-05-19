@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
-import { animationSpeed } from "../../animations/animations";
 import ContactCard from "./ContactCard";
 import LinkButton from "../common-styles/linkButton";
 import { contacts } from "../../data/contacts";
 import { colors } from "../../data/colors";
 import Contact from "../../models/contact";
+import { modalAnimation } from "./modalAnimation";
 
 const ModalBackground = styled.div`
   background: rgba(0, 0, 0, 0.2);
@@ -20,43 +20,7 @@ const ModalBackground = styled.div`
   align-items: center;
   justify-content: center;
 
-  &.animation-enter {
-    opacity: 0;
-
-    > div:first-child {
-      transform: translate(0, 100%);
-    }
-  }
-
-  &.animation-enter-active {
-    opacity: 1;
-    transition: opacity ${animationSpeed}ms;
-
-    > div:first-child {
-      transform: translate(0, 0);
-      transition-timing-function: ease-in-out;
-      transition: transform ${animationSpeed}ms;
-    }
-  }
-
-  &.animation-exit {
-    opacity: 1;
-
-    > div:first-child {
-      transform: translate(0, 0);
-    }
-  }
-
-  &.animation-exit-active {
-    opacity: 0;
-    transition: opacity ${animationSpeed}ms;
-
-    > div:first-child {
-      transform: translate(0, 100%);
-      transition-timing-function: ease-in-out;
-      transition: transform ${animationSpeed}ms;
-    }
-  }
+  ${modalAnimation};
 `;
 
 const ModalWrapper = styled.div`
