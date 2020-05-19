@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../../data/device";
 import { colors } from "../../data/colors";
 
-const LinkButton = styled.button`
+const ButtonStyle = styled.button`
   color: ${colors.mainColor};
   background: ${colors.mainBackgroundColor};
   border: none;
@@ -21,4 +21,4 @@ const LinkButton = styled.button`
   }
 `;
 
-export default LinkButton;
+export default ButtonStyle;

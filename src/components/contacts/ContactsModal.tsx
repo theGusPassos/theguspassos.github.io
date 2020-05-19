@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import ContactCard from "./ContactCard";
-import LinkButton from "../common-styles/linkButton";
+import ButtonStyle from "../common-styles/buttonStyles";
 import { contacts } from "../../data/contacts";
 import { colors } from "../../data/colors";
 import Contact from "../../models/contact";
@@ -39,7 +39,7 @@ const ContactsContainer = styled.div`
   }
 `;
 
-const LinkButtonStyled = styled(LinkButton)`
+const LinkButtonStyled = styled(ButtonStyle)`
   color: ${colors.mainColor};
   font-size: 1.4em;
   width: 100%;
