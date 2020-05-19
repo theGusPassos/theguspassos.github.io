@@ -16,7 +16,7 @@ const Button = styled.button`
   background-color: ${colors.mainBackgroundColor};
   color: ${colors.mainColor};
 
-  font-size: 1.2em;
+  font-size: 1.4em;
   width: 100%;
 
   ${buttonStyle};
