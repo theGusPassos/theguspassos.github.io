@@ -63,7 +63,7 @@ const ModalWrapper = styled.div`
   background-color: #fff;
   z-index: 999999;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
 `;
 
 const ContactsContainer = styled.div`

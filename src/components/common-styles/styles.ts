@@ -17,3 +17,14 @@ export const sectionWithText = css`
 export const defaultPadding = css`
   padding: 10%;
 `;
+
+export const buttonOnHover = css`
+  cursor: pointer;
+  transition: background-color 1s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  :hover {
+    background-color: #00000055;
+  }
+`;

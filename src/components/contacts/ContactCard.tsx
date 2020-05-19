@@ -2,16 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import Contact from "../../models/contact";
 import { onCardClick } from "./contactCardClick";
+import { buttonOnHover } from "../common-styles/styles";
 
 const ContactCardStyled = styled.div`
   padding: 5% 10%;
   display: flex;
-  font-size: 0.9em;
+  font-size: 1em;
+
+  ${buttonOnHover};
 `;
 
 const ContactImage = styled.img`
-  width: 20%;
-  height: 20%;
+  width: 15%;
+  height: 15%;
 `;
 
 const ContactInfo = styled.div`

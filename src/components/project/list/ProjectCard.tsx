@@ -3,6 +3,7 @@ import Project from "../../../models/project";
 import styled from "styled-components";
 import { colors } from "../../../data/colors";
 import { useHistory } from "react-router-dom";
+import { buttonOnHover } from "../../common-styles/styles";
 
 interface ProjectCardProps {
   project: Project;
@@ -17,9 +18,6 @@ const ProjectCardStyled = styled.button`
   box-shadow: 1px 2px 2px 1px #00000075;
   text-align: initial;
   font-size: 1em;
-  cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
 
   img {
     width: 100%;
@@ -32,12 +30,8 @@ const HoverEffect = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  transition: background-color 1s ease;
 
-  :hover,
-  :active {
-    background-color: #00000055;
-  }
+  ${buttonOnHover};
 `;
 
 const ProjectInfo = styled.div`
