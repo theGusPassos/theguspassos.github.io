@@ -4,26 +4,18 @@ import { animationSpeed } from "../../animations/animations";
 import ContactsModal from "./ContactsModal";
 import styled from "styled-components";
 import { colors } from "../../data/colors";
+import { buttonStyle } from "../common-styles/buttonStyles";
 
 const Wrapper = styled.div`
   display: flex;
 `;
 
 const ContactsButtonStyled = styled.button`
-  text-align: center;
-  margin: auto;
-  border: none;
   font-size: 1.5em;
   color: ${colors.mainTextColor};
   background-color: ${colors.mainColor};
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
 
-  :hover,
-  :active {
-    text-decoration: underline;
-  }
+  ${buttonStyle};
 `;
 
 const ContactsButton = () => {

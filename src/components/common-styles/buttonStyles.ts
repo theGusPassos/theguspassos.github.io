@@ -1,24 +1,19 @@
-import styled from "styled-components";
-import { device } from "../../data/device";
+import { css } from "styled-components";
 import { colors } from "../../data/colors";
 
-const ButtonStyle = styled.button`
-  color: ${colors.mainColor};
-  background: ${colors.mainBackgroundColor};
+export const buttonStyle = css`
+  text-align: center;
+  margin: auto;
   border: none;
-  padding: 4% 0;
-  width: 100%;
 
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+
+  :active,
   :focus,
   :hover {
-    cursor: pointer;
-    outline: none;
     text-decoration: underline;
   }
-
-  @media ${device.tablet} {
-    font-size: 1.4em;
-  }
 `;
-
-export default ButtonStyle;

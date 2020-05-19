@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import ContactCard from "./ContactCard";
-import ButtonStyle from "../common-styles/buttonStyles";
+import ButtonStyle from "../common-styles/ButtonStyle";
 import { contacts } from "../../data/contacts";
 import { colors } from "../../data/colors";
 import Contact from "../../models/contact";
 import { modalAnimation } from "./modalAnimation";
+import { buttonStyle } from "../common-styles/buttonStyles";
 
 const ModalBackground = styled.div`
   background: rgba(0, 0, 0, 0.2);
@@ -39,12 +40,15 @@ const ContactsContainer = styled.div`
   }
 `;
 
-const LinkButtonStyled = styled(ButtonStyle)`
+const LinkButtonStyled = styled.button`
   color: ${colors.mainColor};
   font-size: 1.4em;
   width: 100%;
   box-shadow: 0px 3px 11px 0px #0000009c;
   padding: 10px 20px;
+  background-color: ${colors.mainBackgroundColor};
+
+  ${buttonStyle};
 `;
 
 interface ContactsModalProps {

@@ -1,7 +1,7 @@
 import React from "react";
 import LinkToExternal, {
   LinkToExternalProps,
-} from "../../components/common-components/LinkToExternal";
+} from "../../components/common-components/ButtonToExternalLink";
 import styled from "styled-components";
 
 const LinkToExternalHighlighted = styled(LinkToExternal)`
