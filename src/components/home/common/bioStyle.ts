@@ -8,10 +8,6 @@ const Bio = styled.div`
 
   ${defaultPadding};
   ${sectionWithText};
-
-  @media ${device.tablet} {
-    font-size: 1.4em;
-  }
 `;
 
 export default Bio;

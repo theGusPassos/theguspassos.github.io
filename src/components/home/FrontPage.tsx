@@ -42,12 +42,8 @@ const FrontPage = () => {
       </Info>
       <Bio>
         <p>
-          I’m interested in developing any kind of software regardless of the
-          tech stack.
-        </p>
-        <p>
-          The software quality and user experience are the most important things
-          for me. I look forward to working with people that value the same =)
+          I’m a 22 years old developer who’s been programming professionally for
+          5 years in brazillian companies.
         </p>
       </Bio>
       <HomeNavButton link="/about">more about me</HomeNavButton>

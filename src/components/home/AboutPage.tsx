@@ -30,13 +30,12 @@ const AboutPage = () => {
     <AboutPageAnimated transform={AnimationTransform}>
       <Bio>
         <p>
-          I’m a 22 years old developer who’s been programming professionally for
-          5 years in brazillian companies.
+          I'm interested in developing any kind of software or game, regardless
+          of the tech stack.
         </p>
         <p>
-          I'm interested in developing any kind of software or game, regardless
-          of the tech stack. The software quality and the user experience are
-          the most important things to me.
+          The software quality and user experience are the most important things
+          to me. I look forward to working with people that value the same =)
         </p>
         <p>If you need help in a project of yours feel free to contact me =)</p>
       </Bio>{" "}
