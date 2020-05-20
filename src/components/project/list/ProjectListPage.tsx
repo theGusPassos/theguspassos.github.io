@@ -11,9 +11,11 @@ import ProjectCard from "./ProjectCard";
 import { defaultPadding } from "../../common-styles/styles";
 import { colors } from "../../../data/colors";
 import ContactsButton from "../../contacts/ContactsButton";
+import { requiredForAnimation } from "../../common-styles/requiredForAnimation";
 
 const ProjectListPageStyled = styled.section`
   ${defaultPadding};
+  ${requiredForAnimation};
   padding-bottom: 0 !important;
 
   button {

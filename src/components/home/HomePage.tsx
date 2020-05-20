@@ -14,8 +14,11 @@ import {
 } from "../../animations/animations";
 import { CSSTransition } from "react-transition-group";
 import TransitionGroupStyled from "../common-styles/transitionGroup";
+import { requiredForAnimation } from "../common-styles/requiredForAnimation";
 
 const HomePageStyled = styled.section`
+  ${requiredForAnimation};
+  width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: 90% 10%;
