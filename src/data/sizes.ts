@@ -1,1 +1,1 @@
-export const maxWidthInDesktop = 800;
+export const maxWidth = 500;

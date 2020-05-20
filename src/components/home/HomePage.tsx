@@ -9,16 +9,16 @@ import { projectListPath } from "../../data/routes";
 import { animationSpeed } from "../../animations/animations";
 import { CSSTransition } from "react-transition-group";
 import TransitionGroupStyled from "../common-styles/transitionGroup";
-import { requiredForAnimation } from "../common-styles/requiredForAnimation";
+import { maxWidthStyle } from "../common-styles/maxWidthStyle";
 
 const HomePageStyled = styled.section`
-  ${requiredForAnimation};
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: 90% 10%;
   background-color: white;
   z-index: 10;
+  ${maxWidthStyle};
 `;
 
 const HomeNavigation = styled.div`

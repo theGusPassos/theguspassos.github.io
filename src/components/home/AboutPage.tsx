@@ -9,7 +9,6 @@ import {
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";
 import ContactsButton from "../contacts/ContactsButton";
 import { colors } from "../../data/colors";
-import HomeNavButton from "./common/HomeNavButton";
 
 const AboutPageStyled = styled.section`
   display: grid;

@@ -16,7 +16,6 @@ const BodyGrid = styled.div`
   flex-direction: column;
   height: 100%;
   margin: auto;
-  max-width: 1400px;
 
   @media ${device.desktop} {
     display: block;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../data/device";
-import { maxWidthInDesktop } from "../../data/sizes";
+import { maxWidth } from "../../data/sizes";
 
 const pageStyle = styled.section`
   position: absolute;
@@ -14,7 +14,7 @@ const pageStyle = styled.section`
   overflow: auto;
 
   @media ${device.desktop} {
-    max-width: ${maxWidthInDesktop}px;
+    max-width: ${maxWidth}px;
     width: 90%;
     margin: auto;
   }
