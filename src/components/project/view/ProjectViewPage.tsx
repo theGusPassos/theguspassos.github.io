@@ -6,22 +6,25 @@ import { colors } from "../../../data/colors";
 import { sectionWithText } from "../../common-styles/styles";
 import { maxWidthStyle } from "../../common-styles/maxWidthStyle";
 import ContactsButton from "../../contacts/ContactsButton";
+import { device } from "../../../data/device";
 
 interface ProjectViewProps extends DeviceInfo {
   projectId: number;
 }
 
-const ProjectViewStyled = styled.section``;
+const ProjectViewStyled = styled.section`
+  ${maxWidthStyle};
+`;
 
 const ProjectTitle = styled.h1`
   color: ${colors.mainColor};
-  font-size: 1.8em;
+  font-size: 2em;
   margin: 0;
 `;
 
 const ProjectTechStack = styled.span`
   color: ${colors.mainColor};
-  font-size: 1.2em;
+  font-size: 1.4em;
 `;
 
 const PaddedContent = styled.div`
@@ -32,6 +35,10 @@ const PaddedContent = styled.div`
     color: ${colors.mainColor};
     padding: 10px;
   }
+
+  @media ${device.tablet} {
+    padding: 0;
+  }
 `;
 
 const Image = styled.img`
@@ -40,7 +47,8 @@ const Image = styled.img`
 
 const ProjectText = styled.section`
   ${sectionWithText};
-  padding-top: 10%;
+  font-size: 1.2em;
+  padding-top: 5%;
 `;
 
 const ProjectViewPage = (props: ProjectViewProps) => {
