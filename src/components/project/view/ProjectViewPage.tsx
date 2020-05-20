@@ -5,6 +5,7 @@ import DeviceInfo from "../../../models/deviceInfo";
 import { colors } from "../../../data/colors";
 import { sectionWithText } from "../../common-styles/styles";
 import { maxWidthStyle } from "../../common-styles/maxWidthStyle";
+import ContactsButton from "../../contacts/ContactsButton";
 
 interface ProjectViewProps extends DeviceInfo {
   projectId: number;
@@ -26,6 +27,11 @@ const ProjectTechStack = styled.span`
 const PaddedContent = styled.div`
   ${maxWidthStyle};
   padding: 0 5% 5% 5%;
+
+  button {
+    color: ${colors.mainColor};
+    padding: 10px;
+  }
 `;
 
 const Image = styled.img`
@@ -57,6 +63,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
           built with {concatTags(project.tags)}
         </ProjectTechStack>
         <ProjectText>{project.projectInfo()}</ProjectText>
+        <ContactsButton></ContactsButton>
       </PaddedContent>
     </ProjectViewStyled>
   );

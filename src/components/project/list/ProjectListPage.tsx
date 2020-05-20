@@ -39,12 +39,7 @@ const PageTitle = styled.h1`
 const ProjectListPage = () => {
   const getProjects = () => {
     return projectList.map((project: Project, i: number) => {
-      return (
-        <Fragment>
-          <ProjectCard key={i} project={project}></ProjectCard>
-          {i === 0 ? <ContactsButton key={-1}></ContactsButton> : null}
-        </Fragment>
-      );
+      return <ProjectCard key={i} project={project}></ProjectCard>;
     });
   };
 
@@ -53,6 +48,7 @@ const ProjectListPage = () => {
       <ProjectPageBackground></ProjectPageBackground>
       <PageTitle>my projects</PageTitle>
       {getProjects()}
+      <ContactsButton></ContactsButton>
     </ProjectListPageStyled>
   );
 };
