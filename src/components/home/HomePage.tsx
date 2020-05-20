@@ -22,6 +22,8 @@ const HomePageStyled = styled.section`
   height: 100%;
   display: grid;
   grid-template-rows: 90% 10%;
+  background-color: white;
+  z-index: 10;
 `;
 
 const HomePageAnimated = GetAnimator(HomePageStyled);

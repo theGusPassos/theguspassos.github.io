@@ -7,6 +7,9 @@ import { device, isInDesktop, isInTablet } from "../data/device";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../models/resizeListenerProps";
 import { DeviceType } from "../models/deviceInfo";
+import TransitionGroupStyled from "./common-styles/transitionGroup";
+import { CSSTransition } from "react-transition-group";
+import { animationSpeed } from "../animations/animations";
 
 const BodyGrid = styled.div`
   display: flex;
@@ -35,7 +38,15 @@ const Body = (props: BodyProps) => {
         <LastLocationProvider>
           <Route
             render={({ location }) => (
-              <Routes deviceType={deviceType} location={location}></Routes>
+              <TransitionGroupStyled>
+                <CSSTransition
+                  key={location?.pathname}
+                  classNames="animation"
+                  timeout={animationSpeed}
+                >
+                  <Routes deviceType={deviceType} location={location}></Routes>
+                </CSSTransition>
+              </TransitionGroupStyled>
             )}
           ></Route>
         </LastLocationProvider>

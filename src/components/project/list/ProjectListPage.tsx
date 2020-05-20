@@ -24,9 +24,6 @@ const ProjectListPageStyled = styled.section`
   }
 `;
 
-const ProjectListPageAnimated = GetAnimator(ProjectListPageStyled);
-const AnimationTransform = GetAnimationTransform(AnimationDirection.FromDown);
-
 const ProjectPageBackground = styled.div`
   position: absolute;
   background-color: ${colors.mainColor};
@@ -57,11 +54,11 @@ const ProjectListPage = () => {
   };
 
   return (
-    <ProjectListPageAnimated transform={AnimationTransform}>
+    <ProjectListPageStyled>
       <ProjectPageBackground></ProjectPageBackground>
       <PageTitle>my projects</PageTitle>
       {getProjects()}
-    </ProjectListPageAnimated>
+    </ProjectListPageStyled>
   );
 };
 
