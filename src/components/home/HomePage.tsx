@@ -10,7 +10,6 @@ import { animationSpeed } from "../../animations/animations";
 import { CSSTransition } from "react-transition-group";
 import TransitionGroupStyled from "../common-styles/transitionGroup";
 import { device } from "../../data/device";
-import { maxWidthStyle } from "../common-styles/maxWidthStyle";
 
 const HomePageStyled = styled.section`
   width: 100%;
