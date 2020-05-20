@@ -24,12 +24,12 @@ const Info = styled.div`
   ${defaultPadding};
 
   h1 {
-    font-size: 2em;
+    font-size: 2.3em;
     margin: 0;
   }
 
   span {
-    font-size: 1.6em;
+    font-size: 1.8em;
   }
 `;
 

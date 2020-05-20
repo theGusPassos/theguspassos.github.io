@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `;
 
 const ContactsButtonStyled = styled.button`
-  font-size: 1.5em;
+  font-size: 1.6em;
   ${buttonStyle};
 `;
 

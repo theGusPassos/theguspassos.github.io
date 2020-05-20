@@ -15,7 +15,7 @@ interface ColorProp {
 const HomeNaveButtonStyled = styled.div`
   text-align: center;
   margin: auto;
-  font-size: 1.5em;
+  font-size: 1.6em;
 
   a {
     color: ${(props: ColorProp) =>
