@@ -9,6 +9,7 @@ import {
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";
 import ContactsButton from "../contacts/ContactsButton";
 import { colors } from "../../data/colors";
+import { device } from "../../data/device";
 
 const AboutPageStyled = styled.section`
   display: grid;

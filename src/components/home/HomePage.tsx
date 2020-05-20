@@ -9,6 +9,8 @@ import { projectListPath } from "../../data/routes";
 import { animationSpeed } from "../../animations/animations";
 import { CSSTransition } from "react-transition-group";
 import TransitionGroupStyled from "../common-styles/transitionGroup";
+import { device } from "../../data/device";
+import { maxWidthStyle } from "../common-styles/maxWidthStyle";
 
 const HomePageStyled = styled.section`
   width: 100%;
@@ -17,6 +19,10 @@ const HomePageStyled = styled.section`
   grid-template-rows: 90% 10%;
   background-color: white;
   z-index: 10;
+
+  @media ${device.tablet} {
+    grid-template-rows: 80% 20%;
+  }
 `;
 
 const HomeNavigation = styled.div`
