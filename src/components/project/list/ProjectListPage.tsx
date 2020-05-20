@@ -48,7 +48,7 @@ const ProjectListPage = () => {
       return (
         <Fragment>
           <ProjectCard key={i} project={project}></ProjectCard>
-          {i === 0 ? <ContactsButton></ContactsButton> : null}
+          {i === 0 ? <ContactsButton key={-1}></ContactsButton> : null}
         </Fragment>
       );
     });
