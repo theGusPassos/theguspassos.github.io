@@ -48,7 +48,6 @@ const ProjectListPage = () => {
       <ProjectPageBackground></ProjectPageBackground>
       <PageTitle>my projects</PageTitle>
       {getProjects()}
-      <ContactsButton></ContactsButton>
     </ProjectListPageStyled>
   );
 };

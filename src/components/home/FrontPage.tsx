@@ -42,8 +42,8 @@ const FrontPage = () => {
       </Info>
       <Bio>
         <p>
-          I’m a 22 years old developer who’s been programming professionally for
-          5 years in brazillian companies.
+          I'm a 22 years old developer who's been delivering software
+          professionally for 5 years.
         </p>
         <p>
           You can check my personal projects and my blog if you're interested.
