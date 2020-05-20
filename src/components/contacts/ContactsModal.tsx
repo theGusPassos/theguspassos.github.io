@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 import ContactCard from "./ContactCard";
-import ButtonStyle from "../common-styles/ButtonStyle";
 import { contacts } from "../../data/contacts";
 import { colors } from "../../data/colors";
 import Contact from "../../models/contact";

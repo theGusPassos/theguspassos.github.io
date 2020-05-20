@@ -4,14 +4,9 @@ import styled from "styled-components";
 import { colors } from "../../data/colors";
 import HomeNavButton from "./common/HomeNavButton";
 import AboutPage from "./AboutPage";
-import { Switch, Route, RouteProps } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { projectListPath } from "../../data/routes";
-import {
-  GetAnimator,
-  GetAnimationTransform,
-  AnimationDirection,
-  animationSpeed,
-} from "../../animations/animations";
+import { animationSpeed } from "../../animations/animations";
 import { CSSTransition } from "react-transition-group";
 import TransitionGroupStyled from "../common-styles/transitionGroup";
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";

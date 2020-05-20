@@ -12,9 +12,6 @@ const Wrapper = styled.div`
 
 const ContactsButtonStyled = styled.button`
   font-size: 1.5em;
-  /* color: ${colors.mainTextColor};
-  background-color: ${colors.mainColor}; */
-
   ${buttonStyle};
 `;
 
