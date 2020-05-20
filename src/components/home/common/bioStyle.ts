@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { defaultPadding, sectionWithText } from "../../common-styles/styles";
-import { device } from "../../../data/device";
+import { sectionWithText } from "../../common-styles/styles";
+import { defaultPadding } from "./defaultPaddingStyles";
 
 const Bio = styled.div`
   font-size: 1.2em;

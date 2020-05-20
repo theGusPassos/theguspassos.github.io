@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import HomeNavButton from "./common/HomeNavButton";
-import { defaultPadding } from "../common-styles/styles";
 import Bio from "./common/bioStyle";
 import {
   GetAnimator,
@@ -9,6 +8,7 @@ import {
   AnimationDirection,
 } from "../../animations/animations";
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";
+import { defaultPadding } from "./common/defaultPaddingStyles";
 
 const FrontPageStyled = styled.section`
   display: grid;

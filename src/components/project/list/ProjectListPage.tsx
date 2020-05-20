@@ -3,19 +3,22 @@ import { projectList } from "../../../data/projects/projectList";
 import Project from "../../../models/project";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
-import { defaultPadding } from "../../common-styles/styles";
 import { colors } from "../../../data/colors";
-import ContactsButton from "../../contacts/ContactsButton";
-import { maxWidthStyle } from "../../common-styles/maxWidthStyle";
+import { defaultPadding } from "../../home/common/defaultPaddingStyles";
+import { device } from "../../../data/device";
 
 const ProjectListPageStyled = styled.section`
-  ${defaultPadding};
-  ${maxWidthStyle};
+  padding: 10%;
+  position: relative;
   padding-bottom: 0 !important;
 
   button {
     color: ${colors.mainColor};
     margin-bottom: 30px;
+  }
+
+  @media ${device.desktop} {
+    padding: 3%;
   }
 `;
 
@@ -36,6 +39,11 @@ const PageTitle = styled.h1`
   text-align: center;
 `;
 
+const ProjectWrapper = styled.section`
+  max-width: 500px;
+  margin: auto;
+`;
+
 const ProjectListPage = () => {
   const getProjects = () => {
     return projectList.map((project: Project, i: number) => {
@@ -47,7 +55,7 @@ const ProjectListPage = () => {
     <ProjectListPageStyled>
       <ProjectPageBackground></ProjectPageBackground>
       <PageTitle>my projects</PageTitle>
-      {getProjects()}
+      <ProjectWrapper>{getProjects()}</ProjectWrapper>
     </ProjectListPageStyled>
   );
 };
