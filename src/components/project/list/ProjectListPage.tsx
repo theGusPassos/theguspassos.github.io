@@ -2,20 +2,15 @@ import React, { Fragment } from "react";
 import { projectList } from "../../../data/projects/projectList";
 import Project from "../../../models/project";
 import styled from "styled-components";
-import {
-  GetAnimator,
-  GetAnimationTransform,
-  AnimationDirection,
-} from "../../../animations/animations";
 import ProjectCard from "./ProjectCard";
 import { defaultPadding } from "../../common-styles/styles";
 import { colors } from "../../../data/colors";
 import ContactsButton from "../../contacts/ContactsButton";
-import { requiredForAnimation } from "../../common-styles/requiredForAnimation";
+import { maxWidthStyle } from "../../common-styles/maxWidthStyle";
 
 const ProjectListPageStyled = styled.section`
   ${defaultPadding};
-  ${requiredForAnimation};
+  ${maxWidthStyle};
   padding-bottom: 0 !important;
 
   button {

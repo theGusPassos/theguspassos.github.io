@@ -4,6 +4,7 @@ import { getProjectById } from "../../../data/projects/projectList";
 import DeviceInfo from "../../../models/deviceInfo";
 import { colors } from "../../../data/colors";
 import { sectionWithText } from "../../common-styles/styles";
+import { maxWidthStyle } from "../../common-styles/maxWidthStyle";
 
 interface ProjectViewProps extends DeviceInfo {
   projectId: number;
@@ -23,6 +24,7 @@ const ProjectTechStack = styled.span`
 `;
 
 const PaddedContent = styled.div`
+  ${maxWidthStyle};
   padding: 0 5% 5% 5%;
 `;
 
