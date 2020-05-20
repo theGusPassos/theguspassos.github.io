@@ -9,6 +9,7 @@ import {
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";
 import ContactsButton from "../contacts/ContactsButton";
 import { colors } from "../../data/colors";
+import HomeNavButton from "./common/HomeNavButton";
 
 const AboutPageStyled = styled.section`
   display: grid;
@@ -18,7 +19,7 @@ const AboutPageStyled = styled.section`
 
   button {
     color: ${colors.mainTextColor};
-    background-color: ${colors.mainColor};
+    background-color: ${colors.mainColor} !important;
   }
 `;
 
@@ -39,7 +40,7 @@ const AboutPage = () => {
           the most important things to me.
         </p>
         <p>If you need help in a project of yours feel free to contact me =)</p>
-      </Bio>
+      </Bio>{" "}
       <ContactsButton></ContactsButton>
     </AboutPageAnimated>
   );

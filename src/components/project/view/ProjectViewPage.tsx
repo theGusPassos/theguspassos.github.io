@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { getProjectById } from "../../../data/projects/projectList";
 import DeviceInfo from "../../../models/deviceInfo";
@@ -41,6 +41,10 @@ const ProjectViewPage = (props: ProjectViewProps) => {
   const concatTags = (tags: string[]) => {
     return tags.join(" and ");
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <ProjectViewStyled>

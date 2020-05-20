@@ -12,7 +12,6 @@ import {
   AnimationDirection,
   animationSpeed,
 } from "../../animations/animations";
-import TransitionGroup from "react-transition-group/TransitionGroup";
 import { CSSTransition } from "react-transition-group";
 import TransitionGroupStyled from "../common-styles/transitionGroup";
 
