@@ -35,7 +35,7 @@ const AboutPage = () => {
         </p>
         <p>
           The software quality and user experience are the most important things
-          to me. I look forward to working with people that value the same =)
+          to me. I look forward to working with people that value the same.
         </p>
         <p>If you need help in a project of yours feel free to contact me =)</p>
       </Bio>{" "}

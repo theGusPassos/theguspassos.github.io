@@ -51,7 +51,7 @@ const HomePage = () => {
         ></Route>
       </HomeNavigation>
       <HomeNavButton link={projectListPath} useMainColor>
-        see my work
+        see my projects
       </HomeNavButton>
     </HomePageStyled>
   );

@@ -45,6 +45,9 @@ const FrontPage = () => {
           I’m a 22 years old developer who’s been programming professionally for
           5 years in brazillian companies.
         </p>
+        <p>
+          You can check my personal projects and my blog if you're interested.
+        </p>
       </Bio>
       <HomeNavButton link="/about">more about me</HomeNavButton>
     </FrontPageAnimated>
