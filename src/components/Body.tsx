@@ -38,15 +38,7 @@ const Body = (props: BodyProps) => {
         <LastLocationProvider>
           <Route
             render={({ location }) => (
-              <TransitionGroupStyled>
-                <CSSTransition
-                  key={location?.pathname}
-                  classNames="animation"
-                  timeout={animationSpeed}
-                >
-                  <Routes deviceType={deviceType} location={location}></Routes>
-                </CSSTransition>
-              </TransitionGroupStyled>
+              <Routes deviceType={deviceType} location={location}></Routes>
             )}
           ></Route>
         </LastLocationProvider>

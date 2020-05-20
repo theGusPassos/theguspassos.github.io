@@ -26,9 +26,6 @@ const HomePageStyled = styled.section`
   z-index: 10;
 `;
 
-const HomePageAnimated = GetAnimator(HomePageStyled);
-const AnimationTransform = GetAnimationTransform(AnimationDirection.FromUp);
-
 const HomeNavigation = styled.div`
   background-color: ${colors.mainColor};
   color: ${colors.mainTextColor};
@@ -36,7 +33,7 @@ const HomeNavigation = styled.div`
 
 const HomePage = () => {
   return (
-    <HomePageAnimated transform={AnimationTransform}>
+    <HomePageStyled>
       <HomeNavigation>
         <Route
           render={({ location }) => (
@@ -63,7 +60,7 @@ const HomePage = () => {
       <HomeNavButton link={projectListPath} useMainColor>
         see my work
       </HomeNavButton>
-    </HomePageAnimated>
+    </HomePageStyled>
   );
 };
 
