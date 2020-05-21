@@ -13,14 +13,3 @@ export const sectionWithText = css`
     text-decoration: none;
   }
 `;
-
-export const buttonOnHover = css`
-  cursor: pointer;
-  transition: background-color 1s ease;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-
-  :hover {
-    background-color: #00000055;
-  }
-`;

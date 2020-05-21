@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { sectionWithText } from "../../../components/common-styles/styles";
+import { sectionWithText } from "../../../components/common-styles/sectionWithText";
 import LinkToExternal from "../../../components/common-components/ButtonToExternalLink";
 
 const Info = styled.section`

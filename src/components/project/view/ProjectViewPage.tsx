@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { getProjectById } from "../../../data/projects/projectList";
 import DeviceInfo from "../../../models/deviceInfo";
 import { colors } from "../../../data/colors";
-import { sectionWithText } from "../../common-styles/styles";
+import { sectionWithText } from "../../common-styles/sectionWithText";
 import { maxWidthStyle } from "../../common-styles/maxWidthStyle";
 import ContactsButton from "../../contacts/ContactsButton";
 import { device } from "../../../data/device";

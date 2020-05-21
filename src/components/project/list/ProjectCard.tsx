@@ -3,7 +3,7 @@ import Project from "../../../models/project";
 import styled from "styled-components";
 import { colors } from "../../../data/colors";
 import { useHistory } from "react-router-dom";
-import { buttonOnHover } from "../../common-styles/styles";
+import { buttonOnHover } from "../../common-styles/buttonStyles";
 
 interface ProjectCardProps {
   project: Project;

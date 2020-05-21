@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { sectionWithText } from "../../common-styles/styles";
+import { sectionWithText } from "../../common-styles/sectionWithText";
 import { defaultPadding } from "./defaultPaddingStyles";
 
 const Bio = styled.div`
