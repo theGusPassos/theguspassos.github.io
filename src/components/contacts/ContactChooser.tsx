@@ -6,7 +6,7 @@ import ContactIcons from "./ContactIcons";
 interface ContactChooser extends DeviceInfo {}
 
 const ContactChooser = (props: ContactChooser) => {
-  return props.deviceType.isDesktop ? (
+  return props.deviceType.isTablet ? (
     <ContactIcons></ContactIcons>
   ) : (
     <ContactsButton></ContactsButton>
