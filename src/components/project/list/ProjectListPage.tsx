@@ -1,10 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { projectList } from "../../../data/projects/projectList";
 import Project from "../../../models/project";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import { colors } from "../../../data/colors";
-import { defaultPadding } from "../../home/common/defaultPaddingStyles";
 import { device } from "../../../data/device";
 
 const ProjectListPageStyled = styled.section`

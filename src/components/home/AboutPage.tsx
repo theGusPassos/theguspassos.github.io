@@ -8,9 +8,8 @@ import {
 } from "../../animations/animations";
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";
 import { colors } from "../../data/colors";
-import { device } from "../../data/device";
-import DeviceInfo, { DeviceType } from "../../models/deviceInfo";
 import ContactChooser from "../contacts/ContactChooser";
+import DeviceInfo from "../../models/deviceInfo";
 
 const AboutPageStyled = styled.section`
   display: grid;
