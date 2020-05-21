@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { contacts } from "../../data/contacts";
 import Contact from "../../models/contact";
 import { onCardClick, onCardKeyDown } from "./contactCardClick";
+import { MainToolTip } from "../common-components/ToolTip";
 
 const ImageWrapper = styled.div`
   width: 50%;
@@ -38,7 +39,12 @@ const ContactIcons = () => {
     });
   };
 
-  return <ImageWrapper>{getContacts()}</ImageWrapper>;
+  return (
+    <ImageWrapper>
+      {getContacts()}
+      <MainToolTip></MainToolTip>
+    </ImageWrapper>
+  );
 };
 
 export default ContactIcons;
