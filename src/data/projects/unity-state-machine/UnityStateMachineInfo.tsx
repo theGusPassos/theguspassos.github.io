@@ -43,7 +43,7 @@ const UnityStateMachineInfo = () => {
         State and sets every Transition for a given character.
       </p>
       <p>
-        A Awareness interface is also included to receive input from external
+        An Awareness interface is also included to receive input from external
         objects, in the demo it's used to get the distance between the non
         playable character and the player, when the player is close enough a
         transition is triggered. But it can also be used for other types of
