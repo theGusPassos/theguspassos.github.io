@@ -13,6 +13,7 @@ If you desire to use the same design for your own portfolio feel free to do it, 
 ### Built with
 
 - [react](https://reactjs.org/)
+- [typescript](https://www.typescriptlang.org/docs/home.html)
 - [gh-pages](https://www.npmjs.com/package/gh-pages)
 - [styled-components](https://styled-components.com/)
 
