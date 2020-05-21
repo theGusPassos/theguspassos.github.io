@@ -46,7 +46,15 @@ const FrontPage = () => {
           professionally for 5 years.
         </p>
         <p>
-          You can check my personal projects and my blog if you're interested.
+          You can check my personal projects and my{" "}
+          <a
+            href="https://theguspassos.github.io/blog"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            blog
+          </a>{" "}
+          if you're interested.
         </p>
       </Bio>
       <HomeNavButton link="/about">more about me</HomeNavButton>
