@@ -6,7 +6,6 @@ import { onCardClick, onCardKeyDown } from "./contactCardClick";
 
 const ImageWrapper = styled.div`
   width: 50%;
-  padding: 5%;
   margin: auto;
   display: flex;
   flex: 1;

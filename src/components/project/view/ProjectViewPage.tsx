@@ -52,6 +52,10 @@ const ProjectText = styled.section`
   padding-top: 5%;
 `;
 
+const ContactWrapper = styled.div`
+  padding: 5%;
+`;
+
 const ProjectViewPage = (props: ProjectViewProps) => {
   let project = getProjectById(Number(props.projectId));
 
@@ -72,7 +76,10 @@ const ProjectViewPage = (props: ProjectViewProps) => {
           built with {concatTags(project.tags)}
         </ProjectTechStack>
         <ProjectText>{project.projectInfo()}</ProjectText>
-        <ContactChooser deviceType={props.deviceType}></ContactChooser>
+
+        <ContactWrapper>
+          <ContactChooser deviceType={props.deviceType}></ContactChooser>
+        </ContactWrapper>
       </PaddedContent>
     </ProjectViewStyled>
   );

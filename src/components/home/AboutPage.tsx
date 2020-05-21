@@ -7,9 +7,10 @@ import {
   GetAnimationTransform,
 } from "../../animations/animations";
 import { requiredForAnimation } from "../common-styles/requiredForAnimation";
-import ContactsButton from "../contacts/ContactsButton";
 import { colors } from "../../data/colors";
 import { device } from "../../data/device";
+import DeviceInfo, { DeviceType } from "../../models/deviceInfo";
+import ContactChooser from "../contacts/ContactChooser";
 
 const AboutPageStyled = styled.section`
   display: grid;
@@ -26,7 +27,9 @@ const AboutPageStyled = styled.section`
 const AboutPageAnimated = GetAnimator(AboutPageStyled);
 const AnimationTransform = GetAnimationTransform(AnimationDirection.FromRight);
 
-const AboutPage = () => {
+interface AboutPageProps extends DeviceInfo {}
+
+const AboutPage = (props: AboutPageProps) => {
   return (
     <AboutPageAnimated transform={AnimationTransform}>
       <Bio>
@@ -40,7 +43,7 @@ const AboutPage = () => {
         </p>
         <p>If you need help in a project of yours feel free to contact me =)</p>
       </Bio>{" "}
-      <ContactsButton></ContactsButton>
+      <ContactChooser deviceType={props.deviceType}></ContactChooser>
     </AboutPageAnimated>
   );
 };

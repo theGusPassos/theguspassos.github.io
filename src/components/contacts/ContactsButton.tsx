@@ -3,7 +3,6 @@ import { CSSTransition } from "react-transition-group";
 import { animationSpeed } from "../../animations/animations";
 import ContactsModal from "./ContactsModal";
 import styled from "styled-components";
-import { colors } from "../../data/colors";
 import { buttonStyle } from "../common-styles/buttonStyles";
 
 const Wrapper = styled.div`

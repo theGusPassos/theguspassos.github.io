@@ -10,6 +10,7 @@ import { animationSpeed } from "../../animations/animations";
 import { CSSTransition } from "react-transition-group";
 import TransitionGroupStyled from "../common-styles/transitionGroup";
 import { device } from "../../data/device";
+import DeviceInfo from "../../models/deviceInfo";
 
 const HomePageStyled = styled.section`
   width: 100%;
@@ -29,7 +30,9 @@ const HomeNavigation = styled.div`
   color: ${colors.mainTextColor};
 `;
 
-const HomePage = () => {
+interface HomePageProps extends DeviceInfo {}
+
+const HomePage = (props: HomePageProps) => {
   return (
     <HomePageStyled>
       <HomeNavigation>
@@ -47,7 +50,7 @@ const HomePage = () => {
                   </Route>
 
                   <Route exact path="/about">
-                    <AboutPage></AboutPage>
+                    <AboutPage deviceType={props.deviceType}></AboutPage>
                   </Route>
                 </Switch>
               </CSSTransition>
