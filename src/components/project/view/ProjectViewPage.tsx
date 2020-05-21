@@ -7,6 +7,7 @@ import { sectionWithText } from "../../common-styles/sectionWithText";
 import { maxWidthStyle } from "../../common-styles/maxWidthStyle";
 import ContactsButton from "../../contacts/ContactsButton";
 import { device } from "../../../data/device";
+import ContactChooser from "../../contacts/ContactChooser";
 
 interface ProjectViewProps extends DeviceInfo {
   projectId: number;
@@ -71,7 +72,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
           built with {concatTags(project.tags)}
         </ProjectTechStack>
         <ProjectText>{project.projectInfo()}</ProjectText>
-        <ContactsButton></ContactsButton>
+        <ContactChooser deviceType={props.deviceType}></ContactChooser>
       </PaddedContent>
     </ProjectViewStyled>
   );
