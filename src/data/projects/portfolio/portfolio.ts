@@ -1,5 +1,5 @@
 import Project from "../../../models/project";
-import img from "./portfolio-figma-screenshot.png";
+import img from "./portfolio-site.png";
 import PortfolioInfo from "./PortfolioInfo";
 
 export const portfolio: Project = {
