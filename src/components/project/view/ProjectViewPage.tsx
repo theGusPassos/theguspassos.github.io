@@ -7,6 +7,7 @@ import { sectionWithText } from "../../common-styles/sectionWithText";
 import { maxWidthStyle } from "../../common-styles/maxWidthStyle";
 import { device } from "../../../data/device";
 import ContactChooser from "../../contacts/ContactChooser";
+import ProjectPageBackground from "../../common-styles/projectPageBackground";
 
 interface ProjectViewProps extends DeviceInfo {
   projectId: number;
@@ -68,6 +69,7 @@ const ProjectViewPage = (props: ProjectViewProps) => {
 
   return (
     <ProjectViewStyled>
+      <ProjectPageBackground></ProjectPageBackground>
       <Image src={project.image} alt={project.imageAlt}></Image>
       <PaddedContent>
         <ProjectTitle>{project.name}</ProjectTitle>

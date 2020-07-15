@@ -5,6 +5,7 @@ import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import { colors } from "../../../data/colors";
 import { device } from "../../../data/device";
+import ProjectPageBackground from "../../common-styles/projectPageBackground";
 
 const ProjectListPageStyled = styled.section`
   padding: 10%;
@@ -17,23 +18,13 @@ const ProjectListPageStyled = styled.section`
   }
 
   @media ${device.desktop} {
-    padding: 3%;
+    padding: 50px;
   }
-`;
-
-const ProjectPageBackground = styled.div`
-  position: absolute;
-  background-color: ${colors.mainColor};
-  z-index: -9999;
-  right: 0;
-  top: 0;
-  left: 0;
-  bottom: 80%;
 `;
 
 const PageTitle = styled.h1`
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: ${colors.mainTextColor};
   text-align: center;
 `;
