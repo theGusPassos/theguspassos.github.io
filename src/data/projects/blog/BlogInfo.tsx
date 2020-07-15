@@ -15,6 +15,10 @@ const BlogInfo = () => {
         like this website.
       </p>
 
+      <LinkToExternal url="https://theguspassos.github.io/blog">
+        Check the blog here
+      </LinkToExternal>
+
       <LinkToExternal url="https://github.com/theGusPassos/blog">
         Check the source code here
       </LinkToExternal>
