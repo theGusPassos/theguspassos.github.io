@@ -5,7 +5,6 @@ import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import { colors } from "../../../data/colors";
 import { device } from "../../../data/device";
-import DeviceInfo from "../../../models/deviceInfo";
 
 const ProjectListPageStyled = styled.section`
   padding: 10%;
@@ -40,13 +39,11 @@ const PageTitle = styled.h1`
 `;
 
 const ProjectWrapper = styled.section`
+  max-width: 500px;
   margin: auto;
-  max-width: 1000px;
 `;
 
-interface ProjectListProps extends DeviceInfo {}
-
-const ProjectListPage = (props: ProjectListProps) => {
+const ProjectListPage = () => {
   const getProjects = () => {
     return projectList.map((project: Project, i: number) => {
       return <ProjectCard key={i} project={project}></ProjectCard>;

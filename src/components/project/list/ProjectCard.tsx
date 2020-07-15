@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { colors } from "../../../data/colors";
 import { useHistory } from "react-router-dom";
 import { buttonOnHover } from "../../common-styles/buttonStyles";
-import { device } from "../../../data/device";
 
 interface ProjectCardProps {
   project: Project;
@@ -22,11 +21,6 @@ const ProjectCardStyled = styled.button`
 
   img {
     width: 100%;
-  }
-
-  @media ${device.desktop} {
-    width: 44%;
-    margin: 3%;
   }
 `;
 

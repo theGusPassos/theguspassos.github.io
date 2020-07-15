@@ -19,7 +19,7 @@ const Routes = (props: RoutesProps) => {
   return (
     <Switch location={props.location}>
       <Route exact path={projectListPath}>
-        <ProjectListPage deviceType={props.deviceType}></ProjectListPage>
+        <ProjectListPage></ProjectListPage>
       </Route>
 
       <Route

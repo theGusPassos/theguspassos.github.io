@@ -12,7 +12,9 @@ interface ProjectViewProps extends DeviceInfo {
   projectId: number;
 }
 
-const ProjectViewStyled = styled.section``;
+const ProjectViewStyled = styled.section`
+  ${maxWidthStyle};
+`;
 
 const ProjectTitle = styled.h1`
   color: ${colors.mainColor};
