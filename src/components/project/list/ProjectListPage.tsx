@@ -39,7 +39,7 @@ const PageTitle = styled.h1`
 `;
 
 const ProjectWrapper = styled.section`
-  max-width: 500px;
+  max-width: 1000px;
   margin: auto;
 `;
 
