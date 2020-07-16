@@ -1,9 +1,7 @@
 import React from "react";
-import FrontPage from "./FrontPage";
 import styled from "styled-components";
 import { colors } from "../../data/colors";
 import HomeNavButton from "./common/HomeNavButton";
-import AboutPage from "./AboutPage";
 import { Switch, Route } from "react-router-dom";
 import { projectListPath } from "../../data/routes";
 import { animationSpeed } from "../../animations/animations";
@@ -25,42 +23,12 @@ const HomePageStyled = styled.section`
   }
 `;
 
-const HomeNavigation = styled.div`
-  background-color: ${colors.mainColor};
-  color: ${colors.mainTextColor};
-`;
-
 interface HomePageProps extends DeviceInfo {}
 
 const HomePage = (props: HomePageProps) => {
   return (
     <HomePageStyled>
-      <HomeNavigation>
-        <Route
-          render={({ location }) => (
-            <TransitionGroupStyled>
-              <CSSTransition
-                key={location?.pathname}
-                classNames="animation"
-                timeout={animationSpeed}
-              >
-                <Switch location={location}>
-                  <Route exact path="/">
-                    <FrontPage></FrontPage>
-                  </Route>
-
-                  <Route exact path="/about">
-                    <AboutPage deviceType={props.deviceType}></AboutPage>
-                  </Route>
-                </Switch>
-              </CSSTransition>
-            </TransitionGroupStyled>
-          )}
-        ></Route>
-      </HomeNavigation>
-      <HomeNavButton link={projectListPath} useMainColor>
-        see my projects
-      </HomeNavButton>
+      <div>yeah front page</div>
     </HomePageStyled>
   );
 };
