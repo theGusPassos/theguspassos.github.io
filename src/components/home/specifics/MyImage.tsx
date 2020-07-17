@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
-import { CSSTransition } from "react-transition-group";
+import React from "react";
 
 const animationTime = 1000;
 
@@ -32,23 +31,10 @@ const MyImageStyled = styled.img`
 `;
 
 const MyImage = () => {
-  const [inProp, setInProp] = useState(false);
-
-  useEffect(() => {
-    setInProp(true);
-  });
-
   return (
-    <CSSTransition
-      unmountOnExit
-      in={inProp}
-      classNames="animation"
-      timeout={animationTime}
-    >
-      <ImageContainer>
-        <MyImageStyled src="images/eubykuma.png"></MyImageStyled>;
-      </ImageContainer>
-    </CSSTransition>
+    <ImageContainer>
+      <MyImageStyled src="images/eubykuma.png"></MyImageStyled>;
+    </ImageContainer>
   );
 };
 

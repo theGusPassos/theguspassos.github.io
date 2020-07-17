@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../../data/device";
 import DeviceInfo from "../../models/deviceInfo";
 import NameCard from "./specifics/NameSection";
 import BioSection from "./specifics/BioSection";
 import ButtonToInternalPage from "../common-components/ButtonToInternalPage";
 import ContactIcons from "../contacts/ContactIcons";
 import MyImage from "./specifics/MyImage";
+import TransitionOnEnter from "../../animations/TransitionOnEnter";
 
 const HomePageStyled = styled.section`
   width: 100%;
@@ -26,13 +26,27 @@ interface HomePageProps extends DeviceInfo {}
 const HomePage = (props: HomePageProps) => {
   return (
     <HomePageStyled>
-      <MyImage></MyImage>
-      <NameCard></NameCard>
-      <ContactIcons></ContactIcons>
-      <BioSection></BioSection>
-      <SeeMyProjectsButton>
-        <ButtonToInternalPage></ButtonToInternalPage>
-      </SeeMyProjectsButton>
+      <TransitionOnEnter transitionDuration={1000}>
+        <MyImage></MyImage>
+      </TransitionOnEnter>
+
+      <TransitionOnEnter transitionDuration={1000}>
+        <NameCard></NameCard>
+      </TransitionOnEnter>
+
+      <TransitionOnEnter transitionDuration={1000}>
+        <ContactIcons></ContactIcons>
+      </TransitionOnEnter>
+
+      <TransitionOnEnter transitionDuration={1000}>
+        <BioSection></BioSection>
+      </TransitionOnEnter>
+
+      <TransitionOnEnter transitionDuration={1000}>
+        <SeeMyProjectsButton>
+          <ButtonToInternalPage></ButtonToInternalPage>
+        </SeeMyProjectsButton>
+      </TransitionOnEnter>
     </HomePageStyled>
   );
 };

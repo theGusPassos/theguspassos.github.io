@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
-import { CSSTransition } from "react-transition-group";
 
 const fadeDelay = 0;
 const fadeTime = 2000;
@@ -33,26 +32,11 @@ const Job = styled.div`
 `;
 
 const NameSection = () => {
-  const [inProp, setInProp] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setInProp(true);
-    }, fadeDelay);
-  });
-
   return (
-    <CSSTransition
-      unmountOnExit
-      in={inProp}
-      classNames="animation"
-      timeout={fadeTime}
-    >
-      <NameSectionStyled>
-        <Name>Gustavo Passos</Name>
-        <Job>game and software developer</Job>
-      </NameSectionStyled>
-    </CSSTransition>
+    <NameSectionStyled>
+      <Name>Gustavo Passos</Name>
+      <Job>game and software developer</Job>
+    </NameSectionStyled>
   );
 };
 
