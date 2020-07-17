@@ -1,7 +1,21 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import styled, { css } from "styled-components";
 import { colors } from "../../data/colors";
 import { buttonNoDefaultStyle } from "../common-styles/buttonStyles";
+import { CSSTransition } from "react-transition-group";
+
+const animationTime = 1000;
+
+const fadeAnimation = css`
+  &.animation-enter {
+    opacity: 0;
+  }
+
+  &.animation-enter-active {
+    opacity: 1;
+    transition: opacity ${animationTime}ms;
+  }
+`;
 
 const ButtonStyled = styled.button`
   background-color: ${colors.mainBackgroundColor};
@@ -16,6 +30,7 @@ const ButtonStyled = styled.button`
   cursor: pointer;
 
   ${buttonNoDefaultStyle};
+  ${fadeAnimation};
 
   span {
     width: 100%;
@@ -27,10 +42,23 @@ const ButtonStyled = styled.button`
 `;
 
 const ButtonToInternalPage = () => {
+  const [inProp, setInProp] = useState(false);
+
+  useEffect(() => {
+    setInProp(true);
+  });
+
   return (
-    <ButtonStyled>
-      <span>see my projects</span>
-    </ButtonStyled>
+    <CSSTransition
+      unmountOnExit
+      in={inProp}
+      classNames="animation"
+      timeout={animationTime}
+    >
+      <ButtonStyled>
+        <span>see my projects</span>
+      </ButtonStyled>
+    </CSSTransition>
   );
 };
 

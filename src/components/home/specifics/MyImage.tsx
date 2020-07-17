@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 
 const animationTime = 1000;
 
-const fadeAnimation = css`
+const transformAnimation = css`
   &.animation-enter {
     img {
       transform: translate(0, -100%);
@@ -22,7 +22,7 @@ const fadeAnimation = css`
 const ImageContainer = styled.div`
   width: 100%;
   display: flex;
-  ${fadeAnimation};
+  ${transformAnimation};
 `;
 
 const MyImageStyled = styled.img`
