@@ -6,6 +6,7 @@ import NameCard from "./specifics/NameSection";
 import BioSection from "./specifics/BioSection";
 import ButtonToInternalPage from "../common-components/ButtonToInternalPage";
 import ContactIcons from "../contacts/ContactIcons";
+import MyImage from "./specifics/MyImage";
 
 const HomePageStyled = styled.section`
   width: 100%;
@@ -13,12 +14,6 @@ const HomePageStyled = styled.section`
   display: grid;
   grid-template-rows: 30% auto 5% auto auto;
   margin: 0 20px 0 20px;
-`;
-
-const Image = styled.img`
-  height: 90%;
-  margin: 0px auto 0 auto;
-  padding-top: 10px;
 `;
 
 const SeeMyProjectsButton = styled.div`
@@ -31,7 +26,7 @@ interface HomePageProps extends DeviceInfo {}
 const HomePage = (props: HomePageProps) => {
   return (
     <HomePageStyled>
-      <Image src="images/eubykuma.png"></Image>
+      <MyImage></MyImage>
       <NameCard></NameCard>
       <ContactIcons></ContactIcons>
       <BioSection></BioSection>
