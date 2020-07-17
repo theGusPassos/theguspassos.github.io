@@ -15,7 +15,7 @@ const BioSection = () => {
     <BioSectionStyled>
       <p>
         I'm a 23 years old developer who's been delivering software
-        professionally for <b>6 years</b>. Interested in developing any kind of
+        professionally for <b>6 years</b>. Interested in developing any kind of{" "}
         <b>software or game</b>, regardless of the tech stack.
       </p>
 

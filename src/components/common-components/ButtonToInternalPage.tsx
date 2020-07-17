@@ -8,10 +8,14 @@ const ButtonStyled = styled.button`
   border-right: 6px solid ${colors.secondColor};
   border-bottom: 6px solid ${colors.secondColor};
   color: ${colors.mainTextColor};
-  font-size: 1.3em;
+  font-size: 1.2em;
   letter-spacing: 4px;
   width: 100%;
-  padding: 10px;
+  padding: 10px 5px;
+
+  span {
+    width: 100%;
+  }
 `;
 
 const ButtonToInternalPage = () => {

@@ -8,11 +8,11 @@ const NameSectionStyled = styled.section`
 `;
 
 const Name = styled.div`
-  font-size: 1.9em;
+  font-size: 1.8em;
 `;
 
 const Job = styled.div`
-  font-size: 1em;
+  font-size: 0.9em;
 `;
 
 const NameSection = () => {

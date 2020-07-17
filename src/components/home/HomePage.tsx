@@ -11,14 +11,15 @@ const HomePageStyled = styled.section`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 30% 10% 5% auto auto auto;
+  grid-template-rows: 30% auto 5% auto auto;
   margin: 0 20px 0 20px;
+  margin-bottom: 10px;
 `;
 
 const Image = styled.img`
   height: 90%;
   margin: 0px auto 0 auto;
-  padding-top: 20px;
+  padding-top: 10px;
 `;
 
 const SeeMyProjectsButton = styled.div`
