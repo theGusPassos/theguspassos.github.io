@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { colors } from "../../data/colors";
+import { buttonNoDefaultStyle } from "../common-styles/buttonStyles";
 
 const ButtonStyled = styled.button`
   background-color: ${colors.mainBackgroundColor};
@@ -12,9 +13,16 @@ const ButtonStyled = styled.button`
   letter-spacing: 4px;
   width: 100%;
   padding: 10px 5px;
+  cursor: pointer;
+
+  ${buttonNoDefaultStyle};
 
   span {
     width: 100%;
+  }
+
+  :hover {
+    color: ${colors.secondColor};
   }
 `;
 

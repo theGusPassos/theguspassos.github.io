@@ -13,7 +13,6 @@ const HomePageStyled = styled.section`
   display: grid;
   grid-template-rows: 30% auto 5% auto auto;
   margin: 0 20px 0 20px;
-  margin-bottom: 10px;
 `;
 
 const Image = styled.img`

@@ -1,6 +1,13 @@
 import { css } from "styled-components";
 import { colors } from "../../data/colors";
 
+export const buttonNoDefaultStyle = css`
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+`;
+
 export const buttonStyle = css`
   text-align: center;
   margin: auto;
