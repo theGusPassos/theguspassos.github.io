@@ -2,7 +2,8 @@ import { css } from "styled-components";
 import { colors } from "../../data/colors";
 
 export const sectionWithText = css`
-  line-height: 1.7;
+  letter-spacing: 2px;
+  line-height: 1.5;
 
   p a,
   ul li a {

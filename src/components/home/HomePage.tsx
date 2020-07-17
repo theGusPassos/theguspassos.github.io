@@ -9,18 +9,18 @@ import { CSSTransition } from "react-transition-group";
 import TransitionGroupStyled from "../common-styles/transitionGroup";
 import { device } from "../../data/device";
 import DeviceInfo from "../../models/deviceInfo";
+import NameCard from "./specifics/NameSection";
+import BioSection from "./specifics/BioSection";
 
 const HomePageStyled = styled.section`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 90% 10%;
-  background-color: white;
-  z-index: 10;
+`;
 
-  @media ${device.tablet} {
-    grid-template-rows: 80% 20%;
-  }
+const Image = styled.img`
+  width: 60%;
+  margin: 0px auto 10px auto;
 `;
 
 interface HomePageProps extends DeviceInfo {}
@@ -28,7 +28,9 @@ interface HomePageProps extends DeviceInfo {}
 const HomePage = (props: HomePageProps) => {
   return (
     <HomePageStyled>
-      <div>yeah front page</div>
+      <Image src="images/eubykuma.png"></Image>
+      <NameCard></NameCard>
+      <BioSection></BioSection>
     </HomePageStyled>
   );
 };
