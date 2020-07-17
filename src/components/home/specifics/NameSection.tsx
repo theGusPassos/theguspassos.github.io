@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-const fadeDelay = 0;
 const fadeTime = 2000;
 
 const fadeAnimation = css`

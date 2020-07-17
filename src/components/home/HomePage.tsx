@@ -26,23 +26,23 @@ interface HomePageProps extends DeviceInfo {}
 const HomePage = (props: HomePageProps) => {
   return (
     <HomePageStyled>
-      <TransitionOnEnter transitionDuration={1000}>
+      <TransitionOnEnter transitionDuration={1000} delayToStart={0}>
         <MyImage></MyImage>
       </TransitionOnEnter>
 
-      <TransitionOnEnter transitionDuration={1000}>
+      <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
         <NameCard></NameCard>
       </TransitionOnEnter>
 
-      <TransitionOnEnter transitionDuration={1000}>
+      <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
         <ContactIcons></ContactIcons>
       </TransitionOnEnter>
 
-      <TransitionOnEnter transitionDuration={1000}>
+      <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
         <BioSection></BioSection>
       </TransitionOnEnter>
 
-      <TransitionOnEnter transitionDuration={1000}>
+      <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
         <SeeMyProjectsButton>
           <ButtonToInternalPage></ButtonToInternalPage>
         </SeeMyProjectsButton>
