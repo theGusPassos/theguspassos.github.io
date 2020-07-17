@@ -11,6 +11,7 @@ import { device } from "../../data/device";
 import DeviceInfo from "../../models/deviceInfo";
 import NameCard from "./specifics/NameSection";
 import BioSection from "./specifics/BioSection";
+import ButtonToInternalPage from "../common-components/ButtonToInternalPage";
 
 const HomePageStyled = styled.section`
   width: 100%;
@@ -23,6 +24,11 @@ const Image = styled.img`
   margin: 0px auto 10px auto;
 `;
 
+const SeeMyProjectsButton = styled.div`
+  width: 70%;
+  margin: auto;
+`;
+
 interface HomePageProps extends DeviceInfo {}
 
 const HomePage = (props: HomePageProps) => {
@@ -31,6 +37,9 @@ const HomePage = (props: HomePageProps) => {
       <Image src="images/eubykuma.png"></Image>
       <NameCard></NameCard>
       <BioSection></BioSection>
+      <SeeMyProjectsButton>
+        <ButtonToInternalPage></ButtonToInternalPage>
+      </SeeMyProjectsButton>
     </HomePageStyled>
   );
 };

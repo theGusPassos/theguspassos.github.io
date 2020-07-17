@@ -11,7 +11,7 @@ import { colors } from "../data/colors";
 
 const BodyGrid = styled.div`
   height: 100%;
-  margin: 15px;
+  margin: 20px;
 `;
 
 interface BodyProps extends ResizeListenerProps {}

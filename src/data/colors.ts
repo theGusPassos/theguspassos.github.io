@@ -2,7 +2,7 @@ const colors = {
   mainColor: "#5655A3",
   mainTextColor: "#fff",
   mainBackgroundColor: "#181418",
-  secondColor: "#726ff0",
+  secondColor: "#840084",
   secondBackgroundColor: "#f7f7f7",
 
   buttonClickedColor: "#dedede",
