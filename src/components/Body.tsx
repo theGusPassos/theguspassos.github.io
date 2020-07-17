@@ -10,8 +10,9 @@ import { DeviceType } from "../models/deviceInfo";
 import { colors } from "../data/colors";
 
 const BodyGrid = styled.div`
+  display: flex;
   height: 100%;
-  margin: 20px;
+  /* padding: 20px; */
 `;
 
 interface BodyProps extends ResizeListenerProps {}

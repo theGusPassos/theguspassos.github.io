@@ -2,6 +2,7 @@ import Contact from "../models/contact";
 import gmailLogo from "../images/contacts/gmail.png";
 import githubLogo from "../images/contacts/github.png";
 import linkedinLogo from "../images/contacts/linkedin.png";
+import itchioLogo from "../images/contacts/itchio.png";
 
 export const contacts: Contact[] = [
   {
@@ -23,5 +24,12 @@ export const contacts: Contact[] = [
     message: "code with me",
     contactText: "github/theguspassos",
     url: "https://github.com/theGusPassos",
+  },
+  {
+    image: itchioLogo,
+    altImage: "itch.io logo",
+    message: "play my games",
+    contactText: "itchio/theguspassos",
+    url: "https://theguspassos.itch.io",
   },
 ];

@@ -1,27 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import { colors } from "../../data/colors";
-import HomeNavButton from "./common/HomeNavButton";
-import { Switch, Route } from "react-router-dom";
-import { projectListPath } from "../../data/routes";
-import { animationSpeed } from "../../animations/animations";
-import { CSSTransition } from "react-transition-group";
-import TransitionGroupStyled from "../common-styles/transitionGroup";
 import { device } from "../../data/device";
 import DeviceInfo from "../../models/deviceInfo";
 import NameCard from "./specifics/NameSection";
 import BioSection from "./specifics/BioSection";
 import ButtonToInternalPage from "../common-components/ButtonToInternalPage";
+import ContactIcons from "../contacts/ContactIcons";
 
 const HomePageStyled = styled.section`
   width: 100%;
   height: 100%;
   display: grid;
+  grid-template-rows: 30% 10% 5% auto auto auto;
+  margin: 0 20px 0 20px;
 `;
 
 const Image = styled.img`
-  width: 60%;
-  margin: 0px auto 10px auto;
+  height: 90%;
+  margin: 0px auto 0 auto;
+  padding-top: 20px;
 `;
 
 const SeeMyProjectsButton = styled.div`
@@ -36,6 +33,7 @@ const HomePage = (props: HomePageProps) => {
     <HomePageStyled>
       <Image src="images/eubykuma.png"></Image>
       <NameCard></NameCard>
+      <ContactIcons></ContactIcons>
       <BioSection></BioSection>
       <SeeMyProjectsButton>
         <ButtonToInternalPage></ButtonToInternalPage>

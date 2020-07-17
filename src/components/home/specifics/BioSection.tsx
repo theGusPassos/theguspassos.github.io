@@ -5,6 +5,7 @@ import { sectionWithText } from "../../common-styles/sectionWithText";
 const BioSectionStyled = styled.section`
   color: #fff;
   font-size: 0.9em;
+  margin: auto;
 
   ${sectionWithText};
 `;

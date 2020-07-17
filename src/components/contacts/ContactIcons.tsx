@@ -6,15 +6,15 @@ import { onCardClick, onCardKeyDown } from "./contactCardClick";
 import { MainToolTip } from "../common-components/ToolTip";
 
 const ImageWrapper = styled.div`
-  width: 50%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex: 1;
 `;
 
 const ContactIcon = styled.img`
-  opacity: 0.3;
-  width: 10%;
+  opacity: 0.5;
+  width: 8%;
   margin: auto;
 
   :hover,
