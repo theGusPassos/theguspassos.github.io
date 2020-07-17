@@ -1,15 +1,30 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { css } from "styled-components";
 import { contacts } from "../../data/contacts";
 import Contact from "../../models/contact";
 import { onCardClick, onCardKeyDown } from "./contactCardClick";
 import { MainToolTip } from "../common-components/ToolTip";
+import { CSSTransition } from "react-transition-group";
+
+const fadeTime = 2000;
+const fadeAnimation = css`
+  &.animation-enter {
+    opacity: 0;
+  }
+
+  &.animation-enter-active {
+    opacity: 1;
+    transition: opacity ${fadeTime}ms;
+  }
+`;
 
 const ImageWrapper = styled.div`
   width: 100%;
   margin: auto;
   display: flex;
   flex: 1;
+
+  ${fadeAnimation};
 `;
 
 const ContactIcon = styled.img`
@@ -25,6 +40,12 @@ const ContactIcon = styled.img`
 `;
 
 const ContactIcons = () => {
+  const [inProp, setInProp] = useState(false);
+
+  useEffect(() => {
+    setInProp(true);
+  });
+
   const getContacts = () => {
     return contacts.map((contact: Contact, key: number) => {
       return (
@@ -40,10 +61,17 @@ const ContactIcons = () => {
   };
 
   return (
-    <ImageWrapper>
-      {getContacts()}
-      <MainToolTip></MainToolTip>
-    </ImageWrapper>
+    <CSSTransition
+      unmountOnExit
+      in={inProp}
+      classNames="animation"
+      timeout={fadeTime}
+    >
+      <ImageWrapper>
+        {getContacts()}
+        <MainToolTip></MainToolTip>
+      </ImageWrapper>
+    </CSSTransition>
   );
 };
 
