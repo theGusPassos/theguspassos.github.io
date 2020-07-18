@@ -5,7 +5,8 @@ import BlogInfo from "./BlogInfo";
 export const blog: Project = {
   id: 3,
   name: "Academic Developer",
-  description: "Personal blog where I write about software development",
+  description:
+    "Personal blog where I write about software development and some of my experiences related to the industry. built with vue.js",
   tags: ["vue"],
   imageAlt: "Academic Developer blog logo",
   image: img,

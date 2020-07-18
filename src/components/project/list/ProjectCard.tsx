@@ -5,6 +5,7 @@ import { colors } from "../../../data/colors";
 import { useHistory } from "react-router-dom";
 import { buttonOnHover } from "../../common-styles/buttonStyles";
 import { device } from "../../../data/device";
+import { sectionWithText } from "../../common-styles/sectionWithText";
 
 interface ProjectCardProps {
   project: Project;
@@ -45,17 +46,12 @@ const HoverEffect = styled.div`
 `;
 
 const ProjectInfo = styled.div`
-  padding: 10px 20px;
-  color: ${colors.mainColor};
-
-  strong {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-  }
+  color: ${colors.mainTextColor};
+  ${sectionWithText};
+  padding: 0 15px;
 
   span {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 `;
 
@@ -69,13 +65,10 @@ const ProjectCard = (props: ProjectCardProps) => {
   return (
     <ProjectCardStyled>
       {/* <HoverEffect></HoverEffect> */}
-
-      <ImageBackground></ImageBackground>
       <Image src={props.project.image} alt={props.project.imageAlt}></Image>
-      {/* <ProjectInfo>
-        <strong>{props.project.name}</strong>
+      <ProjectInfo>
         <span>{props.project.description}</span>
-      </ProjectInfo> */}
+      </ProjectInfo>
     </ProjectCardStyled>
   );
 };
