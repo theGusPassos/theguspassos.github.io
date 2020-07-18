@@ -43,7 +43,7 @@ const Image = styled.img`
 const ProjectInfo = styled.div`
   color: ${colors.mainTextColor};
   ${sectionWithText};
-  padding: 0 15px;
+  padding: 0 10px;
   margin: 15px 0;
 
   p {

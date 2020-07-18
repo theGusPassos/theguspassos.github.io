@@ -24,6 +24,10 @@ export const buttonStyle = css`
   background-color: ${colors.mainBackgroundColor};
   padding: 10px 5px;
   width: 100%;
+
+  :hover {
+    color: ${colors.secondColor};
+  }
 `;
 
 export const buttonOnHover = css`

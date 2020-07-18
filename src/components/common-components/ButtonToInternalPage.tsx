@@ -29,10 +29,6 @@ const ButtonStyled = styled.button`
   span {
     width: 100%;
   }
-
-  :hover {
-    color: ${colors.secondColor};
-  }
 `;
 
 export interface ButtonToInternalPageProps {
