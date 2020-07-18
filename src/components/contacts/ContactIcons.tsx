@@ -5,11 +5,7 @@ import Contact from "../../models/contact";
 import { onCardClick, onCardKeyDown } from "./contactCardClick";
 import { MainToolTip } from "../common-components/ToolTip";
 import { CSSTransition } from "react-transition-group";
-import {
-  buttonNoDefaultStyle,
-  buttonForImage,
-} from "../common-styles/buttonStyles";
-import { colors } from "../../data/colors";
+import { buttonForImage } from "../common-styles/buttonStyles";
 
 const fadeTime = 2000;
 const fadeAnimation = css`

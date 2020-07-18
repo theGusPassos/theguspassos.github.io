@@ -4,8 +4,6 @@ import Project from "../../../models/project";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import { colors } from "../../../data/colors";
-import { device } from "../../../data/device";
-import ProjectPageBackground from "../../common-styles/projectPageBackground";
 import NameSection from "../../common-components/NameSection";
 import { pageMarginStyle } from "../../common-styles/pageMarginStyle";
 import ContactIcons from "../../contacts/ContactIcons";
