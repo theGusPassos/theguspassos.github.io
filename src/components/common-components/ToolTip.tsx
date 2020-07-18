@@ -3,7 +3,7 @@ import ReactTooltip from "react-tooltip";
 import { colors } from "../../data/colors";
 
 export const MainToolTip = styled(ReactTooltip)`
-  background: ${colors.mainColor} !important;
+  background: ${colors.secondColor} !important;
 `;
 
 export const WhiteToolTip = styled(ReactTooltip)`
