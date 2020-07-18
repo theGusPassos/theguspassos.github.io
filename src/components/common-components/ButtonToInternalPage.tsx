@@ -28,6 +28,7 @@ const ButtonStyled = styled.button`
   letter-spacing: 4px;
   padding: 10px 5px;
   cursor: pointer;
+  width: 100%;
 
   ${buttonNoDefaultStyle};
   ${fadeAnimation};
