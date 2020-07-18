@@ -69,11 +69,11 @@ const HomePage = (props: HomePageProps) => {
         <BioSection></BioSection>
       </TransitionOnEnter>
 
-      <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
-        <SeeMyProjectsButton>
+      <SeeMyProjectsButton>
+        <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
           <ButtonToInternalPage></ButtonToInternalPage>
-        </SeeMyProjectsButton>
-      </TransitionOnEnter>
+        </TransitionOnEnter>
+      </SeeMyProjectsButton>
     </HomePageStyled>
   );
 };

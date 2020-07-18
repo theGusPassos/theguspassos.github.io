@@ -25,7 +25,6 @@ const ButtonStyled = styled.button`
   color: ${colors.mainTextColor};
   font-size: 1.2em;
   letter-spacing: 4px;
-  width: 100%;
   padding: 10px 5px;
   cursor: pointer;
 
@@ -42,23 +41,10 @@ const ButtonStyled = styled.button`
 `;
 
 const ButtonToInternalPage = () => {
-  const [inProp, setInProp] = useState(false);
-
-  useEffect(() => {
-    setInProp(true);
-  });
-
   return (
-    <CSSTransition
-      unmountOnExit
-      in={inProp}
-      classNames="animation"
-      timeout={animationTime}
-    >
-      <ButtonStyled>
-        <span>see my projects</span>
-      </ButtonStyled>
-    </CSSTransition>
+    <ButtonStyled>
+      <span>see my projects</span>
+    </ButtonStyled>
   );
 };
 
