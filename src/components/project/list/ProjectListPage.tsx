@@ -6,25 +6,21 @@ import ProjectCard from "./ProjectCard";
 import { colors } from "../../../data/colors";
 import { device } from "../../../data/device";
 import ProjectPageBackground from "../../common-styles/projectPageBackground";
+import NameSection from "../../common-components/NameSection";
+import { pageMarginStyle } from "../../common-styles/pageMarginStyle";
 
 const ProjectListPageStyled = styled.section`
-  padding: 10%;
-  position: relative;
-  padding-bottom: 0 !important;
+  ${pageMarginStyle};
+  margin-top: 20px !important;
 
-  button {
-    color: ${colors.mainColor};
-    margin-bottom: 30px;
-  }
-
-  @media ${device.desktop} {
-    padding: 50px;
+  section {
+    text-align: left !important;
   }
 `;
 
 const PageTitle = styled.h1`
-  margin-top: 0;
-  margin-bottom: 20px;
+  font-weight: normal;
+  margin: 40px 0;
   color: ${colors.mainTextColor};
   text-align: center;
 `;
@@ -43,8 +39,8 @@ const ProjectListPage = () => {
 
   return (
     <ProjectListPageStyled>
-      <ProjectPageBackground></ProjectPageBackground>
-      <PageTitle>my projects</PageTitle>
+      <NameSection></NameSection>
+      <PageTitle>some things I've built</PageTitle>
       <ProjectWrapper>{getProjects()}</ProjectWrapper>
     </ProjectListPageStyled>
   );

@@ -58,12 +58,12 @@ const ContactIcons = () => {
     return contacts.map((contact: Contact, key: number) => {
       return (
         <ContactIcon
+          key={key}
           onClick={() => onCardClick(contact)}
           onKeyDown={(e) => onCardKeyDown(e, contact)}
         >
           <ContactIconImage
             src={contact.image}
-            key={key}
             data-tip={contact.message}
           ></ContactIconImage>
         </ContactIcon>

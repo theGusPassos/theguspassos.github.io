@@ -27,7 +27,7 @@
     "react-toastify": "^5.5.0",
     "react-tooltip": "^4.2.3",
     "react-transition-group": "^4.3.0",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.1.1",
     "typescript": "^3.8.3"
   },
   "scripts": {

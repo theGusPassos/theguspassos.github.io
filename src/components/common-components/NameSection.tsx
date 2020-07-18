@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { device } from "../../../data/device";
+import { device } from "../../data/device";
 
 const fadeTime = 2000;
 

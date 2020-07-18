@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import DeviceInfo from "../../models/deviceInfo";
-import NameCard from "./specifics/NameSection";
+import NameCard from "../common-components/NameSection";
 import BioSection from "./specifics/BioSection";
 import ButtonToInternalPage from "../common-components/ButtonToInternalPage";
 import ContactIcons from "../contacts/ContactIcons";
@@ -9,15 +9,17 @@ import MyImage from "./specifics/MyImage";
 import TransitionOnEnter from "../../animations/TransitionOnEnter";
 import { maxWidthStyle } from "../common-styles/maxWidthStyle";
 import { device } from "../../data/device";
+import { pageMarginStyle } from "../common-styles/pageMarginStyle";
 
 const HomePageStyled = styled.section`
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: 30% auto auto auto auto;
-  margin: 0 20px 10% 20px;
 
   ${maxWidthStyle};
+  ${pageMarginStyle};
+  margin-bottom: 10%;
 
   @media ${device.tablet} {
     grid-template-rows: 35% 7% 5% auto auto;
