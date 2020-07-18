@@ -21,36 +21,28 @@ const ProjectCardStyled = styled.div`
   }
 `;
 
+const ImageContainer = styled.div`
+  position: relative;
+`;
+
 const ImageBackground = styled.div`
   position: absolute;
-  top: 7px;
-  left: 7px;
+  background-color: ${colors.secondColor};
   width: 100%;
   height: 100%;
-  z-index: 0;
-  background-color: ${colors.secondColor};
+  top: 10px;
+  left: 10px;
 `;
 
 const Image = styled.img`
   position: relative;
-  z-index: 999;
-`;
-
-const HoverEffect = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  ${buttonOnHover};
 `;
 
 const ProjectInfo = styled.div`
   color: ${colors.mainTextColor};
   ${sectionWithText};
   padding: 0 15px;
-  margin: 10px 0;
+  margin: 15px 0;
 
   span {
     font-size: 0.8em;
@@ -71,8 +63,10 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <ProjectCardStyled>
-      {/* <HoverEffect></HoverEffect> */}
-      <Image src={props.project.image} alt={props.project.imageAlt}></Image>
+      <ImageContainer>
+        <ImageBackground></ImageBackground>
+        <Image src={props.project.image} alt={props.project.imageAlt}></Image>
+      </ImageContainer>
       <ProjectInfo>
         <span>{props.project.description}</span>
       </ProjectInfo>

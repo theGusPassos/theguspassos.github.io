@@ -23,6 +23,8 @@ const PageTitle = styled.h1`
   margin: 40px 0;
   color: ${colors.mainTextColor};
   text-align: center;
+  letter-spacing: 4px;
+  font-size: 1.2em;
 `;
 
 const ProjectWrapper = styled.section`
