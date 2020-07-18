@@ -1,6 +1,5 @@
 import Project from "../../../models/project";
 import img from "./acadev-logo.png";
-import BlogInfo from "./BlogInfo";
 
 export const blog: Project = {
   id: 3,
@@ -10,5 +9,6 @@ export const blog: Project = {
   tags: ["vue"],
   imageAlt: "Academic Developer blog logo",
   image: img,
-  projectInfo: BlogInfo,
+  madeWithText: "made with vue.js",
+  linkButton: "visit blog",
 };

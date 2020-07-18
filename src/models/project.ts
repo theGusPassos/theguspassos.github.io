@@ -5,5 +5,6 @@ export default interface Project {
   image: string;
   imageAlt: string;
   tags: string[];
-  projectInfo(): JSX.Element;
+  madeWithText: string;
+  linkButton: string;
 }

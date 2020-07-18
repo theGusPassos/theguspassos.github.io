@@ -45,14 +45,18 @@ const ProjectInfo = styled.div`
   padding: 0 15px;
   margin: 15px 0;
 
-  span {
-    font-size: 0.8em;
+  p {
+    font-size: 0.9em;
   }
 `;
 
 const LinkToProject = styled.div`
   width: 70%;
   margin: auto;
+
+  button {
+    font-size: 1em;
+  }
 `;
 
 const ProjectCard = (props: ProjectCardProps) => {
@@ -69,11 +73,12 @@ const ProjectCard = (props: ProjectCardProps) => {
         <Image src={props.project.image} alt={props.project.imageAlt}></Image>
       </ImageContainer>
       <ProjectInfo>
-        <span>{props.project.description}</span>
+        <p>{props.project.description}</p>
+        <p>{props.project.madeWithText}</p>
       </ProjectInfo>
       <LinkToProject>
         <ButtonToExternalLink url={props.project.name}>
-          visit blog
+          {props.project.linkButton}
         </ButtonToExternalLink>
       </LinkToProject>
     </ProjectCardStyled>

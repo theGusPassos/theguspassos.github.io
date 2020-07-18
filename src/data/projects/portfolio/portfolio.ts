@@ -1,6 +1,5 @@
 import Project from "../../../models/project";
 import img from "./portfolio-site.png";
-import PortfolioInfo from "./PortfolioInfo";
 
 export const portfolio: Project = {
   id: 1,
@@ -10,5 +9,6 @@ export const portfolio: Project = {
   tags: ["react"],
   imageAlt: "an image of this very own website",
   image: img,
-  projectInfo: PortfolioInfo,
+  madeWithText: "made with react",
+  linkButton: "check the source code",
 };

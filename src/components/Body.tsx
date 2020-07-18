@@ -7,12 +7,10 @@ import { isInDesktop, isInTablet } from "../data/device";
 import { withResizeDetector } from "react-resize-detector";
 import ResizeListenerProps from "../models/resizeListenerProps";
 import { DeviceType } from "../models/deviceInfo";
-import { colors } from "../data/colors";
 
 const BodyGrid = styled.div`
   display: flex;
   height: 100%;
-  /* padding: 20px; */
 `;
 
 interface BodyProps extends ResizeListenerProps {}
