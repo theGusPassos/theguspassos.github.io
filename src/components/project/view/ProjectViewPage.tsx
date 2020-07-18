@@ -6,7 +6,6 @@ import { colors } from "../../../data/colors";
 import { sectionWithText } from "../../common-styles/sectionWithText";
 import { maxWidthStyle } from "../../common-styles/maxWidthStyle";
 import { device } from "../../../data/device";
-import ContactChooser from "../../contacts/ContactChooser";
 import ProjectPageBackground from "../../common-styles/projectPageBackground";
 
 interface ProjectViewProps extends DeviceInfo {
@@ -77,10 +76,6 @@ const ProjectViewPage = (props: ProjectViewProps) => {
           built with {concatTags(project.tags)}
         </ProjectTechStack>
         <ProjectText>{project.projectInfo()}</ProjectText>
-
-        <ContactWrapper>
-          <ContactChooser deviceType={props.deviceType}></ContactChooser>
-        </ContactWrapper>
       </PaddedContent>
     </ProjectViewStyled>
   );

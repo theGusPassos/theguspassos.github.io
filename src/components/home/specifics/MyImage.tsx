@@ -1,6 +1,11 @@
 import styled, { css } from "styled-components";
 import React from "react";
 import { device } from "../../../data/device";
+import { MainToolTip } from "../../common-components/ToolTip";
+import {
+  goToExternalPage,
+  goToExternalPageOnKeyDown,
+} from "../../../common-functions/goToExternalPage";
 
 const animationTime = 1000;
 
@@ -23,6 +28,7 @@ const ImageContainer = styled.div`
   width: 100%;
   display: flex;
   ${transformAnimation};
+  cursor: pointer;
 `;
 
 const MyImageStyled = styled.img`
@@ -39,7 +45,19 @@ const MyImageStyled = styled.img`
 const MyImage = () => {
   return (
     <ImageContainer>
-      <MyImageStyled src="images/eubykuma.png"></MyImageStyled>;
+      <MainToolTip></MainToolTip>
+      <MyImageStyled
+        src="images/eubykuma.png"
+        data-tip="this drawing was made by @kumamaskie, check her instagram"
+        alt="drawing of me and my cats made by @kumamaskie, click to go to her instagram"
+        onClick={() =>
+          goToExternalPage("https://www.instagram.com/kumamaskie/")
+        }
+        onKeyDown={(e) =>
+          goToExternalPageOnKeyDown(e, "https://www.instagram.com/kumamaskie/")
+        }
+      ></MyImageStyled>
+      ;
     </ImageContainer>
   );
 };
