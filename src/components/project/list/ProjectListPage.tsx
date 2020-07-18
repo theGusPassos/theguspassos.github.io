@@ -8,6 +8,8 @@ import NameSection from "../../common-components/NameSection";
 import { pageMarginStyle } from "../../common-styles/pageMarginStyle";
 import ContactIcons from "../../contacts/ContactIcons";
 import ButtonToInternalPage from "../../common-components/ButtonToInternalPage";
+import ResizeListenerProps from "../../../models/resizeListenerProps";
+import DeviceInfo from "../../../models/deviceInfo";
 
 const ProjectListPageStyled = styled.section`
   ${pageMarginStyle};
@@ -42,7 +44,9 @@ const BackToHomeButton = styled.div`
   margin: 10px auto 30px auto;
 `;
 
-const ProjectListPage = () => {
+export interface ProjectListProps extends DeviceInfo {}
+
+const ProjectListPage = (props: ProjectListProps) => {
   const getProjects = () => {
     return projectList.map((project: Project, i: number) => {
       return <ProjectCard key={i} project={project}></ProjectCard>;
@@ -55,10 +59,15 @@ const ProjectListPage = () => {
       <PageTitle>some things I've built</PageTitle>
       <ProjectWrapper>{getProjects()}</ProjectWrapper>
       <ProjectEnd>end;</ProjectEnd>
-      <ContactIcons></ContactIcons>
-      <BackToHomeButton>
-        <ButtonToInternalPage path="/">back to home</ButtonToInternalPage>
-      </BackToHomeButton>
+
+      {props.deviceType.isDesktop || props.deviceType.isTablet ? null : (
+        <React.Fragment>
+          <ContactIcons></ContactIcons>
+          <BackToHomeButton>
+            <ButtonToInternalPage path="/">back to home</ButtonToInternalPage>
+          </BackToHomeButton>
+        </React.Fragment>
+      )}
     </ProjectListPageStyled>
   );
 };

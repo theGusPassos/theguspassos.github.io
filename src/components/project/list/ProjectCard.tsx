@@ -1,13 +1,9 @@
 import React, { useEffect } from "react";
 import Project from "../../../models/project";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { colors } from "../../../data/colors";
-import { useHistory } from "react-router-dom";
-import { buttonOnHover } from "../../common-styles/buttonStyles";
-import { device } from "../../../data/device";
 import { sectionWithText } from "../../common-styles/sectionWithText";
 import ButtonToExternalLink from "../../common-components/ButtonToExternalLink";
-import { projectList } from "../../../data/projects/projectList";
 
 interface ProjectCardProps {
   project: Project;
