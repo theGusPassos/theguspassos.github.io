@@ -11,4 +11,5 @@ export const blog: Project = {
   image: img,
   madeWithText: "made with vue.js",
   linkButton: "visit blog",
+  linkToProject: "https://theguspassos.github.io/blog",
 };

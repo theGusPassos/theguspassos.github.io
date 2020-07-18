@@ -11,4 +11,5 @@ export const portfolio: Project = {
   image: img,
   madeWithText: "made with react",
   linkButton: "check the source code",
+  linkToProject: "https://github.com/theGusPassos/theguspassos.github.io",
 };

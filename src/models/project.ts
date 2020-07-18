@@ -7,4 +7,5 @@ export default interface Project {
   tags: string[];
   madeWithText: string;
   linkButton: string;
+  linkToProject: string;
 }

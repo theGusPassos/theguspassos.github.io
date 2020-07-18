@@ -7,6 +7,7 @@ import { buttonOnHover } from "../../common-styles/buttonStyles";
 import { device } from "../../../data/device";
 import { sectionWithText } from "../../common-styles/sectionWithText";
 import ButtonToExternalLink from "../../common-components/ButtonToExternalLink";
+import { projectList } from "../../../data/projects/projectList";
 
 interface ProjectCardProps {
   project: Project;
@@ -81,7 +82,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         <p>{props.project.madeWithText}</p>
       </ProjectInfo>
       <LinkToProject>
-        <ButtonToExternalLink url={props.project.name}>
+        <ButtonToExternalLink url={props.project.linkToProject}>
           {props.project.linkButton}
         </ButtonToExternalLink>
       </LinkToProject>
