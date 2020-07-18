@@ -10,24 +10,28 @@ interface ProjectCardProps {
   project: Project;
 }
 
-const ProjectCardStyled = styled.button`
+const ProjectCardStyled = styled.div`
   position: relative;
-  background-color: #fff;
   margin-bottom: 30px;
-  padding: 0;
-  border: none;
-  box-shadow: 1px 2px 2px 1px #00000075;
-  text-align: initial;
-  font-size: 1em;
 
   img {
     width: 100%;
   }
+`;
 
-  @media ${device.desktop} {
-    width: 44%;
-    margin: 3%;
-  }
+const ImageBackground = styled.div`
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: ${colors.secondColor};
+`;
+
+const Image = styled.img`
+  position: relative;
+  z-index: 999;
 `;
 
 const HoverEffect = styled.div`
@@ -63,13 +67,15 @@ const ProjectCard = (props: ProjectCardProps) => {
   };
 
   return (
-    <ProjectCardStyled onClick={onCardClick}>
-      <HoverEffect></HoverEffect>
-      <img src={props.project.image} alt={props.project.imageAlt}></img>
-      <ProjectInfo>
+    <ProjectCardStyled>
+      {/* <HoverEffect></HoverEffect> */}
+
+      <ImageBackground></ImageBackground>
+      <Image src={props.project.image} alt={props.project.imageAlt}></Image>
+      {/* <ProjectInfo>
         <strong>{props.project.name}</strong>
         <span>{props.project.description}</span>
-      </ProjectInfo>
+      </ProjectInfo> */}
     </ProjectCardStyled>
   );
 };
