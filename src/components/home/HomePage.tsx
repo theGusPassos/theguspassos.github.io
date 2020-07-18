@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import DeviceInfo from "../../models/deviceInfo";
 import NameCard from "../common-components/NameSection";
@@ -51,6 +51,10 @@ const SeeMyProjectsButton = styled.div`
 interface HomePageProps extends DeviceInfo {}
 
 const HomePage = (props: HomePageProps) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <HomePageStyled>
       <TransitionOnEnter transitionDuration={1000} delayToStart={0}>

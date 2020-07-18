@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Project from "../../../models/project";
 import styled, { css } from "styled-components";
 import { colors } from "../../../data/colors";
@@ -65,6 +65,10 @@ const ProjectCard = (props: ProjectCardProps) => {
   const onCardClick = () => {
     history.push("/project/" + props.project.id);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <ProjectCardStyled>
