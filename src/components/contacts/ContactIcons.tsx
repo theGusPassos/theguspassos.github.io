@@ -29,7 +29,7 @@ const ImageWrapper = styled.div`
 
 const ContactIcon = styled.img`
   opacity: 0.5;
-  width: 8%;
+  height: 25px;
   margin: auto;
 
   :hover,

@@ -17,11 +17,15 @@ const fadeAnimation = css`
 
 const BioSectionStyled = styled.section`
   color: #fff;
-  font-size: 0.9em;
+  font-size: 1em;
   margin: auto;
 
   ${sectionWithText};
   ${fadeAnimation};
+
+  p:first-child {
+    margin-top: 0;
+  }
 `;
 
 const BioSection = () => {

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import React from "react";
+import { device } from "../../../data/device";
 
 const animationTime = 1000;
 
@@ -28,6 +29,11 @@ const MyImageStyled = styled.img`
   height: 90%;
   margin: 0px auto 0 auto;
   padding-top: 10px;
+
+  @media ${device.tablet} {
+    height: 85%;
+    padding-top: 40px;
+  }
 `;
 
 const MyImage = () => {
