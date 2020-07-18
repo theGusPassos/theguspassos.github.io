@@ -61,12 +61,6 @@ const LinkToProject = styled.div`
 `;
 
 const ProjectCard = (props: ProjectCardProps) => {
-  const history = useHistory();
-
-  const onCardClick = () => {
-    history.push("/project/" + props.project.id);
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
