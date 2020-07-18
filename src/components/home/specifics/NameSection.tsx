@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { device } from "../../../data/device";
 
 const fadeTime = 2000;
 
@@ -24,10 +25,18 @@ const NameSectionStyled = styled.section`
 
 const Name = styled.div`
   font-size: 1.8em;
+
+  @media ${device.tablet} {
+    font-size: 2em;
+  }
 `;
 
 const Job = styled.div`
   font-size: 0.9em;
+
+  @media ${device.tablet} {
+    font-size: 1.1em;
+  }
 `;
 
 const NameSection = () => {

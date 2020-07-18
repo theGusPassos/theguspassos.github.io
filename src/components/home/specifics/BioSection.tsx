@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { sectionWithText } from "../../common-styles/sectionWithText";
+import { device } from "../../../data/device";
 
 const fadeTime = 2000;
 
@@ -17,7 +18,7 @@ const fadeAnimation = css`
 
 const BioSectionStyled = styled.section`
   color: #fff;
-  font-size: 1em;
+  font-size: 0.9em;
   margin: auto;
 
   ${sectionWithText};
@@ -25,6 +26,11 @@ const BioSectionStyled = styled.section`
 
   p:first-child {
     margin-top: 0;
+  }
+
+  @media ${device.tablet} {
+    font-size: 1em;
+    padding: 0 50px;
   }
 `;
 
