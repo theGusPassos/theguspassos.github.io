@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { colors } from "../../data/colors";
 import { buttonNoDefaultStyle } from "../common-styles/buttonStyles";
 import { CSSTransition } from "react-transition-group";
+import { useHistory } from "react-router-dom";
 
 const animationTime = 1000;
 
@@ -40,10 +41,28 @@ const ButtonStyled = styled.button`
   }
 `;
 
-const ButtonToInternalPage = () => {
+export interface ButtonToInternalPageProps {
+  children: string;
+  path: string;
+}
+
+const ButtonToInternalPage = (props: ButtonToInternalPageProps) => {
+  const history = useHistory();
+
+  const onCardClick = () => {
+    history.push(props.path);
+  };
+
+  const onCardKeyDown = (e: any) => {
+    if (e.keyCode === 13 || e.charCode === 13) history.push(props.path);
+  };
+
   return (
-    <ButtonStyled>
-      <span>see my projects</span>
+    <ButtonStyled
+      onClick={() => onCardClick()}
+      onKeyDown={(e) => onCardKeyDown(e)}
+    >
+      <span>{props.children}</span>
     </ButtonStyled>
   );
 };

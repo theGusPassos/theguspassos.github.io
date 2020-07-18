@@ -71,7 +71,9 @@ const HomePage = (props: HomePageProps) => {
 
       <SeeMyProjectsButton>
         <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
-          <ButtonToInternalPage></ButtonToInternalPage>
+          <ButtonToInternalPage path="/projects">
+            see my projects
+          </ButtonToInternalPage>
         </TransitionOnEnter>
       </SeeMyProjectsButton>
     </HomePageStyled>
