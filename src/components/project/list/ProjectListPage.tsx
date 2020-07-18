@@ -8,6 +8,8 @@ import { device } from "../../../data/device";
 import ProjectPageBackground from "../../common-styles/projectPageBackground";
 import NameSection from "../../common-components/NameSection";
 import { pageMarginStyle } from "../../common-styles/pageMarginStyle";
+import ContactIcons from "../../contacts/ContactIcons";
+import ButtonToInternalPage from "../../common-components/ButtonToInternalPage";
 
 const ProjectListPageStyled = styled.section`
   ${pageMarginStyle};
@@ -33,7 +35,13 @@ const ProjectEnd = styled.div`
   color: ${colors.mainTextColor};
   text-align: right;
   letter-spacing: 4px;
-  font-size: 1.5em;
+  font-size: 1.3em;
+  margin-bottom: 70px;
+`;
+
+const BackToHomeButton = styled.div`
+  width: 70%;
+  margin: 10px auto 30px auto;
 `;
 
 const ProjectListPage = () => {
@@ -49,6 +57,10 @@ const ProjectListPage = () => {
       <PageTitle>some things I've built</PageTitle>
       <ProjectWrapper>{getProjects()}</ProjectWrapper>
       <ProjectEnd>end;</ProjectEnd>
+      <ContactIcons></ContactIcons>
+      <BackToHomeButton>
+        <ButtonToInternalPage path="/">back to home</ButtonToInternalPage>
+      </BackToHomeButton>
     </ProjectListPageStyled>
   );
 };
