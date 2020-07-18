@@ -1,11 +1,12 @@
 import React from "react";
 import Project from "../../../models/project";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { colors } from "../../../data/colors";
 import { useHistory } from "react-router-dom";
 import { buttonOnHover } from "../../common-styles/buttonStyles";
 import { device } from "../../../data/device";
 import { sectionWithText } from "../../common-styles/sectionWithText";
+import ButtonToExternalLink from "../../common-components/ButtonToExternalLink";
 
 interface ProjectCardProps {
   project: Project;
@@ -55,6 +56,11 @@ const ProjectInfo = styled.div`
   }
 `;
 
+const LinkToProject = styled.div`
+  width: 70%;
+  margin: auto;
+`;
+
 const ProjectCard = (props: ProjectCardProps) => {
   const history = useHistory();
 
@@ -69,6 +75,11 @@ const ProjectCard = (props: ProjectCardProps) => {
       <ProjectInfo>
         <span>{props.project.description}</span>
       </ProjectInfo>
+      <LinkToProject>
+        <ButtonToExternalLink url={props.project.name}>
+          visit blog
+        </ButtonToExternalLink>
+      </LinkToProject>
     </ProjectCardStyled>
   );
 };

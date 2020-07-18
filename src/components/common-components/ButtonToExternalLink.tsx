@@ -4,7 +4,10 @@ import {
   goToExternalPageOnKeyDown,
 } from "../../common-functions/goToExternalPage";
 import styled from "styled-components";
-import { buttonStyle } from "../common-styles/buttonStyles";
+import {
+  buttonStyle,
+  buttonNoDefaultStyle,
+} from "../common-styles/buttonStyles";
 import { colors } from "../../data/colors";
 
 export interface LinkToExternalProps {
@@ -13,16 +16,11 @@ export interface LinkToExternalProps {
 }
 
 const Button = styled.button`
-  background-color: ${colors.mainBackgroundColor};
-  color: ${colors.mainColor};
-
-  font-size: 1.4em;
-  width: 100%;
-
+  ${buttonNoDefaultStyle};
   ${buttonStyle};
 `;
 
-const LinkToExternal = (props: LinkToExternalProps) => {
+const ButtonToExternalLink = (props: LinkToExternalProps) => {
   return (
     <Button
       onClick={() => goToExternalPage(props.url)}
@@ -33,4 +31,4 @@ const LinkToExternal = (props: LinkToExternalProps) => {
   );
 };
 
-export default LinkToExternal;
+export default ButtonToExternalLink;

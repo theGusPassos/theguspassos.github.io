@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { sectionWithText } from "../../../components/common-styles/sectionWithText";
-import LinkToExternal from "../../../components/common-components/ButtonToExternalLink";
+import ButtonToExternalLink from "../../../components/common-components/ButtonToExternalLink";
 
 const Info = styled.section`
   ${sectionWithText};
@@ -15,13 +15,13 @@ const BlogInfo = () => {
         like this website.
       </p>
 
-      <LinkToExternal url="https://theguspassos.github.io/blog">
+      <ButtonToExternalLink url="https://theguspassos.github.io/blog">
         Check the blog here
-      </LinkToExternal>
+      </ButtonToExternalLink>
 
-      <LinkToExternal url="https://github.com/theGusPassos/blog">
+      <ButtonToExternalLink url="https://github.com/theGusPassos/blog">
         Check the source code here
-      </LinkToExternal>
+      </ButtonToExternalLink>
 
       <p>
         Since there's no back-end for this website I needed a different approach

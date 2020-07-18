@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { sectionWithText } from "../../../components/common-styles/sectionWithText";
-import LinkToExternal from "../../../components/common-components/ButtonToExternalLink";
+import ButtonToExternalLink from "../../../components/common-components/ButtonToExternalLink";
 
 const Info = styled.section`
   ${sectionWithText}
@@ -15,9 +15,9 @@ const PortfolioInfo = () => {
         <strong>React</strong>. The early prototypes were made with <b>Figma</b>
         .
       </p>
-      <LinkToExternal url="https://github.com/theGusPassos/theguspassos.github.io">
+      <ButtonToExternalLink url="https://github.com/theGusPassos/theguspassos.github.io">
         Check the source code here
-      </LinkToExternal>
+      </ButtonToExternalLink>
       <p>
         I'm using <strong>github pages</strong> to host the source code for
         free. The build process consists on the generation of a production build

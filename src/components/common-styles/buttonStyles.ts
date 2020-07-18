@@ -15,21 +15,15 @@ export const buttonForImage = css`
 `;
 
 export const buttonStyle = css`
-  text-align: center;
-  margin: auto;
+  font-size: 1.2em;
+  letter-spacing: 4px;
   border: none;
+  border-right: 6px solid ${colors.secondColor};
+  border-bottom: 6px solid ${colors.secondColor};
+  color: ${colors.mainTextColor};
   background-color: ${colors.mainBackgroundColor};
-
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none;
-  outline: none;
-  cursor: pointer;
-
-  :active,
-  :focus,
-  :hover {
-    text-decoration: underline;
-  }
+  padding: 10px 5px;
+  width: 100%;
 `;
 
 export const buttonOnHover = css`
