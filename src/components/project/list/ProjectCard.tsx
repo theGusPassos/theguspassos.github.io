@@ -50,9 +50,10 @@ const ProjectInfo = styled.div`
   color: ${colors.mainTextColor};
   ${sectionWithText};
   padding: 0 15px;
+  margin: 10px 0;
 
   span {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 `;
 
