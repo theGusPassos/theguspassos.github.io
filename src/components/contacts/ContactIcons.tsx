@@ -5,6 +5,11 @@ import Contact from "../../models/contact";
 import { onCardClick, onCardKeyDown } from "./contactCardClick";
 import { MainToolTip } from "../common-components/ToolTip";
 import { CSSTransition } from "react-transition-group";
+import {
+  buttonNoDefaultStyle,
+  buttonForImage,
+} from "../common-styles/buttonStyles";
+import { colors } from "../../data/colors";
 
 const fadeTime = 2000;
 const fadeAnimation = css`
@@ -27,10 +32,13 @@ const ImageWrapper = styled.div`
   ${fadeAnimation};
 `;
 
-const ContactIcon = styled.img`
+const ContactIcon = styled.button`
+  ${buttonForImage};
+`;
+
+const ContactIconImage = styled.img`
   opacity: 0.5;
   height: 25px;
-  margin: auto;
 
   :hover,
   :focus {
@@ -52,10 +60,13 @@ const ContactIcons = () => {
         <ContactIcon
           onClick={() => onCardClick(contact)}
           onKeyDown={(e) => onCardKeyDown(e, contact)}
-          src={contact.image}
-          key={key}
-          data-tip={contact.message}
-        ></ContactIcon>
+        >
+          <ContactIconImage
+            src={contact.image}
+            key={key}
+            data-tip={contact.message}
+          ></ContactIconImage>
+        </ContactIcon>
       );
     });
   };

@@ -6,6 +6,7 @@ import {
   goToExternalPage,
   goToExternalPageOnKeyDown,
 } from "../../../common-functions/goToExternalPage";
+import { buttonForImage } from "../../common-styles/buttonStyles";
 
 const animationTime = 1000;
 
@@ -47,6 +48,7 @@ const MyImage = () => {
     <ImageContainer>
       <MainToolTip></MainToolTip>
       <MyImageStyled
+        tabIndex={1}
         src="images/eubykuma.png"
         data-tip="this drawing was made by @kumamaskie, check her instagram"
         alt="drawing of me and my cats made by @kumamaskie, click to go to her instagram"
