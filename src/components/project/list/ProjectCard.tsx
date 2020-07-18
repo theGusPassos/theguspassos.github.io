@@ -23,6 +23,7 @@ const ProjectCardStyled = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
+  display: flex;
 `;
 
 const ImageBackground = styled.div`

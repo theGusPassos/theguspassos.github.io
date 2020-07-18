@@ -27,9 +27,13 @@ const PageTitle = styled.h1`
   font-size: 1.2em;
 `;
 
-const ProjectWrapper = styled.section`
-  max-width: 1000px;
-  margin: auto;
+const ProjectWrapper = styled.section``;
+
+const ProjectEnd = styled.div`
+  color: ${colors.mainTextColor};
+  text-align: right;
+  letter-spacing: 4px;
+  font-size: 1.5em;
 `;
 
 const ProjectListPage = () => {
@@ -44,6 +48,7 @@ const ProjectListPage = () => {
       <NameSection></NameSection>
       <PageTitle>some things I've built</PageTitle>
       <ProjectWrapper>{getProjects()}</ProjectWrapper>
+      <ProjectEnd>end;</ProjectEnd>
     </ProjectListPageStyled>
   );
 };
