@@ -28,21 +28,6 @@ const ProjectListPageStyled = styled.section`
   }
 `;
 
-const Header = styled.header`
-  display: flex;
-`;
-
-const LeftFloat = styled.div`
-  @media ${device.tablet} {
-    width: 50%;
-  }
-`;
-
-const RightFloat = styled.div`
-  width: 50%;
-  float: right;
-`;
-
 const PageTitle = styled.h1`
   font-weight: normal;
   margin: 40px 0;
