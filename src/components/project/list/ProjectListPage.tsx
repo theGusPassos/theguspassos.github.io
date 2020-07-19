@@ -8,7 +8,6 @@ import NameSection from "../../common-components/NameSection";
 import { pageMarginStyle } from "../../common-styles/pageMarginStyle";
 import ContactIcons from "../../contacts/ContactIcons";
 import ButtonToInternalPage from "../../common-components/ButtonToInternalPage";
-import ResizeListenerProps from "../../../models/resizeListenerProps";
 import DeviceInfo from "../../../models/deviceInfo";
 import { device } from "../../../data/device";
 
@@ -21,8 +20,25 @@ const ProjectListPageStyled = styled.section`
   }
 
   @media ${device.tablet} {
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
   }
+`;
+
+const Header = styled.header`
+  display: flex;
+`;
+
+const LeftFloat = styled.div`
+  @media ${device.tablet} {
+    width: 50%;
+  }
+`;
+
+const RightFloat = styled.div`
+  width: 50%;
+  float: right;
 `;
 
 const PageTitle = styled.h1`
@@ -36,6 +52,7 @@ const PageTitle = styled.h1`
 
 const ProjectWrapper = styled.section`
   max-width: 700px;
+  margin: auto;
 `;
 
 const ProjectEnd = styled.div`
@@ -63,7 +80,21 @@ const ProjectListPage = (props: ProjectListProps) => {
 
   return (
     <ProjectListPageStyled>
-      <NameSection></NameSection>
+      <Header>
+        <LeftFloat>
+          <NameSection></NameSection>
+          {props.deviceType.isTablet || props.deviceType.isDesktop ? (
+            <ContactIcons></ContactIcons>
+          ) : null}
+        </LeftFloat>
+        {props.deviceType.isTablet || props.deviceType.isDesktop ? (
+          <RightFloat>
+            <BackToHomeButton>
+              <ButtonToInternalPage path="/">back to home</ButtonToInternalPage>
+            </BackToHomeButton>
+          </RightFloat>
+        ) : null}
+      </Header>
       <PageTitle>some things I've built</PageTitle>
       <ProjectWrapper>
         {getProjects()}
