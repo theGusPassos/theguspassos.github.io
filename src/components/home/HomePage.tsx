@@ -65,11 +65,11 @@ const HomePage = (props: HomePageProps) => {
         <NameCard></NameCard>
       </TransitionOnEnter>
 
-      <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
-        <ContactIconWidth>
+      <ContactIconWidth>
+        <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
           <ContactIcons></ContactIcons>
-        </ContactIconWidth>
-      </TransitionOnEnter>
+        </TransitionOnEnter>
+      </ContactIconWidth>
 
       <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
         <BioSection></BioSection>

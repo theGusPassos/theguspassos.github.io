@@ -44,12 +44,6 @@ const ContactIconImage = styled.img`
 `;
 
 const ContactIcons = () => {
-  const [inProp, setInProp] = useState(false);
-
-  useEffect(() => {
-    setInProp(true);
-  });
-
   const getContacts = () => {
     return contacts.map((contact: Contact, key: number) => {
       return (
@@ -68,17 +62,10 @@ const ContactIcons = () => {
   };
 
   return (
-    <CSSTransition
-      unmountOnExit
-      in={inProp}
-      classNames="animation"
-      timeout={fadeTime}
-    >
-      <ImageWrapper>
-        {getContacts()}
-        <MainToolTip></MainToolTip>
-      </ImageWrapper>
-    </CSSTransition>
+    <ImageWrapper>
+      {getContacts()}
+      <MainToolTip></MainToolTip>
+    </ImageWrapper>
   );
 };
 
