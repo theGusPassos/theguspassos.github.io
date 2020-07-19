@@ -61,6 +61,8 @@ const ProjectInfo = styled.div`
 
   @media ${device.tablet} {
     width: 50%;
+    padding: 0 0 0 25px;
+    margin: 0;
   }
 `;
 

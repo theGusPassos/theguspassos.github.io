@@ -10,7 +10,7 @@ const Header = styled.header`
 
   @media ${device.tablet} {
     max-width: 700px;
-    margin: auto;
+    margin: 20px auto;
   }
 
   @media ${device.desktop} {
