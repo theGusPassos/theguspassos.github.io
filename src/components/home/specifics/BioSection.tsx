@@ -35,12 +35,25 @@ const BioSectionStyled = styled.section`
 `;
 
 const BioSection = () => {
+  function getYearsFromDate(birthDayDate: string) {
+    var today = new Date();
+    var birthDate = new Date(birthDayDate);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age = age - 1;
+    }
+
+    return age;
+  }
+
   return (
     <BioSectionStyled>
       <p>
-        I'm a 23 years old developer who's been delivering software
-        professionally for <b>6 years</b>. Interested in developing any kind of{" "}
-        <b>software or game</b>, regardless of the tech stack.
+        I'm a {getYearsFromDate("6/12/1997")} years old developer who's been
+        delivering software professionally for{" "}
+        <b>{getYearsFromDate("01/09/2016")} years</b>. Interested in developing
+        any kind of <b>software or game</b>, regardless of the tech stack.
       </p>
 
       <p>
