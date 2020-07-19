@@ -10,6 +10,8 @@ import ContactIcons from "../../contacts/ContactIcons";
 import ButtonToInternalPage from "../../common-components/ButtonToInternalPage";
 import DeviceInfo from "../../../models/deviceInfo";
 import { device } from "../../../data/device";
+import ProjectDesktopHeader from "./specifics/ProjectDesktopHeader";
+import ProjectMobileHeader from "./specifics/ProjectMobileHeader";
 
 const ProjectListPageStyled = styled.section`
   ${pageMarginStyle};
@@ -80,21 +82,11 @@ const ProjectListPage = (props: ProjectListProps) => {
 
   return (
     <ProjectListPageStyled>
-      <Header>
-        <LeftFloat>
-          <NameSection></NameSection>
-          {props.deviceType.isTablet || props.deviceType.isDesktop ? (
-            <ContactIcons></ContactIcons>
-          ) : null}
-        </LeftFloat>
-        {props.deviceType.isTablet || props.deviceType.isDesktop ? (
-          <RightFloat>
-            <BackToHomeButton>
-              <ButtonToInternalPage path="/">back to home</ButtonToInternalPage>
-            </BackToHomeButton>
-          </RightFloat>
-        ) : null}
-      </Header>
+      {props.deviceType.isDesktop || props.deviceType.isTablet ? (
+        <ProjectDesktopHeader></ProjectDesktopHeader>
+      ) : (
+        <ProjectMobileHeader></ProjectMobileHeader>
+      )}
       <PageTitle>some things I've built</PageTitle>
       <ProjectWrapper>
         {getProjects()}
