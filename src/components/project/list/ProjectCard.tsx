@@ -19,6 +19,10 @@ const ProjectCardStyled = styled.div`
   img {
     width: 100%;
   }
+
+  @media ${device.tablet} {
+    margin-bottom: 50px;
+  }
 `;
 
 const ImageContainer = styled.div`
