@@ -10,6 +10,7 @@ import ContactIcons from "../../contacts/ContactIcons";
 import ButtonToInternalPage from "../../common-components/ButtonToInternalPage";
 import ResizeListenerProps from "../../../models/resizeListenerProps";
 import DeviceInfo from "../../../models/deviceInfo";
+import { device } from "../../../data/device";
 
 const ProjectListPageStyled = styled.section`
   ${pageMarginStyle};
@@ -17,6 +18,10 @@ const ProjectListPageStyled = styled.section`
 
   section {
     text-align: left !important;
+  }
+
+  @media ${device.tablet} {
+    margin: auto;
   }
 `;
 
@@ -29,7 +34,9 @@ const PageTitle = styled.h1`
   font-size: 1.2em;
 `;
 
-const ProjectWrapper = styled.section``;
+const ProjectWrapper = styled.section`
+  max-width: 700px;
+`;
 
 const ProjectEnd = styled.div`
   color: ${colors.mainTextColor};
@@ -37,6 +44,7 @@ const ProjectEnd = styled.div`
   letter-spacing: 4px;
   font-size: 1.3em;
   margin-bottom: 70px;
+  clear: right;
 `;
 
 const BackToHomeButton = styled.div`
@@ -57,8 +65,10 @@ const ProjectListPage = (props: ProjectListProps) => {
     <ProjectListPageStyled>
       <NameSection></NameSection>
       <PageTitle>some things I've built</PageTitle>
-      <ProjectWrapper>{getProjects()}</ProjectWrapper>
-      <ProjectEnd>end;</ProjectEnd>
+      <ProjectWrapper>
+        {getProjects()}
+        <ProjectEnd>end;</ProjectEnd>
+      </ProjectWrapper>
 
       {props.deviceType.isDesktop || props.deviceType.isTablet ? null : (
         <React.Fragment>
