@@ -16,10 +16,6 @@ const ProjectCardStyled = styled.div`
   position: relative;
   margin-bottom: 30px;
 
-  img {
-    width: 100%;
-  }
-
   @media ${device.tablet} {
     margin-bottom: 50px;
   }
@@ -45,6 +41,8 @@ const ImageBackground = styled.div`
 
 const Image = styled.img`
   position: relative;
+  width: 100%;
+  height: auto;
 `;
 
 const ProjectInfoContainer = styled.div`

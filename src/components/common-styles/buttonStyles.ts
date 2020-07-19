@@ -5,10 +5,6 @@ export const buttonNoDefaultStyle = css`
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   cursor: pointer;
-
-  :focus {
-    outline: none;
-  }
 `;
 
 export const buttonForImage = css`
