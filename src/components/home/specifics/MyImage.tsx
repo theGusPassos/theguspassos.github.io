@@ -32,12 +32,12 @@ const ImageContainer = styled.div`
 `;
 
 const MyImageStyled = styled.img`
-  height: 90%;
+  width: 65%;
   margin: 0px auto 0 auto;
   padding-top: 10px;
 
   @media ${device.tablet} {
-    height: 85%;
+    width: 35%;
     padding-top: 40px;
   }
 `;
