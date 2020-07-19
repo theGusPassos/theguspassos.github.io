@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
-import { colors } from "../../data/colors";
 import {
   buttonNoDefaultStyle,
   buttonStyle,
 } from "../common-styles/buttonStyles";
-import { CSSTransition } from "react-transition-group";
 import { useHistory } from "react-router-dom";
 
 const animationTime = 1000;

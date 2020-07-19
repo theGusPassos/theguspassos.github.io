@@ -6,7 +6,6 @@ import {
   goToExternalPage,
   goToExternalPageOnKeyDown,
 } from "../../../common-functions/goToExternalPage";
-import { buttonForImage } from "../../common-styles/buttonStyles";
 
 const animationTime = 1000;
 

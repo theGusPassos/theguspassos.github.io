@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import { contacts } from "../../data/contacts";
 import Contact from "../../models/contact";
 import { onCardClick, onCardKeyDown } from "./contactCardClick";
 import { MainToolTip } from "../common-components/ToolTip";
-import { CSSTransition } from "react-transition-group";
 import { buttonForImage } from "../common-styles/buttonStyles";
 
 const fadeTime = 2000;

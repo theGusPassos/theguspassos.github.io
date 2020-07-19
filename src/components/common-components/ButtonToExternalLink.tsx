@@ -8,7 +8,6 @@ import {
   buttonStyle,
   buttonNoDefaultStyle,
 } from "../common-styles/buttonStyles";
-import { colors } from "../../data/colors";
 
 export interface LinkToExternalProps {
   url: string;
