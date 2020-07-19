@@ -14,12 +14,9 @@ import { pageMarginStyle } from "../common-styles/pageMarginStyle";
 const HomePageStyled = styled.section`
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-rows: 30% auto auto auto auto;
 
   ${maxWidthStyle};
   ${pageMarginStyle};
-  margin-bottom: 10%;
 
   @media ${device.tablet} {
     grid-template-rows: 35% 7% 5% auto auto;
@@ -32,7 +29,7 @@ const HomePageStyled = styled.section`
 
 const ContactIconWidth = styled.div`
   width: 60%;
-  margin: auto;
+  margin: 5% auto;
 
   @media ${device.tablet} {
     width: 30%;
@@ -41,7 +38,7 @@ const ContactIconWidth = styled.div`
 
 const SeeMyProjectsButton = styled.div`
   width: 70%;
-  margin: auto;
+  margin: 5% auto;
 
   @media ${device.tablet} {
     width: 35%;

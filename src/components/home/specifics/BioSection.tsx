@@ -19,7 +19,7 @@ const fadeAnimation = css`
 const BioSectionStyled = styled.section`
   color: #fff;
   font-size: 0.9em;
-  margin: auto;
+  margin: 10% auto;
 
   ${sectionWithText};
   ${fadeAnimation};
