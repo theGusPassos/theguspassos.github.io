@@ -58,7 +58,6 @@ const MyImage = () => {
           goToExternalPageOnKeyDown(e, "https://www.instagram.com/kumamaskie/")
         }
       ></MyImageStyled>
-      ;
     </ImageContainer>
   );
 };
