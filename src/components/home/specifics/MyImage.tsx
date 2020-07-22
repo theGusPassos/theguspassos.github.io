@@ -32,7 +32,7 @@ const ImageContainer = styled.div`
 `;
 
 const MyImageStyled = styled.img`
-  width: 65%;
+  width: 60%;
   margin: 0px auto 0 auto;
   padding-top: 10px;
 
