@@ -38,6 +38,6 @@ export const contacts: Contact[] = [
     altImage: "itch.io logo",
     message: "play my games",
     contactText: "itchio/theguspassos",
-    url: "https://theguspassos.itch.io",
+    url: "https://guspassos.itch.io",
   },
 ];
