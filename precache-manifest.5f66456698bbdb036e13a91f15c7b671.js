@@ -1,35 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6655f4233e072a637be4d1712d57b16e",
+    "revision": "dfe0e8f97fa411bcd93bafbe19d04ea3",
     "url": "/index.html"
   },
   {
-    "revision": "6945393f48c2353409b0",
+    "revision": "4e0ec5a60b97e5c1e6db",
     "url": "/static/css/2.f42e59c9.chunk.css"
   },
   {
-    "revision": "9cedcbb8d670d4fe2b00",
+    "revision": "ec8b2f9f4f332264c79b",
     "url": "/static/css/main.26e39a66.chunk.css"
   },
   {
-    "revision": "6945393f48c2353409b0",
-    "url": "/static/js/2.f0132731.chunk.js"
+    "revision": "4e0ec5a60b97e5c1e6db",
+    "url": "/static/js/2.7bfc31d0.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/static/js/2.f0132731.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.7bfc31d0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9cedcbb8d670d4fe2b00",
-    "url": "/static/js/main.66ffa072.chunk.js"
+    "revision": "ec8b2f9f4f332264c79b",
+    "url": "/static/js/main.a4f3cb13.chunk.js"
   },
   {
     "revision": "5da85dcf5f4ca828e9ad",
     "url": "/static/js/runtime-main.36844e49.js"
-  },
-  {
-    "revision": "82e87316b2ecec0ec08175e98980eb57",
-    "url": "/static/media/acadev-logo.82e87316.png"
   },
   {
     "revision": "7df28167050264725269262f5002997d",
