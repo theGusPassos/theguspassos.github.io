@@ -1,13 +1,11 @@
 import Project from "../../models/project";
 import { portfolio } from "./portfolio/portfolio";
-import { blog } from "./blog/blog";
 import { brokenDeliveryService } from "./broken-delivery-service/broken-delivery-service";
 import { slasherLock } from "./slasher-lock/slasher-lock";
 
 export const projectList: Project[] = [
   slasherLock,
   brokenDeliveryService,
-  blog,
   portfolio,
 ];
 
