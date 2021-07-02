@@ -10,6 +10,6 @@ export const portfolio: Project = {
   imageAlt: "an image of this very own website",
   image: img,
   madeWithText: "made with react",
-  linkButton: "check the source code",
+  linkButton: "source code",
   linkToProject: "https://github.com/theGusPassos/theguspassos.github.io",
 };

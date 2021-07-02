@@ -41,15 +41,6 @@ const ProjectWrapper = styled.section`
   margin: auto;
 `;
 
-const ProjectEnd = styled.div`
-  color: ${colors.mainTextColor};
-  text-align: right;
-  letter-spacing: 4px;
-  font-size: 1.3em;
-  margin-bottom: 70px;
-  clear: right;
-`;
-
 const BackToHomeButton = styled.div`
   width: 70%;
   margin: 10px auto 30px auto;
@@ -72,10 +63,7 @@ const ProjectListPage = (props: ProjectListProps) => {
         <ProjectMobileHeader></ProjectMobileHeader>
       )}
       <PageTitle>some things I've built</PageTitle>
-      <ProjectWrapper>
-        {getProjects()}
-        <ProjectEnd>end;</ProjectEnd>
-      </ProjectWrapper>
+      <ProjectWrapper>{getProjects()}</ProjectWrapper>
 
       {props.deviceType.isDesktop || props.deviceType.isTablet ? null : (
         <React.Fragment>

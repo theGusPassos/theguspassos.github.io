@@ -14,10 +14,10 @@ const ProjectCardStyled = styled.div`
   display: inline-block;
   clear: right;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 
   @media ${device.tablet} {
-    margin-bottom: 50px;
+    margin-bottom: 80px;
   }
 `;
 

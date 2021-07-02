@@ -10,6 +10,6 @@ export const slasherLock: Project = {
   imageAlt: "image from the slasher lock main menu",
   image: img,
   madeWithText: "made with Unity",
-  linkButton: "play the game online",
+  linkButton: "play the game",
   linkToProject: "https://lucasteles.itch.io/slasherlock",
 };
