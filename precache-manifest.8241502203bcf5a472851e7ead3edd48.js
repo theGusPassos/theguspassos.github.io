@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "936f6ccd059a4b512c22543f9265650d",
+    "revision": "694279f05a732d075eefdab7142a0230",
     "url": "/index.html"
   },
   {
-    "revision": "4e0ec5a60b97e5c1e6db",
+    "revision": "7752678dcaee9252bd4d",
     "url": "/static/css/2.f42e59c9.chunk.css"
   },
   {
-    "revision": "d49746d1b9ebd856fe46",
+    "revision": "0c4edacb7c9daa84fa0a",
     "url": "/static/css/main.26e39a66.chunk.css"
   },
   {
-    "revision": "4e0ec5a60b97e5c1e6db",
-    "url": "/static/js/2.7bfc31d0.chunk.js"
+    "revision": "7752678dcaee9252bd4d",
+    "url": "/static/js/2.44fc7244.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/static/js/2.7bfc31d0.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.44fc7244.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d49746d1b9ebd856fe46",
-    "url": "/static/js/main.da9d0582.chunk.js"
+    "revision": "0c4edacb7c9daa84fa0a",
+    "url": "/static/js/main.a4c67d4c.chunk.js"
   },
   {
     "revision": "5da85dcf5f4ca828e9ad",
@@ -54,5 +54,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5a3cfffa0277f839df9ae530ba115638",
     "url": "/static/media/slasher-lock.5a3cfffa.png"
+  },
+  {
+    "revision": "1e27318632bee24aee7e393b1bbcc96c",
+    "url": "/static/media/who-killed-george.1e273186.png"
   }
 ]);
