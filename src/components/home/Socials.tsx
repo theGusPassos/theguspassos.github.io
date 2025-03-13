@@ -29,6 +29,11 @@ const ContactIcon = styled.button`
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
   cursor: pointer;
+  border: none;
+  background: none;
+	color: inherit;
+	padding: 0;
+	outline: inherit;
 `;
 
 const ContactIconImage = styled.img`
@@ -38,7 +43,7 @@ const ContactIconImage = styled.img`
   :hover,
   :focus {
     cursor: pointer;
-    opacity: 1;
+    opacity: 0.5;
   }
 `;
 
@@ -66,11 +71,17 @@ const Socials = () => {
   const getContacts = () => {
     return contacts.map((contact: Contact, key: number) => {
       return (
+        <ContactIcon
+          key={key}
+          onClick={() => onCardClick(contact)}
+          onKeyDown={(e) => onCardKeyDown(e, contact)}
+        >
           <ContactIconImage
           key={key}
             src={contact.image}
             data-tip={contact.message}
           ></ContactIconImage>
+        </ContactIcon>
       );
     });
   };
