@@ -10,7 +10,7 @@ module.exports = {
     ],
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -25,5 +25,6 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        "react/no-unescaped-entities": "off",
     }
 };

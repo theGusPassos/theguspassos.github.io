@@ -36,10 +36,10 @@ const BioSectionStyled = styled.section`
 
 const BioSection = () => {
   function getYearsFromDate(birthDayDate: string) {
-    var today = new Date();
-    var birthDate = new Date(birthDayDate);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
+    const today = new Date();
+    const birthDate = new Date(birthDayDate);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
       age = age - 1;
     }

@@ -22,7 +22,7 @@ const Routes = (props: RoutesProps) => {
       </Route>
 
       <Route path={homePath}>
-        <HomePage deviceType={props.deviceType}></HomePage>
+        <HomePage></HomePage>
       </Route>
     </Switch>
   );

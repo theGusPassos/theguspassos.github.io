@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import DeviceInfo from "../../models/deviceInfo";
 import NameCard from "../common-components/NameSection";
 import BioSection from "./specifics/BioSection";
 import ButtonToInternalPage from "../common-components/ButtonToInternalPage";
@@ -45,9 +44,7 @@ const SeeMyProjectsButton = styled.div`
   }
 `;
 
-interface HomePageProps extends DeviceInfo {}
-
-const HomePage = (props: HomePageProps) => {
+const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
