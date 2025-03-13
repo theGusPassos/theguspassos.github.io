@@ -8,9 +8,9 @@ const PhotoCardContainer = styled.div`
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  padding: 30px 0;
+  padding: 40px 0 60px 0;
   box-sizing: border-box;
 `;
 
@@ -26,14 +26,15 @@ const NameAndTitle = styled.div`
 `
 
 const Name = styled.label`
-  font-size: 32px;
+  color: #111113;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 42px;
 `
 
 const Title = styled.label`
   color: #5F5F62;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   line-height: 24px;
   text-align: center;
@@ -41,7 +42,7 @@ const Title = styled.label`
 
 const CheckProjects = styled.label`
   color: #973BFF;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 24px;
 `

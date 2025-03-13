@@ -16,22 +16,26 @@ const NameContainer = styled.div`
 `
 
 const Greetings = styled.label`
-  font-size: 80px;
+  letter-spacing: 1px;
+  font-size: 5rem;
   font-weight: 400;
   line-height: 100px;
 `
 
 const Name = styled.label`
-  font-size: 80px;
-  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 5rem;
+  font-weight: 700;
   line-height: 100px;
   color: #973BFF;
 `
 
 const Bio = styled.p`
-  font-size: 16px;
+  letter-spacing: 1px;
+  font-size: 5rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 26px;
 `
 
 const BioSection = () => {
