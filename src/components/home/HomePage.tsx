@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import NameCard from "../common-components/NameSection";
-import BioSection from "./specifics/BioSection";
-import ButtonToInternalPage from "../common-components/ButtonToInternalPage";
-import ContactIcons from "../contacts/ContactIcons";
-import MyImage from "./specifics/MyImage";
-import TransitionOnEnter from "../../animations/TransitionOnEnter";
 import { maxWidthStyle } from "../common-styles/maxWidthStyle";
 import { device } from "../../data/device";
 import { pageMarginStyle } from "../common-styles/pageMarginStyle";
+import PhotoCard from "./personal/PhotoCard";
+import BioSection from "./personal/BioSection";
+import Socials from "./Socials";
 
 const HomePageStyled = styled.section`
   width: 100%;
@@ -26,23 +23,14 @@ const HomePageStyled = styled.section`
   }
 `;
 
-const ContactIconWidth = styled.div`
-  width: 60%;
-  margin: 5% auto;
-
-  @media ${device.tablet} {
-    width: 30%;
-  }
-`;
-
-const SeeMyProjectsButton = styled.div`
-  width: 70%;
-  margin: 5% auto;
-
-  @media ${device.tablet} {
-    width: 35%;
-  }
-`;
+const PersonalInfoContainer = styled.section`
+  height: 848px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: center;
+  max-width: 900px;
+`
 
 const HomePage = () => {
   useEffect(() => {
@@ -51,31 +39,12 @@ const HomePage = () => {
 
   return (
     <HomePageStyled>
-      <TransitionOnEnter transitionDuration={1000} delayToStart={0}>
-        <MyImage></MyImage>
-      </TransitionOnEnter>
-
-      <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
-        <NameCard></NameCard>
-      </TransitionOnEnter>
-
-      <ContactIconWidth>
-        <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
-          <ContactIcons></ContactIcons>
-        </TransitionOnEnter>
-      </ContactIconWidth>
-
-      <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
+      <PersonalInfoContainer>
+        <PhotoCard></PhotoCard>
         <BioSection></BioSection>
-      </TransitionOnEnter>
-
-      <SeeMyProjectsButton>
-        <TransitionOnEnter transitionDuration={2000} delayToStart={1000}>
-          <ButtonToInternalPage path="/projects">
-            see my projects
-          </ButtonToInternalPage>
-        </TransitionOnEnter>
-      </SeeMyProjectsButton>
+      </PersonalInfoContainer>
+      
+      <Socials></Socials>
     </HomePageStyled>
   );
 };

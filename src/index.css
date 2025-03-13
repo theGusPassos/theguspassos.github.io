@@ -6,14 +6,14 @@ body,
   margin: 0;
   padding: 0;
 
-  background-color: #181418;
+  background-color: #17171A;
 
   -webkit-text-size-adjust: none !important;
 }
 
 body,
 button {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
