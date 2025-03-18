@@ -7,6 +7,7 @@ import Socials from "./Socials";
 import PersonalInfoContainer from "./personal/PersonalInfoContainer";
 import Projects from "./projects-section/Projects";
 import Connect from "./Connect";
+import Footer from "../common-components/Footer";
 
 const HomePageStyled = styled.section`
   width: 100%;
@@ -37,6 +38,7 @@ const HomePage = () => {
       <Socials></Socials>
       <Projects></Projects>
       <Connect></Connect>
+      <Footer></Footer>
     </HomePageStyled>
   );
 };

@@ -26,7 +26,7 @@ const Title = styled.h1`
 `
 
 const Desc = styled.p`
-  margin: 10px 0 30px 0;
+  margin: 10px 0 30px;
   color: white;
   font-size: 3.875rem;
   font-weight: 600;

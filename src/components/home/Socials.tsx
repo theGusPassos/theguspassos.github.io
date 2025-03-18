@@ -14,6 +14,7 @@ interface Contact {
 }
 
 const Container = styled.section`
+  background-color: #202023;
 `
 
 const SocialsContainer = styled.section`
@@ -50,23 +51,23 @@ const ContactIconImage = styled.img`
 `;
 
 const Socials = () => {
-    const onCardClick = (contact: Contact) => {
-  if (contact.url) {
-    goToExternalPage(contact.url);
-  } else {
-    copyToClipboard(contact.contactText);
-    toast.info(`my e-mail has been copied to your clipboard =)`, {
-      position: "bottom-right",
-      autoClose: 3000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: false,
-    });
-  }
+  const onCardClick = (contact: Contact) => {
+    if (contact.url) {
+      goToExternalPage(contact.url);
+    } else {
+      copyToClipboard(contact.contactText);
+      toast.info(`my e-mail has been copied to your clipboard =)`, {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+      });
+    }
 };
 
-    const onCardKeyDown = (e: any, contact: Contact) => {
+const onCardKeyDown = (e: any, contact: Contact) => {
   if (e.keyCode === 13 || e.charCode === 13) onCardClick(contact);
 };
 
