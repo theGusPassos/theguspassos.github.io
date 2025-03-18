@@ -5,12 +5,14 @@ import { device } from "../../data/device";
 import { pageMarginStyle } from "../common-styles/pageMarginStyle";
 import Socials from "./Socials";
 import PersonalInfoContainer from "./personal/PersonalInfoContainer";
+import Projects from "./projects-section/Projects";
+import Connect from "./Connect";
 
 const HomePageStyled = styled.section`
   width: 100%;
   height: 100%;
 
-  background-color: #17171A;
+  background-color: #202023;
 
   ${maxWidthStyle};
   ${pageMarginStyle};
@@ -33,6 +35,8 @@ const HomePage = () => {
     <HomePageStyled>
       <PersonalInfoContainer/>
       <Socials></Socials>
+      <Projects></Projects>
+      <Connect></Connect>
     </HomePageStyled>
   );
 };

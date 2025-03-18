@@ -4,7 +4,6 @@ import { contacts } from "../../data/contacts";
 import { copyToClipboard } from "../../common-functions/copyToClipboard";
 import { toast } from "react-toastify";
 import { goToExternalPage } from "../../common-functions/goToExternalPage";
-import { MainToolTip } from "../common-components/ToolTip";
 
 interface Contact {
   image: string;
@@ -13,6 +12,9 @@ interface Contact {
   contactText: string;
   url?: string;
 }
+
+const Container = styled.section`
+`
 
 const SocialsContainer = styled.section`
     height: 225px;
@@ -87,9 +89,11 @@ const Socials = () => {
   };
 
     return (
+      <Container>
         <SocialsContainer>
             {getContacts()}
         </SocialsContainer>
+      </Container>
     );
 }
 
