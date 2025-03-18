@@ -32,7 +32,6 @@ const Name = styled.label`
 
 const Bio = styled.p`
   letter-spacing: 1px;
-  font-size: 5rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 26px;

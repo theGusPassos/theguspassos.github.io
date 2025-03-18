@@ -30,6 +30,8 @@ const Desc = styled.p`
   color: white;
   font-size: 3.875rem;
   font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 68px;
 `
 
 const TalkToMeButton = styled.button`
@@ -50,6 +52,7 @@ const TalkToMeButton = styled.button`
   }
 
   img {
+    margin-left: 8px;
   }
 `
 

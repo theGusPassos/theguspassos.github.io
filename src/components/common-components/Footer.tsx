@@ -12,7 +12,7 @@ const Container = styled.footer`
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
-    margin: 100px 0 60px 0;
+    margin: 100px 0 120px 0;
 `
 
 const BackToTopButton = styled.button`
@@ -29,12 +29,14 @@ const BackToTopButton = styled.button`
     border: none;
     background: none;
     color: inherit;
-	padding: 0;
-	outline: inherit;
+	  padding: 0;
+	  outline: inherit;
 
     label {
         color: white;
         cursor: pointer;
+        padding: 5px;
+        font-weight: 500;
     }
 `
 
@@ -43,17 +45,17 @@ const SocialsContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
     border-bottom-right-radius: 40px;
     border-bottom-left-radius: 40px;
 `
 
 const ContactIcon = styled.button`
-    -webkit-tap-highlight-color: transparent;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    background: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
 	padding: 0;
 	outline: inherit;
 `;

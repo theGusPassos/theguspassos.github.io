@@ -4,7 +4,7 @@ import { projectList } from "../../../data/project-list";
 import Project from "../../../models/project";
 
 const ProjectsContainer = styled.section`
-  margin: 100px 0;
+  margin: 100px 0 130px 0;
 `
 
 const Title = styled.h1`
@@ -13,15 +13,16 @@ const Title = styled.h1`
     line-height: 64px;
     font-weight: 700;
     text-align: center;
-    margin-top: 50px;
+    letter-spacing: 1px;
 `
 
 const ProjectButtonsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 300px); 
-  gap: 10px; 
+  gap: 40px 30px; 
   align-content: center;
   justify-content: center;
+  padding-top: 10px;
 `
 
 const ProjectButton = styled.button`
