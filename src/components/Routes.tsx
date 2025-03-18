@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import ProjectListPage from "./project/list/ProjectListPage";
 import HomePage from "./home/HomePage";
 import { homePath, projectListPath } from "../data/routes";
 import DeviceInfo from "../models/deviceInfo";
@@ -17,9 +16,9 @@ const Routes = (props: RoutesProps) => {
 
   return (
     <Switch location={props.location}>
-      <Route exact path={projectListPath}>
+      {/* <Route exact path={projectListPath}>
         <ProjectListPage deviceType={props.deviceType}></ProjectListPage>
-      </Route>
+      </Route> */}
 
       <Route path={homePath}>
         <HomePage></HomePage>
