@@ -1,9 +1,9 @@
 export default interface Project {
-  id: number;
+  order: number;
   name: string;
   description: string;
-  image: string;
-  imageAlt: string;
+  publicDir: string;
+  capsuleAlt: string;
   tags: string[];
   madeWithText: string;
   linkButton: string;

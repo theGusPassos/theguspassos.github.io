@@ -1,14 +1,13 @@
-import Project from "../../../models/project";
-import img from "./acadev-logo.png";
+import Project from "../../models/project";
 
 export const blog: Project = {
-  id: 3,
+  order: 4,
   name: "Academic Developer",
   description:
     "Personal blog where I write about software development and some of my experiences related to the industry. built with vue.js",
   tags: ["vue"],
-  imageAlt: "Academic Developer blog logo",
-  image: img,
+  publicDir: "projects/blog",
+  capsuleAlt: "Academic Developer blog logo",
   madeWithText: "made with vue.js",
   linkButton: "visit blog",
   linkToProject: "https://theguspassos.github.io/blog",
