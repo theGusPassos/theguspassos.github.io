@@ -1,9 +1,5 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import {
-  buttonNoDefaultStyle,
-  buttonStyle,
-} from "../common-styles/buttonStyles";
 import { useHistory } from "react-router-dom";
 
 const animationTime = 1000;
@@ -20,8 +16,6 @@ const fadeAnimation = css`
 `;
 
 const ButtonStyled = styled.button`
-  ${buttonStyle};
-  ${buttonNoDefaultStyle};
   ${fadeAnimation};
 
   span {

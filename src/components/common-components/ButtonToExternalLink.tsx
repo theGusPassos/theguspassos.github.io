@@ -4,10 +4,6 @@ import {
   goToExternalPageOnKeyDown,
 } from "../../common-functions/goToExternalPage";
 import styled from "styled-components";
-import {
-  buttonStyle,
-  buttonNoDefaultStyle,
-} from "../common-styles/buttonStyles";
 
 export interface LinkToExternalProps {
   url: string;
@@ -15,8 +11,7 @@ export interface LinkToExternalProps {
 }
 
 const Button = styled.button`
-  ${buttonNoDefaultStyle};
-  ${buttonStyle};
+
 `;
 
 const ButtonToExternalLink = (props: LinkToExternalProps) => {

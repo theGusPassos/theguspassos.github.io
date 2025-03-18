@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { maxWidthStyle } from "../common-styles/maxWidthStyle";
 import { device } from "../../data/device";
-import { pageMarginStyle } from "../common-styles/pageMarginStyle";
 import Socials from "./Socials";
 import PersonalInfoContainer from "./personal/PersonalInfoContainer";
 import Projects from "./projects-section/Projects";
@@ -16,7 +15,6 @@ const HomePageStyled = styled.section`
   background-color: #202023;
 
   ${maxWidthStyle};
-  ${pageMarginStyle};
 
   @media ${device.tablet} {
     grid-template-rows: 35% 7% 5% auto auto;
