@@ -40,7 +40,15 @@ const Title = styled.label`
   text-align: center;
 `
 
-const CheckProjects = styled.label`
+const CheckProjects = styled.button`
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+	padding: 5px;
+	outline: inherit;
+
   color: #973BFF;
   font-size: 1.25rem;
   font-weight: 600;
@@ -48,6 +56,15 @@ const CheckProjects = styled.label`
 `
 
 const PhotoCard = () => {
+  const scrollToProjects = () => {
+    const projectsTitle = document.querySelector("#projectsTitle");
+    projectsTitle!.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'center',
+    });
+  }
+
   return (
     <PhotoCardContainer>
       <Image 
@@ -59,7 +76,7 @@ const PhotoCard = () => {
         <Name>Gustavo Passos</Name>
         <Title>Game and Software<br/>Developer</Title>
       </NameAndTitle>
-      <CheckProjects>Check my projects</CheckProjects>
+      <CheckProjects onClick={scrollToProjects} onKeyDown={scrollToProjects}>Check my projects</CheckProjects>
     </PhotoCardContainer>
   );
 };

@@ -26,7 +26,6 @@ const ContainerDisplay = styled.div`
 `
 
 const F = styled.div`
-  
 `
 
 const PersonalInfoContainer = () => {

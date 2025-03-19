@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import { projectList } from "../../../data/project-list";
-import Project from "../../../models/project";
+import { projectList } from "../../data/project-list";
+import Project from "../../models/project";
 
 const ProjectsContainer = styled.section`
   margin: 100px 0 130px 0;
@@ -46,8 +46,6 @@ const ProjectButtonImg = styled.img`
   border-radius: 16px;
   object-fit: cover;
 `
-
-
 const Projects = () => {
   const getProjects = () => {
     return projectList.map((project: Project, key: number) => {
@@ -66,7 +64,7 @@ const Projects = () => {
 
   return (
     <ProjectsContainer>
-        <Title>My projects</Title>
+        <Title id="projectsTitle">My projects</Title>
         <ProjectButtonsContainer>
             {getProjects()}
         </ProjectButtonsContainer>

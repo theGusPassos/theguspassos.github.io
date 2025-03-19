@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { maxWidthStyle } from "../common-styles/maxWidthStyle";
 import { device } from "../../data/device";
 import Socials from "./Socials";
 import PersonalInfoContainer from "./personal/PersonalInfoContainer";
-import Projects from "./projects-section/Projects";
+import Projects from "./Projects";
 import Connect from "./Connect";
 import Footer from "../common-components/Footer";
 
@@ -33,10 +33,10 @@ const HomePage = () => {
   return (
     <HomePageStyled>
       <PersonalInfoContainer/>
-      <Socials></Socials>
-      <Projects></Projects>
-      <Connect></Connect>
-      <Footer></Footer>
+      <Socials/>
+      <Projects/>
+      <Connect/>
+      <Footer/>
     </HomePageStyled>
   );
 };
