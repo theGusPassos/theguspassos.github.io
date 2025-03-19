@@ -56,9 +56,9 @@ const TalkToMeButton = styled.button`
   }
   
   :focus-visible {
-    outline: 2px solid white;
+    outline: 2px solid ;
     outline-offset: 1px;
-    border-radius: 4px;
+    border-radius: 8px;
   }
 `
 

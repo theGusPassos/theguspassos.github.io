@@ -42,7 +42,7 @@ const ProjectButton = styled.button`
   :focus-visible {
     outline: 2px solid #973BFF;
     outline-offset: 1px;
-    border-radius: 4px;
+    border-radius: 16px;
   }
 `
 
