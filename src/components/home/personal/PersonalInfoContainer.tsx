@@ -33,10 +33,8 @@ const PersonalInfoContainer = () => {
         <Container>
             <ContainerColorBorder>
                 <ContainerDisplay>
-                    <F>
-                      <PhotoCard></PhotoCard>
-                    </F>
-                    <BioSection></BioSection>
+                  <PhotoCard></PhotoCard>
+                  <BioSection></BioSection>
                 </ContainerDisplay>
             </ContainerColorBorder>
         </Container>

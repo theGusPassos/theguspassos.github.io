@@ -53,16 +53,29 @@ const CheckProjects = styled.button`
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 24px;
+
+  :focus-visible {
+    outline: 2px solid #973BFF;
+    outline-offset: 1px;
+    border-radius: 4px;
+  }
 `
 
 const PhotoCard = () => {
   const scrollToProjects = () => {
     const projectsTitle = document.querySelector("#projectsTitle");
+
     projectsTitle!.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
       inline: 'center',
     });
+  }
+
+  const onScrollToProjectsKeyDown = (e: any) => {
+    if (e.keyCode === 13 || e.charCode === 13) {
+      scrollToProjects();
+    }
   }
 
   return (
@@ -76,7 +89,12 @@ const PhotoCard = () => {
         <Name>Gustavo Passos</Name>
         <Title>Game and Software<br/>Developer</Title>
       </NameAndTitle>
-      <CheckProjects onClick={scrollToProjects} onKeyDown={scrollToProjects}>Check my projects</CheckProjects>
+      <CheckProjects 
+        onClick={scrollToProjects} 
+        onKeyDown={onScrollToProjectsKeyDown}
+        tab-index={0}>
+          Check my projects
+        </CheckProjects>
     </PhotoCardContainer>
   );
 };

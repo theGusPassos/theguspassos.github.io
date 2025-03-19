@@ -24,3 +24,12 @@ input[type="button"] {
 input[type="button"]::-moz-focus-inner {
   border: 0;
 }
+
+/* Remove default outline for mouse/touch interactions */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+  outline: none;
+}

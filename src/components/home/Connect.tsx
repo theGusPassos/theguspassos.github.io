@@ -54,6 +54,12 @@ const TalkToMeButton = styled.button`
   img {
     margin-left: 8px;
   }
+  
+  :focus-visible {
+    outline: 2px solid white;
+    outline-offset: 1px;
+    border-radius: 4px;
+  }
 `
 
 const Connect = () => {

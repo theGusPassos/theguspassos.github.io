@@ -16,28 +16,34 @@ const Container = styled.footer`
 `
 
 const BackToTopButton = styled.button`
-    font-size: 1rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
-    -webkit-tap-highlight-color: transparent;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    background: none;
-    color: inherit;
-	  padding: 0;
-	  outline: inherit;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+	 adding: 0;
+	 utline: inherit;
 
-    label {
-        color: white;
-        cursor: pointer;
-        padding: 5px;
-        font-weight: 500;
-    }
+  label {
+      color: white;
+      cursor: pointer;
+      padding: 5px;
+      font-weight: 500;
+  }
+
+  :focus-visible {
+    outline: 2px solid white;
+    outline-offset: 1px;
+    border-radius: 4px;
+  }
 `
 
 const SocialsContainer = styled.section`
@@ -58,10 +64,16 @@ const ContactIcon = styled.button`
   background: none;
 	padding: 0;
 	outline: inherit;
+  height: 24px;
+
+  :focus-visible {
+    outline: 2px solid #973BFF;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 `;
 
 const ContactIconImage = styled.img`
-  height: 24px;
   color: #973BFF;
 
   :hover,
@@ -78,6 +90,12 @@ const Credits = styled.label`
 const Footer = () => {
   const goToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }
+
+  const goToTopOnKeyDown = (e: any) => {
+    if (e.keyCode === 13 || e.charCode === 13) {
+      goToTop();
+    }
   }
 
   const onCardClick = (contact: Contact) => {
@@ -120,7 +138,9 @@ const Footer = () => {
 
   return (
     <Container>
-        <BackToTopButton onClick={() => goToTop()} onKeyDown={() => goToTop()}>
+        <BackToTopButton 
+          onClick={() => goToTop()} 
+          onKeyDown={(e) => goToTopOnKeyDown(e)}>
           <img src="icons/arrow-up.svg"></img>
           <label>Back to top</label>
         </BackToTopButton>

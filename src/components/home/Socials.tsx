@@ -37,10 +37,16 @@ const ContactIcon = styled.button`
 	color: inherit;
 	padding: 0;
 	outline: inherit;
+  height: 40px;
+
+  :focus-visible {
+    outline: 2px solid white;
+    outline-offset: 1px;
+    border-radius: 4px;
+  }
 `;
 
 const ContactIconImage = styled.img`
-  height: 40px;
   color: white;
 
   :hover,
@@ -72,15 +78,15 @@ const onCardKeyDown = (e: any, contact: Contact) => {
 };
 
   const getContacts = () => {
-    return contacts.map((contact: Contact, key: number) => {
+    return contacts.map((contact: Contact, i: number) => {
       return (
         <ContactIcon
-          key={key}
+          key={i}
           onClick={() => onCardClick(contact)}
           onKeyDown={(e) => onCardKeyDown(e, contact)}
         >
           <ContactIconImage
-          key={key}
+          key={i}
             src={contact.image}
             data-tip={contact.message}
           ></ContactIconImage>

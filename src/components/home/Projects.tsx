@@ -38,6 +38,12 @@ const ProjectButton = styled.button`
   border-radius: 16px;
   width: 290px;
   height: 320px;
+
+  :focus-visible {
+    outline: 2px solid #973BFF;
+    outline-offset: 1px;
+    border-radius: 4px;
+  }
 `
 
 const ProjectButtonImg = styled.img`
