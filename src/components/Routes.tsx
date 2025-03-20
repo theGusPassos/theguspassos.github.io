@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "./home/HomePage";
-import { homePath, projectListPath } from "../data/routes";
+import { homePath, projectPath } from "../data/routes";
 import DeviceInfo from "../models/deviceInfo";
 import ReactGA from "react-ga";
+import ProjectPage from "./project/ProjectPage";
 
 interface RoutesProps extends DeviceInfo {
   location: any;
@@ -16,12 +17,12 @@ const Routes = (props: RoutesProps) => {
 
   return (
     <Switch location={props.location}>
-      {/* <Route exact path={projectListPath}>
-        <ProjectListPage deviceType={props.deviceType}></ProjectListPage>
-      </Route> */}
+      <Route exact path={projectPath}>
+        <ProjectPage />
+      </Route> 
 
       <Route path={homePath}>
-        <HomePage></HomePage>
+        <HomePage />
       </Route>
     </Switch>
   );
