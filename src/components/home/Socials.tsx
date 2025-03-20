@@ -71,11 +71,11 @@ const Socials = () => {
         draggable: false,
       });
     }
-};
+  };
 
-const onCardKeyDown = (e: any, contact: Contact) => {
-  if (e.keyCode === 13 || e.charCode === 13) onCardClick(contact);
-};
+  const onCardKeyDown = (e: any, contact: Contact) => {
+    if (e.keyCode === 13 || e.charCode === 13) onCardClick(contact);
+  };
 
   const getContacts = () => {
     return contacts.map((contact: Contact, i: number) => {

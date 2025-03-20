@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import { goToExternalPage } from "../../common-functions/goToExternalPage";
 
 const ConnectContainer = styled.section`
   background-color: #3F3F46;
@@ -63,12 +64,20 @@ const TalkToMeButton = styled.button`
 `
 
 const Connect = () => {
+  const onConnectClick = () => {
+      goToExternalPage("mailto:theguspassos@gmail.com");
+  };
+
+  const onConnectKeyDown = (e: any) => {
+    if (e.keyCode === 13 || e.charCode === 13) onConnectClick();
+  };
+
   return (
     <ConnectContainer>
       <ContainerBorders>
         <Title>Connect</Title>
         <Desc>Let's develop your next big project.</Desc>
-        <TalkToMeButton>
+        <TalkToMeButton onClick={onConnectClick} onKeyDown={onConnectKeyDown}>
           <label>Talk to me</label>
           <img src="icons/arrow.svg"></img>
         </TalkToMeButton>
