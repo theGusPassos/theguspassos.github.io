@@ -10,11 +10,12 @@ import Project from "../../models/project";
 
 const ProjectPageStyled = styled.section`
   width: 1440px;
-  height: 2399px;
-  position:relative;
+  height: 100%;
+  position: relative;
 
   background-color: #171719;
 
+  min-height: 100vh;
   ${maxWidthStyle};
 
   margin: auto;
@@ -26,6 +27,8 @@ const BackgroundScreenshotImage = styled.img`
   height: auto;
   top: 0; /* Start from the top */
   left: 0;
+  position: absolute;
+
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 0%, 
@@ -45,7 +48,7 @@ const BackgroundScreenshotImage = styled.img`
 const ProjectContent = styled.div`
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
 `
 

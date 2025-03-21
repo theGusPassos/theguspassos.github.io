@@ -50,16 +50,22 @@ const TalkToMeButton = styled.button`
 
   label {
     font-size: 1.25rem;
+    cursor: pointer;
   }
 
   img {
     margin-left: 8px;
+    cursor: pointer;
   }
   
   :focus-visible {
     outline: 2px solid ;
     outline-offset: 1px;
     border-radius: 8px;
+  }
+
+  :hover, :focus-visible {
+    opacity: 0.5;
   }
 `
 

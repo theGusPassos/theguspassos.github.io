@@ -5,8 +5,8 @@ export const superDash: Project = {
   id: "super-dash",
   name: "Super Dash",
   type: "Game",
-  pitch: "Super Dash é um jogo frenético do gênero rogue-lite e bullet-hell, onde sua nave faz mais do que atirar – ela passa por cima dos inimigos, literalmente!",
-  description: "Prepare-se para desviar e atravessar uma avalanche de tiros enquanto coleta power-ups insanos que vão transformar sua experiência de jogo. Com uma diversidade de inimigos e chefões que vão testar seus reflexos e habilidades, cada partida é uma nova aventura.\nO melhor de tudo? Super Dash é fácil de aprender, mas um verdadeiro desafio para dominar. Você está pronto para enfrentar o caos e se tornar o mestre do \"dash\"?",
+  pitch: "A fast paced bullet hell where your ship doesn't shoot — you dash through enemies to destroy them.\nThe game has a variety of power-ups, enemy types, and bosses that create interesting and distinct challenges when surviving through waves. The minimalist gameplay is easy to learn but hard to master.",
+  description: "Get ready to dodge and dash through a barrage of bullets while collecting insane power-ups that will transform your gaming experience. With a variety of enemies and bosses that will test your reflexes and skills, each match is a new adventure.\nThe best part? Super Dash is easy to learn but a true challenge to master. Are you ready to face the chaos and become the master of the \"dash\"?",
   capsuleAlt: "super dash logo",
   publicDir: "projects/super-dash",
   externalLinks: {

@@ -59,6 +59,10 @@ const CheckProjects = styled.button`
     outline-offset: 1px;
     border-radius: 4px;
   }
+
+  :hover, :focus-visible {
+    opacity: 0.5;
+  }
 `
 
 const PhotoCard = () => {
