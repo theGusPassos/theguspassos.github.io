@@ -6,13 +6,10 @@ export const blog: Project = {
   name: "Academic Developer",
   type: "Blog",
   pitch: "",
-  description:
-    "Personal blog where I write about software development and some of my experiences related to the industry. built with vue.js",
+  description: "My personal blog where I write about software development and some of my experiences related to the industry.",
   publicDir: "projects/blog",
   capsuleAlt: "Academic Developer blog logo",
   externalLinks: {
-    basicExternal: "https://acadev.hashnode.dev/",
-    basicExternalName: "read blog",
     hasPressKit: false,
   },
   platforms: [{
@@ -20,5 +17,10 @@ export const blog: Project = {
     name: "Hashnode",
     icon: "hashnode",
   }],
-  creators: [],
+  creators: [{
+    name: "Gustavo Passos",
+    role: "Writer",
+    photo: "gus.png",
+    socials: "https://bsky.app/profile/guspassos.bsky.social",
+  }],
 };

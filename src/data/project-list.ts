@@ -10,7 +10,6 @@ export const projectList: Project[] = [
   whoKilledGeorge,
   slasherLock,
   brokenDeliveryService,
-  blog,
 ];
 
 export const getProjectById = (id: number) => {

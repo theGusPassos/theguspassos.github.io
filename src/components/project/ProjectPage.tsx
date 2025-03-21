@@ -71,7 +71,7 @@ const ProjectPage = () => {
   if (project) {
     return (
       <ProjectPageStyled>
-          <BackgroundScreenshotImage src={"projects/super-dash/presskit/1.png"}></BackgroundScreenshotImage>
+          <BackgroundScreenshotImage src={`projects/${projectId}/presskit/1.png`}></BackgroundScreenshotImage>
           <ProjectContent>
               <Columns>
                   <ProjectHeader project={project!}/>

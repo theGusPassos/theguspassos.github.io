@@ -162,6 +162,12 @@ const Links = ({ externalLinks, projectId }: LinksProps) => {
         </TrailerContainer>
       }
 
+      { externalLinks.gameplay && 
+        <TrailerContainer>
+          <TrailerFrame src={externalLinks.gameplay} title="Youtube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></TrailerFrame>
+        </TrailerContainer>
+      }
+
       { externalLinks.hasPressKit &&
         <PressKitContainer>
           <PressKitTitle>Press kit</PressKitTitle>

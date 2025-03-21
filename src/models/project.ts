@@ -27,6 +27,7 @@ export interface Creator {
 
 export interface ExternalLinks {
   trailer?: string;
+  gameplay?: string;
   hasPressKit: boolean;
   basicExternal?: string;
   basicExternalName?: string;
