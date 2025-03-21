@@ -10,6 +10,11 @@ export const blog: Project = {
     "Personal blog where I write about software development and some of my experiences related to the industry. built with vue.js",
   publicDir: "projects/blog",
   capsuleAlt: "Academic Developer blog logo",
+  externalLinks: {
+    basicExternal: "https://acadev.hashnode.dev/",
+    basicExternalName: "read blog",
+    hasPressKit: false,
+  },
   platforms: [{
     link: "https://acadev.hashnode.dev/",
     name: "Hashnode",

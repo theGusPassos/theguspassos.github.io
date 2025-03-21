@@ -16,4 +16,7 @@ export const brokenDeliveryService: Project = {
     icon: "itch",
   }],
   creators: [],
+  externalLinks: {
+    hasPressKit: false,
+  }
 };

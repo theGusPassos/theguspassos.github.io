@@ -25,9 +25,6 @@ const ContainerDisplay = styled.div`
   align-items: center;
 `
 
-const F = styled.div`
-`
-
 const PersonalInfoContainer = () => {
     return (
         <Container>

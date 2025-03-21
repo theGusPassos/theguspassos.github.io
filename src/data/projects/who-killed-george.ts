@@ -16,4 +16,7 @@ export const whoKilledGeorge: Project = {
     icon: "itch",
   }],
   creators: [],
+  externalLinks: {
+    hasPressKit: false,
+  }
 };

@@ -33,16 +33,22 @@ const BackToTopButton = styled.button`
 	 utline: inherit;
 
   label {
-      color: white;
-      cursor: pointer;
-      padding: 5px;
-      font-weight: 500;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    font-weight: 500;
   }
 
   :focus-visible {
     outline: 2px solid white;
     outline-offset: 1px;
     border-radius: 4px;
+  }
+
+  :hover {
+    label, img {
+      opacity: 0.5;
+    }
   }
 `
 

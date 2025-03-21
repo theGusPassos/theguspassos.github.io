@@ -58,8 +58,14 @@ const ProjectInfo = ({project}: ProjectInfoProps) => {
         </React.Fragment>
       }
 
-      <SectionTitle>Links</SectionTitle>
-      <Links />
+      { (project.externalLinks.hasPressKit 
+        || project.externalLinks.basicExternal != null 
+        || project.externalLinks.trailer != null) &&
+        <React.Fragment>
+          <SectionTitle>Links</SectionTitle>
+          <Links projectId={project.id} externalLinks={project.externalLinks}/>
+        </React.Fragment>
+      }
     </Container>
   );
 };

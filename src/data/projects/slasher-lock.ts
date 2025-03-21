@@ -16,5 +16,8 @@ export const slasherLock: Project = {
     icon: "itch",
   }],
   creators: [],
+  externalLinks: {
+    hasPressKit: false,
+  }
 };
 

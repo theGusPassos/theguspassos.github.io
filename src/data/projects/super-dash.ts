@@ -9,6 +9,10 @@ export const superDash: Project = {
   description: "Prepare-se para desviar e atravessar uma avalanche de tiros enquanto coleta power-ups insanos que vão transformar sua experiência de jogo. Com uma diversidade de inimigos e chefões que vão testar seus reflexos e habilidades, cada partida é uma nova aventura.\nO melhor de tudo? Super Dash é fácil de aprender, mas um verdadeiro desafio para dominar. Você está pronto para enfrentar o caos e se tornar o mestre do \"dash\"?",
   capsuleAlt: "super dash logo",
   publicDir: "projects/super-dash",
+  externalLinks: {
+    hasPressKit: true,
+    trailer: "https://www.youtube.com/embed/BRRZeoSrIPI?si=9J8XAVh3Ot1rGikD",
+  },
   platforms: [{
     link: "https://guspassos.itch.io/super-dash",
     name: "Itch.io",
