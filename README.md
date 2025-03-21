@@ -4,11 +4,6 @@ My personal portfolio website developed with React and served as a [github page]
 
 ![My personal portfolio](demo/desktop-and-mobile-page.png)
 
-The process of building a react application and serving it as a github page is well explained [here](https://github.com/gitname/react-gh-pages)
-
-The website's design is fully responsive and was made scratch by me. I used [figma](https://www.figma.com/) to prototype the mobile and desktop pages and created the styling with styled-componets without any other css framework.
-
-If you desire to use the same design for your own portfolio feel free to do it, just make sure to give me the credit for the structure in some way =)
 
 ### Built with
 
