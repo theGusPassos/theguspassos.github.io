@@ -11,8 +11,10 @@ const TrailerContainer = styled.div`
 `
 
 const TrailerFrame = styled.iframe`
-  width: 560px;
-  height: 315px;
+  @media (min-width: 640px) {
+    width: 560px;
+    height: 315px;
+  }
 `
 
 const PressKitContainer = styled.div`

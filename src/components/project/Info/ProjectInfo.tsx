@@ -5,8 +5,12 @@ import Platforms from "./Platforms";
 import Links from "./Links";
 
 const Container = styled.div`
-  margin-top: 20px;
-  margin-left: 40px;
+  margin: 20px;
+
+  @media (min-width: 640px) {
+    margin-top: 20px;
+    margin-left: 40px;
+  }
 `
 
 const SectionTitle = styled.h1`

@@ -25,7 +25,7 @@ export const superDash: Project = {
   }],
   creators: [{
     name: "Gustavo Passos",
-    role: "Creator, programmer e game designer",
+    role: "Creator, programmer and game designer",
     photo: "gus.png",
     socials: "https://bsky.app/profile/guspassos.bsky.social",
   },

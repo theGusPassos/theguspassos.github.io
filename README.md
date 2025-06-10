@@ -2,8 +2,6 @@
 
 My personal portfolio website developed with React and served as a [github page](https://theguspassos.github.io/#/)
 
-![My personal portfolio](demo/desktop-and-mobile-page.png)
-
 
 ### Built with
 

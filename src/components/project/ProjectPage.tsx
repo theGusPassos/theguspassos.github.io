@@ -9,16 +9,20 @@ import { projectList } from "../../data/project-list";
 import Project from "../../models/project";
 
 const ProjectPageStyled = styled.section`
-  width: 1440px;
+  width: 100%;
   height: 100%;
   position: relative;
 
   background-color: #171719;
 
   min-height: 100vh;
-  ${maxWidthStyle};
 
   margin: auto;
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+    ${maxWidthStyle};
+  }
 `
 
 const BackgroundScreenshotImage = styled.img`
@@ -53,10 +57,14 @@ const ProjectContent = styled.div`
 `
 
 const Columns = styled.div`
-  max-width: 950px;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  margin: 310px auto 0 auto;
+  margin: 150px auto 0 auto;
+
+  @media (min-width: 640px) {
+    margin: 310px auto 0 auto;
+    max-width: 950px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
 `
 
 const ProjectPage = () => {

@@ -8,7 +8,15 @@ const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  margin-left: 30px;
+
+  margin: 20px;
+
+  @media (min-width: 640px) {
+    margin-left: 30px;
+
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 `
 
 const BackToHomeButton = styled.button`
