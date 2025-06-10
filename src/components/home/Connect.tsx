@@ -5,18 +5,26 @@ import { goToExternalPage } from "../../common-functions/goToExternalPage";
 const ConnectContainer = styled.section`
   background-color: #3F3F46;
   border-radius: 40px;
-  width: 956px;
   margin: auto;
+  width: 90%;
+
+  @media (min-width: 1100px) {
+    width: 956px;
+  }
 `
 
 const ContainerBorders = styled.div`
   margin: auto;
   text-align: center;
-  padding: 90px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+
+  @media (min-width: 1100px) {
+    padding: 90px;
+  }
 `
 
 const Title = styled.h1`
@@ -29,10 +37,15 @@ const Title = styled.h1`
 const Desc = styled.p`
   margin: 10px 0 30px;
   color: white;
-  font-size: 3.875rem;
   font-weight: 600;
   letter-spacing: 1px;
-  line-height: 68px;
+  line-height: 48px;
+  font-size: 2.4rem;
+
+  @media (min-width: 1100px) {
+    font-size: 3.875rem;
+    line-height: 68px;
+  }
 `
 
 const TalkToMeButton = styled.button`

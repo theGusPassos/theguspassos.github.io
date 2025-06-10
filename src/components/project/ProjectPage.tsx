@@ -59,7 +59,7 @@ const ProjectContent = styled.div`
 const Columns = styled.div`
   margin: 150px auto 0 auto;
 
-  @media (min-width: 640px) {
+  @media (min-width: 850px) {
     margin: 310px auto 0 auto;
     max-width: 950px;
     display: grid;

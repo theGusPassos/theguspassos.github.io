@@ -11,7 +11,7 @@ const TrailerContainer = styled.div`
 `
 
 const TrailerFrame = styled.iframe`
-  @media (min-width: 640px) {
+  @media (min-width: 850px) {
     width: 560px;
     height: 315px;
   }

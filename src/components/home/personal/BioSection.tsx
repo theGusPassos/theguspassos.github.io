@@ -3,7 +3,12 @@ import styled from "styled-components";
 
 const BioSectionStyled = styled.section`
   color: #fff;
-  margin: 10% auto;
+  margin: 20px 20px 0 20px;
+  padding: 20px 0;
+
+  @media (min-width: 840px) {
+    margin: 10% auto;
+  }
 
   p:first-child {
     margin-top: 0;
@@ -17,17 +22,27 @@ const NameContainer = styled.div`
 
 const Greetings = styled.label`
   letter-spacing: 1px;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
-  line-height: 100px;
+  line-height: 59px;
+
+  @media (min-width: 840) {
+    font-size: 5rem;
+    line-height: 100px;
+  }
 `
 
 const Name = styled.label`
   letter-spacing: 1px;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
-  line-height: 100px;
+  line-height: 59px;
   color: #973BFF;
+
+  @media (min-width: 840) {
+    font-size: 5rem;
+    line-height: 100px;
+  }
 `
 
 const Bio = styled.p`
@@ -53,7 +68,7 @@ const BioSection = () => {
   return (
     <BioSectionStyled>
       <NameContainer>
-        <Greetings>Hey, I'm</Greetings>
+        <Greetings>Hi there, I'm</Greetings>
         <Name>Gustavo</Name>
       </NameContainer>
 

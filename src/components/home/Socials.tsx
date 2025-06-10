@@ -18,14 +18,18 @@ const Container = styled.section`
 `
 
 const SocialsContainer = styled.section`
-    height: 225px;
-    background-color: #973BFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 225px;
+  background-color: #973BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  gap: 23px;
+
+  @media (min-width: 850px) {
     gap: 40px;
-    border-bottom-right-radius: 40px;
-    border-bottom-left-radius: 40px;
+  }  
 `
 
 const ContactIcon = styled.button`

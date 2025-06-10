@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 
 const ProjectsContainer = styled.section`
   margin: 100px 0 130px 0;
+  overflow: auto;
 `
 
 const Title = styled.h1`
@@ -19,11 +20,17 @@ const Title = styled.h1`
 
 const ProjectButtonsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 300px); 
-  gap: 40px 30px; 
   align-content: center;
   justify-content: center;
   padding-top: 10px;
+
+  grid-template-columns: repeat(2, 50%); 
+  gap: 20px 0; 
+
+  @media (min-width: 850px) {
+    grid-template-columns: repeat(3, 300px); 
+    gap: 40px 30px; 
+  }
 `
 
 const ProjectButton = styled.button`
@@ -37,9 +44,15 @@ const ProjectButton = styled.button`
 	outline: inherit;
 
   border-radius: 16px;
-  width: 290px;
-  height: 320px;
   overflow: hidden; 
+
+  width: 90%;
+  margin: auto;
+
+  @media (min-width: 850px) {
+    width: 290px;
+    height: 320px;
+  }
 
   :focus-visible {
     outline: 2px solid #973BFF;

@@ -12,6 +12,11 @@ const PhotoCardContainer = styled.div`
   align-items: center;
   padding: 40px 0 60px 0;
   box-sizing: border-box;
+  margin: auto;
+
+  @media (min-width: 640px) {
+    margin: none;
+  }
 `;
 
 const Image = styled.img`

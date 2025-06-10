@@ -5,7 +5,10 @@ import BioSection from "./BioSection";
 
 const Container = styled.section`
   background-color: #973BFF;
-  height: 848px;
+
+  @media (min-width: 840px) {
+    height: 848px;
+  }
 `
 
 const ContainerColorBorder = styled.div`
@@ -19,15 +22,28 @@ const ContainerColorBorder = styled.div`
 const ContainerDisplay = styled.div`
   max-width: 950px;
   height: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 50% 50%;
   align-items: center;
+
+  @media (min-width: 840px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+`
+
+const MobileSpacing = styled.div`
+  background-color: #17171A;
+  padding: 50px 0;
+
+  @media (min-width: 840px) {
+    padding: 0;
+  }
 `
 
 const PersonalInfoContainer = () => {
     return (
         <Container>
+          <MobileSpacing>
+          </MobileSpacing>
             <ContainerColorBorder>
                 <ContainerDisplay>
                   <PhotoCard></PhotoCard>

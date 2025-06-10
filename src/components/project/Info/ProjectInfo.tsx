@@ -7,7 +7,7 @@ import Links from "./Links";
 const Container = styled.div`
   margin: 20px;
 
-  @media (min-width: 640px) {
+  @media (min-width: 850px) {
     margin-top: 20px;
     margin-left: 40px;
   }

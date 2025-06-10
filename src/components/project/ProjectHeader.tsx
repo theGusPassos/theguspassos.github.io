@@ -11,7 +11,7 @@ const Header = styled.header`
 
   margin: 20px;
 
-  @media (min-width: 640px) {
+  @media (min-width: 850px) {
     margin-left: 30px;
 
     margin-top: 0px;
