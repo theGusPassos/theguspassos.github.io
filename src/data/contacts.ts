@@ -21,8 +21,8 @@ export const contacts: Contact[] = [
     imagePurple: "socials/blog-purple.svg",
     altImage: "hashnode logo",
     message: "read my blog",
-    contactText: "acadev.hashnode.dev",
-    url: "https://acadev.hashnode.dev/",
+    contactText: "gustavopassos.hashnode.dev",
+    url: "https://gustavopassos.hashnode.dev",
   },
   {
     image: "socials/github.svg",

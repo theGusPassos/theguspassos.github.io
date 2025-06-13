@@ -13,7 +13,7 @@ export const blog: Project = {
     hasPressKit: false,
   },
   platforms: [{
-    link: "https://acadev.hashnode.dev/",
+    link: "https://gustavopassos.hashnode.dev",
     name: "Hashnode",
     icon: "hashnode",
   }],
