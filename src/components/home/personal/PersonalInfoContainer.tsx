@@ -25,6 +25,7 @@ const ContainerDisplay = styled.div`
   align-items: center;
 
   @media (min-width: 840px) {
+    margin: auto;
     display: grid;
     grid-template-columns: 50% 50%;
   }
