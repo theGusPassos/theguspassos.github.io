@@ -22,7 +22,7 @@ const NameContainer = styled.div`
 
 const Greetings = styled.label`
   letter-spacing: 1px;
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: 400;
   line-height: 59px;
 
@@ -34,7 +34,7 @@ const Greetings = styled.label`
 
 const Name = styled.label`
   letter-spacing: 1px;
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: 700;
   line-height: 59px;
   color: #973BFF;

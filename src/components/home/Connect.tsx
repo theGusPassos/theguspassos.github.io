@@ -40,7 +40,7 @@ const Desc = styled.p`
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 48px;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
 
   @media (min-width: 1100px) {
     font-size: 3.875rem;
