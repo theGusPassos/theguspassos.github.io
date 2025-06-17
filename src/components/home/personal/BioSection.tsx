@@ -4,7 +4,7 @@ import styled from "styled-components";
 const BioSectionStyled = styled.section`
   color: #fff;
   margin: 20px 20px 0 20px;
-  padding: 20px 0;
+  padding: 20px 20px;
 
   @media (min-width: 840px) {
     margin: 10% auto;

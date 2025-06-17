@@ -10,6 +10,7 @@ const Header = styled.header`
   align-items: baseline;
 
   margin: 20px;
+  padding: 0 20px;
 
   @media (min-width: 850px) {
     margin-left: 30px;

@@ -6,6 +6,7 @@ import Links from "./Links";
 
 const Container = styled.div`
   margin: 20px;
+  padding: 0 20px;
 
   @media (min-width: 850px) {
     margin-top: 20px;
